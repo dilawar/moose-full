@@ -1,0 +1,10 @@
+all:
+	echo "Nothing to do"
+
+install:
+	echo "nothing to install"
+
+clean:
+	echo "nothing to clean"
+
+

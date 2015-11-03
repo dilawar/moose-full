@@ -1,0 +1,9 @@
+.bzr
+.bzr*
+*.so
+*.o
+*~
+*~
+*.clean
+*.o
+CMakeFiles

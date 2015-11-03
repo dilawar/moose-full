@@ -1,0 +1,29 @@
+language: cpp
+compiler:
+    - gcc
+os:
+    - linux
+
+notifications:
+    email:
+        recipients:
+            - dilawar.s.rajput@gmail.com
+        on_success: change
+        on_failure: always
+
+cache: apt
+before_script:
+    - sudo apt-get update -qq
+    - sudo apt-get install libxml2-dev libbz2-dev
+    - sudo apt-get install libhdf5-serial-dev
+    - sudo apt-get install libgsl0-dev texinfo texi2html  
+    - sudo apt-get install python-numpy python-setuptools python-networkx
+    - sudo apt-get install make texinfo cmake texi2html
+    - sudo apt-get install python-suds python-matplotlib
+    - sudo apt-get install python-qt4-dev python-qt4-gl python-sip-dev libqt4-dev libopenscenegraph-dev
+    - sudo apt-get install doxygen python-sphinx
+    - sudo apt-get install git git-buildpackage debhelper cdbs devscripts 
+
+script:
+    - ./scripts/git_buildpackage_and_test.sh
+

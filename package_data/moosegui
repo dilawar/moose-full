@@ -1,0 +1,4 @@
+#!/bin/bash
+# DO NOT change this file. This might break MacPort build.
+GUIDIR=/usr/lib/moose/gui
+( cd $GUIDIR && python mgui.py )
