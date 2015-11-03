@@ -1,0 +1,44 @@
+language: cpp
+compiler:
+    - gcc
+    - clang
+os:
+    - linux
+notifications:
+    email:
+        recipients:
+            - dilawar.s.rajput@gmail.com
+            - bhalla@ncbs.res.in
+            - aviralg@ncbs.res.in
+            - hrani@ncbs.res.in
+        on_success: change
+        on_failure: always
+
+env:
+    - CTEST_MODEL=Nightly
+cache: apt
+
+before_script:
+    - sudo apt-get update -qq
+    - sudo apt-get install libxml2-dev libbz2-dev
+    - sudo apt-get install libhdf5-serial-dev
+    - sudo apt-get install python-numpy python-setuptools python-networkx
+    - sudo apt-get install make texinfo cmake
+    - sudo apt-get install python-suds python-matplotlib
+    - sudo apt-get install doxygen python-sphinx
+
+before_install:
+    - sbmlurl="http://sourceforge.net/projects/sbml/files/libsbml/5.9.0/stable/Linux/64-bit/libSBML-5.9.0-Linux-x64.deb"
+    - wget "$sbmlurl" -O libsbml.deb && sudo dpkg -i libsbml.deb 
+    - wget http://ftp.debian.org/debian/pool/main/g/gsl/libgsl0ldbl_1.16+dfsg-4_amd64.deb -O gsl_1.16.deb
+    - sudo dpkg -i gsl_1.16.deb
+    - wget "http://ftp.debian.org/debian/pool/main/g/gsl/libgsl0-dev_1.16+dfsg-4_amd64.deb" -O gsl_1.16-dev.deb
+    - sudo dpkg -i gsl_1.16-dev.deb
+
+install:
+    - echo "nothing to do here"
+
+script:
+    - make BUILD=debug USE_NEUROKIT=1 && make clean
+    - mkdir -p _build && cd _build && cmake -DDEBUG=ON -DWITH_DOC=ON .. && make
+    - ctest --output-on-failure
