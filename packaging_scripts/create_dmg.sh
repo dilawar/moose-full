@@ -1,7 +1,10 @@
 #!/bin/bash
+set -x
+set -e
 
-# by Andy Maloney
+# Originally by Andy Maloney
 # http://asmaloney.com/2013/07/howto/packaging-a-mac-os-x-application-using-a-dmg/
+# Modified by Dilawar Singh, 2015
 
 # make sure we are in the correct dir when we double-click a .command file
 dir=${0%/*}
@@ -13,11 +16,15 @@ fi
 APP_NAME="Moose"
 VERSION="3.0.2"
 DMG_BACKGROUND_IMG="../moose-gui/icons/moose_icon_large.png"
+if [ ! -f $DMG_BACKGROUND_IMG ]; then
+    echo "Background image $DMG_BACKGROUND_IMG not found"
+    exit;
+fi
 
 # you should not need to change these
 APP_EXE="${APP_NAME}.app/Contents/MacOS/${APP_NAME}"
 
-VOL_NAME="${APP_NAME} ${VERSION}"   
+VOL_NAME="${APP_NAME}"   
 DMG_TMP="${VOL_NAME}-temp.dmg"
 DMG_FINAL="${VOL_NAME}.dmg"        
 STAGING_DIR="./Install"             # we copy all our stuff into this dir
