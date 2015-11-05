@@ -1,7 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 ## Now setting up project.
 # A dummy target to add dependencies later.
-project(moose_full)
+project(Moose)
 
 add_custom_target(_moose_static_dependencies ALL)
 # This variable should point to the source code.

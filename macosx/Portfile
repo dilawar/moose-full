@@ -5,6 +5,7 @@ PortSystem              1.0
 PortGroup               python 1.0
 
 name                    moose
+categories-append       science biology chemistry
 version                 3.0.2
 categories              science
 platforms               darwin
@@ -33,14 +34,16 @@ depends_build           port:cmake \
                         port:gsl  \
                         port:hdf5 \
 
-depends_lib             port:gsl \
+depends_lib-append      port:gsl \
                         port:hdf5 \
-                        port:py27-matplotlib \
                         port:py27-numpy \
-                        port:py-suds-jurko \
                         port:py-pyqt4 \
-                        port:py-networkx \
                         port:python27 \
+
+depends_run-append      port:py-suds-jurko \
+                        port:py27-matplotlib \
+                        port:python27 \
+                        port:py-networkx \
 
 set python_branch       2.7
 use_configure           yes
