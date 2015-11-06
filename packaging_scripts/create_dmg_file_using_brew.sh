@@ -33,6 +33,9 @@ fi
 DEVICE=$(hdiutil attach -readwrite -noverify "${DMG_TMP}" | \
          egrep '^/dev/' | sed 1q | awk '{print $1}')
 
+# traps
+trap hdiutil detach "${DEVICE}" 2
+
 sleep 2
 pushd /Volumes/"${VOLNAME}"
 popd 
@@ -52,9 +55,10 @@ BREW_PREFIX="/Volumes/${VOLNAME}"
     $BREW_PREFIX/bin/brew -v install python 
     $BREW_PREFIX/bin/brew -v install moose
     $BREW_PREFIX/bin/pip install matplotlib numpy suds-jurko networkx 
-
+ 
 )
-
 
 echo "Detaching ${DEVICE}"
 hdiutil detach "${DEVICE}"
+
+
