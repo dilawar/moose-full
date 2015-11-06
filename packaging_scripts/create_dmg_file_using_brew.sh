@@ -20,7 +20,7 @@ THISDIR=`pwd`
 
 # create the temp DMG file
 STAGING_DIR=_Install
-DMG_TMP="__${PKGNAME}__.dmg"
+DMG_TMP="${PKGNAME}-${MAC_NAME}.dmg"
 mkdir -p ${STAGING_DIR}
 
 if [ ! -f "${DMG_TMP}" ]; then
@@ -35,12 +35,14 @@ fi
 DEVICE=$(hdiutil attach -readwrite -noverify "${DMG_TMP}" | \
          egrep '^/dev/' | sed 1q | awk '{print $1}')
 
-# traps
+############################# EXIT gacefully ################################ 
+# Traps etc
+# ALWAYS DETACH THE DEVICE BEFORE EXITING...
 function detach_device 
 {
     hdiutil detach "${DEVICE}"
 }
-trap hdiutil detach_device 2
+trap detach_device SIGINT SIGTERM SIGEXIT
 
 sleep 1
 
@@ -65,15 +67,15 @@ BREW_PREFIX="/Volumes/${VOLNAME}"
 )
 
 ################ COPY THE .app ##########################################
-cp -rpf "$APPNAME}.app" "$BREW_PREFIX"
-APP_EXE="${APP_NAME}.app/Contents/MacOS/${APP_NAME}"
-mkdir -p `dirname $APP_EXE`
+cp -rpf "${APPNAME}.app" "$BREW_PREFIX"
+APPEXE="${APPNAME}.app/Contents/MacOS/${APPNAME}"
+mkdir -p `dirname $APPEXE`
 # create the executable.
-cat > ${APP_EXE} <<-EOF
+cat > ${APPEXE} <<-EOF
 #!/bin/bash
 ${BREW_PREFIX}/bin/moosegui
 EOF
-chmod +x ${APP_EXE}
+chmod +x ${APPEXE}
 
 ################ INSTALL THE ICON ########################################
 DMG_BACKGROUND_IMG="${CURRDIR}/moose_icon_large.png"
