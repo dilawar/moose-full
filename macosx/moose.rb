@@ -23,8 +23,8 @@ class Moose < Formula
       system "python", *Language::Python.setup_install_args(prefix)
     end
 
-    lib.install "moose-gui"
-    lib.install "moose-examples"
+    (lib/"moose").install "moose-gui"
+    (lib/"moose").install "moose-examples"
 
     # A wrapper script to launch moose gui.
     (bin/"moosegui").write <<-EOS.undent
