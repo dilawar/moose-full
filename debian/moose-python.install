@@ -1,1 +1,1 @@
-moose/usr/lib/ usr/lib
+moose/usr/lib/* usr/lib
