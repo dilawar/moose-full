@@ -4,10 +4,10 @@ set -x
 set -e
 
 CURRDIR=`pwd`
+unset PYTHONPATH
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export HOMEBREW_BUILD_FROM_SOURCE=YES
 CFLAGS+=-march=native
-unset PYTHONPATH
 
 APPNAME="Moose"
 VERSION="3.0.2"
@@ -41,13 +41,15 @@ DEVICE=$(hdiutil attach -readwrite -noverify "${DMG_TMP}" | \
 function detach_device 
 {
     hdiutil detach "${DEVICE}"
+    exit
 }
-trap detach_device SIGINT SIGTERM SIGEXIT
+trap detach_device SIGINT SIGTERM SIGKILL
 
 sleep 1
 
 echo "Install whatever you want now"
 BREW_PREFIX="/Volumes/${VOLNAME}"
+export PATH=${BREW_PREFIX}/bin:$PATH
 (
     cd $BREW_PREFIX
     if [ ! -f $BREW_PREFIX/bin/brew ]; then
@@ -60,9 +62,10 @@ BREW_PREFIX="/Volumes/${VOLNAME}"
 
     cp $CURRDIR/../macosx/*.rb $BREW_PREFIX/Library/Formula/
 
+    # Need for numpy / fortran
     $BREW_PREFIX/bin/brew -v install python 
-    $BREW_PREFIX/bin/brew -v install moose
-    $BREW_PREFIX/bin/pip install matplotlib numpy suds-jurko networkx 
+    $BREW_PREFIX/bin/brew -v install homebrew/python/matplotlib
+    $BREW_PREFIX/bin/brew -v install moose | tee __brew_moose_log__
  
 )
 
