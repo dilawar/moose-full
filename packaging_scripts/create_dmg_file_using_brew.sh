@@ -1,11 +1,18 @@
 #!/bin/bash
+set -x
+set -e
 
 PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+export HOMEBREW_BUILD_FROM_SOURCE=YES
+CFLAGS+=-march=native
 unset PYTHONPATH
 
-PKGNAME="MooseGhevar"
-VOLNAME="${PKGNAME}"
+APPNAME="Moose"
 VERSION="3.0.2"
+MAC_NAME=`sw_vers -productVersion`
+PKGNAME="${APPNAME}_${VERSION}_OSX-${MAC_NAME}"
+
+VOLNAME="${PKGNAME}"
 DMGFILELABEL="${PKGNAME}"
 THISDIR=`pwd`
 
@@ -42,7 +49,10 @@ BREW_PREFIX="/Volumes/${VOLNAME}"
     fi
     echo "Copying moose.rb and moogli.rb"
     cp $THISDIR/../macosx/*.rb $BREW_PREFIX/Library/Formula/
+    $BREW_PREFIX/bin/brew -v install python 
     $BREW_PREFIX/bin/brew -v install moose
+    $BREW_PREFIX/bin/pip install matplotlib numpy suds-jurko networkx 
+
 )
 
 
