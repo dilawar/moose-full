@@ -15,6 +15,13 @@ MAC_NAME=`sw_vers -productVersion`
 PKGNAME="${APPNAME}_${VERSION}"
 
 VOLNAME="${PKGNAME}"
+
+#### SAFETY
+set +e
+echo "|| Detaching possibly attached disk"
+hdiutil detach /Volumes/${PKGNAME}
+set -e
+
 DMGFILELABEL="${PKGNAME}"
 THISDIR=`pwd`
 
@@ -25,7 +32,7 @@ mkdir -p ${STAGING_DIR}
 
 if [ ! -f "${DMG_TMP}" ]; then
     hdiutil create -srcfolder "${STAGING_DIR}" -volname "${PKGNAME}" -fs HFS+ \
-          -fsargs "-c c=64,a=16,e=16" -format UDRW -size 1G "${DMG_TMP}"
+          -fsargs "-c c=64,a=16,e=16" -format UDRW -size 600M "${DMG_TMP}"
 else
     echo "DMG file $DMG_TMP exists. Mounting ..."
 fi
@@ -62,8 +69,8 @@ export PATH=${BREW_PREFIX}/bin:$PATH
 
     cp $CURRDIR/../macosx/*.rb $BREW_PREFIX/Library/Formula/
 
-    # Need for numpy / fortran
-    $BREW_PREFIX/bin/brew -v install python 
+    # This even works without it.
+    #$BREW_PREFIX/bin/brew -v install python 
     $BREW_PREFIX/bin/brew -v install homebrew/python/matplotlib
     $BREW_PREFIX/bin/brew -v install moose | tee __brew_moose_log__
  
@@ -95,7 +102,50 @@ if [ $(echo " $_BACKGROUND_IMAGE_DPI_H != 72.0 " | bc) -eq 1 -o $(echo " $_BACKG
     DMG_BACKGROUND_IMG="${_DMG_BACKGROUND_TMP}"
 fi
 
-## TODO: Resize the harddisk and compress it for distribution if tests are OK.
+############################################################################
+# add a background image
+mkdir -p /Volumes/"${VOLNAME}"/.background
+cp "${DMG_BACKGROUND_IMG}" /Volumes/"${VOLNAME}"/.background/
+
+
+### NOTICE: Following block does not work with X-window support.
+#### tell the Finder to resize the window, set the background,
+####  change the icon size, place the icons in the right position, etc.
+###echo '
+###   tell application "Finder"
+###     tell disk "'${VOLNAME}'"
+###           open
+###           set current view of container window to icon view
+###           set toolbar visible of container window to false
+###           set statusbar visible of container window to false
+###           set the bounds of container window to {400, 100, 920, 440}
+###           set viewOptions to the icon view options of container window
+###           set arrangement of viewOptions to not arranged
+###           set icon size of viewOptions to 72
+###           set background picture of viewOptions to file ".background:'${DMG_BACKGROUND_IMG}'"
+###           set position of item "'${APP_NAME}'.app" of container window to {160, 205}
+###           set position of item "Applications" of container window to {360, 205}
+###           close
+###           open
+###           update without registering applications
+###           delay 2
+###     end tell
+###   end tell
+###' | osascript
+###
+###sync
+
+echo "TODO. Now resize and compress using hdiutil"
+
+#### TODO: Resize the harddisk and compress it for distribution if tests are OK.
+##set +e
+##DISKSIZE=`du -sh /Volumes/"${VOLNAME}"`
+##echo "Overall disk size is $DISKSIZE"
+##echo "|| Blowing up brew cache"
+##rm -rf `${BREW_PREFIX}/bin/brew --cache`
+##
+##DISKSIZE=`du -sh /Volumes/"${VOLNAME}"`
+##echo "|| Now the size $DISKSIZE"
 
 ## Finally detach the device
 detach_device
