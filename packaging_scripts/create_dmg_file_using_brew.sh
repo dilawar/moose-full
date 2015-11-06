@@ -1,4 +1,8 @@
 #!/bin/bash
+
+PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+unset PYTHONPATH
+
 PKGNAME="MooseGhevar"
 VOLNAME="${PKGNAME}"
 VERSION="3.0.2"
@@ -19,8 +23,8 @@ fi
 
 # TODO
 # mount it and save the device
-#DEVICE=$(hdiutil attach -readwrite -noverify "${DMG_TMP}" | \
-#         egrep '^/dev/' | sed 1q | awk '{print $1}')
+DEVICE=$(hdiutil attach -readwrite -noverify "${DMG_TMP}" | \
+         egrep '^/dev/' | sed 1q | awk '{print $1}')
 
 sleep 2
 pushd /Volumes/"${VOLNAME}"
@@ -42,5 +46,5 @@ BREW_PREFIX="/Volumes/${VOLNAME}"
 )
 
 
-#echo "Detaching ${DEVICE}"
-#hdiutil detach "${DEVICE}"
+echo "Detaching ${DEVICE}"
+hdiutil detach "${DEVICE}"
