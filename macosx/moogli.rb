@@ -7,8 +7,11 @@ class Moogli < Formula
   depends_on "open-scene-graph"
   depends_on "python" if MacOS.version <= :snow_leopard
   depends_on "pyqt"
+  depends_on "gcc"
 
   def install
+    ENV['CC'] = 'gcc'
+    ENV['CXX'] = 'g++'
     system "python", *Language::Python.setup_install_args(prefix)
   end
 
