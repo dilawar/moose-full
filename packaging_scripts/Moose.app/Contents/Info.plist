@@ -6,6 +6,8 @@
         <string>moose</string>
 	<key>CFBundleIdentifier</key>
 	<string>in.ac.ncbs.Moose</string>
+        <key>CFBundleIconFile</key>
+        <string>moose</string>
 	<key>CFBundleName</key>
 	<string>MOOSE</string>
 	<key>CFBundlePackageType</key>
