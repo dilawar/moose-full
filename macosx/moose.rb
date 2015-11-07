@@ -9,19 +9,21 @@ class Moose < Formula
   depends_on "cmake" => :build
   depends_on "gsl"
   depends_on "hdf5"
-  depends_on "libsbml" => :optional
+  depends_on "libsbml" => :recommended
 
   depends_on "matplotlib" => :python
-  depends_on "numpy" => :python
   depends_on "python" if MacOS.version <= :snow_leopard
 
-  if build.with?("gui")
-    depends_on "pyqt"
-  end
+  depends_on "pyqt" => [:recommended, "with-gui"]
 
   def install
+    args = std_cmake_args
+    if build.with?("libsbml")
+      args << "-DWITH_SBML=ON"
+    end
+
     mkdir "_build" do
-      system "cmake", "..", *std_cmake_args
+      system "cmake", "..", *args
       system "make"
     end
 
@@ -33,7 +35,8 @@ class Moose < Formula
       (lib/"moose").install "moose-gui"
       (lib/"moose").install "moose-examples"
 
-      # A wrapper script to launch moose gui.
+      # A wrapper script to launch moose gui. Do we need to set PYTHONPATH here,
+      # when prefix is not /usr/local?
       (bin/"moosegui").write <<-EOS.undent
         #!/bin/bash
         GUIDIR="#{lib}/moose/moose-gui"
@@ -41,8 +44,6 @@ class Moose < Formula
       EOS
       chmod 0755, bin/"moosegui"
     end
-
-    bin.env_script_all_files(libexec+"bin", :PYTHONPATH => ENV["PYTHONPATH"])
   end
 
   def caveats
@@ -51,14 +52,13 @@ class Moose < Formula
     the dependencies.
 
     $ pip install networkx suds-jurko
+
     EOS
   end
 
   test do
-    # This will not work on Travis
+    ## This will not work on Travis
     # system "#{HOMEBREW_PREFIX}/bin/python", "-c", "import moose"
-    if build.with?("python")
-      system "python", "-c", "import moose"
-    end
+    system "python", "-c", "import moose"
   end
 end
