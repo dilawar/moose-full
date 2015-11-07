@@ -73,7 +73,12 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     $BREW_PREFIX/bin/brew -v install python 
     $BREW_PREFIX/bin/brew -v install homebrew/python/matplotlib
     $BREW_PREFIX/bin/brew -v install moose | tee __brew_moose_log__
- 
+    $BREW_PREFIX/bin/pip install suds-jurko 
+
+    # Delete unneccessay files.
+    echo "|| Deleting brew files"
+    find . -type f -maxdepth 1 -print0 | xargs -I file rm -f file
+    echo "|| TODO: Delete more here if not needed. Such as build tools etc.."
 )
 
 ################ COPY THE .app ##########################################
