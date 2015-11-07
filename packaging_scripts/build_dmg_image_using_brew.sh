@@ -43,7 +43,7 @@ mkdir -p ${STAGING_DIR}
 
 if [ ! -f "${DMG_TMP}" ]; then
     hdiutil create -srcfolder "${STAGING_DIR}" -volname "${PKGNAME}" -fs HFS+ \
-          -fsargs "-c c=64,a=16,e=16" -format UDRW -size 650M "${DMG_TMP}"
+          -fsargs "-c c=64,a=16,e=16" -format UDSP -size 650M "${DMG_TMP}"
 else
     echo "DMG file $DMG_TMP exists. Mounting ..."
 fi
@@ -100,15 +100,16 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     rm -rf $APPNAME.app
 
     # Also write apple script
+    MOOSEPATH=${BREW_PREFIX}/lib/python2.7/site-packages
     cat > $BREW_PREFIX/moosegui <<EOF
-MOOSEPATH=${BREW_PREFIX}/lib/python2.7/site-packages
 source $HOME/.bash_profile
-if [[ ":$PYTHONPATH:" == *":$MOOSEPATH:"* ]]; then
-    export PYTHONPATH=${MOOSEPATH}:$PYTHONPATH
+if [[ ":${PYTHONPATH}:" == *":${MOOSEPATH}:"* ]]; then
+    export PYTHONPATH=${MOOSEPATH}:\$PYTHONPATH
     # Also write to .bash_profile, so that we can use it.
-    echo "export PYTHONPATH=${MOOSEPATH}:$PYTHONPATH" >> $HOME/.bash_profile
+    echo "export PYTHONPATH=${MOOSEPATH}:\$PYTHONPATH" >> $HOME/.bash_profile
     source $HOME/.bash_profile
 fi
+exec ${BREW_PREFIX}/bin/moosegui
 EOF
     chmod a+x $BREW_PREFIX/moosegui
 )
