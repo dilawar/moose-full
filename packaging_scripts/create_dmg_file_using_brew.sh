@@ -136,6 +136,7 @@ cp "${DMG_BACKGROUND_IMG}" /Volumes/"${VOLNAME}"/.background/
 ###sync
 
 echo "TODO. Now resize and compress using hdiutil"
+echo "|| use: hdiutil convert a.dmg -format UDBZ -o b.dmg"
 
 #### TODO: Resize the harddisk and compress it for distribution if tests are OK.
 ##set +e
@@ -145,7 +146,6 @@ echo "TODO. Now resize and compress using hdiutil"
 ##rm -rf `${BREW_PREFIX}/bin/brew --cache`
 ##
 ##DISKSIZE=`du -sh /Volumes/"${VOLNAME}"`
-##echo "|| Now the size $DISKSIZE"
 
 ## Finally detach the device
 detach_device
