@@ -1,6 +1,7 @@
 #!/bin/bash
 set -x
 
+PATH=/usr/local/bin:$PATH
 rm -f /Library/Caches/Homebrew/moose*.tar.gz
 rm -f /Library/Caches/Homebrew/moose*.zip
 cp ./moose.rb /usr/local/Library/Formula/moose.rb
