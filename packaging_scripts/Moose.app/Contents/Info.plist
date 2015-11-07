@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleExecutable</key>
-        <string>moose.command</string>
+        <string>moose</string>
 	<key>CFBundleIconFile</key>
-	<string>moose</string>
+        <string>moose</string>
 	<key>CFBundleIdentifier</key>
 	<string>in.ac.ncbs.Moose</string>
 	<key>CFBundleName</key>
