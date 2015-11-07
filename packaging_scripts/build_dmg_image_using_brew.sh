@@ -42,8 +42,8 @@ DMG_TMP="${PKGNAME}-${MAC_NAME}.dmg"
 mkdir -p ${STAGING_DIR}
 
 if [ ! -f "${DMG_TMP}" ]; then
-    hdiutil create -srcfolder "${STAGING_DIR}" -volname "${PKGNAME}" -fs HFS+ \
-          -fsargs "-c c=64,a=16,e=16" -format UDSP -size 650M "${DMG_TMP}"
+    hdiutil create -srcfolder "${STAGING_DIR}" -volname "${PKGNAME}" \
+        -format UDRW -size 650M "${DMG_TMP}"
 else
     echo "DMG file $DMG_TMP exists. Mounting ..."
 fi
