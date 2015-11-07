@@ -83,18 +83,18 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     # This even works without python.
     $BREW_PREFIX/bin/brew -v install python 
     $BREW_PREFIX/bin/brew -v install homebrew/python/matplotlib
-    $BREW_PREFIX/bin/brew -v install moose | tee "$CURRDIR/__brew_moose_log__"
+    $BREW_PREFIX/bin/brew -v install moose --with-gui | tee "$CURRDIR/__brew_moose_log__"
 
     # Lets not depends on system level libraries. Install all dependencies.
     $BREW_PREFIX/bin/pip install suds-jurko 
     $BREW_PREFIX/bin/pip install networkx
 
     # Remove the unwanted documentation.
-    rm -rf share/docs
+    rm -rf ${BREW_PREFIX}/share/docs
 
     # Delete unneccessay files.
     echo "|| Deleting brew files"
-    find . -type f -maxdepth 1 -print0 | xargs -I file rm -f file
+    find ${BREW_PREFIX} -type f -maxdepth 1 -print0 | xargs -I file rm -f file
 
     echo "|| TODO: Delete more here if not needed. Such as build tools etc.."
     rm -rf $APPNAME.app
@@ -102,7 +102,8 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     # Also write a wrapper around moosegui with PYTHONPATH.
     cat > $BREW_PREFIX/moosegui <<EOF
 #!/bin/bash
-
+export PYTHONPATH=${BREW_PREFIX}/lib/python2.7/site-packages
+${BREW_PREFIX}/bin/moosegui
 EOF
     chmod a+x $BREW_PREFIX/moosegui
 )

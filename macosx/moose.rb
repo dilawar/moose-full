@@ -14,7 +14,7 @@ class Moose < Formula
   depends_on "matplotlib" => :python
   depends_on "python" if MacOS.version <= :snow_leopard
 
-  depends_on "pyqt" => [:recommended, "with-gui"]
+  depends_on "pyqt" => :recommended
 
   def install
     args = std_cmake_args
