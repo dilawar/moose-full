@@ -24,7 +24,9 @@ hdiutil attach $TEMPDMG
     echo "Removing the temp files"
     cd /Volumes/$LABEL
     du -sh /Volumes/$LABEL
-    ./bin/brew uninstall cmake gcc
+    # One command in each line, else if one fails everyoone fails.
+    ./bin/brew uninstall cmake 
+    ./bin/brew uninstall gcc
     du -sh /Volumes/$LABEL
 )
 
@@ -40,5 +42,6 @@ echo "|| Detaching .."
 hdiutil detach /Volumes/$LABEL
 
 echo "|| Compressing "
+rm -f "$LABEL"_OSX.dmg
 hdiutil convert "$OUTFILE" -format UDBZ -o "$LABEL"_OSX.dmg
 

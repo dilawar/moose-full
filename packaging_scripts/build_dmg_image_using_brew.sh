@@ -102,13 +102,18 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     # Also write apple script
     MOOSEPATH=${BREW_PREFIX}/lib/python2.7/site-packages
     cat > $BREW_PREFIX/moosegui <<EOF
-source $HOME/.bash_profile
-if [[ ":${PYTHONPATH}:" == *":${MOOSEPATH}:"* ]]; then
-    export PYTHONPATH=${MOOSEPATH}:\$PYTHONPATH
+touch \$HOME/.bash_profile
+source \$HOME/.bash_profile
+if [[ "\${PYTHONPATH}" == *"${MOOSEPATH}"* ]]; then
+    echo "[INFO] PYTHONPATH aleady contains ${MOOSEPATH}"
+else
     # Also write to .bash_profile, so that we can use it.
-    echo "export PYTHONPATH=${MOOSEPATH}:\$PYTHONPATH" >> $HOME/.bash_profile
-    source $HOME/.bash_profile
+    echo "[INFO] Adding ${MOOSEPATH} to PYTHONPATH"
+    echo "export PYTHONPATH=${MOOSEPATH}:\$PYTHONPATH" >> \$HOME/.bash_profile
+    source \$HOME/.bash_profile
 fi
+# make sure that for current runtime, we have correct path.
+export PYTHONPATH=${MOOSEPATH}:\$PYTHONPATH
 exec ${BREW_PREFIX}/bin/moosegui
 EOF
     chmod a+x $BREW_PREFIX/moosegui
