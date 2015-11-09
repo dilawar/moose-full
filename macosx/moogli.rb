@@ -10,9 +10,9 @@ class Moogli < Formula
   depends_on "gcc"
 
   def install
-    ENV['CC'] = 'gcc'
-    ENV['CXX'] = 'g++'
-    system "python", *Language::Python.setup_install_args(prefix)
+    ENV['CC'] = "#{HOMEBREW_PREFIX}/bin/gcc-5"
+    ENV['CXX'] = "#{HOMEBREW_PREFIX}/bin/g++-5"
+    system "python", "setup.py", "build"
   end
 
   test do
