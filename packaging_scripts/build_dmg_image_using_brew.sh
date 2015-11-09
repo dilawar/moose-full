@@ -77,7 +77,6 @@ export PATH=${BREW_PREFIX}/bin:$PATH
         echo "[I] Brew exists. Not installing"
     fi
     echo "Copying moose.rb and moogli.rb"
-
     cp $CURRDIR/../macosx/*.rb $BREW_PREFIX/Library/Formula/
 
     # This even works without python.
@@ -102,6 +101,7 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     # Also write apple script
     MOOSEPATH=${BREW_PREFIX}/lib/python2.7/site-packages
     cat > $BREW_PREFIX/moosegui <<EOF
+#!/bin/bash
 touch \$HOME/.bash_profile
 source \$HOME/.bash_profile
 if [[ "\${PYTHONPATH}" == *"${MOOSEPATH}"* ]]; then
