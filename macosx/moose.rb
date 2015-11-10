@@ -9,7 +9,6 @@ class Moose < Formula
   depends_on "cmake" => :build
   depends_on "gsl"
   depends_on "hdf5"
-  depends_on "libsbml" => :recommended
 
   depends_on "matplotlib" => :python
   depends_on "python" if MacOS.version <= :snow_leopard
@@ -18,9 +17,13 @@ class Moose < Formula
 
   def install
     args = std_cmake_args
-    if build.with?("libsbml")
-      args << "-DWITH_SBML=ON"
-    end
+    args << "-DWITH_SBML=ON"
+
+    # Use libsbml-5.9.0 which is shipped with moose. Use static linking
+    # mechanism. DO NOT rely on macport version.
+    # if build.with?("libsbml")
+    #   args << "-DWITH_SBML=ON"
+    # end
 
     mkdir "_build" do
       system "cmake", "..", *args
@@ -40,7 +43,7 @@ class Moose < Formula
       (bin/"moosegui").write <<-EOS.undent
         #!/bin/bash
         GUIDIR="#{lib}/moose/moose-gui"
-        (cd $GUIDIR && #{HOMEBREW_PREFIX}/bin/python mgui.py)
+        (cd ${GUIDIR} && #{HOMEBREW_PREFIX}/bin/python mgui.py)
       EOS
       chmod 0755, bin/"moosegui"
     end

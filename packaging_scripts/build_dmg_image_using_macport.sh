@@ -19,7 +19,7 @@ PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 APPNAME="Moose"
 VERSION="3.0.2"
 MAC_NAME=`sw_vers -productVersion`
-PKGNAME="${APPNAME}_${VERSION}"
+PKGNAME="${APPNAME}_${VERSION}_macport"
 
 VOLNAME="${PKGNAME}"
 
@@ -39,7 +39,7 @@ mkdir -p ${STAGING_DIR}
 
 if [ ! -f "${DMG_TMP}" ]; then
     hdiutil create -srcfolder "${STAGING_DIR}" -volname "${PKGNAME}" \
-        -format UDRW -size 900M "${DMG_TMP}"
+        -format UDRW -size 3G "${DMG_TMP}"
 else
     echo "DMG file $DMG_TMP exists. Mounting ..."
 fi
@@ -67,23 +67,26 @@ export PATH=${PORT_PREFIX}/bin:$PATH
 (
     cd $PORT_PREFIX
     if [ ! -f $PORT_PREFIX/bin/port ]; then
-        curl -O https://distfiles.macports.org/MacPorts-2.3.3.tar.bz2
-        tar xf MacPorts-2.3.3.tar.bz2
+        curl -O https://distfiles.macports.org/MacPorts/MacPorts-2.3.3.tar.bz2
+        tar xvf MacPorts-2.3.3.tar.bz2
         cd MacPorts-2.3.3
         ./configure --prefix=$PORT_PREFIX \
             --with-applications-dir=$PORT_PREFIX/Applications
         make 
-        make install
+        sudo make install
+        cp ./sources.conf $PORT_PREFIX/etc/macports/sources.conf
+        $PORT_PREFIX/bin/port -d sync
     else
         echo "[I] Port exists. Not installing"
     fi
-    #echo "Copying moose.rb and moogli.rb"
-    #cp $CURRDIR/../macosx/*.rb $PORT_PREFIX/Library/Formula/
+
+    $PORT_PREFIX/bin/port -d sync
+    cp $CURRDIR/sources.conf $PORT_PREFIX/etc/macports/sources.conf
 
     # This even works without python.
-    $PORT_PREFIX/bin/port -v install python 
-    $PORT_PREFIX/bin/port -v install matplotlib
-    $PORT_PREFIX/bin/port -v install networkx
+    $PORT_PREFIX/bin/port -v install hdf5 gsl libsbml libxml2 
+    $PORT_PREFIX/bin/port -v install OpenSceneGraph-devel
+
     #$PORT_PREFIX/bin/port -v install moose --with-gui | tee "$CURRDIR/__port_moose_log__"
 
     # Delete unneccessay files.
