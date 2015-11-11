@@ -68,6 +68,7 @@ sleep 1
 
 echo "Install whatever you want now"
 PORT_PREFIX="/Volumes/${VOLNAME}"
+PYTHONPREFIX=$PORT_PREFIX/pymodules
 export PATH=${PORT_PREFIX}/bin:$PATH
 
 (
@@ -95,7 +96,7 @@ export PATH=${PORT_PREFIX}/bin:$PATH
 
     # 2. Install moose-full using cmake.
     MOOSE_PREFIX=$PORT_PREFIX/moose
-    export PYTHONPATH=$MOOSE_PREFIX/lib/python2.7/site-packages
+    export PYTHONPATH=$PYTHONPREFIX/lib/python2.7/site-packages
     if python -c 'import moose'; then
         echo "|STATUS| MOOSE is installed and could be imported"
     else
@@ -103,8 +104,6 @@ export PATH=${PORT_PREFIX}/bin:$PATH
         if [ ! -d moose-full ]; then
             echo "Cloning moose-full"
             git clone --depth 1 https://github.com/BhallaLab/moose-full
-        else
-            cd moose-full && git pull && cd ..
         fi
         set -e
         cd moose-full
@@ -112,7 +111,8 @@ export PATH=${PORT_PREFIX}/bin:$PATH
         $CMAKE_BIN -DCMAKE_INSTALL_PREFIX=$MOOSE_PREFIX .. 
         make -j3
         # Override the install step.
-        cd ../moose-core/python && python setup.py install --prefix=$MOOSE_PREFIX
+        cd ../moose-core/python 
+        python setup.py install --prefix=$PYTHONPREFIX
         python -c 'import moose'
         set +e
         cd $WORKDIR
@@ -123,36 +123,39 @@ export PATH=${PORT_PREFIX}/bin:$PATH
     QTPREFIX=$PORT_PREFIX/qt4.8
     mkdir -p $QTPREFIX
     (
+    if [ ! -f $QTPREFIX/bin/qmake ]; then
+        echo "|| Trying to install qt"
         cd $WORKDIR
-        QTDIR="qt-everywhere-opensource-src-4.8.7"
-        if [ ! -f "${QTDIR}.tar.gz" ]; then
-            echo "|| Downloading qt"
-            curl -O http://master.qt.io/official_releases/qt/4.8/4.8.7/$QTDIR.tar.gz
-        else
-            echo "|| Qt is already downloaded"
-        fi
+        QTDIR="qt"
         if [ ! -d "$QTDIR" ]; then
-            tar xvf $QTDIR.tar.gz
+            git clone --depth 1 https://github.com/qtproject/qt 
         else
-            echo "||| Qt is already extracted to $QTDIR"
+            echo "|| qt is already downloaded."
+            #cd qt && git clean -fxd && cd ..
         fi
         cd $QTDIR
         # Delete all license files so qt it does not prompt us to accept
         # license.
-        if [ ! -d $QTPREFIX/lib ]; then
-            ./configure --prefix=$QTPREFIX -silent -opensource -stl -no-qt3support \
-                -confirm-license -nomake examples -nomake demos
-            make -j3
-            make install
-        else
-            echo "||| Qt seems to be installed. Here are the list of libs"
-            ls -lh "$QTPREFIX/lib"
-        fi
+        ./configure -opensource -stl -no-qt3support \
+            -confirm-license -nomake examples -nomake demos
+        make -j3
+        # Override make install
+        mkdir -p $QTPREFIX/lib
+        cp lib/*.dylib $QTPREFIX/lib/
+        cp bin/qmake $QTPREFIX/bin
+
+    else
+        echo "||| Qt seems to be installed. Here are the list of libs"
+        ls -lh "$QTPREFIX/lib"
+    fi
     )
 
     # 4. Install SIP 
     SIPPREFIX=$PORT_PREFIX/sip
     mkdir -p $SIPPREFIX
+    if python -c 'import sip'; then
+        echo "|| SIP is installed"
+    else
     (
         cd $WORKDIR
         SIPHEAD=0cbb680b4f69
@@ -170,17 +173,34 @@ export PATH=${PORT_PREFIX}/bin:$PATH
         fi
 
         cd sip-$SIPHEAD
-        if [ -f $SIPPREFIX/bin/sip ]; then
-            echo "|| sip is already installed"
-        else
-            echo "|| installing sip"
-            python build.py prepare
-            python configure.py -b $SIPPREFIX/bin -d $SIPPREFIX/lib/python2.7 \
-                -e $SIPPREFIX/include -v $SIPPREFIX/include/sip
-            make -j3
-            make install
-        fi
+        echo "|| installing sip"
+        python build.py prepare
+        python configure.py 
+        make 
+        ( cd siplib && python -c 'import sip' )
+        # Override install
+        cp -f sipconfig.py $PYTHONPATH/sipconfig.py
+        mkdir -p $SIPPREFIX/bin
+        cp sipgen/sip $SIPPREFIX/bin/sip
+        mkdir -p $SIPPREFIX/include
+        cp sipgen/sip.h $SIPPREFIX/include/sip.h
+        cp siplib/sip.so $PYTHONPATH/sip.so
+    )
+    fi
 
+    # 5. Install PyQt4.
+    PYQT4PREFIX=pyqt4
+
+    (
+        cd $WORKDIR
+        if [ ! -d PyQt4 ]; then
+            echo "|| Downloading PyQt4"
+            git clone --depth 1 https://github.com/dilawar/PyQt4
+        else
+            echo "|| Already PyQt4 downloaded"
+        fi
+        cd PyQt4
+        python configure.py --confirm-license -q $QTPREFIX/bin/qmake
     )
         
 
