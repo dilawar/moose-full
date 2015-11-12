@@ -181,7 +181,7 @@ export PATH=${PORT_PREFIX}/bin:$PATH
     fi
 
     # 5. Install PyQt4.
-    PYQT4PREFIX=$PORT_PREFIX/pyqt4
+    
     (
         if python -c 'from PyQt4 import pyqtconfig'; then
             echo "|| PyQt4 already installed"
@@ -241,7 +241,7 @@ export PATH=${PORT_PREFIX}/bin:$PATH
     # Now finally moogli.
     MOOGLI_PREFIX=$PORT_PREFIX/moogli
     (
-        export DYLD_LIBRARY_PATH=$OSGPREFIX/lib:$QTPREFIX/lib
+        export DYLD_FALLBACK_FRAMEWORK_PATH=$QTPREFIX/lib
         if python -c 'import moogli'; then
             echo "Seems like moogli is already installed"
             exit
@@ -250,14 +250,20 @@ export PATH=${PORT_PREFIX}/bin:$PATH
         cd $WORKDIR
         if [ ! -d moogli ]; then
             git clone --depth 1 --branch macosx https://github.com/BhallaLab/moogli
+        else
+            echo "||| moogli is already downloaded"
         fi
         cd moogli
         export QT_HOME=$QTPREFIX
         export OSG_HOME=$OSGPREFIX
         export PYQT_HOME=$PYTHONPATH/PyQt4
-        ( CFLAGS="" CXXFLAGS="" OPT="" ATCHFLAGS="-arch x86_64" python setup.py build )
-        python setup.py install --prefix=$MOOGLI_PREFIX
-        python -c 'import moogli'
+        ( CFLAGS="-m64" CXXFLAGS="" OPT="" ARCHFLAGS="-arch x86_64" python setup.py build )
+        if python -c 'import moogli'; then
+            CFLAGS="-m64" CXXFLAGS="" OPT="" ARCHFLAGS="-arch x86_64" \
+                python setup.py install --prefix=$PYTHONPATH
+        else
+            echo "|| Loading of module is failing."
+        fi
     )
 
     ##||| Install startup scripts.
