@@ -123,6 +123,7 @@ export PATH=${PORT_PREFIX}/bin:$PATH
     QTPREFIX=$PORT_PREFIX/qt4.8
     mkdir -p $QTPREFIX
     (
+    mkdir -p $QTPREFIX/bin/
     if [ ! -f $QTPREFIX/bin/qmake ]; then
         echo "|| Trying to install qt"
         cd $WORKDIR
@@ -137,13 +138,10 @@ export PATH=${PORT_PREFIX}/bin:$PATH
         # Delete all license files so qt it does not prompt us to accept
         # license.
         ./configure -opensource -stl -no-qt3support \
-            -confirm-license -nomake examples -nomake demos
+            -confirm-license -nomake examples -nomake demos \
+            -prefix $QTPREFIX
         make -j3
-        # Override make install
-        mkdir -p $QTPREFIX/lib
-        cp lib/*.dylib $QTPREFIX/lib/
-        cp bin/qmake $QTPREFIX/bin
-
+        make install
     else
         echo "||| Qt seems to be installed. Here are the list of libs"
         ls -lh "$QTPREFIX/lib"
@@ -153,54 +151,59 @@ export PATH=${PORT_PREFIX}/bin:$PATH
     # 4. Install SIP 
     SIPPREFIX=$PORT_PREFIX/sip
     mkdir -p $SIPPREFIX
-    if python -c 'import sip'; then
+    if python -c 'import sipp'; then
         echo "|| SIP is installed"
     else
     (
         cd $WORKDIR
-        SIPHEAD=0cbb680b4f69
-        if [ ! -f $SIPHEAD.tar.gz ]; then
+        # Thought of trying this version as it is indicated to work with pyqt4.
+        SIPHEAD=4.17
+        if [ ! -f sip-$SIPHEAD.tar.gz ] ; then
+            rm -f sip-$SIPHEAD.tar.gz
             echo "|| Downloading SIP"
-            curl -O "https://www.riverbankcomputing.com/hg/sip/archive/$SIPHEAD.tar.gz"
+            curl -L -O "https://sourceforge.net/projects/pyqt/files/sip/sip-4.15.5/sip-4.15.5.tar.gz"
         else
-            echo "|| SIP is already downloaded"
+            echo "|| SIP is already downloaded and unarchived"
         fi
-        if [ ! -d sip-$SIPHEAD ]; then
-            echo "||| Extracting SIP"
-            tar xvf $SIPHEAD.tar.gz 
-        else
-            echo "||| Already extracted"
-        fi
+
+        tar xvf sip-$SIPHEAD.tar.gz
 
         cd sip-$SIPHEAD
         echo "|| installing sip"
-        python build.py prepare
-        python configure.py 
+        python configure.py -b $SIPPREFIX/bin \
+            -d $PYTHONPATH \
+            -e $SIPPREFIX/include \
+            -v $SIPPREFIX/include/sip
         make 
         ( cd siplib && python -c 'import sip' )
-        # Override install
-        cp -f sipconfig.py $PYTHONPATH/sipconfig.py
-        mkdir -p $SIPPREFIX/bin
-        cp sipgen/sip $SIPPREFIX/bin/sip
-        mkdir -p $SIPPREFIX/include
-        cp sipgen/sip.h $SIPPREFIX/include/sip.h
-        cp siplib/sip.so $PYTHONPATH/sip.so
+        make install
     )
     fi
 
     # 5. Install PyQt4.
-    PYQT4PREFIX=pyqt4
+    PYQT4PREFIX=$PORT_PREFIX/pyqt4
 
     (
         cd $WORKDIR
-        if [ ! -d PyQt4 ]; then
+        QTVERSION="4.11.4"
+        if [ ! -d PyQt-mac-gpl-$QTVERSION ]; then
             echo "|| Downloading PyQt4"
-            git clone --depth 1 https://github.com/dilawar/PyQt4
+            curl -L -O
+            "https://www.sourceforge.net/projects/pyqt/files/PyQt4/PyQt-$QTVERSION/PyQt-mac-gpl-$QTVERSION.tar.gz"
+            tar xvf PyQt-mac-gpl-$QTVERSION.tar.gz
         else
             echo "|| Already PyQt4 downloaded"
         fi
-        cd PyQt4
-        python configure.py --confirm-license -q $QTPREFIX/bin/qmake
+        cd PyQt-mac-gpl-$QTVERSION
+        export PATH=$QTPREFIX/bin:$PATH:$SIPPREFIX/bin
+        echo "||| sip: `which sip`"
+        python configure-ng.py --confirm-license \
+            --sip-incdir=$SIPPREFIX/include \
+            -b $PYTHONPREFIX/bin  \
+            -d $PYTHONPREFIX \
+            -v $PYQT4PREFIX/sip
+        make  -j3
+        make install
     )
         
 
