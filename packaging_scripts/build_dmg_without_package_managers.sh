@@ -215,7 +215,7 @@ export PATH=${PORT_PREFIX}/bin:$PATH
         if [ -f $OSGPREFIX/lib/libosg.dylib ]; then
             echo "||| Looks like osg is installed. Heres the libraries"
             ls $OSGPREFIX/lib
-            #exit
+            exit
         fi
         cd $WORKDIR
         OSG_VERSION=3.2.3
@@ -241,6 +241,7 @@ export PATH=${PORT_PREFIX}/bin:$PATH
     # Now finally moogli.
     MOOGLI_PREFIX=$PORT_PREFIX/moogli
     (
+        export DYLD_LIBRARY_PATH=$OSGPREFIX/lib:$QTPREFIX/lib
         if python -c 'import moogli'; then
             echo "Seems like moogli is already installed"
             exit
@@ -251,10 +252,12 @@ export PATH=${PORT_PREFIX}/bin:$PATH
             git clone --depth 1 --branch macosx https://github.com/BhallaLab/moogli
         fi
         cd moogli
-        python -c 'import PyQt4'
-        export QT_INCLUDE_PATH=$QTPREFIX/include
-        export OSG_INCLUDE_PATH=$OSGPREFIX/include
-        CFLAGS="" CXXFLAGS="" OPT="" python setup.py build
+        export QT_HOME=$QTPREFIX
+        export OSG_HOME=$OSGPREFIX
+        export PYQT_HOME=$PYTHONPATH/PyQt4
+        ( CFLAGS="" CXXFLAGS="" OPT="" ATCHFLAGS="-arch x86_64" python setup.py build )
+        python setup.py install --prefix=$MOOGLI_PREFIX
+        python -c 'import moogli'
     )
 
     ##||| Install startup scripts.

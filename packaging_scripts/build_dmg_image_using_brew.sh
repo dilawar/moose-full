@@ -80,7 +80,6 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     cp $CURRDIR/../macosx/*.rb $BREW_PREFIX/Library/Formula/
 
     # This even works without python.
-    $BREW_PREFIX/bin/brew -v install python 
     $BREW_PREFIX/bin/brew -v install homebrew/python/matplotlib
     $BREW_PREFIX/bin/brew -v install moose --with-gui | tee "$CURRDIR/__brew_moose_log__"
 
