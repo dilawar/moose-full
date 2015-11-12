@@ -119,7 +119,7 @@ export PATH=${PORT_PREFIX}/bin:$PATH
         cd ..
     fi
 
-    # 3. Let's get PyQt4 and openscenegraph.
+    # 3. Let's get Qt4
     QTPREFIX=$PORT_PREFIX/qt4.8
     mkdir -p $QTPREFIX
     (
@@ -151,7 +151,7 @@ export PATH=${PORT_PREFIX}/bin:$PATH
     # 4. Install SIP 
     SIPPREFIX=$PORT_PREFIX/sip
     mkdir -p $SIPPREFIX
-    if python -c 'import sipp'; then
+    if python -c 'import sip'; then
         echo "|| SIP is installed"
     else
     (
@@ -182,14 +182,17 @@ export PATH=${PORT_PREFIX}/bin:$PATH
 
     # 5. Install PyQt4.
     PYQT4PREFIX=$PORT_PREFIX/pyqt4
-
     (
+        if python -c 'from PyQt4 import pyqtconfig'; then
+            echo "|| PyQt4 already installed"
+            exit 1
+        fi
+
         cd $WORKDIR
         QTVERSION="4.11.4"
         if [ ! -d PyQt-mac-gpl-$QTVERSION ]; then
             echo "|| Downloading PyQt4"
-            curl -L -O
-            "https://www.sourceforge.net/projects/pyqt/files/PyQt4/PyQt-$QTVERSION/PyQt-mac-gpl-$QTVERSION.tar.gz"
+            curl -L -O "https://www.sourceforge.net/projects/pyqt/files/PyQt4/PyQt-$QTVERSION/PyQt-mac-gpl-$QTVERSION.tar.gz"
             tar xvf PyQt-mac-gpl-$QTVERSION.tar.gz
         else
             echo "|| Already PyQt4 downloaded"
@@ -197,16 +200,62 @@ export PATH=${PORT_PREFIX}/bin:$PATH
         cd PyQt-mac-gpl-$QTVERSION
         export PATH=$QTPREFIX/bin:$PATH:$SIPPREFIX/bin
         echo "||| sip: `which sip`"
-        python configure-ng.py --confirm-license \
-            --sip-incdir=$SIPPREFIX/include \
+        #--sip-incdir=$SIPPREFIX/include \
+        python configure.py --confirm-license \
             -b $PYTHONPREFIX/bin  \
-            -d $PYTHONPREFIX \
+            -d $PYTHONPATH \
             -v $PYQT4PREFIX/sip
         make  -j3
         make install
     )
-        
 
+    # Install osg
+    OSGPREFIX=$PORT_PREFIX/osg
+    (
+        if [ -f $OSGPREFIX/lib/libosg.dylib ]; then
+            echo "||| Looks like osg is installed. Heres the libraries"
+            ls $OSGPREFIX/lib
+            #exit
+        fi
+        cd $WORKDIR
+        OSG_VERSION=3.2.3
+        if [ ! -f OpenSceneGraph-$OSG_VERSION.zip ]; then
+            echo "|| Downloading OSG - $OSG_VERSION"
+            curl -O http://trac.openscenegraph.org/downloads/developer_releases/OpenSceneGraph-3.2.3.zip
+        else
+            echo "||| OSG $OSG_VERSION is already downloaded"
+        fi
+        if [ ! -d OpenSceneGraph-$OSG_VERSION ]; then
+            echo "|||| Unzipping "
+            unzip OpenSceneGraph-$OSG_VERSION.zip
+        fi
+        cd OpenSceneGraph-$OSG_VERSION 
+        mkdir -p _build
+        cd _build
+        export QTDIR=$QTPREFIX
+        $CMAKE_BIN -DDESIRED_QT_VERSION=4 -DCMAKE_INSTALL_PREFIX=$OSGPREFIX ..
+        make -j4
+        make install
+    )
+        
+    # Now finally moogli.
+    MOOGLI_PREFIX=$PORT_PREFIX/moogli
+    (
+        if python -c 'import moogli'; then
+            echo "Seems like moogli is already installed"
+            exit
+        fi
+
+        cd $WORKDIR
+        if [ ! -d moogli ]; then
+            git clone --depth 1 --branch macosx https://github.com/BhallaLab/moogli
+        fi
+        cd moogli
+        python -c 'import PyQt4'
+        export QT_INCLUDE_PATH=$QTPREFIX/include
+        export OSG_INCLUDE_PATH=$OSGPREFIX/include
+        CFLAGS="" CXXFLAGS="" OPT="" python setup.py build
+    )
 
     ##||| Install startup scripts.
     MOOSEPATH=${PORT_PREFIX}/lib/python2.7/site-packages

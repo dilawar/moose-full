@@ -15,7 +15,9 @@ class Moogli < Formula
     ENV['CXX'] = "#{HOMEBREW_PREFIX}/bin/g++-5"
     # Copy QtCore.so etc to lib of our app.
     system "python", "setup.py", "build"
-    system "python", "setup.py", "install"
+    system "python", "setup.py", "install", "--prefix", prefix
+    (prefix/"lib/python2.7/site-packages/moogli/core").install "moogli/core/_moogli.so"
+
   end
 
   test do
