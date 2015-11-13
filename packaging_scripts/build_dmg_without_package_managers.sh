@@ -261,6 +261,8 @@ export PATH=${PORT_PREFIX}/bin:$PATH
         if python -c 'import moogli'; then
             CFLAGS="-m64" CXXFLAGS="" OPT="" ARCHFLAGS="-arch x86_64" \
                 python setup.py install --prefix=$PYTHONPATH
+            # Also copy the _moogli.so, to be sure. distutils behaves oddly.
+            cp moogli/core/_moogli.so $PYTHONPATH/moogli/core/_moogli.so
         else
             echo "|| Loading of module is failing."
         fi
