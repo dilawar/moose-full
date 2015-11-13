@@ -68,6 +68,7 @@ sleep 1
 
 echo "Install whatever you want now"
 BREW_PREFIX="/Volumes/${VOLNAME}"
+BREW=$BREW_PREFIX/bin/brew
 export PATH=${BREW_PREFIX}/bin:$PATH
 (
     cd $BREW_PREFIX
@@ -81,29 +82,34 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     cp $CURRDIR/../macosx/*.rb $BREW_PREFIX/Library/Formula/
 
     # This even works without python.
-    $BREW_PREFIX/bin/brew -v install python
-    $BREW_PREFIX/bin/brew -v install homebrew/python/matplotlib --with-pyqt
-    $BREW_PREFIX/bin/brew -v install homebrew/python/numpy
-    $BREW_PREFIX/bin/brew -v install homebrew/science/hdf5
-    $BREW_PREFIX/bin/brew -v install moose --with-gui | tee "$CURRDIR/__brew_moose_log__"
+    ## NOTE: DO NOT install matplotlib using brew unless also installing python
+    ## using brew. Since we are going to uninstall later, use pip to install
+    ## matplotlib and numpy.
+    $BREW -v install homebrew/python/matplotlib --with-pyqt
+    $BREW -v install homebrew/python/numpy
+    $BREW link --overwrite matplotlib
+    $BREW -v install homebrew/science/hdf5
+    $BREW -v install moose --with-gui | tee "$CURRDIR/__brew_moose_log__"
     # Set home of Qt4, openscenegraph etc.
     # Install python-gobject 
-    #$BREW_PREFIX/bin/brew rm $($BREW_PREFIX/bin/brew deps gobject-introspection)
-    $BREW_PREFIX/bin/brew -v install gobject-introspection --env=std --with-head
+    $BREW -v install gobject-introspection --env=std --with-head
     export QT_HOME=$BREW_PREFIX
     export OSG_HOME=$BREW_PREFIX 
     export PYQT_HOME=$BREW_PREFIX
-    $BREW_PREFIX/bin/brew -v install moogli | tee "$CURRDIR/__brew_moogli__log__" 
+    $BREW -v install moogli | tee "$CURRDIR/__brew_moogli__log__" 
     # Lets not depends on system level libraries. Install all dependencies.
     $BREW_PREFIX/bin/pip install suds-jurko  --upgrade 
     $BREW_PREFIX/bin/pip install networkx --upgrade 
-    $BREW_PREFIX/bin/pip install six --upgrade
+    # Do not use pip to install matplotlib. It does not work.
+    $BREW_PREFIX/bin/pip matplotlib 
 
     ## Tests
     set -e
-    export PYTHONPATH=$BREW_PREFIX/lib/python2.7/site-packages:$PYTHONPATH
+    export PYTHONPATH=$BREW_PREFIX/lib/python2.7/site-packages
     python -c 'import moose'
     python -c 'import moogli'
+    python -c 'import matplotlib'
+    $BREW_PREFIX/bin/python -c 'import six'
     set +e
 
     # Also write script to launch the moosegui.

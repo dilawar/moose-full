@@ -1,6 +1,15 @@
 #!/bin/bash
 set -x
 
+BREW_PREFIX=/Volumes/Moose_3.0.2
+function test_installation
+{
+    export PYTHONPATH=$BREW_PREFIX/lib/python2.7/site-packages
+    python -c 'import moose'
+    python -c 'import moogli'
+    python -c 'import matplotlib; import networkx; import numpy'
+}
+
 LABEL=Moose_3.0.2
 
 # Not all build dependencies are required at runtime. Lets just disable them.
@@ -27,9 +36,48 @@ hdiutil attach $TEMPDMG
     # One command in each line, else if one fails everyoone fails.
     ./bin/brew uninstall cmake 
     ./bin/brew uninstall gcc
-    ./bin/brew uninstall python
-    ./bin/brew uninstall sip
-    echo "|| probably we can remove some more here"
+    ./bin/brew uninstall python 
+    ./bin/brew uninstall wget 
+    ./bin/brew uninstall pkg-config
+    ./bin/brew uninstall sqlite
+
+    rm -rf include
+    test_installation
+    rm -rf Frameworks
+    test_installation
+    rm -rf Library
+    test_installation
+    rm -rf etc
+    test_installation
+    rm -rf var
+    test_installation
+    (
+        cd Cellar/qt/4.8*
+        rm -rf *.app
+        rm -rf bin
+        rm -rf tests
+        rm -rf plugins
+        rm -rf mkspecs
+        rm -rf translations
+        rm -rf Frameworks
+    )
+    test_installation
+
+    # Delete all folders named include and share and doc
+    find . -type d -name "include" -print0 | xargs -0 -I d rm -rf d
+    test_installation
+    find . -type d -name "share" -print0 | xargs -0 -I d rm -rf d
+    test_installation
+    find . -type d -name "doc" -print0 | xargs -0 -I d rm -rf d
+    test_installation
+    #
+    echo "|| Probably we can remove some more here"
+    # Remove all *.a
+    find . -name "*.a" -exec rm -rf \{} \;
+    find . -name "*.html" -exec rm -rf \{} \;
+    find . -name "*.pdf" -exec rm -rf \{} \;
+    find . -name "*.md" -exec rm -rf \{} \;
+
     du -sh /Volumes/$LABEL
 )
 
