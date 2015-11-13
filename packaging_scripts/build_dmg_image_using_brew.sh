@@ -42,8 +42,9 @@ DMG_TMP="${PKGNAME}-${MAC_NAME}.dmg"
 mkdir -p ${STAGING_DIR}
 
 if [ ! -f "${DMG_TMP}" ]; then
+    ## NOTE: When building MOOGLI, size should be at least 1 GB.
     hdiutil create -srcfolder "${STAGING_DIR}" -volname "${PKGNAME}" \
-        -format UDRW -size 650M "${DMG_TMP}"
+        -format UDRW -size 1G "${DMG_TMP}"
 else
     echo "DMG file $DMG_TMP exists. Mounting ..."
 fi
@@ -80,24 +81,16 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     cp $CURRDIR/../macosx/*.rb $BREW_PREFIX/Library/Formula/
 
     # This even works without python.
+    $BREW_PREFIX/bin/brew -v install python
     $BREW_PREFIX/bin/brew -v install homebrew/python/matplotlib
+    $BREW_PREFIX/bin/brew -v install homebrew/science/hdf5
     $BREW_PREFIX/bin/brew -v install moose --with-gui | tee "$CURRDIR/__brew_moose_log__"
-
+    $BREW_PREFIX/bin/brew -v install moogli | tee "$CURRDIR/__brew_moogli__log__" 
     # Lets not depends on system level libraries. Install all dependencies.
     $BREW_PREFIX/bin/pip install suds-jurko 
     $BREW_PREFIX/bin/pip install networkx
 
-    # Remove the unwanted documentation.
-    rm -rf ${BREW_PREFIX}/share/docs
-
-    # Delete unneccessay files.
-    echo "|| Deleting brew files"
-    find ${BREW_PREFIX} -type f -maxdepth 1 -print0 | xargs -I file rm -f file
-
-    echo "|| TODO: Delete more here if not needed. Such as build tools etc.."
-    rm -rf $APPNAME.app
-
-    # Also write apple script
+    # Also write script to launch the moosegui.
     MOOSEPATH=${BREW_PREFIX}/lib/python2.7/site-packages
     cat > $BREW_PREFIX/moosegui <<EOF
 #!/bin/bash
