@@ -11,16 +11,16 @@ class Moogli < Formula
   depends_on "pyqt"
 
   def install
-    ENV['CC'] = "#{HOMEBREW_PREFIX}/bin/gcc-5"
-    ENV['CXX'] = "#{HOMEBREW_PREFIX}/bin/g++-5"
+    ENV['CFLAGS'] = ""
+    ENV['CXXFLAGS'] = ""
     # Copy QtCore.so etc to lib of our app.
-    system "python", "setup.py", "build"
+    system "./build_on_macosx.sh"
     system "python", "setup.py", "install", "--prefix", prefix
     (prefix/"lib/python2.7/site-packages/moogli/core").install "moogli/core/_moogli.so"
-
   end
 
   test do
     system "#{HOMEBREW_PREFIX}/bin/python", "-c", "import moogli"
+    system "python", "-c", "import moogli"
   end
 end

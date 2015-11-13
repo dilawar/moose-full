@@ -70,9 +70,8 @@ echo "Install whatever you want now"
 PORT_PREFIX="/Volumes/${VOLNAME}"
 PYTHONPREFIX=$PORT_PREFIX/pymodules
 export PATH=${PORT_PREFIX}/bin:$PATH
-
 (
-    WORKDIR=/tmp/_work
+    WORKDIR=$CURRDIR/_work
     mkdir -p $WORKDIR
     cd $PORT_PREFIX
     ## NOTICE: Try to build using Xcode.
@@ -215,7 +214,7 @@ export PATH=${PORT_PREFIX}/bin:$PATH
         if [ -f $OSGPREFIX/lib/libosg.dylib ]; then
             echo "||| Looks like osg is installed. Heres the libraries"
             ls $OSGPREFIX/lib
-            exit
+            #exit
         fi
         cd $WORKDIR
         OSG_VERSION=3.2.3
@@ -242,6 +241,7 @@ export PATH=${PORT_PREFIX}/bin:$PATH
     MOOGLI_PREFIX=$PORT_PREFIX/moogli
     (
         export DYLD_FALLBACK_FRAMEWORK_PATH=$QTPREFIX/lib
+        export DYLD_LIBRARY_PATH=$OSGPREFIX/lib
         if python -c 'import moogli'; then
             echo "Seems like moogli is already installed"
             exit
