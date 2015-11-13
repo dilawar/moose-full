@@ -6,7 +6,6 @@ class Moogli < Formula
 
   depends_on "open-scene-graph"
   depends_on "python" if MacOS.version <= :snow_leopard
-  depends_on "gcc"
   depends_on "sip"
   depends_on "pyqt"
 
