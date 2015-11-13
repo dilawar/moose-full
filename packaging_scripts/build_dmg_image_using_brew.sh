@@ -99,9 +99,8 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     $BREW -v install moogli | tee "$CURRDIR/__brew_moogli__log__" 
     # Lets not depends on system level libraries. Install all dependencies.
     $BREW_PREFIX/bin/pip install suds-jurko  --upgrade 
-    $BREW_PREFIX/bin/pip install networkx --upgrade 
+    $BREW_PREFIX/bin/pip install networkx 
     # Do not use pip to install matplotlib. It does not work.
-    $BREW_PREFIX/bin/pip matplotlib 
 
     ## Tests
     set -e

@@ -4,10 +4,12 @@ set -x
 BREW_PREFIX=/Volumes/Moose_3.0.2
 function test_installation
 {
+    echo "||||||||| TEST STEP"
     export PYTHONPATH=$BREW_PREFIX/lib/python2.7/site-packages
     python -c 'import moose'
     python -c 'import moogli'
-    python -c 'import matplotlib; import networkx; import numpy'
+    python -c 'import matplotlib; import numpy'
+    python -c 'import networkx as nx'
 }
 
 LABEL=Moose_3.0.2
@@ -70,14 +72,15 @@ hdiutil attach $TEMPDMG
     test_installation
     find . -type d -name "doc" -print0 | xargs -0 -I d rm -rf d
     test_installation
-    find . -type d -name "tests" -print0 | xargs -0 -I d rm -rf d 
-    #
-    echo "|| Probably we can remove some more here"
+    find . -type d -name "tests" -not -path "*/networkx/*" -print0 | xargs -0 -I d rm -rf d 
+    test_installation
+
     # Remove all *.a
     find . -name "*.a" -exec rm -rf \{} \;
     find . -name "*.html" -exec rm -rf \{} \;
     find . -name "*.pdf" -exec rm -rf \{} \;
     find . -name "*.md" -exec rm -rf \{} \;
+    test_installation
 
     # Adding license.
     curl -O https://gnu.org/licenses/gpl.txt
