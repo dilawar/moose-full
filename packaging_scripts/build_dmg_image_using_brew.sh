@@ -44,7 +44,7 @@ mkdir -p ${STAGING_DIR}
 if [ ! -f "${DMG_TMP}" ]; then
     ## NOTE: When building MOOGLI, size should be at least 1 GB.
     hdiutil create -srcfolder "${STAGING_DIR}" -volname "${PKGNAME}" \
-        -format UDRW -size 1G "${DMG_TMP}"
+        -format UDRW -size 1.5G "${DMG_TMP}"
 else
     echo "DMG file $DMG_TMP exists. Mounting ..."
 fi
@@ -81,7 +81,8 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     cp $CURRDIR/../macosx/*.rb $BREW_PREFIX/Library/Formula/
 
     # This even works without python.
-    $BREW_PREFIX/bin/brew -v install homebrew/python/matplotlib
+    $BREW_PREFIX/bin/brew -v install python
+    $BREW_PREFIX/bin/brew -v install homebrew/python/matplotlib --with-pyqt
     $BREW_PREFIX/bin/brew -v install homebrew/python/numpy
     $BREW_PREFIX/bin/brew -v install homebrew/science/hdf5
     $BREW_PREFIX/bin/brew -v install moose --with-gui | tee "$CURRDIR/__brew_moose_log__"
@@ -94,8 +95,16 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     export PYQT_HOME=$BREW_PREFIX
     $BREW_PREFIX/bin/brew -v install moogli | tee "$CURRDIR/__brew_moogli__log__" 
     # Lets not depends on system level libraries. Install all dependencies.
-    $BREW_PREFIX/bin/pip install suds-jurko 
-    $BREW_PREFIX/bin/pip install networkx
+    $BREW_PREFIX/bin/pip install suds-jurko  --upgrade 
+    $BREW_PREFIX/bin/pip install networkx --upgrade 
+    $BREW_PREFIX/bin/pip install six --upgrade
+
+    ## Tests
+    set -e
+    export PYTHONPATH=$BREW_PREFIX/lib/python2.7/site-packages:$PYTHONPATH
+    python -c 'import moose'
+    python -c 'import moogli'
+    set +e
 
     # Also write script to launch the moosegui.
     MOOSEPATH=${BREW_PREFIX}/lib/python2.7/site-packages

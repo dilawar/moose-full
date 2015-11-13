@@ -27,6 +27,9 @@ hdiutil attach $TEMPDMG
     # One command in each line, else if one fails everyoone fails.
     ./bin/brew uninstall cmake 
     ./bin/brew uninstall gcc
+    ./bin/brew uninstall python
+    ./bin/brew uninstall sip
+    echo "|| probably we can remove some more here"
     du -sh /Volumes/$LABEL
 )
 
