@@ -43,7 +43,7 @@ class Moose < Formula
       (bin/"moosegui").write <<-EOS.undent
         #!/bin/bash
         GUIDIR="#{lib}/moose/moose-gui"
-        (cd ${GUIDIR} && #{HOMEBREW_PREFIX}/bin/python mgui.py)
+        (cd ${GUIDIR} && python mgui.py)
       EOS
       chmod 0755, bin/"moosegui"
     end

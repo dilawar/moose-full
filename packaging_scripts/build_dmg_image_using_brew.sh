@@ -81,13 +81,14 @@ export PATH=${BREW_PREFIX}/bin:$PATH
     cp $CURRDIR/../macosx/*.rb $BREW_PREFIX/Library/Formula/
 
     # This even works without python.
-    $BREW_PREFIX/bin/brew -v install gsl
-    $BREW_PREFIX/bin/brew -v install python
     $BREW_PREFIX/bin/brew -v install homebrew/python/matplotlib
     $BREW_PREFIX/bin/brew -v install homebrew/python/numpy
     $BREW_PREFIX/bin/brew -v install homebrew/science/hdf5
     $BREW_PREFIX/bin/brew -v install moose --with-gui | tee "$CURRDIR/__brew_moose_log__"
     # Set home of Qt4, openscenegraph etc.
+    # Install python-gobject 
+    #$BREW_PREFIX/bin/brew rm $($BREW_PREFIX/bin/brew deps gobject-introspection)
+    $BREW_PREFIX/bin/brew -v install gobject-introspection --env=std --with-head
     export QT_HOME=$BREW_PREFIX
     export OSG_HOME=$BREW_PREFIX 
     export PYQT_HOME=$BREW_PREFIX
