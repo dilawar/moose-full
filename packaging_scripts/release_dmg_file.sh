@@ -70,6 +70,7 @@ hdiutil attach $TEMPDMG
     test_installation
     find . -type d -name "doc" -print0 | xargs -0 -I d rm -rf d
     test_installation
+    find . -type d -name "tests" -print0 | xargs -0 -I d rm -rf d 
     #
     echo "|| Probably we can remove some more here"
     # Remove all *.a
@@ -77,6 +78,10 @@ hdiutil attach $TEMPDMG
     find . -name "*.html" -exec rm -rf \{} \;
     find . -name "*.pdf" -exec rm -rf \{} \;
     find . -name "*.md" -exec rm -rf \{} \;
+
+    # Adding license.
+    curl -O https://gnu.org/licenses/gpl.txt
+    mv gpl.txt LICENSE.txt
 
     du -sh /Volumes/$LABEL
 )
