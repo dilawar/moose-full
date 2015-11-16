@@ -484,7 +484,7 @@ if(WITH_PYTHON)
             WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
             )
         execute_process(
-            COMMAND ${PYTHON_EXECUTABLE} setup.py install 
+            COMMAND ${PYTHON_EXECUTABLE} setup.py install --prefix=${CMAKE_INSTALL_PREFIX}
             WORKING_DIRECTORY /tmp/moose-${MOOSE_VERSION}
             )
         "

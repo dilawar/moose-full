@@ -1,7 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 ## Now setting up project.
 # A dummy target to add dependencies later.
-project(Moose)
+project(moose-all)
 
 add_custom_target(_moose_static_dependencies ALL)
 # This variable should point to the source code.
@@ -111,34 +111,27 @@ add_custom_command(
     )
 
 add_custom_target(_build_moose_core ALL
-    DEPENDS ${MOOSE_CORE_BUILD_DIR}/moose.bin ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
+    DEPENDS ${MOOSE_CORE_BUILD_DIR}/moose.bin 
+    ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
     )
-add_dependencies(_build_moose_core _moose_static_dependencies)
 
-# Use moose-core cmake file to install it.
-install(CODE
-    "
-    execute_process(COMMAND cmake -P cmake_install.cmake
-        WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
-        )
-    "
-    )
+add_dependencies(_build_moose_core _moose_static_dependencies)
 
 # Copy the gui folder. TODO: This should be a python-module.
 install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
     DESTINATION bin
+    COMPONENT moose-core
     )
 
-install(FILES ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
-    DESTINATION share/moose
-    )
-
-# install moogli sdist if only BUILD_MOOGLI is ON/TRUE.
-if(BUILD_MOOGLI)
-    install(FILES ${MOOSE_CORE_BUILD_DIR}/moogli-${MOOGLI_VERSION}.tar.gz
-        DESTINATION share/moogli
+install(CODE 
+    "
+    EXECUTE_PROCESS(
+        COMMAND python setup.py install --root=${CMAKE_INSTALL_PREFIX} --install-layout=deb
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moose-core/python
         )
-endif(BUILD_MOOGLI)
+    "
+    COMPONENT moose-python
+    )
 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
     DESTINATION lib/moose/gui
@@ -166,5 +159,7 @@ install(FILES ${CMAKE_SOURCE_DIR}/moose-gui/icons/moose_icon.png
 # And the desktop file.
 install(FILES ${CMAKE_SOURCE_DIR}/moose-core/scripts/moose.desktop
     DESTINATION share/applications
-    COMPONENT moose
+    COMPONENT moose-gui
     )
+
+
