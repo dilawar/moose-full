@@ -17,7 +17,7 @@ override_dh_auto_clean:
 # consider using -DUSE_VERSIONED_DIR=ON if backporting
 override_dh_auto_configure:
 	mkdir -p $(BUILD_DIR_MOOSE)
-	cd $(BUILD_DIR_MOOSE) && cmake -DWITH_DOC=ON -DCMAKE_INSTALL_PREFIX=`pwd`/../debian/tmp/usr ..
+	cd $(BUILD_DIR_MOOSE) && cmake -DWITH_DOC=OFF -DCMAKE_INSTALL_RPATH=OFF -DCMAKE_INSTALL_PREFIX=`pwd`/../debian/tmp/usr ..
 
 override_dh_auto_build:
 	cd $(BUILD_DIR_MOOSE) && make VERBOSE=0 -j`nproc`

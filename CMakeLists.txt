@@ -40,6 +40,8 @@ endif()
 ################
 # Definately building release type ##########################
 set(CMAKE_BUILD_TYPE Release)
+# This is essential to remove the RPATH.
+set(CMAKE_INSTALL_RPATH "")
 
 ################
 # Which local libraries need to be built, Here we just set the
@@ -101,7 +103,7 @@ add_custom_command(
         -DSTATIC_GSLBLAS_LIBRARY=${STATIC_GSLBLAS_LIBRARY}
         -DSTATIC_SBML_LIBRARY=${STATIC_SBML_LIBRARY}
         -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
-        -DCMAKE_SKIP_INSTALL_RPATH=ON
+        -DCMAKE_SKIP_RPATH=ON
         ${MOOSE_SOURCE_DIRECTORY}
     COMMAND $(MAKE) VERBOSE=1
     # Not running neuroml test since it requires matplotlib.

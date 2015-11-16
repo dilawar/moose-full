@@ -46,6 +46,7 @@ add_custom_target(uninstall
     ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake
     )
 
+# This is for testing purpose.
 link_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ################################# OS Specific ##################################
