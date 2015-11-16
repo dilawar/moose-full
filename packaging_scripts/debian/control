@@ -3,7 +3,7 @@ Version: 3.0.2
 Section: science
 Priority: optional
 Architecture: any
-Depends: libhdf5-7 | libhdf5-serial-1.8.4, python-lxml, python-numpy, python-matplotlib, python-nose, python-suds, python-networkx, python-qt4
+Depends: libc6, libhdf5-7 | libhdf5-serial-1.8.4, python-lxml, python-numpy, python-matplotlib, python-nose, python-suds, python-networkx, python-qt4
 Maintainer: Dilawar Singh <dilawars@ncbs.res.in>
 Description: MOOSE is the Multiscale Object-Oriented Simulation Environment
  It is the base and numerical core for large, detailed simulations including Computational Neuroscience and Systems Biology.

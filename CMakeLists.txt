@@ -101,6 +101,7 @@ add_custom_command(
         -DSTATIC_GSLBLAS_LIBRARY=${STATIC_GSLBLAS_LIBRARY}
         -DSTATIC_SBML_LIBRARY=${STATIC_SBML_LIBRARY}
         -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
+        -DCMAKE_SKIP_INSTALL_RPATH=ON
         ${MOOSE_SOURCE_DIRECTORY}
     COMMAND $(MAKE) VERBOSE=1
     # Not running neuroml test since it requires matplotlib.
@@ -117,22 +118,22 @@ add_custom_target(_build_moose_core ALL
 
 add_dependencies(_build_moose_core _moose_static_dependencies)
 
-# Copy the gui folder. TODO: This should be a python-module.
-install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
-    DESTINATION bin
-    COMPONENT moose-core
-    )
+##install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
+##    DESTINATION bin
+##    COMPONENT moose-core
+##    )
 
 install(CODE 
     "
     EXECUTE_PROCESS(
-        COMMAND python setup.py install --root=${CMAKE_INSTALL_PREFIX} --install-layout=deb
+        COMMAND python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --install-layout=deb
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moose-core/python
         )
     "
     COMPONENT moose-python
     )
 
+## Copy the gui folder.
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
     DESTINATION lib/moose/gui
     COMPONENT moose-gui
@@ -147,6 +148,9 @@ install(PROGRAMS ${CMAKE_SOURCE_DIR}/package_data/moosegui
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-examples/
     DESTINATION lib/moose/moose-examples
     COMPONENT moose-gui
+    PATTERN "travis" EXCLUDE
+    PATTERN "CVS" EXCLUDE
+    PATTERN ".git*" EXCLUDE
     )
 
 ## Install the icon
