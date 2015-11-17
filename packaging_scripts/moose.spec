@@ -17,12 +17,9 @@ BuildRequires: gcc-c++
 BuildRequires: cmake
 BuildRequires: python-devel
 BuildRequires: python-setuptools
-BuildRequires: libbz2-devel
+BuildRequires: bzip2-devel
 BuildRequires: numpy
 BuildRequires: libxml2-devel
-%if 0%{?openscenegraph_dist}
-
-%endif
 
 %description
 
@@ -50,7 +47,6 @@ Group: Application/Biology
 %description -n moose
 This is meta package of MOOSE simulator. Its contains python bindings and GUI.
 
-Requires: libbz2
 Requires: libxml2
 Requires: bzip2
 Requires: python-matplotlib
