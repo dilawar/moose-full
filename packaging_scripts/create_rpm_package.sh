@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "|| INFO : This script should be called from top subdirectory"
 set -x
 if which gbp; then
     echo "Packager is intalled"
@@ -12,4 +13,5 @@ else
 )
 fi
 rpmlint moose.spec
-gbp buildpackage-rpm  --git-ignore-new --git-ignore-branch
+gbp buildpackage-rpm  --git-ignore-new --git-ignore-branch \
+    --git-spec-file=packaging_scripts/moose.spec

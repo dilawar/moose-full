@@ -60,19 +60,18 @@ Requires: python-suds
 
 %build
 %if 0%{?openscenegraph_dist} 
-cmake -DWITH_DOC=OFF -DBUILD_MOOGLI=TRUE  -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr ..  && make -j`nproc`
+cmake -DWITH_DOC=OFF -DBUILD_MOOGLI=TRUE \
+                 -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr .  && make -j`nproc`
 %else
-cmake -DWITH_DOC=OFF -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr .. && make -j`nproc`
+cmake -DWITH_DOC=OFF -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr . && make -j`nproc`
 %endif
 
 %install
-ls -l
 make install
-mkdir -p packaging_scripts/usr/lib/moose/gui
-cp -r ../moose-gui/* packaging_scripts/usr/lib/moose/gui/
-install ../package_data/moosegui %{buildroot}/usr/bin/
+cp -r moose-gui/* packaging_scripts/usr/lib/moose/gui/
+install package_data/moosegui %{buildroot}/usr/bin/
 # Now install the python module.
-cd ../moose-core/python/ && python setup.py install --prefix=%{_prefix} --root=%{buildroot}
+cd moose-core/python/ && python setup.py install --prefix=%{_prefix} --root=%{buildroot}
 
 %files -n moose
 %defattr(-,root,root)
