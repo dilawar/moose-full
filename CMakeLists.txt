@@ -80,6 +80,13 @@ if(LOCAL_SBML)
 endif() 
 
 ##*############## 
+# Build Local OSG
+OPTION(WITH_MOOGLI "Enable moogli" ON)
+IF(WITH_MOOGLI)
+    include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_osg.cmake)
+ENDIF()
+
+
 ## Now build MOOSE
 SET(MOOSE_CORE_BUILD_DIR ${CMAKE_BINARY_DIR}/_moose-core)
 FILE(MAKE_DIRECTORY ${MOOSE_CORE_BUILD_DIR})
