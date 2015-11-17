@@ -67,10 +67,13 @@ cmake -DWITH_DOC=OFF -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr . && make -j`nproc`
 %endif
 
 %install
-#make install
+make install
 mkdir -p %{buildroot}/usr/lib/moose/gui
 cp -r moose-gui/* %{buildroot}/usr/lib/moose/gui/
+mkdir -p %{buildroot}/bin
+mkdir -p %{buildroot}/lib
 install package_data/moosegui %{buildroot}/usr/bin/
+
 # Now install the python module.
 cd moose-core/python/ && python setup.py install --prefix=%{_prefix} --root=%{buildroot}
 
