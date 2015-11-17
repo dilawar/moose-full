@@ -75,12 +75,11 @@ mkdir -p %{buildroot}/lib
 install package_data/moosegui %{buildroot}/usr/bin/
 
 # Now install the python module.
-cd moose-core/python/ && python setup.py install --prefix=%{_prefix} --root=%{buildroot}
+cd moose-core/python/ && %{__python2} setup.py install --prefix=%{_prefix} --root=%{buildroot}
 
 %files -n moose
 %defattr(-,root,root)
-%dir /usr/share/moose
-%{python_sitearch}/*
+%{python2_sitelib}/*
 %defattr(-,root,root)
 %dir /usr/lib/moose
 %dir /usr/lib/moose/gui
