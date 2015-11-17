@@ -79,15 +79,15 @@ cd moose-core/python/ && python setup.py install --prefix=%{_prefix} --root=%{bu
 
 %files -n moose
 %defattr(-,root,root)
-%dir usr/share/moose
+%dir /usr/share/moose
 %{python_sitearch}/*
 %defattr(-,root,root)
-%dir usr/lib/moose
-%dir usr/lib/moose/gui
-%dir usr/lib/moose/moose-examples
-%dir usr/share/icons/moose
-usr/lib/moose/gui
-usr/bin/moosegui
-usr/lib/moose/moose-examples
-usr/share/applications/moose.desktop
-usr/share/icons/moose/moose.png
+%dir /usr/lib/moose
+%dir /usr/lib/moose/gui
+%dir /usr/lib/moose/moose-examples
+%dir /usr/share/icons/moose
+/usr/lib/moose/gui
+/usr/bin/moosegui
+/usr/lib/moose/moose-examples
+/usr/share/applications/moose.desktop
+/usr/share/icons/moose/moose.png
