@@ -66,6 +66,7 @@ cmake -DWITH_DOC=OFF -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr .. && make -j`nproc
 %endif
 
 %install
+ls -l
 make install
 mkdir -p packaging_scripts/usr/lib/moose/gui
 cp -r ../moose-gui/* packaging_scripts/usr/lib/moose/gui/
