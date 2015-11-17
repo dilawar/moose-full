@@ -34,6 +34,8 @@ sys.argv = [sys.argv[0],
 sys.argv.extend(remaining)
 
 here = os.path.dirname(__file__)
+include_dirs = [ "./moogli/bin/include/" ]
+
 
 # print(sys.argv)
 # RESOURCES -
@@ -49,10 +51,8 @@ here = os.path.dirname(__file__)
 extra_objects = []
 
 # list of libraries to link against
-libraries = ["QtCore",
-             "QtGui",
-             "QtOpenGL",
-             "osg",
+qt_libs = [ "QtCore", "QtGui", "QtOpenGL" ]
+osg_libs =  [ "osg",
              "osgFX",
              "osgUtil",
              "osgFX",
@@ -65,6 +65,19 @@ libraries = ["QtCore",
              "osgSim",
              "osgText"]
 
+libraries = qt_libs 
+
+## OSG_HOME is given if and only if we want to link against static libraries.
+osghome = os.environ.get('OSG_HOME', None)
+if osghome:
+    print("OSG_HOME is set. Using static libraries. If you want to "
+            " link against shared libraries, make sure that they are installed"
+            " in any of  LD_LIBRARY_PATH s"
+            )
+    extra_objects += [ os.path.join(osghome, "lib", "lib"+x+".a") for x in osg_libs ]
+    include_dirs += [ os.path.join( osghome, "include" ) ]
+else:
+    libraries += osg_libs
 
 # list of directories to search for libraries at link-time
 library_dirs = []
@@ -80,16 +93,13 @@ extra_compile_args = ["-O2",
 
 # additional command line options for the linker command line
 if osname_ == 'Linux':
-    extra_link_args = ["-fPIC", "-shared"]
+    extra_link_args = ["-L/usr/lib64", "-L/usr/X11R6/lib64"]
 elif osname_ == 'Windows':
     # Who cares
     pass
 else:
     # On MacOSX, leave them empty.
     extra_link_args = []
-
-# specify include directories to search
-include_dirs = [ "./moogli/bin/include/" ]
 
 includes = [ 
     "include/qt4/",

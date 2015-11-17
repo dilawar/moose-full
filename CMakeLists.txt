@@ -79,13 +79,6 @@ if(LOCAL_SBML)
     include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_sbml.cmake)
 endif() 
 
-##*############## 
-# Build Local OSG
-OPTION(WITH_MOOGLI "Enable moogli" ON)
-IF(WITH_MOOGLI)
-    include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_osg.cmake)
-ENDIF()
-
 
 ## Now build MOOSE
 SET(MOOSE_CORE_BUILD_DIR ${CMAKE_BINARY_DIR}/_moose-core)
@@ -121,6 +114,18 @@ add_custom_target(_build_moose_core ALL
     DEPENDS ${MOOSE_CORE_BUILD_DIR}/moose.bin ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
     )
 add_dependencies(_build_moose_core _moose_static_dependencies)
+
+##*############## 
+# Build Local OSG
+OPTION(WITH_MOOGLI "Enable moogli" ON)
+IF(WITH_MOOGLI)
+    include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_osg.cmake)
+    EXECUTE_PROCESS(COMMAND
+        python setup.py build 
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moogli
+        )
+ENDIF()
+
 
 # Use moose-core cmake file to install it.
 install(CODE
