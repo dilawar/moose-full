@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>include/mesh/SphereMesh.hpp</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/31.html'>include</a>/<a href='../files/33.html'>mesh</a>/SphereMesh.hpp</h2>
+<i><font color='green'>/* [&lt;][&gt;][^][v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2><a href='../J/6.html' title='Multiple included from 2 places.'>INCLUDED FROM</a></h2>
+<hr>
+<pre>
+<a name='L1'>   1 <font color='darkred'>#ifndef</font> <a href='../S/15.html#L2' title='Defined at 2 in include/mesh/SphereMesh.hpp.'>_SPHERE_MESH_HPP_</a>
+<a name='L2'>   2 <font color='darkred'>#define</font> <a href='../S/15.html#L1' title='Refered from 1 in include/mesh/SphereMesh.hpp.'>_SPHERE_MESH_HPP_</a>
+<a name='L3'>   3 
+<a name='L4'>   4 <font color='darkred'>#include</font> &lt;osg/Shape&gt;
+<a name='L5'>   5 <font color='darkred'>#include</font> &lt;osg/Geometry&gt;
+<a name='L6'>   6 <font color='darkred'>#include</font> &lt;osg/Geode&gt;
+<a name='L7'>   7 <font color='darkred'>#include</font> &lt;osg/Vec3d&gt;
+<a name='L8'>   8 <font color='darkred'>#include</font> &lt;osg/ShapeDrawable&gt;
+<a name='L9'>   9 <font color='darkred'>#include</font> &lt;osg/ref_ptr&gt;
+<a name='L10'>  10 <font color='darkred'>#include</font> &lt;osgViewer/Viewer&gt;
+<a name='L11'>  11 <font color='darkred'>#include</font> &lt;osgGA/TrackballManipulator&gt;
+<a name='L12'>  12 <font color='darkred'>#include</font> &lt;osgViewer/ViewerEventHandlers&gt;
+<a name='L13'>  13 <font color='darkred'>#include</font> &lt;osgUtil/Optimizer&gt;
+<a name='L14'>  14 <font color='darkred'>#include</font> &lt;osgUtil/SmoothingVisitor&gt;
+<a name='L15'>  15 <font color='darkred'>#include</font> &lt;osg/LOD&gt;
+<a name='L16'>  16 
+<a name='L17'>  17 <font color='darkred'>#include</font> &lt;cmath&gt;
+<a name='L18'>  18 <font color='darkred'>#include</font> &lt;chrono&gt;
+<a name='L19'>  19 <font color='darkred'>#include</font> &lt;fstream&gt;
+<a name='L20'>  20 <font color='darkred'>#include</font> &lt;iostream&gt;
+<a name='L21'>  21 <font color='darkred'>#include</font> &lt;tuple&gt;
+<a name='L22'>  22 <font color='darkred'>#include</font> &lt;algorithm&gt;
+<a name='L23'>  23 <font color='darkred'>#include</font> &lt;unordered_map&gt;
+<a name='L24'>  24 <font color='darkred'>#include</font> &lt;string&gt;
+<a name='L25'>  25 <font color='darkred'>#include</font> &lt;vector&gt;
+<a name='L26'>  26 
+<a name='L27'>  27 <b>using</b> <b>namespace</b> std;
+<a name='L28'>  28 <b>using</b> <b>namespace</b> <a href='../R/61.html' title='Multiple refered from 132 places.'>osg</a>;
+<a name='L29'>  29 
+<a name='L30'>  30 <b>class</b> <a href='../R/10.html' title='Multiple refered from 7 places.'>SphereMesh</a>
+<a name='L31'>  31 <font color='red'>{</font>
+<a name='L32'>  32 <b>public</b>:
+<a name='L33'>  33 
+<a name='L34'>  34     <a href='../D/11.html' title='Multiple defined in 2 places.'>SphereMesh</a>();
+<a name='L35'>  35 
+<a name='L36'>  36     <a href='../Y/28.html' title='Multiple used in 27 places.'>Geometry</a> *
+<a name='L37'>  37     <b>operator</b>()( <a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>        <a href='../Y/175.html' title='Multiple used in 52 places.'>center</a>
+<a name='L38'>  38               , <b>float</b>        <a href='../Y/300.html' title='Multiple used in 17 places.'>radius</a>
+<a name='L39'>  39               , <b>unsigned</b> <b>int</b> <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>
+<a name='L40'>  40               , <b>const</b> <a href='../Y/127.html' title='Multiple used in 15 places.'>Vec4</a>&amp;  <a href='../Y/177.html' title='Multiple used in 27 places.'>color</a>
+<a name='L41'>  41               );
+<a name='L42'>  42 
+<a name='L43'>  43     <b>void</b>
+<a name='L44'>  44     <b>operator</b>()( <a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>        <a href='../Y/175.html' title='Multiple used in 52 places.'>center</a>
+<a name='L45'>  45               , <b>float</b>        <a href='../Y/300.html' title='Multiple used in 17 places.'>radius</a>
+<a name='L46'>  46               , <a href='../Y/28.html' title='Multiple used in 27 places.'>Geometry</a>  *  <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a>
+<a name='L47'>  47               , <b>unsigned</b> <b>int</b> <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>
+<a name='L48'>  48               , <b>const</b> <a href='../Y/127.html' title='Multiple used in 15 places.'>Vec4</a>&amp;  <a href='../Y/177.html' title='Multiple used in 27 places.'>color</a>
+<a name='L49'>  49               );
+<a name='L50'>  50 
+<a name='L51'>  51 <b>private</b>:
+<a name='L52'>  52 
+<a name='L53'>  53     <a href='../Y/381.html' title='Multiple used in 5 places.'>unordered_map</a>&lt; <b>unsigned</b> <b>int</b>
+<a name='L54'>  54                  , <b>const</b> <a href='../Y/375.html' title='Multiple used in 6 places.'>tuple</a>&lt; <b>const</b> <a href='../Y/124.html' title='Multiple used in 20 places.'>Vec3Array</a> * <b>const</b>
+<a name='L55'>  55                               , <b>const</b> <a href='../Y/18.html' title='Multiple used in 10 places.'>DrawElementsUShort</a> * <b>const</b>
+<a name='L56'>  56                               , <b>const</b> <a href='../Y/124.html' title='Multiple used in 20 places.'>Vec3Array</a> * <b>const</b>
+<a name='L57'>  57                               &gt;
+<a name='L58'>  58                  &gt; <a href='../Y/356.html' title='Multiple used in 4 places.'>spheres</a>;
+<a name='L59'>  59 
+<a name='L60'>  60     <b>const</b> <a href='../Y/375.html' title='Multiple used in 6 places.'>tuple</a>&lt; <b>const</b> <a href='../Y/124.html' title='Multiple used in 20 places.'>Vec3Array</a> * <b>const</b>
+<a name='L61'>  61                , <b>const</b> <a href='../Y/18.html' title='Multiple used in 10 places.'>DrawElementsUShort</a> * <b>const</b>
+<a name='L62'>  62                , <b>const</b> <a href='../Y/124.html' title='Multiple used in 20 places.'>Vec3Array</a> * <b>const</b>
+<a name='L63'>  63                &gt;
+<a name='L64'>  64     <a href='../D/98.html' title='Multiple defined in 2 places.'>unit</a>(<b>unsigned</b> <b>int</b> <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a> = 10);
+<a name='L65'>  65 <font color='red'>}</font>;
+<a name='L66'>  66 
+<a name='L67'>  67 <font color='darkred'>#endif</font> <i><font color='green'>/* _SPHERE_MESH_HPP_ */</font></i>
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;][^][v]<a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

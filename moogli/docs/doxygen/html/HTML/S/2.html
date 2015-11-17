@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>src/mesh/SphereMesh.cpp</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/37.html'>src</a>/<a href='../files/39.html'>mesh</a>/SphereMesh.cpp</h2>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L13'>[^]</a>[v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L13' title='Defined at 13.'>unit</a>
+</ol>
+<hr>
+<pre>
+<a name='L1'>   1 <font color='darkred'>#include</font> "<a href='15.html'>mesh/SphereMesh.hpp</a>"
+<a name='L2'>   2 
+<a name='L3'>   3 <b>using</b> <b>namespace</b> std;
+<a name='L4'>   4 <b>using</b> <b>namespace</b> <a href='../R/61.html' title='Multiple refered from 132 places.'>osg</a>;
+<a name='L5'>   5 
+<a name='L6'>   6 <a href='../R/10.html' title='Multiple refered from 7 places.'>SphereMesh</a>::<a href='../D/11.html' title='Multiple defined in 2 places.'>SphereMesh</a>()
+<a name='L7'>   7 <font color='red'>{</font> <font color='red'>}</font>
+<a name='L8'>   8 
+<a name='L9'>   9 <b>const</b> <a href='../Y/375.html' title='Multiple used in 6 places.'>tuple</a>&lt; <b>const</b> <a href='../Y/124.html' title='Multiple used in 20 places.'>Vec3Array</a> * <b>const</b>
+<a name='L10'>  10            , <b>const</b> <a href='../Y/18.html' title='Multiple used in 10 places.'>DrawElementsUShort</a> * <b>const</b>
+<a name='L11'>  11            , <b>const</b> <a href='../Y/124.html' title='Multiple used in 20 places.'>Vec3Array</a> * <b>const</b>
+<a name='L12'>  12            &gt;
+<a name='L13'>  13 <a href='../D/11.html' title='Multiple defined in 2 places.'>SphereMesh</a>::<a href='../R/96.html' title='Multiple refered from 4 places.'>unit</a>(<b>unsigned</b> <b>int</b> <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>)
+<a name='L14'>  14 <font color='red'>{</font>
+<a name='L15'>  15     <i><font color='green'>//points should always be even</font></i>
+<a name='L16'>  16 
+<a name='L17'>  17     <i><font color='green'>// First check if sphere with the required number of points already exists.</font></i>
+<a name='L18'>  18     <b>auto</b> <a href='../Y/306.html' title='Multiple used in 4 places.'>result</a> = <a href='../Y/356.html' title='Multiple used in 4 places.'>spheres</a>.<a href='../Y/210.html' title='Multiple used in 14 places.'>find</a>(<a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>);
+<a name='L19'>  19     <b>if</b>(<a href='../Y/306.html' title='Multiple used in 4 places.'>result</a> != <a href='../Y/356.html' title='Multiple used in 4 places.'>spheres</a>.<a href='../Y/201.html' title='Multiple used in 17 places.'>end</a>()) <font color='red'>{</font> <b>return</b> <a href='../Y/306.html' title='Multiple used in 4 places.'>result</a> -&gt; <a href='../Y/313.html' title='Multiple used in 6 places.'>second</a>; <font color='red'>}</font>
+<a name='L20'>  20 
+<a name='L21'>  21     <i><font color='green'>// If a sphere is not found then create, cache and return it.</font></i>
+<a name='L22'>  22 
+<a name='L23'>  23     <b>unsigned</b> <b>int</b> <a href='../Y/391.html' title='Multiple used in 7 places.'>vertex_count</a>   = (<a href='../Y/293.html' title='Multiple used in 71 places.'>points</a> * <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>) / 2 - <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a> + 2;
+<a name='L24'>  24     <b>unsigned</b> <b>int</b> <a href='../Y/373.html' title='Multiple used in 4 places.'>triangle_count</a> = 3 * <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a> * <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a> - 6 * <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>;
+<a name='L25'>  25 
+<a name='L26'>  26     <b>unsigned</b> <b>int</b> <a href='../Y/392.html' title='Multiple used in 6 places.'>vertex_index</a>   = 1;
+<a name='L27'>  27     <b>unsigned</b> <b>int</b> <a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> = 0;
+<a name='L28'>  28 
+<a name='L29'>  29     <b>unsigned</b> <b>int</b> <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>, <a href='../Y/245.html' title='Multiple used in 21 places.'>j</a>;
+<a name='L30'>  30     <b>unsigned</b> <b>int</b> <a href='../Y/158.html' title='Multiple used in 6 places.'>alpha</a>, <a href='../Y/168.html' title='Multiple used in 10 places.'>beta</a>;
+<a name='L31'>  31 
+<a name='L32'>  32     <b>float</b> <a href='../Y/291.html' title='Multiple used in 3 places.'>phi_delta</a>   = 2.0 * <a href='../Y/56.html' title='Multiple used in 7 places.'>M_PI</a> / <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>;
+<a name='L33'>  33     <b>float</b> <a href='../Y/369.html' title='Multiple used in 5 places.'>theta_delta</a> = 2.0 * <a href='../Y/56.html' title='Multiple used in 7 places.'>M_PI</a> / <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>;
+<a name='L34'>  34     <b>float</b> <a href='../Y/408.html' title='Multiple used in 4 places.'>z</a>;
+<a name='L35'>  35     <b>float</b> <a href='../Y/300.html' title='Multiple used in 17 places.'>radius</a>;
+<a name='L36'>  36 
+<a name='L37'>  37     <a href='../Y/124.html' title='Multiple used in 20 places.'>Vec3Array</a>          * <a href='../Y/393.html' title='Multiple used in 24 places.'>vertices</a> = <b>new</b> Vec3Array(<a href='../Y/391.html' title='Multiple used in 7 places.'>vertex_count</a>);
+<a name='L38'>  38     <a href='../Y/124.html' title='Multiple used in 20 places.'>Vec3Array</a>          * <a href='../Y/279.html' title='Multiple used in 18 places.'>normals</a>  = <b>new</b> Vec3Array(<a href='../Y/391.html' title='Multiple used in 7 places.'>vertex_count</a>);
+<a name='L39'>  39     <a href='../Y/18.html' title='Multiple used in 10 places.'>DrawElementsUShort</a> * <a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>  = <b>new</b> DrawElementsUShort(<a href='../Y/25.html' title='Multiple used in 2 places.'>GL_TRIANGLES</a>, <a href='../Y/373.html' title='Multiple used in 4 places.'>triangle_count</a>);
+<a name='L40'>  40 
+<a name='L41'>  41     <i><font color='green'>// Excluding the topmost and bottommost vertices there will be n - 2 vertices</font></i>
+<a name='L42'>  42     <i><font color='green'>// So there will be (n - 2)/2 vertices per side</font></i>
+<a name='L43'>  43     <i><font color='green'>// There will be a angle delta of n/2 between each vertex.</font></i>
+<a name='L44'>  44 
+<a name='L45'>  45     (*<a href='../Y/393.html' title='Multiple used in 24 places.'>vertices</a>)[0] = (*<a href='../Y/279.html' title='Multiple used in 18 places.'>normals</a>)[0] = <a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>(0.0f, 0.0f, 1.0f);
+<a name='L46'>  46 
+<a name='L47'>  47     <b>for</b>(<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> = 1; <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> &lt; <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a> / 2; ++<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>)
+<a name='L48'>  48     <font color='red'>{</font>
+<a name='L49'>  49         <a href='../Y/408.html' title='Multiple used in 4 places.'>z</a> = <a href='../Y/183.html' title='Multiple used in 3 places.'>cos</a>( <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> * <a href='../Y/291.html' title='Multiple used in 3 places.'>phi_delta</a>);
+<a name='L50'>  50         <a href='../Y/300.html' title='Multiple used in 17 places.'>radius</a> = <a href='../Y/353.html' title='Multiple used in 3 places.'>sin</a>( <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> * <a href='../Y/291.html' title='Multiple used in 3 places.'>phi_delta</a> );
+<a name='L51'>  51         <b>for</b>(<a href='../Y/245.html' title='Multiple used in 21 places.'>j</a> = 0; <a href='../Y/245.html' title='Multiple used in 21 places.'>j</a> &lt; <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>; ++<a href='../Y/245.html' title='Multiple used in 21 places.'>j</a>)
+<a name='L52'>  52         <font color='red'>{</font>
+<a name='L53'>  53             (*<a href='../Y/393.html' title='Multiple used in 24 places.'>vertices</a>)[<a href='../Y/392.html' title='Multiple used in 6 places.'>vertex_index</a>] =
+<a name='L54'>  54             (*<a href='../Y/279.html' title='Multiple used in 18 places.'>normals</a>)[<a href='../Y/392.html' title='Multiple used in 6 places.'>vertex_index</a>] =
+<a name='L55'>  55                 <a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>( <a href='../Y/300.html' title='Multiple used in 17 places.'>radius</a> * <a href='../Y/183.html' title='Multiple used in 3 places.'>cos</a>(<a href='../Y/245.html' title='Multiple used in 21 places.'>j</a> * <a href='../Y/369.html' title='Multiple used in 5 places.'>theta_delta</a>)
+<a name='L56'>  56                      , <a href='../Y/300.html' title='Multiple used in 17 places.'>radius</a> * <a href='../Y/353.html' title='Multiple used in 3 places.'>sin</a>(<a href='../Y/245.html' title='Multiple used in 21 places.'>j</a> * <a href='../Y/369.html' title='Multiple used in 5 places.'>theta_delta</a>)
+<a name='L57'>  57                      , <a href='../Y/408.html' title='Multiple used in 4 places.'>z</a>
+<a name='L58'>  58                      );
+<a name='L59'>  59             ++<a href='../Y/392.html' title='Multiple used in 6 places.'>vertex_index</a>;
+<a name='L60'>  60         <font color='red'>}</font>
+<a name='L61'>  61     <font color='red'>}</font>
+<a name='L62'>  62 
+<a name='L63'>  63     (*<a href='../Y/393.html' title='Multiple used in 24 places.'>vertices</a>)[<a href='../Y/392.html' title='Multiple used in 6 places.'>vertex_index</a>] =
+<a name='L64'>  64     (*<a href='../Y/279.html' title='Multiple used in 18 places.'>normals</a>)[<a href='../Y/392.html' title='Multiple used in 6 places.'>vertex_index</a>] = <a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>(0.0f, 0.0f, -1.0f);
+<a name='L65'>  65 
+<a name='L66'>  66     <b>for</b>(<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> = 0; <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> &lt; <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>; ++<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>)
+<a name='L67'>  67     <font color='red'>{</font>
+<a name='L68'>  68         (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a>]     = 0;
+<a name='L69'>  69         (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> + 1] = <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> + 1;
+<a name='L70'>  70         (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> + 2] = <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> + 2;
+<a name='L71'>  71         <a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> += 3;
+<a name='L72'>  72     <font color='red'>}</font>
+<a name='L73'>  73 
+<a name='L74'>  74     (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> - 1]     = 1;
+<a name='L75'>  75 
+<a name='L76'>  76     <b>for</b>(<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> = 1; <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> &lt; <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a> / 2 - 1; ++<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>)
+<a name='L77'>  77     <font color='red'>{</font>
+<a name='L78'>  78         <a href='../Y/158.html' title='Multiple used in 6 places.'>alpha</a> = 1 + <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a> * (<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> - 1);
+<a name='L79'>  79         <a href='../Y/168.html' title='Multiple used in 10 places.'>beta</a>  = 1 + <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a> * <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>;
+<a name='L80'>  80 
+<a name='L81'>  81         <b>for</b>(<a href='../Y/245.html' title='Multiple used in 21 places.'>j</a> = 0; <a href='../Y/245.html' title='Multiple used in 21 places.'>j</a> &lt; <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>; ++<a href='../Y/245.html' title='Multiple used in 21 places.'>j</a>)
+<a name='L82'>  82         <font color='red'>{</font>
+<a name='L83'>  83             (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a>    ] = <a href='../Y/158.html' title='Multiple used in 6 places.'>alpha</a> + <a href='../Y/245.html' title='Multiple used in 21 places.'>j</a>;
+<a name='L84'>  84             (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> + 1] = <a href='../Y/168.html' title='Multiple used in 10 places.'>beta</a>  + <a href='../Y/245.html' title='Multiple used in 21 places.'>j</a>;
+<a name='L85'>  85             (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> + 2] = <a href='../Y/168.html' title='Multiple used in 10 places.'>beta</a>  + <a href='../Y/245.html' title='Multiple used in 21 places.'>j</a> + 1;
+<a name='L86'>  86 
+<a name='L87'>  87             (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> + 3] = <a href='../Y/158.html' title='Multiple used in 6 places.'>alpha</a> + <a href='../Y/245.html' title='Multiple used in 21 places.'>j</a> + 1;
+<a name='L88'>  88             (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> + 4] = <a href='../Y/158.html' title='Multiple used in 6 places.'>alpha</a> + <a href='../Y/245.html' title='Multiple used in 21 places.'>j</a>;
+<a name='L89'>  89             (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> + 5] = <a href='../Y/168.html' title='Multiple used in 10 places.'>beta</a>  + <a href='../Y/245.html' title='Multiple used in 21 places.'>j</a> + 1;
+<a name='L90'>  90             <a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> += 6;
+<a name='L91'>  91         <font color='red'>}</font>
+<a name='L92'>  92         (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> - 4] = <a href='../Y/168.html' title='Multiple used in 10 places.'>beta</a>;
+<a name='L93'>  93         (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> - 3] = <a href='../Y/158.html' title='Multiple used in 6 places.'>alpha</a>;
+<a name='L94'>  94         (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> - 1] = <a href='../Y/168.html' title='Multiple used in 10 places.'>beta</a>;
+<a name='L95'>  95     <font color='red'>}</font>
+<a name='L96'>  96 
+<a name='L97'>  97     <b>for</b>(<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> = 0; <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> &lt; <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>; ++<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>)
+<a name='L98'>  98     <font color='red'>{</font>
+<a name='L99'>  99         (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a>    ] = <a href='../Y/391.html' title='Multiple used in 7 places.'>vertex_count</a> - 1;
+<a name='L100'> 100         (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> + 1] = <a href='../Y/168.html' title='Multiple used in 10 places.'>beta</a> + <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> + 1;
+<a name='L101'> 101         (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> + 2] = <a href='../Y/168.html' title='Multiple used in 10 places.'>beta</a> + <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>;
+<a name='L102'> 102         <a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> += 3;
+<a name='L103'> 103     <font color='red'>}</font>
+<a name='L104'> 104 
+<a name='L105'> 105     (*<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>)[<a href='../Y/374.html' title='Multiple used in 40 places.'>triangle_index</a> - 2]     = <a href='../Y/168.html' title='Multiple used in 10 places.'>beta</a>;
+<a name='L106'> 106 
+<a name='L107'> 107     <b>auto</b> <a href='../Y/243.html' title='Multiple used in 4 places.'>insert_position</a> = <a href='../Y/356.html' title='Multiple used in 4 places.'>spheres</a>.<a href='../Y/242.html' title='Multiple used in 2 places.'>insert</a>(<a href='../Y/258.html' title='Multiple used in 2 places.'>make_pair</a>( <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>
+<a name='L108'> 108                             , <a href='../Y/259.html' title='Multiple used in 2 places.'>make_tuple</a>( <a href='../Y/393.html' title='Multiple used in 24 places.'>vertices</a>
+<a name='L109'> 109                                         , <a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>
+<a name='L110'> 110                                         , <a href='../Y/279.html' title='Multiple used in 18 places.'>normals</a>
+<a name='L111'> 111                                         )
+<a name='L112'> 112                             )
+<a name='L113'> 113                   );
+<a name='L114'> 114     <b>return</b> <a href='../Y/243.html' title='Multiple used in 4 places.'>insert_position</a>.<a href='../Y/211.html' title='Multiple used in 2 places.'>first</a> -&gt; <a href='../Y/313.html' title='Multiple used in 6 places.'>second</a>;
+<a name='L115'> 115 <font color='red'>}</font>
+<a name='L116'> 116 
+<a name='L117'> 117 <a href='../Y/28.html' title='Multiple used in 27 places.'>Geometry</a> *
+<a name='L118'> 118 <a href='../D/11.html' title='Multiple defined in 2 places.'>SphereMesh</a>::<b>operator</b>()( <a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>        <a href='../Y/175.html' title='Multiple used in 52 places.'>center</a>
+<a name='L119'> 119                       , <b>float</b>        <a href='../Y/300.html' title='Multiple used in 17 places.'>radius</a>
+<a name='L120'> 120                       , <b>unsigned</b> <b>int</b> <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>
+<a name='L121'> 121                       , <b>const</b> <a href='../Y/127.html' title='Multiple used in 15 places.'>Vec4</a>&amp;  <a href='../Y/177.html' title='Multiple used in 27 places.'>color</a>
+<a name='L122'> 122                       )
+<a name='L123'> 123 <font color='red'>{</font>
+<a name='L124'> 124     <a href='../Y/28.html' title='Multiple used in 27 places.'>Geometry</a> * <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a> = <b>new</b> Geometry();
+<a name='L125'> 125     <b>operator</b>()( <a href='../Y/175.html' title='Multiple used in 52 places.'>center</a>
+<a name='L126'> 126               , <a href='../Y/300.html' title='Multiple used in 17 places.'>radius</a>
+<a name='L127'> 127               , <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a>
+<a name='L128'> 128               , <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>
+<a name='L129'> 129               , <a href='../Y/177.html' title='Multiple used in 27 places.'>color</a>
+<a name='L130'> 130               );
+<a name='L131'> 131     <b>return</b> <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a>;
+<a name='L132'> 132 <font color='red'>}</font>
+<a name='L133'> 133 
+<a name='L134'> 134 <b>void</b>
+<a name='L135'> 135 <a href='../D/11.html' title='Multiple defined in 2 places.'>SphereMesh</a>::<b>operator</b>()( <a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>        <a href='../Y/175.html' title='Multiple used in 52 places.'>center</a>
+<a name='L136'> 136                       , <b>float</b>        <a href='../Y/300.html' title='Multiple used in 17 places.'>radius</a>
+<a name='L137'> 137                       , <a href='../Y/28.html' title='Multiple used in 27 places.'>Geometry</a>  *  <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a>
+<a name='L138'> 138                       , <b>unsigned</b> <b>int</b> <a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>
+<a name='L139'> 139                       , <b>const</b> <a href='../Y/127.html' title='Multiple used in 15 places.'>Vec4</a>&amp;  <a href='../Y/177.html' title='Multiple used in 27 places.'>color</a>
+<a name='L140'> 140                       )
+<a name='L141'> 141 <font color='red'>{</font>
+<a name='L142'> 142     <b>const</b> <b>auto</b> <a href='../Y/160.html' title='Multiple used in 8 places.'>arrays</a> = <a href='../D/98.html' title='Multiple defined in 2 places.'>unit</a>(<a href='../Y/293.html' title='Multiple used in 71 places.'>points</a>);
+<a name='L143'> 143 
+<a name='L144'> 144     <b>const</b> <b>auto</b> <a href='../Y/380.html' title='Multiple used in 10 places.'>unit_vertices</a> = <a href='../Y/218.html' title='Multiple used in 20 places.'>get</a>&lt;0&gt;(<a href='../Y/160.html' title='Multiple used in 8 places.'>arrays</a>);
+<a name='L145'> 145     <b>const</b> <b>auto</b> <a href='../Y/378.html' title='Multiple used in 4 places.'>unit_indices</a>  = <a href='../Y/218.html' title='Multiple used in 20 places.'>get</a>&lt;1&gt;(<a href='../Y/160.html' title='Multiple used in 8 places.'>arrays</a>);
+<a name='L146'> 146     <b>const</b> <b>auto</b> <a href='../Y/379.html' title='Multiple used in 5 places.'>unit_normals</a>  = <a href='../Y/218.html' title='Multiple used in 20 places.'>get</a>&lt;2&gt;(<a href='../Y/160.html' title='Multiple used in 8 places.'>arrays</a>);
+<a name='L147'> 147 
+<a name='L148'> 148     <a href='../Y/124.html' title='Multiple used in 20 places.'>Vec3Array</a>          * <a href='../Y/393.html' title='Multiple used in 24 places.'>vertices</a> = <b>new</b> Vec3Array(<a href='../Y/380.html' title='Multiple used in 10 places.'>unit_vertices</a> -&gt; <a href='../D/95.html' title='Multiple defined in 3 places.'>size</a>());
+<a name='L149'> 149     <a href='../Y/124.html' title='Multiple used in 20 places.'>Vec3Array</a>          * <a href='../Y/279.html' title='Multiple used in 18 places.'>normals</a>  = <b>new</b> Vec3Array(*<a href='../Y/379.html' title='Multiple used in 5 places.'>unit_normals</a>);
+<a name='L150'> 150     <a href='../Y/18.html' title='Multiple used in 10 places.'>DrawElementsUShort</a> * <a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>  = <b>new</b> DrawElementsUShort(*<a href='../Y/378.html' title='Multiple used in 4 places.'>unit_indices</a>);
+<a name='L151'> 151 
+<a name='L152'> 152     <a href='../Y/361.html' title='Multiple used in 15 places.'>std</a>::transform( <a href='../Y/380.html' title='Multiple used in 10 places.'>unit_vertices</a> -&gt; <a href='../Y/167.html' title='Multiple used in 7 places.'>begin</a>()
+<a name='L153'> 153                   , <a href='../Y/380.html' title='Multiple used in 10 places.'>unit_vertices</a> -&gt; <a href='../Y/201.html' title='Multiple used in 17 places.'>end</a>()
+<a name='L154'> 154                   , <a href='../Y/393.html' title='Multiple used in 24 places.'>vertices</a> -&gt; <a href='../Y/167.html' title='Multiple used in 7 places.'>begin</a>()
+<a name='L155'> 155                   , [&amp;](<b>const</b> <a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>&amp; <a href='../Y/390.html' title='Multiple used in 2 places.'>vertex</a>)
+<a name='L156'> 156                     <font color='red'>{</font>
+<a name='L157'> 157                         <b>return</b> <a href='../Y/390.html' title='Multiple used in 2 places.'>vertex</a> * <a href='../Y/300.html' title='Multiple used in 17 places.'>radius</a> + <a href='../Y/175.html' title='Multiple used in 52 places.'>center</a>;
+<a name='L158'> 158                     <font color='red'>}</font>
+<a name='L159'> 159                   );
+<a name='L160'> 160 
+<a name='L161'> 161     <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a> -&gt; <a href='../Y/347.html' title='Multiple used in 2 places.'>setVertexArray</a>(<a href='../Y/393.html' title='Multiple used in 24 places.'>vertices</a>);
+<a name='L162'> 162     <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a> -&gt; <a href='../Y/336.html' title='Multiple used in 2 places.'>setNormalArray</a>(<a href='../Y/279.html' title='Multiple used in 18 places.'>normals</a>);
+<a name='L163'> 163     <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a> -&gt; setNormalBinding(<a href='../Y/28.html' title='Multiple used in 27 places.'>Geometry</a>::<a href='../Y/5.html' title='Multiple used in 2 places.'>BIND_PER_VERTEX</a>);
+<a name='L164'> 164     <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a> -&gt; <a href='../Y/156.html' title='Multiple used in 2 places.'>addPrimitiveSet</a>(<a href='../Y/241.html' title='Multiple used in 40 places.'>indices</a>);
+<a name='L165'> 165     <a href='../Y/128.html' title='Multiple used in 5 places.'>Vec4Array</a> * <a href='../Y/178.html' title='Multiple used in 30 places.'>colors</a> = <b>new</b> Vec4Array();
+<a name='L166'> 166     <a href='../Y/178.html' title='Multiple used in 30 places.'>colors</a> -&gt; <a href='../Y/296.html' title='Multiple used in 8 places.'>push_back</a>(<a href='../Y/177.html' title='Multiple used in 27 places.'>color</a>); <i><font color='green'>//color);</font></i>
+<a name='L167'> 167     <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a> -&gt; <a href='../Y/324.html' title='Multiple used in 5 places.'>setColorArray</a>(<a href='../Y/178.html' title='Multiple used in 30 places.'>colors</a>);
+<a name='L168'> 168     <a href='../Y/216.html' title='Multiple used in 41 places.'>geometry</a> -&gt; <a href='../Y/325.html' title='Multiple used in 5 places.'>setColorBinding</a>( <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/28.html' title='Multiple used in 27 places.'>Geometry</a>::<a href='../Y/4.html' title='Multiple used in 8 places.'>BIND_OVERALL</a> );
+<a name='L169'> 169 <font color='red'>}</font>
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;][^]<a href='#L13'>[v]</a><a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>proportion</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/1.html#L178'>proportion</a>        178 src/mesh/CylinderMesh.cpp             float proportion = angle(side, temp_vertex) / M_PI;
+<a href='../S/1.html#L179'>proportion</a>        179 src/mesh/CylinderMesh.cpp             RECORD_INFO( string("proportion =&gt; ") + to_string(proportion));
+<a href='../S/1.html#L180'>proportion</a>        180 src/mesh/CylinderMesh.cpp             if(proportion &lt;= -0.5f)
+<a href='../S/1.html#L183'>proportion</a>        183 src/mesh/CylinderMesh.cpp                 -0.5 - 2 * (1 + proportion) * max_warp;
+<a href='../S/1.html#L185'>proportion</a>        185 src/mesh/CylinderMesh.cpp             else if(proportion &lt;= 0.0f)
+<a href='../S/1.html#L188'>proportion</a>        188 src/mesh/CylinderMesh.cpp                 -0.5 + 2 * proportion * max_warp;
+<a href='../S/1.html#L190'>proportion</a>        190 src/mesh/CylinderMesh.cpp             else if(proportion &lt;= 0.5f)
+<a href='../S/1.html#L193'>proportion</a>        193 src/mesh/CylinderMesh.cpp                 -0.5 + 2 * proportion * max_warp;
+<a href='../S/1.html#L195'>proportion</a>        195 src/mesh/CylinderMesh.cpp             else if(proportion &lt;= 1.0f)
+<a href='../S/1.html#L198'>proportion</a>        198 src/mesh/CylinderMesh.cpp                 -0.5 + 2 * (1.0 - proportion) * max_warp;
+</pre>
+</body>
+</html>
