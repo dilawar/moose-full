@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>vertices</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/1.html#L33'>vertices</a>           33 src/mesh/CylinderMesh.cpp     Vec3Array          * vertices = new Vec3Array(2 * vertex_count);
+<a href='../S/1.html#L54'>vertices</a>           54 src/mesh/CylinderMesh.cpp         (*vertices)[i]          = Vec3f(x, y,  0.5f);
+<a href='../S/1.html#L55'>vertices</a>           55 src/mesh/CylinderMesh.cpp         (*vertices)[i + points] = Vec3f(x, y, -0.5f);
+<a href='../S/1.html#L56'>vertices</a>           56 src/mesh/CylinderMesh.cpp         (*vertices)[i + 2 * points] = Vec3f(x, y,  0.5f);
+<a href='../S/1.html#L57'>vertices</a>           57 src/mesh/CylinderMesh.cpp         (*vertices)[i + 3 * points] = Vec3f(x, y, -0.5f);
+<a href='../S/1.html#L106'>vertices</a>          106 src/mesh/CylinderMesh.cpp                                    , make_tuple( vertices
+<a href='../S/1.html#L142'>vertices</a>          142 src/mesh/CylinderMesh.cpp     ref_ptr&lt;Vec3Array&gt; vertices(
+<a href='../S/1.html#L174'>vertices</a>          174 src/mesh/CylinderMesh.cpp             temp_vertex.set( (*vertices)[i + points][0]
+<a href='../S/1.html#L175'>vertices</a>          175 src/mesh/CylinderMesh.cpp                            , (*vertices)[i + points][1]
+<a href='../S/1.html#L182'>vertices</a>          182 src/mesh/CylinderMesh.cpp                 (*vertices)[i + 3 * points][2] = (*vertices)[i + points][2] =
+<a href='../S/1.html#L187'>vertices</a>          187 src/mesh/CylinderMesh.cpp                 (*vertices)[i + 3 * points][2] = (*vertices)[i + points][2] =
+<a href='../S/1.html#L192'>vertices</a>          192 src/mesh/CylinderMesh.cpp                 (*vertices)[i + 3 * points][2] = (*vertices)[i + points][2] =
+<a href='../S/1.html#L197'>vertices</a>          197 src/mesh/CylinderMesh.cpp                 (*vertices)[i + 3 * points][2] = (*vertices)[i + points][2] =
+<a href='../S/1.html#L211'>vertices</a>          211 src/mesh/CylinderMesh.cpp         (*vertices)[i + 2 * points] = (*vertices)[i] = rotate * temp_vertex + center;
+<a href='../S/1.html#L221'>vertices</a>          221 src/mesh/CylinderMesh.cpp         (*vertices)[j + 2 * points] = (*vertices)[j] = rotate * temp_vertex + center;
+<a href='../S/1.html#L242'>vertices</a>          242 src/mesh/CylinderMesh.cpp     geometry -&gt; setVertexArray(vertices.get());
+<a href='../S/2.html#L37'>vertices</a>           37 src/mesh/SphereMesh.cpp     Vec3Array          * vertices = new Vec3Array(vertex_count);
+<a href='../S/2.html#L45'>vertices</a>           45 src/mesh/SphereMesh.cpp     (*vertices)[0] = (*normals)[0] = Vec3f(0.0f, 0.0f, 1.0f);
+<a href='../S/2.html#L53'>vertices</a>           53 src/mesh/SphereMesh.cpp             (*vertices)[vertex_index] =
+<a href='../S/2.html#L63'>vertices</a>           63 src/mesh/SphereMesh.cpp     (*vertices)[vertex_index] =
+<a href='../S/2.html#L108'>vertices</a>          108 src/mesh/SphereMesh.cpp                             , make_tuple( vertices
+<a href='../S/2.html#L148'>vertices</a>          148 src/mesh/SphereMesh.cpp     Vec3Array          * vertices = new Vec3Array(unit_vertices -&gt; size());
+<a href='../S/2.html#L154'>vertices</a>          154 src/mesh/SphereMesh.cpp                   , vertices -&gt; begin()
+<a href='../S/2.html#L161'>vertices</a>          161 src/mesh/SphereMesh.cpp     geometry -&gt; setVertexArray(vertices);
+</pre>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>osg</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/23.html#L15'>osg</a>                15 include/core/Compartment.hpp     osg::ref_ptr&lt;osg::Switch&gt; node;
+<a href='../S/23.html#L16'>osg</a>                16 include/core/Compartment.hpp     osg::ref_ptr&lt;osg::Geode&gt; voxel_group_node;
+<a href='../S/24.html#L12'>osg</a>                12 include/core/Network.hpp     osg::ref_ptr&lt;osg::MatrixTransform&gt; node;
+<a href='../S/25.html#L15'>osg</a>                15 include/core/Neuron.hpp     osg::ref_ptr&lt;osg::Switch&gt; node;
+<a href='../S/25.html#L16'>osg</a>                16 include/core/Neuron.hpp     osg::ref_ptr&lt;osg::Group&gt; compartment_group_node;
+<a href='../S/26.html#L13'>osg</a>                13 include/core/Voxel.hpp     osg::ref_ptr&lt;osg::Geometry&gt; node;
+<a href='../S/18.html#L4'>osg</a>                 4 include/utility/constants.hpp const osg::Node::NodeMask NODE_SHOW_MASK = 0xffffffff;
+<a href='../S/18.html#L5'>osg</a>                 5 include/utility/constants.hpp const osg::Node::NodeMask NODE_HIDE_MASK = 0xfffffff0;
+<a href='../S/18.html#L14'>osg</a>                14 include/utility/constants.hpp const osg::Vec4f CYLINDRICAL_NEURON_COLOR      = osg::Vec4f(0.0f, 1.0f, 0.0f, 1.0f); //green
+<a href='../S/18.html#L15'>osg</a>                15 include/utility/constants.hpp const osg::Vec4f SPHERICAL_NEURON_COLOR        = osg::Vec4f(0.0f, 0.0f, 1.0f, 1.0f); //blue
+<a href='../S/18.html#L16'>osg</a>                16 include/utility/constants.hpp const osg::Vec4f CYLINDRICAL_COMPARTMENT_COLOR = osg::Vec4f(1.0f, 0.5f, 0.0f, 0.5f); //orange
+<a href='../S/18.html#L17'>osg</a>                17 include/utility/constants.hpp const osg::Vec4f SPHERICAL_COMPARTMENT_COLOR   = osg::Vec4f(0.5f, 0.0f, 1.0f, 0.5f); //violet
+<a href='../S/18.html#L18'>osg</a>                18 include/utility/constants.hpp const osg::Vec4f CYLINDRICAL_VOXEL_COLOR       = osg::Vec4f(0.0f, 1.0f, 1.0f, 0.5f); //yellow
+<a href='../S/18.html#L19'>osg</a>                19 include/utility/constants.hpp const osg::Vec4f SPHERICAL_VOXEL_COLOR         = osg::Vec4f(1.0f, 0.0f, 0.0f, 0.9f); //red
+<a href='../S/21.html#L10'>osg</a>                10 include/utility/conversions.hpp osg::Vec4d
+<a href='../S/21.html#L13'>osg</a>                13 include/utility/conversions.hpp osg::Vec4f
+<a href='../S/21.html#L16'>osg</a>                16 include/utility/conversions.hpp osg::Vec3d
+<a href='../S/21.html#L19'>osg</a>                19 include/utility/conversions.hpp osg::Vec3f
+<a href='../S/17.html#L130'>osg</a>               130 include/view/NetworkViewer.hpp                        ,  osg::Vec3d  &amp; eye
+<a href='../S/17.html#L131'>osg</a>               131 include/view/NetworkViewer.hpp                        , osg::Vec3d  &amp; center
+<a href='../S/17.html#L133'>osg</a>               133 include/view/NetworkViewer.hpp                        , osg::Vec3d  &amp; up
+<a href='../S/17.html#L134'>osg</a>               134 include/view/NetworkViewer.hpp                        , osg::Vec3d  &amp; look
+<a href='../S/17.html#L135'>osg</a>               135 include/view/NetworkViewer.hpp                        , osg::Vec3d  &amp; side
+<a href='../S/17.html#L140'>osg</a>               140 include/view/NetworkViewer.hpp                        , const osg::Vec3d &amp; eye
+<a href='../S/17.html#L141'>osg</a>               141 include/view/NetworkViewer.hpp                        , const osg::Vec3d &amp; center
+<a href='../S/17.html#L142'>osg</a>               142 include/view/NetworkViewer.hpp                        , const osg::Vec3d &amp; up
+<a href='../S/17.html#L157'>osg</a>               157 include/view/NetworkViewer.hpp     osg::Camera *
+<a href='../S/17.html#L163'>osg</a>               163 include/view/NetworkViewer.hpp     osg::ref_ptr&lt;osgViewer::GraphicsWindowEmbedded&gt; _graphics_window;
+<a href='../S/17.html#L164'>osg</a>               164 include/view/NetworkViewer.hpp     osg::ref_ptr&lt;osgViewer::CompositeViewer&gt; _viewer;
+<a href='../S/7.html#L71'>osg</a>                71 src/core/Compartment.cpp     osg::Geometry * geometry = new osg::Geometry();
+<a href='../S/7.html#L72'>osg</a>                72 src/core/Compartment.cpp     osg::Geode    * geode    = new osg::Geode();
+<a href='../S/7.html#L76'>osg</a>                76 src/core/Compartment.cpp         sphere( osg::Vec3f(d[0], d[1], d[2])
+<a href='../S/7.html#L198'>osg</a>               198 src/core/Compartment.cpp             geometry -&gt; setColorArray(colors, osg::Array::BIND_OVERALL);
+<a href='../S/7.html#L199'>osg</a>               199 src/core/Compartment.cpp             geometry -&gt; setColorBinding(osg::Geometry::BIND_OVERALL);
+<a href='../S/8.html#L85'>osg</a>                85 src/core/Neuron.cpp     osg::Geometry * geometry = new osg::Geometry();
+<a href='../S/8.html#L86'>osg</a>                86 src/core/Neuron.cpp     osg::Geode    * geode   = new osg::Geode();
+<a href='../S/8.html#L90'>osg</a>                90 src/core/Neuron.cpp         sphere( osg::Vec3f(d[0], d[1], d[2])
+<a href='../S/8.html#L192'>osg</a>               192 src/core/Neuron.cpp             geometry -&gt; setColorArray(colors, osg::Array::BIND_OVERALL);
+<a href='../S/8.html#L193'>osg</a>               193 src/core/Neuron.cpp             geometry -&gt; setColorBinding(osg::Geometry::BIND_OVERALL);
+<a href='../S/9.html#L59'>osg</a>                59 src/core/Voxel.cpp         sphere( osg::Vec3f(d[0], d[1], d[2])
+<a href='../S/9.html#L84'>osg</a>                84 src/core/Voxel.cpp     node -&gt; setColorArray(colors, osg::Array::BIND_OVERALL);
+<a href='../S/9.html#L85'>osg</a>                85 src/core/Voxel.cpp     node -&gt; setColorBinding(osg::Geometry::BIND_OVERALL);
+<a href='../S/1.html#L158'>osg</a>               158 src/mesh/CylinderMesh.cpp     rotate.makeRotate(parent, osg::Vec3f(0.0f, 0.0f, 1.0f));
+<a href='../S/1.html#L159'>osg</a>               159 src/mesh/CylinderMesh.cpp     Vec3f side = osg::Vec3f(0.0f, 0.0f, 1.0f) ^ (rotate * direction);
+<a href='../S/1.html#L203'>osg</a>               203 src/mesh/CylinderMesh.cpp     rotate.makeRotate(osg::Vec3f(0.0f, 0.0f, 1.0f), direction);
+<a href='../S/1.html#L244'>osg</a>               244 src/mesh/CylinderMesh.cpp     geometry -&gt; setColorBinding( osg::Geometry::BIND_OVERALL );
+<a href='../S/2.html#L168'>osg</a>               168 src/mesh/SphereMesh.cpp     geometry -&gt; setColorBinding( osg::Geometry::BIND_OVERALL );
+<a href='../S/4.html#L3'>osg</a>                 3 src/utility/conversions.cpp osg::Vec4d
+<a href='../S/4.html#L8'>osg</a>                 8 src/utility/conversions.cpp         return osg::Vec4d();
+<a href='../S/4.html#L10'>osg</a>                10 src/utility/conversions.cpp     return osg::Vec4d( PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 0))
+<a href='../S/4.html#L18'>osg</a>                18 src/utility/conversions.cpp osg::Vec4f
+<a href='../S/4.html#L23'>osg</a>                23 src/utility/conversions.cpp         return osg::Vec4f();
+<a href='../S/4.html#L26'>osg</a>                26 src/utility/conversions.cpp     return osg::Vec4f( static_cast&lt;float&gt;(
+<a href='../S/4.html#L41'>osg</a>                41 src/utility/conversions.cpp osg::Vec3d
+<a href='../S/4.html#L46'>osg</a>                46 src/utility/conversions.cpp         return osg::Vec3d();
+<a href='../S/4.html#L49'>osg</a>                49 src/utility/conversions.cpp     return osg::Vec3d( PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 0))
+<a href='../S/4.html#L56'>osg</a>                56 src/utility/conversions.cpp osg::Vec3f
+<a href='../S/4.html#L61'>osg</a>                61 src/utility/conversions.cpp         return osg::Vec3f();
+<a href='../S/4.html#L64'>osg</a>                64 src/utility/conversions.cpp     return osg::Vec3f( static_cast&lt;float&gt;(
+<a href='../S/3.html#L110'>osg</a>               110 src/view/NetworkViewer.cpp     osg::StateSet* stateSet = network -&gt; node -&gt; getOrCreateStateSet();
+<a href='../S/3.html#L111'>osg</a>               111 src/view/NetworkViewer.cpp     osg::Material* material = new osg::Material;
+<a href='../S/3.html#L113'>osg</a>               113 src/view/NetworkViewer.cpp     material-&gt;setColorMode( osg::Material::AMBIENT_AND_DIFFUSE );
+<a href='../S/3.html#L114'>osg</a>               114 src/view/NetworkViewer.cpp     material-&gt;setAlpha( osg::Material::FRONT_AND_BACK, 1.0);
+<a href='../S/3.html#L115'>osg</a>               115 src/view/NetworkViewer.cpp     material-&gt;setShininess(osg::Material::FRONT_AND_BACK, 128.0);
+<a href='../S/3.html#L116'>osg</a>               116 src/view/NetworkViewer.cpp     material-&gt;setAmbient(osg::Material::FRONT_AND_BACK, osg::Vec4(1.0, 1.0, 1.0, 1.0));
+<a href='../S/3.html#L117'>osg</a>               117 src/view/NetworkViewer.cpp     material-&gt;setDiffuse(osg::Material::FRONT_AND_BACK, osg::Vec4(1.0, 1.0, 1.0, 1.0));
+<a href='../S/3.html#L125'>osg</a>               125 src/view/NetworkViewer.cpp     stateSet -&gt; setAttributeAndModes( material, osg::StateAttribute::ON );
+<a href='../S/3.html#L126'>osg</a>               126 src/view/NetworkViewer.cpp     stateSet -&gt; setMode( GL_DEPTH_TEST, osg::StateAttribute::ON );
+<a href='../S/3.html#L127'>osg</a>               127 src/view/NetworkViewer.cpp     stateSet -&gt; setMode( GL_BLEND, osg::StateAttribute::ON );
+<a href='../S/3.html#L128'>osg</a>               128 src/view/NetworkViewer.cpp     stateSet -&gt; setMode( GL_ALPHA_TEST, osg::StateAttribute::ON | osg::StateAttribute::OVERRIDE);// just added this now as a test but still no luck
+<a href='../S/3.html#L129'>osg</a>               129 src/view/NetworkViewer.cpp     osg::ShadeModel * shade_model = new osg::ShadeModel(osg::ShadeModel::SMOOTH);
+<a href='../S/3.html#L130'>osg</a>               130 src/view/NetworkViewer.cpp     stateSet -&gt; setAttributeAndModes(shade_model,osg::StateAttribute::ON);
+<a href='../S/3.html#L131'>osg</a>               131 src/view/NetworkViewer.cpp     stateSet -&gt; setRenderingHint( osg::StateSet::TRANSPARENT_BIN );
+<a href='../S/3.html#L150'>osg</a>               150 src/view/NetworkViewer.cpp     const osg::BoundingSphere&amp; bs = network -&gt; node -&gt; getBound();
+<a href='../S/3.html#L176'>osg</a>               176 src/view/NetworkViewer.cpp     osg::Camera * parent_camera = parent_view -&gt; getCamera();
+<a href='../S/3.html#L177'>osg</a>               177 src/view/NetworkViewer.cpp     osg::Viewport * parent_viewport = parent_camera -&gt; getViewport();
+<a href='../S/3.html#L204'>osg</a>               204 src/view/NetworkViewer.cpp     osg::Camera * parent_camera = parent_view -&gt; getCamera();
+<a href='../S/3.html#L205'>osg</a>               205 src/view/NetworkViewer.cpp     osg::Viewport * parent_viewport = parent_camera -&gt; getViewport();
+<a href='../S/3.html#L252'>osg</a>               252 src/view/NetworkViewer.cpp     osg::Camera* camera = new osg::Camera;
+<a href='../S/3.html#L254'>osg</a>               254 src/view/NetworkViewer.cpp     camera-&gt;setClearColor(osg::Vec4(0.0f, 0.0f, 0.0f, 1.f ));
+<a href='../S/3.html#L261'>osg</a>               261 src/view/NetworkViewer.cpp     osg::StateSet* stateset = camera -&gt; getOrCreateStateSet();
+<a href='../S/3.html#L269'>osg</a>               269 src/view/NetworkViewer.cpp     view -&gt; setLightingMode(osg::View::HEADLIGHT);
+<a href='../S/3.html#L450'>osg</a>               450 src/view/NetworkViewer.cpp     osg::Vec3d eye;
+<a href='../S/3.html#L451'>osg</a>               451 src/view/NetworkViewer.cpp     osg::Vec3d center;
+<a href='../S/3.html#L452'>osg</a>               452 src/view/NetworkViewer.cpp     osg::Vec3d up;
+<a href='../S/3.html#L453'>osg</a>               453 src/view/NetworkViewer.cpp     osg::Vec3d look;
+<a href='../S/3.html#L454'>osg</a>               454 src/view/NetworkViewer.cpp     osg::Vec3d side;
+<a href='../S/3.html#L463'>osg</a>               463 src/view/NetworkViewer.cpp     osg::Vec3d eye;
+<a href='../S/3.html#L464'>osg</a>               464 src/view/NetworkViewer.cpp     osg::Vec3d center;
+<a href='../S/3.html#L465'>osg</a>               465 src/view/NetworkViewer.cpp     osg::Vec3d up;
+<a href='../S/3.html#L466'>osg</a>               466 src/view/NetworkViewer.cpp     osg::Vec3d look;
+<a href='../S/3.html#L467'>osg</a>               467 src/view/NetworkViewer.cpp     osg::Vec3d side;
+<a href='../S/3.html#L476'>osg</a>               476 src/view/NetworkViewer.cpp     osg::Vec3d eye;
+<a href='../S/3.html#L477'>osg</a>               477 src/view/NetworkViewer.cpp     osg::Vec3d center;
+<a href='../S/3.html#L478'>osg</a>               478 src/view/NetworkViewer.cpp     osg::Vec3d up;
+<a href='../S/3.html#L479'>osg</a>               479 src/view/NetworkViewer.cpp     osg::Vec3d look;
+<a href='../S/3.html#L480'>osg</a>               480 src/view/NetworkViewer.cpp     osg::Vec3d side;
+<a href='../S/3.html#L489'>osg</a>               489 src/view/NetworkViewer.cpp     osg::Vec3d eye;
+<a href='../S/3.html#L490'>osg</a>               490 src/view/NetworkViewer.cpp     osg::Vec3d center;
+<a href='../S/3.html#L491'>osg</a>               491 src/view/NetworkViewer.cpp     osg::Vec3d up;
+<a href='../S/3.html#L492'>osg</a>               492 src/view/NetworkViewer.cpp     osg::Vec3d look;
+<a href='../S/3.html#L493'>osg</a>               493 src/view/NetworkViewer.cpp     osg::Vec3d side;
+<a href='../S/3.html#L502'>osg</a>               502 src/view/NetworkViewer.cpp     osg::Vec3d eye;
+<a href='../S/3.html#L503'>osg</a>               503 src/view/NetworkViewer.cpp     osg::Vec3d center;
+<a href='../S/3.html#L504'>osg</a>               504 src/view/NetworkViewer.cpp     osg::Vec3d up;
+<a href='../S/3.html#L505'>osg</a>               505 src/view/NetworkViewer.cpp     osg::Vec3d look;
+<a href='../S/3.html#L506'>osg</a>               506 src/view/NetworkViewer.cpp     osg::Vec3d side;
+<a href='../S/3.html#L515'>osg</a>               515 src/view/NetworkViewer.cpp     osg::Vec3d eye;
+<a href='../S/3.html#L516'>osg</a>               516 src/view/NetworkViewer.cpp     osg::Vec3d center;
+<a href='../S/3.html#L517'>osg</a>               517 src/view/NetworkViewer.cpp     osg::Vec3d up;
+<a href='../S/3.html#L518'>osg</a>               518 src/view/NetworkViewer.cpp     osg::Vec3d look;
+<a href='../S/3.html#L519'>osg</a>               519 src/view/NetworkViewer.cpp     osg::Vec3d side;
+<a href='../S/3.html#L528'>osg</a>               528 src/view/NetworkViewer.cpp     osg::Vec3d eye;
+<a href='../S/3.html#L529'>osg</a>               529 src/view/NetworkViewer.cpp     osg::Vec3d center;
+<a href='../S/3.html#L530'>osg</a>               530 src/view/NetworkViewer.cpp     osg::Vec3d up;
+<a href='../S/3.html#L531'>osg</a>               531 src/view/NetworkViewer.cpp     osg::Vec3d look;
+<a href='../S/3.html#L532'>osg</a>               532 src/view/NetworkViewer.cpp     osg::Vec3d side;
+<a href='../S/3.html#L573'>osg</a>               573 src/view/NetworkViewer.cpp     osg::Vec3d eye;
+<a href='../S/3.html#L574'>osg</a>               574 src/view/NetworkViewer.cpp     osg::Vec3d center;
+<a href='../S/3.html#L575'>osg</a>               575 src/view/NetworkViewer.cpp     osg::Vec3d up;
+<a href='../S/3.html#L576'>osg</a>               576 src/view/NetworkViewer.cpp     osg::Vec3d look;
+<a href='../S/3.html#L577'>osg</a>               577 src/view/NetworkViewer.cpp     osg::Vec3d side;
+<a href='../S/3.html#L590'>osg</a>               590 src/view/NetworkViewer.cpp     osg::Vec3d eye;
+<a href='../S/3.html#L591'>osg</a>               591 src/view/NetworkViewer.cpp     osg::Vec3d center;
+<a href='../S/3.html#L592'>osg</a>               592 src/view/NetworkViewer.cpp     osg::Vec3d up;
+<a href='../S/3.html#L593'>osg</a>               593 src/view/NetworkViewer.cpp     osg::Vec3d look;
+<a href='../S/3.html#L594'>osg</a>               594 src/view/NetworkViewer.cpp     osg::Vec3d side;
+<a href='../S/3.html#L608'>osg</a>               608 src/view/NetworkViewer.cpp     osg::Vec3d eye;
+<a href='../S/3.html#L609'>osg</a>               609 src/view/NetworkViewer.cpp     osg::Vec3d center;
+<a href='../S/3.html#L610'>osg</a>               610 src/view/NetworkViewer.cpp     osg::Vec3d up;
+<a href='../S/3.html#L611'>osg</a>               611 src/view/NetworkViewer.cpp     osg::Vec3d look;
+<a href='../S/3.html#L612'>osg</a>               612 src/view/NetworkViewer.cpp     osg::Vec3d side;
+</pre>
+</body>
+</html>

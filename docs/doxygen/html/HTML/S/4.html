@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>src/utility/conversions.cpp</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/37.html'>src</a>/<a href='../files/40.html'>utility</a>/conversions.cpp</h2>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L4'>[^]</a><a href='#L57'>[v]</a>[top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L4' title='Defined at 4.'>pysequence_to_vec4d</a>
+<li><a href='#L19' title='Defined at 19.'>pysequence_to_vec4f</a>
+<li><a href='#L42' title='Defined at 42.'>pysequence_to_vec3d</a>
+<li><a href='#L57' title='Defined at 57.'>pysequence_to_vec3f</a>
+</ol>
+<hr>
+<pre>
+<a name='L1'>   1 <font color='darkred'>#include</font> "<a href='21.html'>utility/conversions.hpp</a>"
+<a name='L2'>   2 
+<a name='L3'>   3 <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/129.html' title='Multiple used in 4 places.'>Vec4d</a>
+<a name='L4'>   4 <a href='../R/67.html' title='Multiple refered from 4 places.'>pysequence_to_vec4d</a>(<a href='../Y/74.html' title='Multiple used in 38 places.'>PyObject</a> * <a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>)
+<a name='L5'>   5 <font color='red'>{</font>
+<a name='L6'>   6     <b>if</b>(<a href='../Y/280.html' title='Multiple used in 4 places.'>not</a> <a href='../Y/73.html' title='Multiple used in 4 places.'>PyList_Check</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>))
+<a name='L7'>   7     <font color='red'>{</font>
+<a name='L8'>   8         <b>return</b> <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/129.html' title='Multiple used in 4 places.'>Vec4d</a>();
+<a name='L9'>   9     <font color='red'>}</font>
+<a name='L10'>  10     <b>return</b> <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/129.html' title='Multiple used in 4 places.'>Vec4d</a>( <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 0))
+<a name='L11'>  11                      , <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 1))
+<a name='L12'>  12                      , <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 2))
+<a name='L13'>  13                      , <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 3))
+<a name='L14'>  14                      );
+<a name='L15'>  15 <font color='red'>}</font>
+<a name='L16'>  16 
+<a name='L17'>  17 
+<a name='L18'>  18 <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/130.html' title='Multiple used in 24 places.'>Vec4f</a>
+<a name='L19'>  19 <a href='../R/68.html' title='Multiple refered from 7 places.'>pysequence_to_vec4f</a>(<a href='../Y/74.html' title='Multiple used in 38 places.'>PyObject</a> * <a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>)
+<a name='L20'>  20 <font color='red'>{</font>
+<a name='L21'>  21     <b>if</b>(<a href='../Y/280.html' title='Multiple used in 4 places.'>not</a> <a href='../Y/73.html' title='Multiple used in 4 places.'>PyList_Check</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>))
+<a name='L22'>  22     <font color='red'>{</font>
+<a name='L23'>  23         <b>return</b> <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/130.html' title='Multiple used in 24 places.'>Vec4f</a>();
+<a name='L24'>  24     <font color='red'>}</font>
+<a name='L25'>  25 
+<a name='L26'>  26     <b>return</b> <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/130.html' title='Multiple used in 24 places.'>Vec4f</a>( <b>static_cast</b>&lt;<b>float</b>&gt;(
+<a name='L27'>  27                         <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 0))
+<a name='L28'>  28                                          )
+<a name='L29'>  29                      , <b>static_cast</b>&lt;<b>float</b>&gt;(
+<a name='L30'>  30                         <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 1))
+<a name='L31'>  31                                          )
+<a name='L32'>  32                      , <b>static_cast</b>&lt;<b>float</b>&gt;(
+<a name='L33'>  33                         <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 2))
+<a name='L34'>  34                                          )
+<a name='L35'>  35                      , <b>static_cast</b>&lt;<b>float</b>&gt;(
+<a name='L36'>  36                         <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 3))
+<a name='L37'>  37                                          )
+<a name='L38'>  38                      );
+<a name='L39'>  39 <font color='red'>}</font>
+<a name='L40'>  40 
+<a name='L41'>  41 <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/125.html' title='Multiple used in 70 places.'>Vec3d</a>
+<a name='L42'>  42 <a href='../S/21.html#L17' title='Refered from 17 in include/utility/conversions.hpp.'>pysequence_to_vec3d</a>(<a href='../Y/74.html' title='Multiple used in 38 places.'>PyObject</a> * <a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>)
+<a name='L43'>  43 <font color='red'>{</font>
+<a name='L44'>  44     <b>if</b>(<a href='../Y/280.html' title='Multiple used in 4 places.'>not</a> <a href='../Y/73.html' title='Multiple used in 4 places.'>PyList_Check</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>))
+<a name='L45'>  45     <font color='red'>{</font>
+<a name='L46'>  46         <b>return</b> <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/125.html' title='Multiple used in 70 places.'>Vec3d</a>();
+<a name='L47'>  47     <font color='red'>}</font>
+<a name='L48'>  48 
+<a name='L49'>  49     <b>return</b> <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/125.html' title='Multiple used in 70 places.'>Vec3d</a>( <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 0))
+<a name='L50'>  50                      , <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 1))
+<a name='L51'>  51                      , <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 2))
+<a name='L52'>  52                      );
+<a name='L53'>  53 <font color='red'>}</font>
+<a name='L54'>  54 
+<a name='L55'>  55 
+<a name='L56'>  56 <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>
+<a name='L57'>  57 <a href='../R/66.html' title='Multiple refered from 4 places.'>pysequence_to_vec3f</a>(<a href='../Y/74.html' title='Multiple used in 38 places.'>PyObject</a> * <a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>)
+<a name='L58'>  58 <font color='red'>{</font>
+<a name='L59'>  59     <b>if</b>(<a href='../Y/280.html' title='Multiple used in 4 places.'>not</a> <a href='../Y/73.html' title='Multiple used in 4 places.'>PyList_Check</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>))
+<a name='L60'>  60     <font color='red'>{</font>
+<a name='L61'>  61         <b>return</b> <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>();
+<a name='L62'>  62     <font color='red'>}</font>
+<a name='L63'>  63 
+<a name='L64'>  64     <b>return</b> <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/126.html' title='Multiple used in 51 places.'>Vec3f</a>( <b>static_cast</b>&lt;<b>float</b>&gt;(
+<a name='L65'>  65                         <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 0))
+<a name='L66'>  66                                          )
+<a name='L67'>  67                      , <b>static_cast</b>&lt;<b>float</b>&gt;(
+<a name='L68'>  68                         <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 1))
+<a name='L69'>  69                                          )
+<a name='L70'>  70                      , <b>static_cast</b>&lt;<b>float</b>&gt;(
+<a name='L71'>  71                         <a href='../Y/72.html' title='Multiple used in 14 places.'>PyFloat_AS_DOUBLE</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/314.html' title='Multiple used in 26 places.'>sequence</a>, 2))
+<a name='L72'>  72                                          )
+<a name='L73'>  73                      );
+<a name='L74'>  74 <font color='red'>}</font>
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L4'>[^]</a><a href='#L57'>[v]</a><a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>
