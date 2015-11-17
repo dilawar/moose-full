@@ -12,7 +12,7 @@ set(MOOGLI_VERSION "1.0")
 
 ## CMAKE options
 option(WITH_DOC "Build documentation as well" OFF)
-option(BUILD_MOOGLI "Build moogli extension" OFF)
+option(WITH_MOOGLI "Build moogli extension" ON)
 
 ## Project related macros
 set(MOOSE_SOURCE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${MOOSE_CORE_DIRNAME})
@@ -92,10 +92,6 @@ add_custom_command(
     ${CMAKE_COMMAND} 
         -DDEBUG:BOOL=OFF 
         -DWITH_DOC:BOOL=${WITH_DOC}
-        # MOOGLI related command line arguments.
-        -DBUILD_MOOGLI:BOOL=${BUILD_MOOGLI}
-        # where to store moogli source distribution.
-        -DMOOGLI_DIST_DIR=${MOOSE_CORE_BUILD_DIR}
         -DLOCAL_SBML:BOOL=${LOCAL_SBML} -DLOCAL_GSL:BOOL=${LOCAL_GSL}
         -DSTATIC_GSL_LIBRARY=${STATIC_GSL_LIBRARY}
         -DSTATIC_GSLBLAS_LIBRARY=${STATIC_GSLBLAS_LIBRARY}
@@ -117,13 +113,8 @@ add_dependencies(_build_moose_core _moose_static_dependencies)
 
 ##*############## 
 # Build Local OSG
-OPTION(WITH_MOOGLI "Enable moogli" ON)
 IF(WITH_MOOGLI)
     include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_osg.cmake)
-    EXECUTE_PROCESS(COMMAND
-        python setup.py build 
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moogli
-        )
 ENDIF()
 
 
@@ -146,11 +137,12 @@ install(FILES ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
     )
 
 # install moogli sdist if only BUILD_MOOGLI is ON/TRUE.
-if(BUILD_MOOGLI)
-    install(FILES ${MOOSE_CORE_BUILD_DIR}/moogli-${MOOGLI_VERSION}.tar.gz
-        DESTINATION share/moogli
+if(WITH_MOOGLI)
+    EXECUTE_PROCESS(COMMAND
+        python setup.py build 
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moogli
         )
-endif(BUILD_MOOGLI)
+endif(WITH_MOOGLI)
 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
     DESTINATION lib/moose/gui
