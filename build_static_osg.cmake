@@ -5,7 +5,8 @@ FILE(MAKE_DIRECTORY ${OSG_INSTALL_DIR})
 SET(OSG_SRC_DIR ${CMAKE_SOURCE_DIR}/dependencies/OpenSceneGraph-3.2.0/)
 
 # A target which depends on STATIC_OSG_LIBRARY
-ADD_CUSTOM_COMMAND(OUTPUT __static_osg_was_run__
+ADD_CUSTOM_COMMAND(
+    OUTPUT ${OSG_INSTALL_DIR}/lib/libosg.a
     COMMAND ${CMAKE_COMMAND} 
         -DCMAKE_INSTALL_PREFIX=${OSG_INSTALL_DIR}
         -DBUILD_OSG_APPLICATIONS:BOOL=OFF
@@ -18,8 +19,8 @@ ADD_CUSTOM_COMMAND(OUTPUT __static_osg_was_run__
     )
 
 ADD_CUSTOM_TARGET(_libosg ALL 
-    DEPENDS __static_osg_was_run__
+    DEPENDS ${OSG_INSTALL_DIR}/lib/libosg.a
     )
 
-LIST(APPEND ALL_STATIC_LIBS ${STATIC_OSG_LIBRARY})
+SET(ENV{OSGDIR} "${OSG_INSTALL_DIR}")
 add_dependencies(_moose_static_dependencies _libosg)

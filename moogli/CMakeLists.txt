@@ -104,32 +104,12 @@ SET(DYNAMIC_LIBRARIES
 IF(BUILD_STATIC)
     SET(STATIC_LIBRARIES 
         ${STATIC_LIBRARIES} 
-        osg
-        osgFX
-        osgUtil
-        osgFX
-        osgGA
-        osgQt
-        osgAnimation
-        osgViewer
-        osgQt
-        osgManipulator
-        osgText
+        ${OPENSCENEGRAPH_LIBRARIES}
         )
 ELSE(BUILD_STATIC)
     SET(DYNAMIC_LIBRARIES 
         ${DYNAMIC_LIBRARIES}
-        osg
-        osgFX
-        osgUtil
-        osgFX
-        osgGA
-        osgQt
-        osgAnimation
-        osgViewer
-        osgQt
-        osgManipulator
-        osgText
+        ${OPENSCENEGRAPH_LIBRARIES}
         )
 ENDIF(BUILD_STATIC)
 
