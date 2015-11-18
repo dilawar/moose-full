@@ -2,7 +2,7 @@ Source: moose
 Section: science
 Priority: optional
 Maintainer: Dilawar Singh <dilawars@ncbs.res.in>
-Build-Depends: debhelper, cdbs, devscripts, cmake, python-qt4, libxml2-dev, libbz2-dev, python-dev, python-numpy, libhdf5-serial-dev, libqt4-dev, python-qt4-dev, python-qt4-gl
+Build-Depends: debhelper, cdbs, devscripts, cmake, python-qt4, libxml2-dev, libbz2-dev, python-dev, python-numpy, libhdf5-serial-dev, libqt4-dev, python-qt4-dev, python-qt4-gl, libgsl0l-dev, python-opengl-dev
 Standards-Version: 3.9.5
 Homepage: http://moose.ncbs.res.in
 

@@ -1,6 +1,7 @@
 libqt4-dev
 python-qt4-dev
 python-qt4-gl
+python-opengl-dev
 libxml2-dev
 libbz2-dev
 libgsl0l-dev
