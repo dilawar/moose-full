@@ -191,6 +191,6 @@ add_test(NAME moose-core
     )
 add_test(NAME moogli
     COMMAND python -c "import moogli"
-    WORKING_DIRECTORY ${MOOGLI_BUILD_DIR}
+    WORKING_DIRECTORY ${MOOGLI_SOURCE_DIR}
     )
 
