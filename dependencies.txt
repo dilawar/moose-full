@@ -1,0 +1,10 @@
+libqt4-dev
+python-qt4-dev
+python-qt4-gl
+libxml2-dev
+libbz2-dev
+libgsl0l-dev
+cmake
+libhdf5-dev
+python-numpy
+libpython-dev

@@ -1,0 +1,2883 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"s",
+				"simulation_variable"
+			],
+			[
+				"me",
+				"mediator"
+			],
+			[
+				"visu",
+				"visualization_variable"
+			],
+			[
+				"Sim",
+				"SimulationDataConsumer"
+			],
+			[
+				"se",
+				"setter"
+			],
+			[
+				"con",
+				"consumer"
+			],
+			[
+				"co",
+				"consumer"
+			],
+			[
+				"cons",
+				"consumers"
+			],
+			[
+				"m",
+				"medcondict"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"pro",
+				"property	New Property"
+			],
+			[
+				"pr",
+				"property	New Property"
+			],
+			[
+				"vi",
+				"visualizable"
+			],
+			[
+				"sim",
+				"sim_var"
+			],
+			[
+				"__",
+				"__downsampler"
+			],
+			[
+				"no",
+				"normalizer"
+			],
+			[
+				"S",
+				"SimulationDataMediator"
+			],
+			[
+				"P",
+				"PipeLineElement"
+			],
+			[
+				"dat",
+				"data_producer_1"
+			],
+			[
+				"Dat",
+				"DataSource"
+			],
+			[
+				"thre",
+				"thresholder"
+			],
+			[
+				"time",
+				"time_series"
+			],
+			[
+				"tiem",
+				"time_series"
+			],
+			[
+				"spik",
+				"spike_series"
+			],
+			[
+				"sp",
+				"spike_times"
+			],
+			[
+				"tim",
+				"time_series"
+			],
+			[
+				"spike",
+				"spiketimes"
+			],
+			[
+				"t",
+				"timeseries"
+			],
+			[
+				"spi",
+				"spike_series"
+			],
+			[
+				"ti",
+				"time_series"
+			],
+			[
+				"b",
+				"begin"
+			],
+			[
+				"vis",
+				"visualizable"
+			],
+			[
+				"po",
+				"points"
+			],
+			[
+				"int",
+				"interval"
+			],
+			[
+				"st",
+				"start_time"
+			],
+			[
+				"ab",
+				"absresult"
+			],
+			[
+				"color",
+				"color_controller"
+			],
+			[
+				"ON",
+				"ON_FOCUS_ICON_PATH"
+			],
+			[
+				"y_",
+				"y_start"
+			],
+			[
+				"is",
+				"isinstance"
+			],
+			[
+				"x_",
+				"x_position"
+			],
+			[
+				"x_p",
+				"x_position"
+			],
+			[
+				"ba",
+				"background_color"
+			],
+			[
+				"bakc",
+				"background_color"
+			],
+			[
+				"Flo",
+				"FloatingButtonGrid"
+			],
+			[
+				"but",
+				"button_datum"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"col",
+				"col_index"
+			],
+			[
+				"ro",
+				"row_index"
+			],
+			[
+				"butt",
+				"button_data"
+			],
+			[
+				"bak",
+				"background_color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"row",
+				"row_count"
+			],
+			[
+				"rw",
+				"row_index"
+			],
+			[
+				"bu",
+				"button_data"
+			],
+			[
+				"y",
+				"y_percentage"
+			],
+			[
+				"bad",
+				"background_color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"hom",
+				"home_button"
+			],
+			[
+				"ho",
+				"home_button"
+			],
+			[
+				"boto",
+				"bottom_left_position"
+			],
+			[
+				"padd",
+				"paddingBottom"
+			],
+			[
+				"O",
+				"OverlayDialog"
+			],
+			[
+				"Qt",
+				"QtGui"
+			],
+			[
+				"res",
+				"resizeEvent"
+			],
+			[
+				"add",
+				"addChild"
+			],
+			[
+				"par",
+				"parent_proximal"
+			],
+			[
+				"pa",
+				"parent_distal"
+			],
+			[
+				"central",
+				"central_segment_index"
+			],
+			[
+				"ra",
+				"radial_segment_index"
+			],
+			[
+				"min",
+				"minval"
+			],
+			[
+				"type",
+				"typeexception"
+			],
+			[
+				"hex",
+				"hexstring"
+			],
+			[
+				"Geom",
+				"GeometrySelector"
+			],
+			[
+				"cat",
+				"catmull_rom_smoothen"
+			],
+			[
+				"ch",
+				"child_pair"
+			],
+			[
+				"r",
+				"root_compartment"
+			],
+			[
+				"for",
+				"for	For Loop"
+			],
+			[
+				"to",
+				"to_string"
+			],
+			[
+				"catmull",
+				"catmull_rom_bounded_compartment"
+			],
+			[
+				"rad",
+				"radial_segments"
+			],
+			[
+				"ge",
+				"geometry"
+			],
+			[
+				"go",
+				"geode"
+			],
+			[
+				"Vec",
+				"Vec4f"
+			],
+			[
+				"ver",
+				"vertex_count"
+			],
+			[
+				"Ge",
+				"Geometry"
+			],
+			[
+				"Ve",
+				"Vec3Array"
+			],
+			[
+				"si",
+				"size_t"
+			],
+			[
+				"G",
+				"Geometry"
+			],
+			[
+				"radi",
+				"radial_segments"
+			],
+			[
+				"centr",
+				"central_segment_index"
+			],
+			[
+				"axi",
+				"axial_segments"
+			],
+			[
+				"temp",
+				"temp_geometry"
+			],
+			[
+				"compute_",
+				"compute_center"
+			],
+			[
+				"comp",
+				"compute_center"
+			],
+			[
+				"Se",
+				"segment_index"
+			],
+			[
+				"ca",
+				"catmull_rom_point"
+			],
+			[
+				"kno",
+				"knot_factor_21"
+			],
+			[
+				"kn",
+				"knot_factor_21"
+			],
+			[
+				"k",
+				"knot_factor_32"
+			],
+			[
+				"ri",
+				"right_axial_segments"
+			],
+			[
+				"z",
+				"zdelta"
+			],
+			[
+				"a",
+				"axial_segments"
+			],
+			[
+				"cy",
+				"cylinder2"
+			],
+			[
+				"cyli",
+				"cylinder1"
+			],
+			[
+				"vie",
+				"viewer"
+			],
+			[
+				"ne",
+				"neuron_name"
+			],
+			[
+				"p",
+				"proximal"
+			],
+			[
+				"paren",
+				"parent_compartment"
+			],
+			[
+				"moose_",
+				"moose_ecompt"
+			],
+			[
+				"chi",
+				"children"
+			],
+			[
+				"neur",
+				"neuromesh"
+			],
+			[
+				"moos",
+				"moose_neuron"
+			],
+			[
+				"moose_Ec",
+				"moose_ecompt"
+			],
+			[
+				"moose_e",
+				"moose_ecompts"
+			],
+			[
+				"Compartm",
+				"CompartmentBase"
+			],
+			[
+				"moose",
+				"moose_neurons"
+			],
+			[
+				"pre",
+				"prelude"
+			],
+			[
+				"moo",
+				"moose_ecompt"
+			],
+			[
+				"wil",
+				"wildcardFind"
+			],
+			[
+				"ass",
+				"assertTrue"
+			],
+			[
+				"ce",
+				"chemical_compartment"
+			],
+			[
+				"PyF",
+				"PyFloat_FromDouble"
+			],
+			[
+				"PyTuple",
+				"PyTuple_SET_ITEM"
+			],
+			[
+				"PyTup",
+				"PyTuple_New"
+			],
+			[
+				"PyE",
+				"PyExc_TypeError"
+			],
+			[
+				"sipE",
+				"sipErrorFail"
+			],
+			[
+				"colo",
+				"color_seq"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "from .pipeline import PipelineElement\n\nclass Consumer(PipelineElement):\n    __metaclass__ = ABCMeta\n\n    def __init__(self):\n        super(Consumer, self).__init__()\n        self.input = None\n        self._mediators = set()\n\n    @property\n    def input(self):\n        return self._input\n\n    @input.setter\n    def input(self, value):\n        self._input = value\n\n    @property\n    def mediators(self):\n        return tuple(self._mediators)\n\n    @abstractmethod\n    def consume(self):\n        pass\n\n\n\n\nclass SimulationDataConsumer(Consumer):\n    pass\n",
+			"file": "moogli/pipeline/consumer.py",
+			"file_size": 551,
+			"file_write_time": 130829833389988662,
+			"settings":
+			{
+				"buffer_size": 550,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/aviral/programming/github/moose/moose-core/Makefile",
+			"settings":
+			{
+				"buffer_size": 18002,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/aviral/programming/github/moose/.git/MERGE_MSG",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/aviral/programming/github-final/moose/moose-core/.travis.yml",
+			"settings":
+			{
+				"buffer_size": 1569,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/aviral/programming/github-final/moose/.git/modules/moose-core/MERGE_MSG",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/aviral/programming/github-final/moose/.git/MERGE_MSG",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "setup.py",
+			"settings":
+			{
+				"buffer_size": 6653,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/aviral/programming/paper-model/fig7bcde_6.py",
+			"settings":
+			{
+				"buffer_size": 37849,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/aviral/programming/github-final/moose/moose-examples/snippets/rxdSpineSize.py",
+			"settings":
+			{
+				"buffer_size": 11226,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/aviral/programming/paper-model/test.py",
+			"settings":
+			{
+				"buffer_size": 38027,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/aviral/programming/paper-model/cells_channels/CA1_nochans.morph.xml",
+			"settings":
+			{
+				"buffer_size": 598067,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "moogli/core/viewer.py",
+			"settings":
+			{
+				"buffer_size": 6594,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "moogli/bin/sip/moogli.sip",
+			"settings":
+			{
+				"buffer_size": 18021,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "moogli/bin/sip/moogli.old.sip",
+			"settings":
+			{
+				"buffer_size": 36769,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "moogli/bin/src/view/Viewer.cpp",
+			"settings":
+			{
+				"buffer_size": 12964,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "experiments/continuity.cpp",
+			"settings":
+			{
+				"buffer_size": 18806,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "experiments/segment_continuity.cpp",
+			"settings":
+			{
+				"buffer_size": 42253,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "experiments/catmull_rom.cpp",
+			"settings":
+			{
+				"buffer_size": 23614,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#include <cmath>\n#include \"definitions.h\"\n#include \"Simulation.h\"\n#include \"MorphologyViewer.h\"\n#include <osg/StateSet>\n#include <osg/LineWidth>\n\nSimulation::Simulation( morphology_t& morphology\n                      , simulation_t& simulation\n                      , MorphologyViewer* morphology_viewer\n                      )\n{\n    _morphology             = morphology;\n    _simulation             = simulation;\n    _morphology_viewer      = morphology_viewer;\n    _k_base                 = 0.0;\n    _k_increment            = 1.0;\n    _vm_vbase               = -0.065;\n    _vm_vpeak               = -0.04;\n    _rotation_change        = osg::Vec3f(0.0f, 0.0f, 0.0f);\n    _translation_offset     = osg::Vec3f(0.0f, 0.0f ,0.0001f);\n    _translation_change     = osg::Vec3f(0.0f, 0.0f ,0.0f);\n    _scaling_offset         = osg::Vec3f(1800000.0f, 1800000.0f ,1800000.0f);\n    _scaling_change         = osg::Vec3f(0.0f, 0.0f ,0.0f);\n    _simulation_start_time  = 0.75;\n    _simulation_end_time    = 1.00;\n    _simulation_interval    = 0.00005;\n    _refresh_interval       = 0.001;\n    _k_tau                  = 5.0 * _refresh_interval;\n    _k_tau_factor           = _k_tau/_refresh_interval;\n    _k_exponent_decay_factor= exp(-1.0 / _k_tau_factor);\n    _color                  = true;\n    _transparency           = false;\n    _simulation_screenshot  = true;\n\n    _transparency_setting   = TRANSPARENCY_CONTINUOUS;\n    _color_setting          = COLOR_CONTINUOUS;\n    _color_dormant          = osg::Vec4f(0.0, 0.0, 0.0, 0.0);\n    _color_active           = osg::Vec4f(1.0, 1.0, 1.0, 1.0);\n    _color_stable           = osg::Vec4f(0.5, 0.5, 0.5, 0.5);\n    _transparency_dormant   = 0.1;\n    _transparency_active    = 1.0;\n    _transparency_stable    = 0.5;\n\n    _projection_color_setting           = PROJECTION_COLOR_POSTSYNAPTIC;\n    _projection_transparency_setting    = PROJECTION_TRANSPARENCY_STABLE;\n    _projection_transparency_initial    = 0.0;\n\n    _projection_transparency_stable     = 0.0;\n    _popeye_effect          = true;\n    _radius_factor          = 0.75;\n    _camera = _morphology_viewer -> _camera;\n    _fps                    = 30;\n    _projection_popeye_effect_ = true;\n    _projection_width_factor = 0.75;\n    _projection_base_width   = 1.0f;\n\n    set_initial_color();\n//    update_model();\n    QVariant viewing_sequence_root = read_or_die(\"../model/viewing_sequence.json\");\n    read_viewing_sequence(viewing_sequence_root);\n};\n\nvoid Simulation::set_initial_color()\n{\n    neuron_iterator_t it1;\n    compartment_iterator_t it2;\n    for(it1 = _morphology.neurons.begin(); it1 != _morphology.neurons.end(); ++it1)\n    {\n        neuron_t neuron = it1 -> second;\n        for(it2 = neuron.compartments.begin(); it2 != neuron.compartments.end(); ++it2)\n        {\n            compartment_t compartment = it2 -> second;\n            compartment.k = _k_base;\n            osg::Vec4f new_color;\n            generate_color( new_color\n                          , _color_stable\n                          , _color_dormant\n                          , neuron.color.initial\n                          , _transparency_stable\n                          , _transparency_dormant\n                          , neuron.color\n                          , compartment.k\n                          );\n            compartment.node -> setColor(new_color);\n            set_projection_color(compartment.origin, 0);\n            set_projection_color(compartment.end, 1);\n        }\n    }\n}\n\n\nvoid\nSimulation::run_sequence()\n{\n    int screenshot_index = 0;\n    simulation_history_t simulation_history;\n\n    for(int i = 0; i < _viewing_sequence.size(); ++i)\n    {\n        std::cout << \"Setting Camera Position\\n\";\n        set_camera_position(i);\n\n        screenshot_index = run_subsequence( i\n                                           , screenshot_index\n                                           , simulation_history\n                                           );\n        if(i < _viewing_sequence.size() - 1)\n        {\n            std::cout << \"Interpolating\\n\";\n            screenshot_index = run_interpolation_sequence(i, screenshot_index);\n        }\n    }\n}\n\nint\nSimulation::run_subsequence( int index\n                           , int screenshot_index\n                           , simulation_history_t& simulation_history\n                           )\n{\n    int start_index = _viewing_sequence[index].viewing_item_indices.start_index;\n    int end_index   = _viewing_sequence[index].viewing_item_indices.end_index;\n    int interval    = _viewing_sequence[index].viewing_item_indices.interval;\n    int frames      = _viewing_sequence[index].viewing_item_indices.frames;\n    std::cout << \"Start Index :\" << start_index << \"\\n\";\n    std::cout << \"End Index   :\" << end_index << \"\\n\";\n    std::cout << \"Interval    :\" << interval << \"\\n\";\n    std::cout << \"Frames      :\" << frames << \"\\n\";\n    for( int start = start_index; interval != 0 && start < end_index; start += interval)\n    {\n        simulation_event_t average_simulation_event;\n//        simulation_time += _refresh_interval;\n        // std::cout << \"Time :\" << simulation_time <<\"\\n\";\n        create_simulation_event( start\n                               , start + interval\n                               , 0.0\n                               , average_simulation_event\n                               );\n        update_simulation_history( simulation_history\n                                 , average_simulation_event\n                                 );\n        trigger_simulation_event( average_simulation_event\n                                );\n        apply_simulation_history( simulation_history\n                                );\n\n        _morphology_viewer -> refresh_frame();\n        if(_simulation_screenshot)\n        {\n            for(int j = 0; j < frames; ++j)\n            {\n                _morphology_viewer -> screenshot(screenshot_index);\n                ++screenshot_index;\n            }\n        }\n    }\n\n    if(interval == 0)\n    {\n        if(_simulation_screenshot)\n        {\n            for(int j = 0; j < frames; ++j)\n            {\n                _morphology_viewer -> refresh_frame();\n                _morphology_viewer -> screenshot(screenshot_index);\n                ++screenshot_index;\n            }\n        }\n    }\n    return screenshot_index;\n}\n\n\nvoid\nSimulation::set_camera_position( int index\n                               )\n{\n    osg::Vec3f camera_position = _viewing_sequence[index].viewing_item_camera.camera_position;\n    osg::Vec3f eye_position    = _viewing_sequence[index].viewing_item_camera.eye_position;\n    osg::Vec3f up_vector       = _viewing_sequence[index].viewing_item_camera.up_vector;\n    _camera -> setViewMatrix(osg::Matrix::lookAt( camera_position\n                                                , eye_position\n                                                , up_vector\n                                                ));\n    _morphology_viewer -> refresh_frame();\n\n}\n\nint\nSimulation::run_interpolation_sequence( int index\n                                      , int screenshot_index\n                                      )\n{\n    int frames = _viewing_sequence[index].viewing_item_time.transition_interval * _fps;\n    for(int i = 1; i <= frames; ++i)\n    {\n        float ratio = ((float)i) / (frames + 1);\n        osg::Vec3f camera_position;\n        osg::Vec3f eye_position;\n        osg::Vec3f up_vector;\n        interpolator( camera_position\n                    , eye_position\n                    , up_vector\n                    , index\n                    , ratio\n                    );\n        _camera -> setViewMatrix(osg::Matrix::lookAt( camera_position\n                                                    , eye_position\n                                                    , up_vector\n                                                    ));\n        _morphology_viewer -> refresh_frame();\n        if(_simulation_screenshot)\n        {\n            _morphology_viewer -> screenshot(screenshot_index);\n            ++screenshot_index;\n        }\n    }\n    return screenshot_index;\n}\n\nvoid\nSimulation::interpolator( osg::Vec3f& camera_position\n                        , osg::Vec3f& eye_position\n                        , osg::Vec3f& up_vector\n                        , int index\n                        , float ratio\n                        )\n{\n\n    camera_position = interpolate_vectors(\n          _viewing_sequence[index].viewing_item_camera.camera_position\n        , _viewing_sequence[index + 1].viewing_item_camera.camera_position\n        , ratio\n        );\n    eye_position = interpolate_vectors(\n          _viewing_sequence[index].viewing_item_camera.eye_position\n        , _viewing_sequence[index + 1].viewing_item_camera.eye_position\n        , ratio\n        );\n    up_vector = interpolate_vectors(\n          _viewing_sequence[index].viewing_item_camera.up_vector\n        , _viewing_sequence[index + 1].viewing_item_camera.up_vector\n        , ratio\n        );\n}\n\n\nosg::Vec3f\nSimulation::interpolate_vectors( osg::Vec3f& first_vector\n                               , osg::Vec3f& second_vector\n                               , float ratio\n                               )\n{\n    return first_vector + (second_vector - first_vector) * ratio;\n}\n\n\n\nvoid\nSimulation::run()\n{\n\n    simulation_event_iterator_t simulation_iterator = _simulation.begin();\n    double simulation_time = 0.0;\n    _simulation_start_time -= _simulation[0].time;\n    _simulation_end_time -= _simulation[0].time;\n    int start_index = round(_simulation_start_time / _simulation_interval);\n    int end_index   = round(_simulation_end_time / _simulation_interval) + 1;\n    int interval    = round(_refresh_interval / _simulation_interval) + 1;\n    if(start_index < 0){ start_index = 0; }\n    if(end_index > _simulation.size()){ end_index = _simulation.size(); }\n    // std::cout << start_index << \"\\n\";\n    // std::cout << end_index << \"\\n\";\n    // std::cout << interval << \"\\n\";\n    // std::cout << _simulation.size()<<\"\\n\";\n    int start;\n    int end;\n    int screenshot_index = 0;\n    simulation_history_t simulation_history;\n    for( int start = start_index, end = start_index + interval\n       ; end <= end_index\n       ; start += interval, end += interval\n       )\n    {\n        simulation_event_t average_simulation_event;\n        simulation_time += _refresh_interval;\n        // std::cout << \"Time :\" << simulation_time <<\"\\n\";\n        update_model();\n        create_simulation_event( start\n                               , end\n                               , simulation_time\n                               , average_simulation_event\n                               );\n        update_simulation_history( simulation_history\n                                 , average_simulation_event\n                                 );\n        trigger_simulation_event( average_simulation_event\n                                );\n        apply_simulation_history( simulation_history\n                                );\n        //_morphology_viewer -> dosomething();\n        _morphology_viewer -> refresh_frame();\n        if(_simulation_screenshot)\n        {\n            _morphology_viewer -> screenshot(screenshot_index);\n            ++screenshot_index;\n        }\n    }\n}\n\nvoid\nSimulation::update_model()\n{\n    /*\n    double x0 = -222.273148732643;\n    double y0 = -1473.42900172213;\n    double z0 =  1656.15556977421;\n    double a =0.472201003311975;\n    double b = -0.00111894287688018;\n    double c = -0.0586994841411479;\n    double d = 0.87953358719242;\n\n    osg::Quat quat(a,b,c,d);\n\n\n    osg::Matrix viewMatrix = osg::Matrix::rotate(quat) * osg::Matrix::translate(osg::Vec3f(x0,y0,z0));\n    viewMatrix.preMult(osg::Matrix::rotate(osg::PI_2,osg::X_AXIS));\n    viewMatrix.invert(viewMatrix);\n    _camera->setViewMatrix(viewMat);\n    _morphology_viewer -> _camera -> setViewMatrix(viewMatrix);\n*/\n    osg::Quat quat( _rotation_offset[0], osg::Vec3d(1.0, 0.0, 0.0)\n                  , _rotation_offset[1], osg::Vec3d(0.0, 1.0, 0.0)\n                  , _rotation_offset[2], osg::Vec3d(0.0, 0.0, 1.0)\n                  );\n\n\n    _morphology.node -> setAttitude(quat);\n    _morphology.node -> setPosition(_translation_offset);\n    _morphology.node -> setScale(_scaling_offset);\n    _rotation_offset    += _rotation_change;\n    _scaling_offset     += _scaling_change;\n    _translation_offset += _translation_change;\n\n}\n\n/*\n    _camera -> setViewMatrixAsLookAt( osg::Vec3d(xCamera,yCamera,zCamera)\n                                   , osg::Vec3d(0.0,0.0,0.0)\n                                   , osg::Vec3d(0.0,0.0,1.0)\n                                   );\n\n   _morphology.node -> setRotation();\n   _morphology.node -> setRotation();\n   _morphology.node -> setRotation();\n\n}\n\n*/\n\nvoid\nSimulation::create_simulation_event( int start\n                                   , int end\n                                   , double simulation_time\n                                   , simulation_event_t& average_simulation_event\n                                   )\n{\n    for(int index = start; index < end; ++index)\n    {\n\n        update_spike_event( average_simulation_event.spike_event\n                          , _simulation[index].spike_event\n                          );\n        update_vm_event( average_simulation_event.vm_event\n                       , _simulation[index].vm_event\n                       );\n    }\n\n    average_vm( average_simulation_event.vm_event\n              , end - start\n              );\n}\n\n\nvoid\nSimulation::average_vm( vm_event_t& vm_event\n                      , int interval\n                      )\n{\n    neuron_vm_event_iterator_t neuron_vm_event_iterator;\n    for( neuron_vm_event_iterator = vm_event.begin()\n       ; neuron_vm_event_iterator != vm_event.end()\n       ; ++neuron_vm_event_iterator\n       )\n    {\n        neuron_vm_event_t neuron_vm_event =\n            neuron_vm_event_iterator -> second;\n        neuron_vm_event_compartment_iterator_t neuron_vm_event_compartment_iterator;\n        for( neuron_vm_event_compartment_iterator = neuron_vm_event.compartments.begin()\n           ; neuron_vm_event_compartment_iterator != neuron_vm_event.compartments.end()\n           ; ++ neuron_vm_event_compartment_iterator\n           )\n        {\n            neuron_vm_event_compartment_iterator -> second /= interval;\n        }\n    }\n}\n\nvoid\nSimulation::update_spike_event( spike_event_t& average_spike_event\n                              , spike_event_t& actual_spike_event\n                              )\n{\n    neuron_spike_event_iterator_t neuron_spike_event_iterator;\n    for( neuron_spike_event_iterator = actual_spike_event.begin()\n       ; neuron_spike_event_iterator != actual_spike_event.end()\n       ; ++neuron_spike_event_iterator\n       )\n    {\n        neuron_name_t neuron_name = neuron_spike_event_iterator -> first;\n        neuron_spike_event_t actual_neuron_spike_event = neuron_spike_event_iterator -> second;\n        if(average_spike_event.find(neuron_name) == average_spike_event.end())\n        {\n            neuron_spike_event_t average_neuron_spike_event;\n            update_neuron_spike_event( average_neuron_spike_event\n                                     , neuron_name\n                                     , actual_neuron_spike_event\n                                     );\n            average_spike_event[neuron_name] = average_neuron_spike_event;\n        }\n        else\n        {\n            update_neuron_spike_event( average_spike_event[neuron_name]\n                                     , neuron_name\n                                     , actual_neuron_spike_event\n                                     );\n        }\n    }\n}\n\n\nvoid\nSimulation::update_neuron_spike_event( neuron_spike_event_t& average_neuron_spike_event\n                                     , neuron_name_t& neuron_name\n                                     , neuron_spike_event_t& actual_neuron_spike_event\n\n                                     )\n{\n    if( average_neuron_spike_event.compartments.size() ==\n        _morphology.neurons[neuron_name].compartments.size()\n      )\n    {\n        return;\n    }\n    if(actual_neuron_spike_event.compartments.size() == 0)\n    {\n        compartment_iterator_t compartment_iterator;\n        for( compartment_iterator  = _morphology.neurons[neuron_name].compartments.begin()\n           ; compartment_iterator != _morphology.neurons[neuron_name].compartments.end()\n           ; ++ compartment_iterator\n           )\n        {\n            average_neuron_spike_event.compartments.insert(compartment_iterator -> first);\n        }\n    }\n    else\n    {\n        average_neuron_spike_event.compartments.insert( actual_neuron_spike_event.compartments.begin()\n                                                      , actual_neuron_spike_event.compartments.end()\n                                                      );\n    }\n}\n\nvoid\nSimulation::update_vm_event( vm_event_t& average_vm_event\n                           , vm_event_t& actual_vm_event\n                           )\n{\n    neuron_vm_event_iterator_t neuron_vm_event_iterator;\n    for( neuron_vm_event_iterator = actual_vm_event.begin()\n       ; neuron_vm_event_iterator != actual_vm_event.end()\n       ; ++neuron_vm_event_iterator\n       )\n    {\n        neuron_name_t neuron_name = neuron_vm_event_iterator -> first;\n        neuron_vm_event_t actual_neuron_vm_event = neuron_vm_event_iterator -> second;\n        if(average_vm_event.find(neuron_name) == average_vm_event.end())\n        {\n            neuron_vm_event_t average_neuron_vm_event;\n            update_neuron_vm_event( average_neuron_vm_event\n                                  , neuron_name\n                                  , actual_neuron_vm_event\n                                  );\n            average_vm_event[neuron_name] = average_neuron_vm_event;\n        }\n        else\n        {\n            update_neuron_vm_event( average_vm_event[neuron_name]\n                                  , neuron_name\n                                  , actual_neuron_vm_event\n                                  );\n        }\n    }\n}\n\nvoid\nSimulation::update_neuron_vm_event( neuron_vm_event_t& average_neuron_vm_event\n                                  , neuron_name_t& neuron_name\n                                  , neuron_vm_event_t& actual_neuron_vm_event\n                                  )\n{\n    if( actual_neuron_vm_event.compartments.size() == 0)\n    {\n        compartment_iterator_t compartment_iterator;\n        for( compartment_iterator = _morphology.neurons[neuron_name].compartments.begin()\n           ; compartment_iterator != _morphology.neurons[neuron_name].compartments.end()\n           ; ++compartment_iterator\n           )\n        {\n            compartment_name_t compartment_name = compartment_iterator -> first;\n            if( average_neuron_vm_event.compartments.find(compartment_name) !=\n                average_neuron_vm_event.compartments.end()\n              )\n            {\n                average_neuron_vm_event.compartments[compartment_name] += actual_neuron_vm_event.vm;\n            }\n            else\n            {\n                average_neuron_vm_event.compartments[compartment_name] = actual_neuron_vm_event.vm;\n            }\n        }\n    }\n\n    else\n    {\n        neuron_vm_event_compartment_iterator_t it;\n        for( it =  actual_neuron_vm_event.compartments.begin()\n           ; it != actual_neuron_vm_event.compartments.end()\n           ; ++it\n           )\n        {\n            compartment_name_t compartment_name = it -> first;\n            double vm = it -> second;\n            if( average_neuron_vm_event.compartments.find(compartment_name) !=\n                average_neuron_vm_event.compartments.end()\n              )\n            {\n                average_neuron_vm_event.compartments[compartment_name] += vm;\n            }\n            else\n            {\n                average_neuron_vm_event.compartments[compartment_name] = vm;\n            }\n        }\n    }\n}\n\n\nvoid\nSimulation::update_simulation_history( simulation_history_t& simulation_history\n                                     , simulation_event_t& average_simulation_event\n                                     )\n{\n    neuron_spike_event_iterator_t it1;\n    for( it1 =  average_simulation_event.spike_event.begin()\n       ; it1 != average_simulation_event.spike_event.end()\n       ; ++it1\n       )\n    {\n        neuron_name_t neuron_name = it1 -> first;\n        neuron_spike_event_t neuron_spike_event = it1 -> second;\n        if( simulation_history.find(neuron_name) == simulation_history.end() )\n        {\n            std::unordered_set<compartment_name_t> compartment_map;\n            simulation_history[neuron_name] = compartment_map;\n        }\n        simulation_history[neuron_name].insert( neuron_spike_event.compartments.begin()\n                                              , neuron_spike_event.compartments.end()\n                                              );\n    }\n/*\n    neuron_vm_event_iterator_t it2;\n    for( it2 =  average_simulation_event.vm_event.begin()\n       ; it2 != average_simulation_event.vm_event.end()\n       ; ++it2\n       )\n    {\n        neuron_name_t neuron_name = it2 -> first;\n        neuron_vm_event_t neuron_vm_event = it2 -> second;\n        neuron_vm_event_compartment_iterator_t it3;\n        if( simulation_history.find(neuron_name) == simulation_history.end())\n        {\n            std::unordered_set<compartment_name_t> compartment_map;\n            simulation_history[neuron_name] = compartment_map;\n        }\n\n        for( it3 =  neuron_vm_event.compartments.begin()\n           ; it3 != neuron_vm_event.compartments.end()\n           ; ++it3\n           )\n        {\n            compartment_name_t compartment_name = it3 -> first;\n            simulation_history[neuron_name].insert(compartment_name);\n        }\n    }\n*/\n}\n\nvoid\nSimulation::trigger_simulation_event( simulation_event_t& average_simulation_event\n                                    )\n{\n    trigger_spike_event( average_simulation_event.spike_event\n                       );\n    trigger_vm_event( average_simulation_event.vm_event\n                    );\n    // std::cout << \"Mitrals 0 :\"<< _morphology.neurons[std::string(\"mitrals_0\")].compartments[std::string(\"Seg0_soma_0\")].k<<\"\\n\";\n    // std::cout << \"Mitrals 1 :\" << _morphology.neurons[std::string(\"mitrals_1\")].compartments[std::string(\"Seg0_soma_0\")].k<<\"\\n\";\n}\n\nvoid\nSimulation::trigger_spike_event( spike_event_t& spike_event\n                               )\n{\n\n    neuron_spike_event_iterator_t neuron_spike_event_iterator;\n    for( neuron_spike_event_iterator = spike_event.begin()\n       ; neuron_spike_event_iterator != spike_event.end()\n       ; ++neuron_spike_event_iterator\n       )\n    {\n        neuron_name_t neuron_name = neuron_spike_event_iterator -> first;\n        neuron_spike_event_t neuron_spike_event = neuron_spike_event_iterator -> second;\n        trigger_neuron_spike_event( neuron_name\n                                  , neuron_spike_event\n                                  );\n    }\n}\n\n\nvoid\nSimulation::trigger_neuron_spike_event( neuron_name_t& neuron_name\n                                      , neuron_spike_event_t& neuron_spike_event\n                                      )\n{\n    neuron_spike_event_compartment_iterator_t it;\n    for( it = neuron_spike_event.compartments.begin()\n       ; it != neuron_spike_event.compartments.end()\n       ; ++it\n       )\n    {\n        compartment_name_t compartment_name = *it;\n/*\n        visualize_spike(neuron_name, compartment_name);\n*/\n        increase_k( _morphology.neurons[neuron_name].compartments[*it]\n                  , _morphology.neurons[neuron_name].color\n                  );\n\n    }\n}\n/*\nvoid\nSimulation::visualize_spike( neuron_name_t& neuron_name\n                           , compartment_name_t& compartment_name\n                           )\n{\n    if(_color_setting == COLOR_STABLE)\n    {\n        osg::Vec4f new_color = _color_constant;\n    }\n    else if(_color_setting == COLOR_BISTABLE)\n    {\n        osg::Vec4f new_color = _color_active;\n    }\n    else\n    {\n\n    }\n\n    if(_color_setting == COLOR_STABLE)\n    {\n        osg::Vec4f new_color = _color_constant;\n    }\n    else if(_color_setting == COLOR_BISTABLE)\n    {\n        osg::Vec4f new_color = _color_active;\n    }\n    else\n    {\n\n    }\n}\n\n\nvoid\nSimulation::visualize_vm( neuron_name_t& neuron_name\n                           , compartment_name_t& compartment_name\n                           )\n{\n\n}\n\nvoid\nSimulation::visualize_decay( neuron_name_t& neuron_name\n                           , compartment_name_t& compartment_name\n                           )\n{\n\n}\n\n*/\n\nvoid\nSimulation::trigger_vm_event( vm_event_t& vm_event\n                            )\n{\n    // std::cout << _morphology.neurons[std::string(\"mitrals_1\")].compartments[std::string(\"Seg0_soma_0\")].k<<\"\\n\";\n    neuron_vm_event_iterator_t neuron_vm_event_iterator;\n    for( neuron_vm_event_iterator = vm_event.begin()\n       ; neuron_vm_event_iterator != vm_event.end()\n       ; ++neuron_vm_event_iterator\n       )\n    {\n        neuron_name_t neuron_name = neuron_vm_event_iterator -> first;\n        neuron_vm_event_t neuron_vm_event = neuron_vm_event_iterator -> second;\n        trigger_neuron_vm_event( neuron_name\n                               , neuron_vm_event\n                               );\n    }\n}\n\n\nvoid\nSimulation::trigger_neuron_vm_event( neuron_name_t& neuron_name\n                                   , neuron_vm_event_t& neuron_vm_event\n                                   )\n{\n    neuron_vm_event_compartment_iterator_t it;\n    for( it = neuron_vm_event.compartments.begin()\n       ; it != neuron_vm_event.compartments.end()\n       ; ++it\n       )\n    {\n        modify_k( _morphology.neurons[neuron_name].compartments[it -> first]\n                , it -> second\n                , _morphology.neurons[neuron_name].color\n                );\n    }\n}\n\nvoid\nSimulation::apply_simulation_history(simulation_history_t& simulation_history)\n{\n    simulation_history_neuron_iterator_t it1;\n    for( it1 =  simulation_history.begin()\n       ; it1 != simulation_history.end()\n       ; ++it1\n       )\n    {\n        simulation_history_compartment_iterator_t it2;\n        for( it2 =  (it1 -> second).begin()\n           ; it2 != (it1 -> second).end()\n           ; ++it2\n           )\n        {\n            decrease_k( _morphology.neurons[it1 -> first].compartments[*it2]\n                      , _morphology.neurons[it1 -> first].color\n                      );\n        }\n    }\n}\n\nvoid\nSimulation::generate_color( osg::Vec4f& new_color\n                          , osg::Vec4f& stable_color\n                          , osg::Vec4f& bistable_color\n                          , osg::Vec4f& multistable_color\n                          , float stable_transparency\n                          , float bistable_transparency\n                          , color_t& color\n                          , double k\n                          )\n{\n    switch(_color_setting)\n    {\n        case COLOR_STABLE        :\n            new_color = stable_color;\n            break;\n        case TRANSPARENCY_BISTABLE      :\n            new_color = bistable_color;\n            break;\n        case TRANSPARENCY_MULTISTABLE   :\n            new_color = multistable_color;\n            break;\n        case TRANSPARENCY_CONTINUOUS    :\n            new_color = color.initial + (color.final - color.initial)* k;\n            break;\n        default :\n            break;\n    }\n    switch(_transparency_setting)\n    {\n        case TRANSPARENCY_STABLE        :\n            new_color[3] = stable_transparency;\n            break;\n        case TRANSPARENCY_BISTABLE      :\n            new_color[3] = bistable_transparency;\n            break;\n        case TRANSPARENCY_MULTISTABLE   :\n            new_color[3] = multistable_color[3];\n            break;\n        case TRANSPARENCY_CONTINUOUS    :\n            new_color[3] = color.initial[3] + (color.final[3] - color.initial[3])* k;\n            break;\n        default :\n            break;\n    }\n}\n\nvoid\nSimulation::increase_k(compartment_t& compartment, color_t& color)\n{\n    compartment.k += _k_increment;\n    if(compartment.k > 1.0){ compartment.k = 1.0; }\n\n    osg::Vec4f new_color;\n\n    generate_color( new_color\n                  , _color_stable\n                  , _color_active\n                  , color.final\n                  , _transparency_stable\n                  , _transparency_active\n                  , color\n                  , compartment.k\n                  );\n\n    compartment.node -> setColor(new_color);\n    if(_popeye_effect)\n    {\n        compartment.distal_radius = compartment.proximal_radius * (1.0 + _radius_factor * compartment.k);\n        osg::ref_ptr<osg::Cylinder> cylinder = static_cast<osg::Cylinder *>(compartment.node -> getShape());\n        cylinder -> setRadius(compartment.distal_radius);\n    }\n    set_projection_color(compartment.origin, 0);\n    set_projection_color(compartment.end, 1);\n}\n\nvoid\nSimulation::modify_k(compartment_t& compartment, double vm, color_t& color)\n{\n    compartment.k = (vm - _vm_vbase) / (_vm_vpeak - _vm_vbase);\n    if(compartment.k > 1.0){ compartment.k = 1.0; }\n    else if(compartment.k < 0.0){ compartment.k = 0.0; }\n\n    osg::Vec4f new_color;\n\n    generate_color( new_color\n                  , _color_stable\n                  , _color_active\n                  , color.final\n                  , _transparency_stable\n                  , _transparency_active\n                  , color\n                  , compartment.k\n                  );\n\n    compartment.node -> setColor(new_color);\n    if(_popeye_effect)\n    {\n        compartment.distal_radius = compartment.proximal_radius * (1.0 + _radius_factor * compartment.k);\n        osg::ref_ptr<osg::Cylinder> cylinder = static_cast<osg::Cylinder *>(compartment.node -> getShape());\n        cylinder -> setRadius(compartment.distal_radius);\n    }\n    set_projection_color(compartment.origin, 0);\n    set_projection_color(compartment.end, 1);\n}\n\n\nvoid\nSimulation::decrease_k(compartment_t& compartment, color_t& color)\n{\n    compartment.k = _k_base +(compartment.k - _k_base) * _k_exponent_decay_factor;\n    osg::Vec4f new_color;\n\n    generate_color( new_color\n                  , _color_stable\n                  , _color_dormant\n                  , color.initial\n                  , _transparency_stable\n                  , _transparency_dormant\n                  , color\n                  , compartment.k\n                  );\n\n    compartment.node -> setColor(new_color);\n    if(_popeye_effect)\n    {\n        compartment.distal_radius = compartment.proximal_radius * (1 + _radius_factor * compartment.k);\n        osg::ref_ptr<osg::Cylinder> cylinder = static_cast<osg::Cylinder *>(compartment.node -> getShape());\n        cylinder -> setRadius(compartment.distal_radius);\n    }\n\n    set_projection_color(compartment.origin, 0);\n    set_projection_color(compartment.end, 1);\n}\n\n\n\nvoid\nSimulation::set_projection_color( std::vector<projection_t *>& projections\n                                , int index\n                                )\n{\n    std::vector<projection_t *>::iterator projection_iterator;\n    for( projection_iterator = projections.begin()\n       ; projection_iterator != projections.end()\n       ; ++projection_iterator\n       )\n    {\n        projection_t projection = **projection_iterator;\n        osg::Vec4f color;\n        if(index == 0)\n        {\n            color = get_projection_color_initial(projection);\n        }\n        else\n        {\n            color = get_projection_color_final(projection);\n        }\n\n        osg::Vec4Array* projection_color = static_cast<osg::Vec4Array*>(projection.node -> getColorArray());\n        (*projection_color)[index] = color;\n        projection.node -> setColorArray(projection_color);\n        projection.node -> setColorBinding( osg::Geometry::BIND_PER_VERTEX );\n    }\n}\n\nosg::Vec4f\nSimulation::get_projection_color_initial( projection_t& projection)\n{\n    compartment_t start_compartment = _morphology.neurons[projection.origin_neuron].compartments[projection.origin_compartment];\n    compartment_t end_compartment = _morphology.neurons[projection.end_neuron].compartments[projection.end_compartment];\n    color_t start_neuron_color = _morphology.neurons[projection.origin_neuron].color;\n    color_t end_neuron_color = _morphology.neurons[projection.end_neuron].color;\n\n    osg::Vec4f start_compartment_color = start_compartment.node -> getColor();\n    osg::Vec4f end_compartment_color   = end_compartment.node -> getColor();\n\n    osg::Vec4f first_color;\n\n    switch(_projection_color_setting)\n    {\n        case PROJECTION_COLOR_PRESYNAPTIC   :\n            first_color = start_compartment_color;\n            break;\n        case PROJECTION_COLOR_POSTSYNAPTIC  :\n            first_color = end_neuron_color.initial + (end_neuron_color.final - start_neuron_color.initial) * start_compartment.k;\n            break;\n        case PROJECTION_COLOR_GRADATION     :\n            first_color = start_compartment_color;\n            break;\n        default:\n            break;\n    }\n\n    switch(_projection_transparency_setting)\n    {\n        case PROJECTION_TRANSPARENCY_STABLE:\n            first_color[3] = _projection_transparency_stable;\n            break;\n        case PROJECTION_TRANSPARENCY_GRADATION:\n            first_color[3] = start_compartment_color[3];\n            break;\n        case PROJECTION_TRANSPARENCY_GRADATION_INITIAL:\n            first_color[3] = _projection_transparency_initial + (start_neuron_color.final[3] - _projection_transparency_initial) * start_compartment.k;\n            break;\n        case PROJECTION_TRANSPARENCY_PRESYNAPTIC:\n            first_color[3] = start_compartment_color[3];\n            break;\n        case PROJECTION_TRANSPARENCY_PRESYNAPTIC_INITIAL:\n            first_color[3] = _projection_transparency_initial + (start_neuron_color.final[3] - _projection_transparency_initial) * start_compartment.k;\n            break;\n        case PROJECTION_TRANSPARENCY_POSTSYNAPTIC:\n            first_color[3] = end_compartment_color[3];\n            break;\n        case PROJECTION_TRANSPARENCY_POSTSYNAPTIC_INITIAL:\n            first_color[3] = _projection_transparency_initial + (end_neuron_color.final[3] - _projection_transparency_initial) * end_compartment.k;\n            break;\n        default :\n            break;\n    }\n\n    if(_projection_popeye_effect_)\n    {\n        float projection_width = _projection_base_width * (1.0 + _projection_width_factor * start_compartment.k);\n        osg::ref_ptr<osg::Geode> parent = static_cast<osg::Geode *>(projection.node -> getParent(0));\n        osg::LineWidth* line_width = new osg::LineWidth();\n        line_width->setWidth(projection_width);\n        parent->getOrCreateStateSet()->setAttributeAndModes(line_width, osg::StateAttribute::ON);\n    }\n    return first_color;\n}\n\nosg::Vec4f\nSimulation::get_projection_color_final( projection_t& projection\n                                      )\n{\n    compartment_t start_compartment = _morphology.neurons[projection.origin_neuron].compartments[projection.origin_compartment];\n    compartment_t end_compartment = _morphology.neurons[projection.end_neuron].compartments[projection.end_compartment];\n    color_t start_neuron_color = _morphology.neurons[projection.origin_neuron].color;\n    color_t end_neuron_color = _morphology.neurons[projection.end_neuron].color;\n    osg::Vec4f start_compartment_color = start_compartment.node -> getColor();\n    osg::Vec4f end_compartment_color   = end_compartment.node -> getColor();\n\n    osg::Vec4f second_color;\n\n    switch(_projection_color_setting)\n    {\n        case PROJECTION_COLOR_PRESYNAPTIC   :\n            second_color = start_compartment_color;\n            break;\n        case PROJECTION_COLOR_POSTSYNAPTIC  :\n            second_color = end_neuron_color.initial + (end_neuron_color.final - start_neuron_color.initial) * start_compartment.k;\n            break;\n        case PROJECTION_COLOR_GRADATION     :\n            second_color = end_neuron_color.initial + (end_neuron_color.final - start_neuron_color.initial) * start_compartment.k;\n            break;\n        default:\n            break;\n    }\n\n    switch(_transparency_setting)\n    {\n        case PROJECTION_TRANSPARENCY_STABLE:\n            second_color[3] = _projection_transparency_stable;\n            break;\n        case PROJECTION_TRANSPARENCY_GRADATION:\n            second_color[3] = end_compartment_color[3];\n            break;\n        case PROJECTION_TRANSPARENCY_GRADATION_INITIAL:\n            second_color[3] = _projection_transparency_initial + (end_neuron_color.final[3] - _projection_transparency_initial) * end_compartment.k;\n            break;\n        case PROJECTION_TRANSPARENCY_PRESYNAPTIC:\n            second_color[3] = start_compartment_color[3];\n            break;\n        case PROJECTION_TRANSPARENCY_PRESYNAPTIC_INITIAL:\n            second_color[3] = _projection_transparency_initial + (start_neuron_color.final[3] - _projection_transparency_initial) * start_compartment.k;\n            break;\n        case PROJECTION_TRANSPARENCY_POSTSYNAPTIC:\n            second_color[3] = end_compartment_color[3];\n            break;\n        case PROJECTION_TRANSPARENCY_POSTSYNAPTIC_INITIAL:\n            second_color[3] = _projection_transparency_initial + (end_neuron_color.final[3] - _projection_transparency_initial) * end_compartment.k;\n            break;\n        default :\n            break;\n    }\n    return second_color;\n}\n\n\n\nviewing_item_t\nSimulation::read_viewing_item( QVariant& viewing_sequence_item_root\n                         )\n{\n    /*\n     duration          : 0.1\n, transition-interval: 0.1\n, start-sim-time    : 0.0\n, end-sim-time      : 0.0\n, camera-position   : [-0.000116, -0.009392, 0.000633]\n, eye-position      : [-0.000116, 0.990608, 0.000633]\n, up-vector         : [0.000000, 0.000000, 1.000000]\n, model-scaling     : [1.000000, 1.000000, 1.000000]\n, model-rotation    : [0.000000, 0.000000, 0.000000, 1.000000]\n, model-position    : [0.000000, 0.000000, 0.000000]\n    */\n    viewing_item_t viewing_item;\n    QMap<QString, QVariant> item_map = viewing_sequence_item_root.toMap();\n    viewing_item.viewing_item_time.duration = item_map[QString(\"duration\")].toFloat();\n    viewing_item.viewing_item_time.transition_interval   = item_map[QString(\"transition-interval\")].toFloat();\n    viewing_item.viewing_item_time.simulation_start_time = item_map[QString(\"start-sim-time\")].toFloat();\n    viewing_item.viewing_item_time.simulation_end_time   = item_map[QString(\"end-sim-time\")].toFloat();\n    osg::Vec3f camera_position;\n    osg::Vec3f eye_position;\n    osg::Vec3f up_vector;\n    read_vector( item_map[QString(\"camera-position\")]\n               , viewing_item.viewing_item_camera.camera_position\n               );\n    read_vector( item_map[QString(\"eye-position\")]\n               , viewing_item.viewing_item_camera.eye_position\n               );\n    read_vector( item_map[QString(\"up-vector\")]\n               , viewing_item.viewing_item_camera.up_vector\n               );\n    return viewing_item;\n}\n\nvoid\nSimulation::read_vector( QVariant& vector_root\n                       , osg::Vec3f& vec\n                       )\n{\n    QList<QVariant> vector_list = vector_root.toList();\n    vec[0] = vector_list.at(0).toFloat();\n    vec[1] = vector_list.at(1).toFloat();\n    vec[2] = vector_list.at(2).toFloat();\n}\n\nvoid\nSimulation::read_viewing_sequence( QVariant& viewing_sequence_root\n                             )\n{\n    QList<QVariant> viewing_sequence_list = viewing_sequence_root.toList();\n\n    QList<QVariant>::iterator iter;\n\n    for( iter  = viewing_sequence_list.begin()\n       ; iter != viewing_sequence_list.end()\n       ; ++iter\n       )\n    {\n        viewing_item_t viewing_item = read_viewing_item(*iter);\n        _viewing_sequence.push_back( viewing_item );\n    }\n    smoothen_viewing_sequence(_viewing_sequence);\n}\n\n\nvoid\nSimulation::smoothen_viewing_sequence(viewing_sequence_t& viewing_sequence)\n{\n    for(int i = 0; i < viewing_sequence.size() ; ++i)\n    {\n        float simulation_end_time = viewing_sequence[i].viewing_item_time.simulation_end_time;\n        float simulation_start_time = viewing_sequence[i].viewing_item_time.simulation_start_time;\n        float duration = viewing_sequence[i].viewing_item_time.duration;\n\n        int start_index;\n        int end_index;\n        int interval;\n        int frames;\n\n        if(simulation_start_time > simulation_end_time)\n        {\n            simulation_end_time = simulation_start_time;\n        }\n\n        if(fabs(simulation_end_time - simulation_start_time) < _simulation_interval)\n        {\n            interval = 0;\n            simulation_end_time = simulation_start_time;\n            simulation_start_time = ((int)(simulation_start_time / _simulation_interval)) * _simulation_interval;\n            simulation_end_time = simulation_start_time;\n            start_index = round((simulation_start_time - _simulation[0].time)/ _simulation_interval);\n            end_index = start_index + 1;\n            frames = int(_fps * duration);\n        }\n        else\n        {\n            frames = round(_fps * duration);\n            start_index = round((simulation_start_time - _simulation[0].time)/ _simulation_interval);\n            end_index = round((simulation_end_time - _simulation[0].time)/ _simulation_interval);\n\n            if((end_index - start_index) > frames)\n            {\n                interval = round((end_index - start_index) / frames);\n                end_index = interval * frames + start_index;\n                simulation_end_time = end_index * _simulation_interval + _simulation[0].time;\n                frames = 1;\n            }\n            else\n            {\n                frames = int(frames / (end_index - start_index));\n                interval = 1;\n            }\n        }\n        if( ( i != viewing_sequence.size() - 1 ) &&\n           ( viewing_sequence[i].viewing_item_time.simulation_end_time >=\n             viewing_sequence[i+1].viewing_item_time.simulation_start_time\n           )\n         )\n        {\n            std::cout << \"Executing\\n\";\n            viewing_sequence[i+1].viewing_item_time.simulation_start_time = simulation_end_time;\n        }\n\n        viewing_sequence[i].viewing_item_time.simulation_start_time = simulation_start_time;\n        viewing_sequence[i].viewing_item_time.simulation_end_time = simulation_end_time;\n        viewing_sequence[i].viewing_item_indices.start_index = start_index;\n        viewing_sequence[i].viewing_item_indices.end_index = end_index;\n        viewing_sequence[i].viewing_item_indices.interval = interval;\n        viewing_sequence[i].viewing_item_indices.frames = frames;\n\n\n    }\n}",
+			"settings":
+			{
+				"buffer_size": 42578,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#ifndef _DEFINITIONS_H_\n#define _DEFINITIONS_H_\n\n#include <string>\n#include <map>\n#include <vector>\n#include <list>\n#include <unordered_map>\n#include <unordered_set>\n#include <osg/Vec3f>\n#include <osg/Vec4f>\n#include <osg/PositionAttitudeTransform>\n#include <osg/Geode>\n#include <osg/ShapeDrawable>\n#include <osg/Geometry>\n\n\ntypedef std::string compartment_name_t;\ntypedef std::string neuron_name_t;\n\n\ntypedef struct\n{\n    osg::Vec4f initial;\n    osg::Vec4f final;\n    std::string map;\n} color_t;\n\ntypedef struct\n{\n    neuron_name_t origin_neuron;\n    compartment_name_t origin_compartment;\n    neuron_name_t end_neuron;\n    compartment_name_t end_compartment;\n    osg::Vec3f start;\n    osg::Vec3f end;\n    osg::Vec3f direction;\n    double height;\n    osg::ref_ptr<osg::Geometry> node;\n} projection_t;\n\ntypedef struct\n{\n    osg::ref_ptr<osg::ShapeDrawable> node;\n    osg::Vec3f proximal;\n    osg::Vec3f distal;\n    osg::Vec3f center;\n    osg::Vec3f direction;\n    float height;\n    float proximal_radius;\n    float distal_radius;\n    double k;\n    std::vector<projection_t *> origin;\n    std::vector<projection_t *> end;\n}  compartment_t;\n\ntypedef std::vector<projection_t *> ::iterator projection_iterator_t;\n\ntypedef struct\n{\n    osg::ref_ptr<osg::PositionAttitudeTransform> node;\n    color_t color;\n    std::unordered_map<compartment_name_t, compartment_t> compartments;\n} neuron_t;\n\n\ntypedef struct\n{\n    osg::ref_ptr<osg::PositionAttitudeTransform> node;\n    std::unordered_map<neuron_name_t, neuron_t> neurons;\n} morphology_t;\n\ntypedef std::unordered_map<compartment_name_t, compartment_t>::iterator compartment_iterator_t;\ntypedef std::unordered_map<neuron_name_t, neuron_t>::iterator neuron_iterator_t;\n\ntypedef struct\n{\n    std::unordered_set<compartment_name_t> compartments;\n} neuron_spike_event_t;\n\ntypedef std::unordered_map<neuron_name_t, neuron_spike_event_t> spike_event_t;\ntypedef std::unordered_map<neuron_name_t, neuron_spike_event_t>::iterator neuron_spike_event_iterator_t;\ntypedef std::unordered_set<compartment_name_t>::iterator neuron_spike_event_compartment_iterator_t;\n\ntypedef struct\n{\n    double vm;\n    std::unordered_map<compartment_name_t, double> compartments;\n} neuron_vm_event_t;\ntypedef std::unordered_map<compartment_name_t, double>::iterator neuron_vm_event_compartment_iterator_t;\ntypedef std::unordered_map<neuron_name_t, neuron_vm_event_t> vm_event_t;\ntypedef std::unordered_map<neuron_name_t, neuron_vm_event_t>::iterator neuron_vm_event_iterator_t;\n\ntypedef struct\n{\n    double time;\n    spike_event_t spike_event;\n    vm_event_t    vm_event;\n} simulation_event_t;\n\ntypedef std::vector<simulation_event_t> simulation_t;\ntypedef std::vector<simulation_event_t>::iterator simulation_event_iterator_t;\n\ntypedef std::unordered_map<neuron_name_t, std::unordered_set<compartment_name_t> > simulation_history_t;\ntypedef std::unordered_map<neuron_name_t, std::unordered_set<compartment_name_t> >::iterator simulation_history_neuron_iterator_t;\ntypedef std::unordered_set<compartment_name_t>::iterator simulation_history_compartment_iterator_t;\n\nconst int TRANSPARENCY_STABLE       =   0;\nconst int TRANSPARENCY_BISTABLE     =   1;\nconst int TRANSPARENCY_MULTISTABLE  =   2;\nconst int TRANSPARENCY_CONTINUOUS   =   3;\n\nconst int COLOR_STABLE              =   0;\nconst int COLOR_BISTABLE            =   1;\nconst int COLOR_MULTISTABLE         =   2;\nconst int COLOR_CONTINUOUS          =   3;\n\nconst int PROJECTION_TRANSPARENCY_STABLE                = 0;\nconst int PROJECTION_TRANSPARENCY_GRADATION             = 1;\nconst int PROJECTION_TRANSPARENCY_GRADATION_INITIAL     = 2;\nconst int PROJECTION_TRANSPARENCY_PRESYNAPTIC           = 3;\nconst int PROJECTION_TRANSPARENCY_PRESYNAPTIC_INITIAL   = 4;\nconst int PROJECTION_TRANSPARENCY_POSTSYNAPTIC          = 5;\nconst int PROJECTION_TRANSPARENCY_POSTSYNAPTIC_INITIAL  = 6;\n\nconst int PROJECTION_COLOR_GRADATION                    = 0;\nconst int PROJECTION_COLOR_PRESYNAPTIC                  = 1;\nconst int PROJECTION_COLOR_POSTSYNAPTIC                 = 2;\n\n\ntypedef struct\n{\n    double duration;\n    double transition_interval;\n    double simulation_start_time;\n    double simulation_end_time;\n} viewing_item_time_t;\n\ntypedef struct\n{\n    osg::Vec3f camera_position;\n    osg::Vec3f eye_position;\n    osg::Vec3f up_vector;\n} viewing_item_camera_t;\n\ntypedef struct\n{\n    int start_index;\n    int end_index;\n    int interval;\n    int frames;\n} viewing_item_indices_t;\ntypedef struct\n{\n    viewing_item_time_t    viewing_item_time;\n    viewing_item_camera_t  viewing_item_camera;\n    viewing_item_indices_t viewing_item_indices;\n} viewing_item_t;\n\ntypedef std::vector<viewing_item_t> viewing_sequence_t;\n\n#endif /* _DEFINITIONS_H_ */",
+			"settings":
+			{
+				"buffer_size": 4709,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#http://www.jeffknupp.com/blog/2013/04/07/improve-your-python-yield-and-generators-explained/\n\n\ndef main():\n    environment = VisualizationEnvironment()\n    viewer      = NetworkViewer(MooseNetwork(path), camera_settings)\n    plotter     = LinePlot()\n    moose_producer = MooseProducer()\n    nsdf_producer  = NsdfProducer()\n    environment.layout().add(viewer)\n    environment.layout().add(plotter)\n    environment.connect(vm_producer, , viewer)\n    environment.connect(ca_producer, ca_mediator, viewer)\n    environment.connect(nsdf_producer, nsdf_mediator, viewer)\n    environment.connect(nsdf_producer, nsdf_mediator, plotter)\n    environment.show()\n\n    simulation_variable(name)\n\n\nraise 5 signals -> produce\n                -> mediate\n                -> consume\n                -> rewind\n                -> reinit\n\nthe clock at every tick asks all producers to produce \nthen asks all mediators to mediate - read a value from producers and transform\nthen asks all consumers to consume - read a value from mediators and update themselves\n\n\n\n\n\n\n\n\nmatplolib_colormap(name)\n\nProducer > SimulationData > Mediator > \n\nclass SimulationData():\n\n    self._data = {}\n\n    { simvar 1 : { element_id_1 : \n                 }\n      simvar 2 : {\n\n                 }\n      simvar 3 : {\n\n                 }\n    }\n    def add_spikes()\n    def add_()\n    def simulation_variables(): \n        pass\n    def visualization_variables(): \n        pass\n\n    def add(entity, visualizable_id, value):\n        if entity not in self._data: self._data[entity] = {}\n        if isinstance(value, bool):\n            self._data[entity][\"spike\"][visualizable_id] = value\n        elif isinstance(value, float):\n            self._data[]\n\n    def add_spike(entity, visualizable_id):\n        pass\n\n    def \n\nclass SimulationDataProducer(self):\n\n\n{ \"spike\" : { \"n1\" : True\n            , \"n2\" : False\n            }\n, \"timeseries\" : { \"c1\"  : -0.05\n                 , \"c2\"  : -0.034\n                 }\n}\n\n\nmediator -\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nclass SimulationData(object):\n    pass\n\n\n\n\n\n# on each clock tick, \n\n\nclass VisualizationEnvironment()\n    \n    def __init__(self):\n\n\n\nclass Producer(self):\n    def __init__(self):\n\n\n\n\n\nclass SimulationDataTransformer(object):\n    transform\n\nclass SimulationDataPoint(object):\n\n    def __init__(self):\n        \n\n\nclass SimulationDataProducer(QObject):\n    __metaclass__ = abc.ABCMeta\n\n    def __init__(self):\n        self.queue = []\n\n    @abc.abstractmethod\n    def produce(self):\n        \"\"\"Retrieve data from the input source and return an object.\"\"\"\n        return\n\n    @abc.abstractmethod\n    def time(self):\n\n\nclass DataProducer(SimulationDataProducer):\n\n    def next(self):\n\n        moose.start()\n\n\nMorphologyDataProducer\n\nMorphologyDataConsumer\n\nSimulationDataProducer()\n\nSimulationDataConsumer",
+			"settings":
+			{
+				"buffer_size": 2792,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "--with-x --with-kerberos --with-kerberos5 --with"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/tmp/libav-11.4/temp.txt",
+			"file_size": 4503,
+			"file_write_time": 130827217110068554,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "moogli/parser/csv.py",
+			"settings":
+			{
+				"buffer_size": 1804,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "moogli/parser/__init__.py",
+			"settings":
+			{
+				"buffer_size": 251,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "moogli/simulator/moose.py",
+			"settings":
+			{
+				"buffer_size": 25795,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/moogli_purkinje_simulation_with_rm_and_graph.py",
+			"settings":
+			{
+				"buffer_size": 8730,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "moogli/parser/swc.py",
+			"settings":
+			{
+				"buffer_size": 3318,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"file": "/home/aviral/Projects/goose",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "Git",
+		"selected_items":
+		[
+			[
+				"Git",
+				"Git: Status"
+			],
+			[
+				"Python",
+				"Set Syntax: Python"
+			],
+			[
+				"shell",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"C++",
+				"Set Syntax: C++"
+			],
+			[
+				"Pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"MAr",
+				"Set Syntax: Markdown"
+			],
+			[
+				"Rst",
+				"Set Syntax: reStructuredText Improved"
+			],
+			[
+				"Mar",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"No",
+				"SublimeREPL: Node"
+			],
+			[
+				"Pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"Character",
+				"Character Table: Lookup Unicode Character"
+			],
+			[
+				"Todo",
+				"TodoReview: Open Files"
+			],
+			[
+				"TodoR",
+				"TodoReview: Project and Open Files"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Jav",
+				"Set Syntax: Java"
+			],
+			[
+				"Java",
+				"Set Syntax: Java"
+			],
+			[
+				"Scala",
+				"Set Syntax: Scala"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: scheme_header"
+			],
+			[
+				"INstal",
+				"Package Control: Install Package"
+			],
+			[
+				"haskell",
+				"SublimeHaskell: Lint"
+			],
+			[
+				"Inst",
+				"Package Control: Install Package"
+			],
+			[
+				"inse",
+				"Character Table: Insert Unicode Character"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Snipp",
+				"Snippet: scheme_header"
+			],
+			[
+				"iNS",
+				"Package Control: Install Package"
+			],
+			[
+				"Tasks:",
+				"Tasks: New"
+			],
+			[
+				"New",
+				"Tasks: New document"
+			],
+			[
+				"ne",
+				"Tasks: New"
+			],
+			[
+				"Net",
+				"Tasks: New document"
+			],
+			[
+				"Fetc",
+				"Fetch: File"
+			],
+			[
+				"Manga",
+				"Fetch: Manage"
+			],
+			[
+				"Fet",
+				"Fetch: File"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"INstll",
+				"Package Control: Install Package"
+			],
+			[
+				"INstall",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"dis",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"coffee",
+				"Coffee: Display JavaScript"
+			],
+			[
+				"co",
+				"Coffee: Compile File"
+			],
+			[
+				"Compil",
+				"Coffee: Compile File"
+			],
+			[
+				"Str",
+				"Strapdown.js Markdown: Preview in Sublime Text"
+			],
+			[
+				"Stra",
+				"Strapdown.js Markdown: Preview in a browser"
+			],
+			[
+				"Strap",
+				"Strapdown.js Markdown: Preview in a browser"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 409.0,
+		"history":
+		[
+			"zoom_pane",
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/aviral/programming/moogli"
+	],
+	"file_history":
+	[
+		"/home/aviral/programming/moogli/moogli/bin/src/mesh/Mesh.cpp",
+		"/home/aviral/programming/moogli/moogli/bin/src/mesh/FrustumMesh.cpp",
+		"/home/aviral/programming/moogli/scripts/moogliviewer",
+		"/home/aviral/programming/moogli/examples/test.py",
+		"/home/aviral/programming/Projects/harsha-goose-2/src/goose/widgets/plots/plot.py",
+		"/home/aviral/programming/github-final/moose/.travis.yml",
+		"/home/aviral/programming/github/moose/.git/modules/moose-gui/MERGE_MSG",
+		"/home/aviral/programming/moogli/moogli/__init__.py",
+		"/home/aviral/st/tmux",
+		"/home/aviral/programming/moogli/examples/file.dat",
+		"/home/aviral/programming/moogli/examples/dump",
+		"/home/aviral/programming/moogli/moogli/include/mesh/Ring.hpp",
+		"/home/aviral/programming/moogli/moogli/src/mesh/Ring.cpp",
+		"/home/aviral/programming/moogli/moogli/clock.py",
+		"/home/aviral/programming/moogli/moogli/viewer.py",
+		"/home/aviral/programming/moogli/moogli/include/core/ElectricalCompartment.hpp",
+		"/home/aviral/programming/moogli/moogli/src/core/Neuron.cpp",
+		"/home/aviral/programming/moogli/moogli/include/core/Neuron.hpp",
+		"/home/aviral/programming/moogli/moogli/src/core/Network.cpp",
+		"/home/aviral/programming/moogli/moogli/include/core/Network.hpp",
+		"/home/aviral/programming/moogli/moogli/sip/moogli.sip",
+		"/home/aviral/programming/moogli/moogli/include/view/NetworkViewer.hpp",
+		"/home/aviral/programming/moogli/moogli/src/core/Visualizable.cpp",
+		"/home/aviral/programming/moogli/moogli/include/core/Visualizable.hpp",
+		"/home/aviral/programming/moogli/moogli/src/view/NetworkViewer.cpp",
+		"/home/aviral/programming/moogli/moogli/pipeline/producer.py",
+		"/home/aviral/programming/moogli/moogli/pipeline/mediator.py",
+		"/home/aviral/programming/moogli/moogli/pipeline/pipeline.py",
+		"/home/aviral/programming/moogli/moogli/pipeline/__init__.py",
+		"/home/aviral/programming/moogli/moogli/pipeline.py",
+		"/tmp/temp.txt",
+		"/etc/X11/xorg.conf",
+		"/home/aviral/programming/moogli/test.py",
+		"/home/aviral/programming/moogli/experiments/test_catmull_rom.cpp",
+		"/home/aviral/programming/moogli/README.rst",
+		"/home/aviral/programming/moogli/experiments/moogli-gui.py",
+		"/home/aviral/programming/moogli/moogli/utils/constants.py",
+		"/home/aviral/programming/moogli/moogli/colors.py",
+		"/home/aviral/programming/moogli/moogli/src/view/NetworkView.cpp",
+		"/home/aviral/programming/moogli/moogli/src/handlers/GeometrySelector.cpp",
+		"/home/aviral/programming/moogli/moogli/include/handlers/GeometrySelector.hpp",
+		"/home/aviral/programming/Projects/moose-trunk-pristine-2/gui/objectedit.py",
+		"/home/aviral/programming/moogli/experiments/catmull_rom.hpp",
+		"/home/aviral/programming/moogli/moogli/color.py",
+		"/home/aviral/programming/moogli/moogli.sublime-project",
+		"/home/aviral/programming/Projects/harsha-goose-2/src/goose/utils/constants.py",
+		"/home/aviral/programming/moogli/experiments/camera.svg",
+		"/home/aviral/programming/moogli/experiments/colormaps.py",
+		"/home/aviral/programming/moogli/experiments/Extensions",
+		"/home/aviral/programming/moogli/experiments/Section",
+		"/home/aviral/downloads/area-chart.svg",
+		"/home/aviral/programming/moogli/experiments/test.cpp",
+		"/home/aviral/programming/moogli/experiments/test.py",
+		"/home/aviral/Desktop/abcd.py",
+		"/home/aviral/Projects/moose-trunk-pristine-2/Makefile",
+		"/home/aviral/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/aviral/OpenSceneGraph-3.2.1-rc2/examples/osgpick/osgpick.cpp",
+		"/home/aviral/Projects/moogli/moogli/include/mesh/Ring.hpp",
+		"/home/aviral/Projects/moose-trunk-pristine-2/dependencies",
+		"/home/aviral/Projects/moose-trunk-pristine-2/ubuntu-dep",
+		"/home/aviral/Projects/moogli/docs/doxygen/html/NetworkViewer_8hpp_source.html",
+		"/home/aviral/Projects/moose-trunk-pristine-2/ubuntu-dep.sh",
+		"/home/aviral/Projects/moogli/data/neuroml/PurkinjeCellPassivePulseInput/README",
+		"/home/aviral/Projects/moogli/moogli/src/mesh/Ring.cpp",
+		"/home/aviral/Projects/moogli/moogli/include/utility/libraries.hpp",
+		"/home/aviral/Projects/moogli/moogli/include/utility/record.hpp",
+		"/home/aviral/Projects/moose-trunk-pristine-2/requirements.txt",
+		"/home/aviral/Projects/moogli/experiments/catmull_rom.cpp",
+		"/home/aviral/svn-commit.2.tmp",
+		"/home/aviral/svn-commit.tmp",
+		"/home/aviral/.xmonad/xmonad.hs",
+		"/home/aviral/.zshrc",
+		"/home/aviral/.oh-my-zsh/themes/ys.zsh-theme",
+		"/home/aviral/.Xresources",
+		"/home/aviral/Projects/moogli/scripts/moogli_simple_viewing.py",
+		"/home/aviral/Projects/moogli/scripts/moogli_purkinje_simulation.py",
+		"/home/aviral/Projects/moogli/moogli/src/view/NetworkView.cpp",
+		"/home/aviral/Projects/moogli/moogli/simulator/moose.py",
+		"/home/aviral/Projects/moogli/moogli/src/view/NetworkViewer.cpp",
+		"/home/aviral/Projects/moogli/moogli/reader/swc.py",
+		"/home/aviral/Projects/moogli/moogli/src/mesh/CylinderMesh.cpp",
+		"/home/aviral/Projects/multiGrid/buildCA1Pyr_v2.py",
+		"/home/aviral/Projects/moogli/setup.py",
+		"/home/aviral/Projects/moogli/moogli/utils/__init__.py",
+		"/home/aviral/Projects/moogli/moogli/src/core/Visualizable.cpp",
+		"/home/aviral/Projects/moogli/moogli/include/utility/constants.hpp",
+		"/home/aviral/Projects/moogli/moogli/sip/moogli.sip",
+		"/home/aviral/Projects/moogli/moogli/__init__.py",
+		"/home/aviral/Projects/moogli/moogli/utils/constants.py",
+		"/home/aviral/Projects/harsha-goose-2/src/goose/widgets/nkit/__main__.py",
+		"/home/aviral/Projects/moogli/moogli/viewer.py",
+		"/home/aviral/Projects/moogli/scripts/moogliviewer",
+		"/home/aviral/Projects/moogli/moogli/console/viewer.py",
+		"/home/aviral/Projects/moogli/docs/navigation.md",
+		"/home/aviral/Projects/moogli/moogli/src/core/ElectricalCompartment.cpp",
+		"/home/aviral/Projects/multiGrid/buildCA1Pyr.py",
+		"/home/aviral/Projects/moose-trunk-pristine-2/Demos/util/rdesigneur.py",
+		"/home/aviral/Projects/moogli/test/test.py",
+		"/home/aviral/Projects/moogli/moogli.egg-info/dependency_links.txt",
+		"/home/aviral/Projects/moogli/moogli/include/core/Visualizable.hpp",
+		"/home/aviral/Projects/moogli/moogli/include/core/Neuron.hpp",
+		"/home/aviral/Projects/moogli/README.rst",
+		"/home/aviral/Projects/moogli/moogli/include/core/Network.hpp",
+		"/home/aviral/Projects/moogli/moogli/include/core/ChemicalCompartment.hpp",
+		"/home/aviral/Projects/moogli/moogli/include/core/ElectricalCompartment.hpp",
+		"/home/aviral/Projects/moogli/moogli.sublime-project",
+		"/home/aviral/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/aviral/Remaining.sublime-keymap",
+		"/home/aviral/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/aviral/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/aviral/Projects/moogli/moogli/src/utility/conversions.cpp",
+		"/home/aviral/Projects/moogli/moogli/src/core/Network.cpp",
+		"/home/aviral/Projects/moogli/build/temp.linux-x86_64-2.7/sip_moogliNetwork.cpp",
+		"/home/aviral/Projects/moogli/build/temp.linux-x86_64-2.7/sip_moogliNeuron.cpp",
+		"/home/aviral/Downloads/sip-4.16.7/sipgen/gencode.c",
+		"/usr/include/python2.7/sip.h",
+		"/home/aviral/Projects/moogli/moogli/src/core/ChemicalCompartment.cpp",
+		"/home/aviral/Projects/moogli/moogli/src/core/Visualizables.cpp",
+		"/home/aviral/Projects/moogli/moogli/src/mesh/SphereMesh.cpp",
+		"/home/aviral/Projects/moogli/moogli/include/handlers/GeometrySelector.hpp",
+		"/home/aviral/Projects/moogli/moogli/include/mesh/CylinderMesh.hpp",
+		"/home/aviral/Projects/moogli/moogli/include/core/Visualizables.hpp",
+		"/home/aviral/Projects/moogli/moogli/src/core/Neuron.cpp",
+		"/home/aviral/Projects/moogli/moogli/include/utility/conversions.hpp",
+		"/home/aviral/Projects/moogli/moogli/include/mesh/SphereMesh.hpp",
+		"/home/aviral/Desktop/sip-4.16.7/sipgen/sip.h",
+		"/home/aviral/Projects/moogli/moogli/src/core/Sequence.cpp",
+		"/home/aviral/Projects/moogli/moogli/include/core/Sequence.hpp"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"clicked",
+			"\\}",
+			"}",
+			"HDF",
+			"moose",
+			"HDF",
+			"benchmarks",
+			"Clock",
+			"clock",
+			"audacious",
+			"timeseries",
+			"spiketimes",
+			"setup_move_grid",
+			"opac",
+			"red",
+			"fill",
+			"color",
+			"D",
+			"central_segment_index",
+			"twist",
+			"int",
+			"GeometrySelector",
+			"cerr",
+			"RECORD_ERROR",
+			"osg::Group \\* group",
+			"osg::Group * group",
+			"compute_normals",
+			"catmull_rom_bounded_compartment",
+			"compute_triangles",
+			"compute_triangle",
+			"vector",
+			"]))[",
+			"date",
+			"yellow",
+			"white",
+			"black",
+			"myTerminal",
+			".zprezto",
+			"NEURON",
+			"ELECTRICAL",
+			"CHEMICAL",
+			"NEURON_VIEW",
+			"print",
+			"self.spineDistrib",
+			"spineDistrib",
+			"spine",
+			"spineSpacing",
+			"SIP_NOT_NONE",
+			"size_t",
+			"MethodCode",
+			"size",
+			"exc",
+			"exception",
+			"indent",
+			"tab",
+			"overlay",
+			"scroll",
+			"find_all_under",
+			"command",
+			"delete",
+			"detach",
+			"get",
+			"sipArgs",
+			"sipParseErr",
+			"sipParseArgs",
+			"SIP_PYTUPLE",
+			"parse",
+			"sipParse",
+			"Visualizable",
+			"void \\*",
+			"void *",
+			"sipSimpleWrapper \\*",
+			"sipSimpleWrapper",
+			"PyCapsule",
+			"sipSimpleWrapper",
+			"Visualizables",
+			"#include",
+			"PyCapsule",
+			"proximal",
+			"Compartment",
+			"Visualizables",
+			"Visualizable",
+			"parent",
+			"add_ge",
+			"PyVisualizables",
+			"Py",
+			"Sequence",
+			"Group",
+			"update",
+			"node",
+			"color",
+			"moose",
+			"instances",
+			"clock",
+			"hsolve",
+			"plotdt",
+			"loadMOdel",
+			"plotdt",
+			"NeuroMesh",
+			"show_geometry",
+			"NEuroMesh",
+			"makeCurrent",
+			"QtGui",
+			"blue",
+			";\n",
+			"morphology",
+			"morphol",
+			"morphology",
+			"MorphologyViewerWidget",
+			"Compartment",
+			"lmmath",
+			"radius",
+			"removeCallbackFromViewer",
+			"_stopCapture",
+			"light",
+			"USE_NEUROKIT",
+			"getEventQueue",
+			"onResize",
+			"QtOpenGL",
+			"addView",
+			"viewer_",
+			"MorphlogyViewerWidget",
+			"get_scene_graph",
+			"eventQueue",
+			"getEventQueue",
+			"resizeGL",
+			"if",
+			"_functionAddVar"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"black",
+			"Visualizables",
+			"self.moose",
+			"NetworkViewer",
+			"MorphologyViewerWidget",
+			"template <",
+			"template<",
+			"\\n",
+			"Moogli",
+			"scale=\"0.5\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "moogli/pipeline/consumer.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 550,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								497,
+								497
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/aviral/programming/github/moose/moose-core/Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18002,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9559,
+								9559
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 6174.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/aviral/programming/github/moose/.git/MERGE_MSG",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/aviral/programming/github-final/moose/moose-core/.travis.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1569,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 389.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/aviral/programming/github-final/moose/.git/modules/moose-core/MERGE_MSG",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/home/aviral/programming/github-final/moose/.git/MERGE_MSG",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "setup.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6653,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 3927.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/aviral/programming/paper-model/fig7bcde_6.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 37849,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4725.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/aviral/programming/github-final/moose/moose-examples/snippets/rxdSpineSize.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11226,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5460.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/home/aviral/programming/paper-model/test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 38027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10544,
+								10544
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4347.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/home/aviral/programming/paper-model/cells_channels/CA1_nochans.morph.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 598067,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								58529,
+								58529
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 24518.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "moogli/core/viewer.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5307,
+								5307
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2279.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "moogli/bin/sip/moogli.sip",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18021,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 13167.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "moogli/bin/sip/moogli.old.sip",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 36769,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								36769,
+								36769
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 24906.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "moogli/bin/src/view/Viewer.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 693.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "experiments/continuity.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3443,
+								3443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2247.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "experiments/segment_continuity.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 42253,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40740,
+								40740
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 18691.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 25,
+					"type": "text"
+				},
+				{
+					"buffer": 17,
+					"file": "experiments/catmull_rom.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23614,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 24,
+					"type": "text"
+				},
+				{
+					"buffer": 18,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 42578,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								42578,
+								42578
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 25200.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 17,
+					"type": "text"
+				},
+				{
+					"buffer": 19,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4709,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4709,
+								4709
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3214.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 23,
+					"type": "text"
+				},
+				{
+					"buffer": 20,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								385,
+								385
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "--with-x --with-kerberos --with-kerberos5 --with",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 16,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 18,
+					"type": "text"
+				},
+				{
+					"buffer": 23,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "/tmp/libav-11.4/temp.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 20,
+					"type": "text"
+				},
+				{
+					"buffer": 25,
+					"file": "moogli/parser/csv.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1804,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 22,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
+					"file": "moogli/parser/__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 251,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 28,
+					"file": "moogli/simulator/moose.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"history_list_is_closing": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 29,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 31,
+					"type": "text"
+				},
+				{
+					"buffer": 30,
+					"file": "scripts/moogli_purkinje_simulation_with_rm_and_graph.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8730,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 31,
+					"file": "moogli/parser/swc.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 32,
+					"file": "/home/aviral/Projects/goose",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 32,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 227.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.haskell_sublime_load":
+	{
+		"height": 132.0
+	},
+	"output.unicode_preview":
+	{
+		"height": 198.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "moogli.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pip",
+				"moogli/pipeline/pipeline.py"
+			],
+			[
+				"pipelin",
+				"moogli/pipeline/pipeline.py"
+			],
+			[
+				"med",
+				"moogli/pipeline/mediator.py"
+			],
+			[
+				"consum",
+				"moogli/pipeline/consumer.py"
+			],
+			[
+				"pr",
+				"moogli/pipeline/producer.py"
+			],
+			[
+				"cons",
+				"moogli/pipeline/consumer.py"
+			],
+			[
+				"",
+				"moogli/pipeline/mediator.py"
+			],
+			[
+				"pro",
+				"moogli/pipeline/producer.py"
+			],
+			[
+				"__",
+				"moogli/pipeline/__init__.py"
+			],
+			[
+				"__i",
+				"moogli/__init__.py"
+			],
+			[
+				"vier",
+				"moogli/viewer.py"
+			],
+			[
+				"cpp",
+				"experiments/continuity.cpp"
+			],
+			[
+				"csv.py",
+				"moogli/parser/csv.py"
+			],
+			[
+				"vie",
+				"moogli/viewer.py"
+			],
+			[
+				"view",
+				"moogli/viewer.py"
+			],
+			[
+				"consta",
+				"moogli/utils/constants.py"
+			],
+			[
+				"svg",
+				"experiments/camera.svg"
+			],
+			[
+				"moogli.s",
+				"moogli.sublime-project"
+			],
+			[
+				"ring",
+				"moogli/src/mesh/Ring.cpp"
+			],
+			[
+				"catmu",
+				"experiments/catmull_rom.hpp"
+			],
+			[
+				"rin",
+				"moogli/src/mesh/Ring.cpp"
+			],
+			[
+				"catm",
+				"experiments/catmull_rom.hpp"
+			],
+			[
+				"ring.hpp",
+				"moogli/include/mesh/Ring.hpp"
+			],
+			[
+				"ca",
+				"experiments/catmull_rom.hpp"
+			],
+			[
+				"cat",
+				"experiments/test_catmull_rom.cpp"
+			],
+			[
+				"twist",
+				"docs/doxygen/html/NetworkViewer_8hpp_source.html"
+			],
+			[
+				"ring.",
+				"moogli/src/mesh/Ring.cpp"
+			],
+			[
+				"color",
+				"moogli/color.py"
+			],
+			[
+				"colors",
+				"moogli/colors.py"
+			],
+			[
+				"geoe",
+				"moogli/src/handlers/GeometrySelector.cpp"
+			],
+			[
+				"networkvi",
+				"moogli/src/view/NetworkViewer.cpp"
+			],
+			[
+				"net",
+				"moogli/src/view/NetworkView.cpp"
+			],
+			[
+				"network",
+				"moogli/include/view/NetworkViewer.hpp"
+			],
+			[
+				"sele",
+				"moogli/include/handlers/GeometrySelector.hpp"
+			],
+			[
+				"ele",
+				"moogli/include/core/ElectricalCompartment.hpp"
+			],
+			[
+				"neuron.cpp",
+				"moogli/src/core/Neuron.cpp"
+			],
+			[
+				"neuron",
+				"moogli/include/core/Neuron.hpp"
+			],
+			[
+				"netw",
+				"moogli/src/core/Network.cpp"
+			],
+			[
+				"network.hpp",
+				"moogli/include/core/Network.hpp"
+			],
+			[
+				"reco",
+				"moogli/include/utility/record.hpp"
+			],
+			[
+				"seg",
+				"experiments/segment_continuity.cpp"
+			],
+			[
+				"lib",
+				"moogli/include/utility/libraries.hpp"
+			],
+			[
+				"rin.cpp",
+				"moogli/src/mesh/Ring.cpp"
+			],
+			[
+				"catmull",
+				"experiments/catmull_rom.cpp"
+			],
+			[
+				"rea",
+				"README.rst"
+			],
+			[
+				"re",
+				"data/neuroml/PurkinjeCellPassivePulseInput/README"
+			],
+			[
+				"moogliv",
+				"scripts/moogliviewer"
+			],
+			[
+				"swc",
+				"moogli/parser/swc.py"
+			],
+			[
+				"moogliview",
+				"scripts/moogliviewer"
+			],
+			[
+				"moogli_",
+				"scripts/moogli_purkinje_simulation_with_rm_and_graph.py"
+			],
+			[
+				"moo",
+				"moogli/simulator/moose.py"
+			],
+			[
+				"moose",
+				"moogli/simulator/moose.py"
+			],
+			[
+				"swc.py",
+				"moogli/parser/swc.py"
+			],
+			[
+				"setup.py",
+				"setup.py"
+			],
+			[
+				"moogli.sip",
+				"moogli/sip/moogli.sip"
+			],
+			[
+				"vis",
+				"moogli/src/core/Visualizable.cpp"
+			],
+			[
+				"visu",
+				"moogli/include/core/Visualizable.hpp"
+			],
+			[
+				"networkviewer.hpp",
+				"moogli/include/view/NetworkViewer.hpp"
+			],
+			[
+				"networ",
+				"moogli/src/view/NetworkViewer.cpp"
+			],
+			[
+				"__ini",
+				"moogli/parser/__init__.py"
+			],
+			[
+				"moogli",
+				"scripts/moogliviewer"
+			],
+			[
+				"__in",
+				"moogli/__init__.py"
+			],
+			[
+				"moose.py",
+				"moogli/simulator/moose.py"
+			],
+			[
+				"moog",
+				"scripts/moogliviewer"
+			],
+			[
+				"cylindermesh",
+				"moogli/src/mesh/CylinderMesh.cpp"
+			],
+			[
+				"networkview",
+				"moogli/src/view/NetworkViewer.cpp"
+			],
+			[
+				"networkvie",
+				"moogli/src/view/NetworkView.cpp"
+			],
+			[
+				"se",
+				"setup.py"
+			],
+			[
+				"simple",
+				"scripts/moogli_simple_viewing.py"
+			],
+			[
+				"set",
+				"setup.py"
+			],
+			[
+				"moo_vie",
+				"scripts/moogli_simple_viewing.py"
+			],
+			[
+				"test",
+				"test/test.py"
+			],
+			[
+				"che",
+				"moogli/include/core/ChemicalCompartment.hpp"
+			],
+			[
+				"neuron.",
+				"moogli/include/core/Neuron.hpp"
+			],
+			[
+				"conv",
+				"moogli/src/utility/conversions.cpp"
+			],
+			[
+				"conver",
+				"moogli/include/utility/conversions.hpp"
+			],
+			[
+				"network.cpp",
+				"moogli/src/core/Network.cpp"
+			],
+			[
+				"sip_",
+				"build/temp.linux-x86_64-2.7/sip_moogliNetwork.cpp"
+			],
+			[
+				"sip_moogli",
+				"build/temp.linux-x86_64-2.7/sip_moogliNetwork.cpp"
+			],
+			[
+				"mo",
+				"moogli/sip/moogli.sip"
+			],
+			[
+				"con",
+				"moogli/src/utility/conversions.cpp"
+			],
+			[
+				"ne",
+				"moogli/include/core/Network.hpp"
+			],
+			[
+				"netwo",
+				"moogli/src/core/Network.cpp"
+			],
+			[
+				"mooglinet",
+				"build/temp.linux-x86_64-2.7/sip_moogliNetwork.cpp"
+			],
+			[
+				"sip_moo",
+				"build/temp.linux-x86_64-2.7/sip_moogliNetwork.cpp"
+			],
+			[
+				"n",
+				"moogli/include/core/Network.hpp"
+			],
+			[
+				"vi",
+				"moogli/src/core/Visualizables.cpp"
+			],
+			[
+				"visual",
+				"moogli/src/core/Visualizables.cpp"
+			],
+			[
+				"libr",
+				"moogli/include/utility/libraries.hpp"
+			],
+			[
+				"setup",
+				"setup.py"
+			],
+			[
+				"v",
+				"moogli/src/core/Visualizables.cpp"
+			],
+			[
+				"neuro",
+				"moogli/include/core/Neuron.hpp"
+			],
+			[
+				"visuali",
+				"moogli/include/core/Visualizables.hpp"
+			],
+			[
+				"neur",
+				"moogli/include/core/Neuron.hpp"
+			],
+			[
+				"sip_moogliner",
+				"build/temp.linux-x86_64-2.7/sip_moogliNeuron.cpp"
+			],
+			[
+				"visualizables.hpp",
+				"moogli/include/core/Visualizables.hpp"
+			],
+			[
+				"electrical",
+				"moogli/src/core/ElectricalCompartment.cpp"
+			],
+			[
+				"chem",
+				"moogli/src/core/ChemicalCompartment.cpp"
+			],
+			[
+				"init",
+				"moogli/__init__.py"
+			],
+			[
+				"moos",
+				"moogli/simulator/moose.py"
+			],
+			[
+				"vsi",
+				"moogli/src/core/Visualizables.cpp"
+			],
+			[
+				"utility/",
+				"moogli/src/utility/conversions.cpp"
+			],
+			[
+				"li",
+				"moogli/include/utility/libraries.hpp"
+			],
+			[
+				"cyli",
+				"moogli/src/mesh/CylinderMesh.cpp"
+			],
+			[
+				"243",
+				"docs/doxygen/html/HTML/Y/243.html"
+			],
+			[
+				"neu",
+				"moogli/src/core/Neuron.cpp"
+			],
+			[
+				"neuron.hpp",
+				"moogli/include/core/Neuron.hpp"
+			],
+			[
+				"sequen",
+				"moogli/src/core/Sequence.cpp"
+			],
+			[
+				"seq",
+				"moogli/include/core/Sequence.hpp"
+			],
+			[
+				"setup.",
+				"setup.py"
+			],
+			[
+				"geome",
+				"moogli/include/handlers/GeometrySelector.hpp"
+			],
+			[
+				"cyl",
+				"moogli/include/mesh/CylinderMesh.hpp"
+			],
+			[
+				"speh",
+				"moogli/src/mesh/SphereMesh.cpp"
+			],
+			[
+				"spher",
+				"moogli/include/mesh/SphereMesh.hpp"
+			],
+			[
+				"group.hpp",
+				"moogli/include/core/Group.hpp"
+			],
+			[
+				"group",
+				"moogli/src/core/Group.cpp"
+			],
+			[
+				"main",
+				"src/goose/main.py"
+			],
+			[
+				"comp",
+				"moogli/src/core/Compartment.cpp"
+			],
+			[
+				"goose",
+				"src/scripts/goose"
+			],
+			[
+				"nkit",
+				"src/goose/widgets/nkit/main.py"
+			],
+			[
+				"kkit.py",
+				"src/goose/widgets/kkit/kkit.py"
+			],
+			[
+				"main.py",
+				"src/goose/main.py"
+			],
+			[
+				"moose.",
+				"moogli/simulator/moose.py"
+			],
+			[
+				"networkviewe",
+				"moogli/include/view/NetworkViewer.hpp"
+			],
+			[
+				"vox",
+				"moogli/src/core/Voxel.cpp"
+			],
+			[
+				"recr",
+				"moogli/include/utility/record.hpp"
+			],
+			[
+				"seu",
+				"setup.py"
+			],
+			[
+				"randnum/make",
+				"randnum/Makefile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 375.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 1069.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 222.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

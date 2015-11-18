@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>sequence</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/21.html#L11'>sequence</a>           11 include/utility/conversions.hpp pysequence_to_vec4d(PyObject * sequence);
+<a href='../S/21.html#L14'>sequence</a>           14 include/utility/conversions.hpp pysequence_to_vec4f(PyObject * sequence);
+<a href='../S/21.html#L17'>sequence</a>           17 include/utility/conversions.hpp pysequence_to_vec3d(PyObject * sequence);
+<a href='../S/21.html#L20'>sequence</a>           20 include/utility/conversions.hpp pysequence_to_vec3f(PyObject * sequence);
+<a href='../S/4.html#L4'>sequence</a>            4 src/utility/conversions.cpp pysequence_to_vec4d(PyObject * sequence)
+<a href='../S/4.html#L6'>sequence</a>            6 src/utility/conversions.cpp     if(not PyList_Check(sequence))
+<a href='../S/4.html#L10'>sequence</a>           10 src/utility/conversions.cpp     return osg::Vec4d( PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 0))
+<a href='../S/4.html#L11'>sequence</a>           11 src/utility/conversions.cpp                      , PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 1))
+<a href='../S/4.html#L12'>sequence</a>           12 src/utility/conversions.cpp                      , PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 2))
+<a href='../S/4.html#L13'>sequence</a>           13 src/utility/conversions.cpp                      , PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 3))
+<a href='../S/4.html#L19'>sequence</a>           19 src/utility/conversions.cpp pysequence_to_vec4f(PyObject * sequence)
+<a href='../S/4.html#L21'>sequence</a>           21 src/utility/conversions.cpp     if(not PyList_Check(sequence))
+<a href='../S/4.html#L27'>sequence</a>           27 src/utility/conversions.cpp                         PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 0))
+<a href='../S/4.html#L30'>sequence</a>           30 src/utility/conversions.cpp                         PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 1))
+<a href='../S/4.html#L33'>sequence</a>           33 src/utility/conversions.cpp                         PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 2))
+<a href='../S/4.html#L36'>sequence</a>           36 src/utility/conversions.cpp                         PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 3))
+<a href='../S/4.html#L42'>sequence</a>           42 src/utility/conversions.cpp pysequence_to_vec3d(PyObject * sequence)
+<a href='../S/4.html#L44'>sequence</a>           44 src/utility/conversions.cpp     if(not PyList_Check(sequence))
+<a href='../S/4.html#L49'>sequence</a>           49 src/utility/conversions.cpp     return osg::Vec3d( PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 0))
+<a href='../S/4.html#L50'>sequence</a>           50 src/utility/conversions.cpp                      , PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 1))
+<a href='../S/4.html#L51'>sequence</a>           51 src/utility/conversions.cpp                      , PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 2))
+<a href='../S/4.html#L57'>sequence</a>           57 src/utility/conversions.cpp pysequence_to_vec3f(PyObject * sequence)
+<a href='../S/4.html#L59'>sequence</a>           59 src/utility/conversions.cpp     if(not PyList_Check(sequence))
+<a href='../S/4.html#L65'>sequence</a>           65 src/utility/conversions.cpp                         PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 0))
+<a href='../S/4.html#L68'>sequence</a>           68 src/utility/conversions.cpp                         PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 1))
+<a href='../S/4.html#L71'>sequence</a>           71 src/utility/conversions.cpp                         PyFloat_AS_DOUBLE(PySequence_GetItem(sequence, 2))
+</pre>
+</body>
+</html>

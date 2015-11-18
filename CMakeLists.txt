@@ -12,7 +12,7 @@ set(MOOGLI_VERSION "1.0")
 
 ## CMAKE options
 option(WITH_DOC "Build documentation as well" OFF)
-option(BUILD_MOOGLI "Build moogli extension" OFF)
+option(WITH_MOOGLI "Build moogli extension" ON)
 
 ## Project related macros
 set(MOOSE_SOURCE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${MOOSE_CORE_DIRNAME})
@@ -81,7 +81,7 @@ if(LOCAL_SBML)
     include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_sbml.cmake)
 endif() 
 
-##*############## 
+
 ## Now build MOOSE
 SET(MOOSE_CORE_BUILD_DIR ${CMAKE_BINARY_DIR}/_moose-core)
 FILE(MAKE_DIRECTORY ${MOOSE_CORE_BUILD_DIR})
@@ -94,10 +94,6 @@ add_custom_command(
     ${CMAKE_COMMAND} 
         -DDEBUG:BOOL=OFF 
         -DWITH_DOC:BOOL=${WITH_DOC}
-        # MOOGLI related command line arguments.
-        -DBUILD_MOOGLI:BOOL=${BUILD_MOOGLI}
-        # where to store moogli source distribution.
-        -DMOOGLI_DIST_DIR=${MOOSE_CORE_BUILD_DIR}
         -DLOCAL_SBML:BOOL=${LOCAL_SBML} -DLOCAL_GSL:BOOL=${LOCAL_GSL}
         -DSTATIC_GSL_LIBRARY=${STATIC_GSL_LIBRARY}
         -DSTATIC_GSLBLAS_LIBRARY=${STATIC_GSLBLAS_LIBRARY}
@@ -120,12 +116,33 @@ add_custom_target(_build_moose_core ALL
 
 add_dependencies(_build_moose_core _moose_static_dependencies)
 
-##install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
-##    DESTINATION bin
-##    COMPONENT moose-core
-##    )
+##*############## 
+# Build Local OSG
+IF(WITH_MOOGLI)
+    include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_osg.cmake)
+    # Set the OSGDIR environment so that cmake can find the libraries.
+    SET(MOOGLI_BUILD_DIR ${CMAKE_CURRENT_BINARY_DIR}/_moogli_)
+    SET(MOOGLI_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/moogli)
+    FILE(MAKE_DIRECTORY ${MOOGLI_BUILD_DIR})
+    add_custom_command(
+        OUTPUT ${MOOGLI_SOURCE_DIR}/moogli/core/_moogli.so
+        COMMAND OSGDIR=${OSG_INSTALL_DIR}
+        ${CMAKE_COMMAND} ${MOOGLI_SOURCE_DIR}
+    COMMAND $(MAKE) VERBOSE=1
 
-install(CODE 
+    WORKING_DIRECTORY ${MOOGLI_BUILD_DIR}
+    VERBATIM
+    )
+
+    add_custom_target(_build_moogli ALL
+        DEPENDS ${MOOGLI_SOURCE_DIR}/moogli/core/_moogli.so
+        )
+    add_dependencies(_build_moogli _libosg)
+ENDIF(WITH_MOOGLI)
+
+
+# Use moose-core cmake file to install it.
+install(CODE
     "
     EXECUTE_PROCESS(
         COMMAND python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --install-layout=deb
@@ -135,7 +152,11 @@ install(CODE
     COMPONENT moose-python
     )
 
-## Copy the gui folder.
+# Copy the gui folder. TODO: This should be a python-module.
+install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
+    DESTINATION bin
+    )
+
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
     DESTINATION lib/moose/gui
     COMPONENT moose-gui
@@ -168,4 +189,14 @@ install(FILES ${CMAKE_SOURCE_DIR}/moose-core/scripts/moose.desktop
     COMPONENT moose-gui
     )
 
+### Tests.
+enable_testing()
+add_test(NAME moose-core 
+    COMMAND ctest --output-on-failure
+    WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
+    )
+add_test(NAME moogli
+    COMMAND python -c "import moogli"
+    WORKING_DIRECTORY ${MOOGLI_SOURCE_DIR}
+    )
 
