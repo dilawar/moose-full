@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>stateSet</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/3.html#L110'>stateSet</a>          110 src/view/NetworkViewer.cpp     osg::StateSet* stateSet = network -&gt; node -&gt; getOrCreateStateSet();
+<a href='../S/3.html#L125'>stateSet</a>          125 src/view/NetworkViewer.cpp     stateSet -&gt; setAttributeAndModes( material, osg::StateAttribute::ON );
+<a href='../S/3.html#L126'>stateSet</a>          126 src/view/NetworkViewer.cpp     stateSet -&gt; setMode( GL_DEPTH_TEST, osg::StateAttribute::ON );
+<a href='../S/3.html#L127'>stateSet</a>          127 src/view/NetworkViewer.cpp     stateSet -&gt; setMode( GL_BLEND, osg::StateAttribute::ON );
+<a href='../S/3.html#L128'>stateSet</a>          128 src/view/NetworkViewer.cpp     stateSet -&gt; setMode( GL_ALPHA_TEST, osg::StateAttribute::ON | osg::StateAttribute::OVERRIDE);// just added this now as a test but still no luck
+<a href='../S/3.html#L130'>stateSet</a>          130 src/view/NetworkViewer.cpp     stateSet -&gt; setAttributeAndModes(shade_model,osg::StateAttribute::ON);
+<a href='../S/3.html#L131'>stateSet</a>          131 src/view/NetworkViewer.cpp     stateSet -&gt; setRenderingHint( osg::StateSet::TRANSPARENT_BIN );
+</pre>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>node</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/23.html#L15'>node</a>               15 include/core/Compartment.hpp     osg::ref_ptr&lt;osg::Switch&gt; node;
+<a href='../S/24.html#L12'>node</a>               12 include/core/Network.hpp     osg::ref_ptr&lt;osg::MatrixTransform&gt; node;
+<a href='../S/25.html#L15'>node</a>               15 include/core/Neuron.hpp     osg::ref_ptr&lt;osg::Switch&gt; node;
+<a href='../S/26.html#L13'>node</a>               13 include/core/Voxel.hpp     osg::ref_ptr&lt;osg::Geometry&gt; node;
+<a href='../S/7.html#L4'>node</a>                4 src/core/Compartment.cpp                                           , node(new osg::Switch())
+<a href='../S/7.html#L9'>node</a>                9 src/core/Compartment.cpp     node -&gt; addChild(voxel_group_node.get(), true);
+<a href='../S/7.html#L42'>node</a>               42 src/core/Compartment.cpp     node -&gt; setNodeMask(NODE_HIDE_MASK);
+<a href='../S/7.html#L48'>node</a>               48 src/core/Compartment.cpp     node -&gt; setNodeMask(NODE_SHOW_MASK);
+<a href='../S/7.html#L54'>node</a>               54 src/core/Compartment.cpp     return (node -&gt; getNodeMask() == NODE_SHOW_MASK ? true : false);
+<a href='../S/7.html#L95'>node</a>               95 src/core/Compartment.cpp     node -&gt; addChild(geode);
+<a href='../S/7.html#L96'>node</a>               96 src/core/Compartment.cpp     return node -&gt; getNumChildren();
+<a href='../S/7.html#L111'>node</a>              111 src/core/Compartment.cpp         voxel_group_node -&gt; addDrawable(voxel -&gt; node.get());
+<a href='../S/7.html#L134'>node</a>              134 src/core/Compartment.cpp         voxel_group_node -&gt; removeDrawable(voxel -&gt; node.get());
+<a href='../S/7.html#L144'>node</a>              144 src/core/Compartment.cpp     if(hide_others) node -&gt; setSingleChildOn(geometry_index);
+<a href='../S/7.html#L145'>node</a>              145 src/core/Compartment.cpp     else            node -&gt; setValue(geometry_index, true);
+<a href='../S/7.html#L152'>node</a>              152 src/core/Compartment.cpp     node -&gt; setValue(geometry_index, false);
+<a href='../S/7.html#L158'>node</a>              158 src/core/Compartment.cpp     node -&gt; setAllChildrenOn();
+<a href='../S/7.html#L164'>node</a>              164 src/core/Compartment.cpp     node -&gt; setAllChildrenOff();
+<a href='../S/7.html#L190'>node</a>              190 src/core/Compartment.cpp     for(unsigned int i = 1; i &lt; node -&gt; getNumChildren(); ++i)
+<a href='../S/7.html#L192'>node</a>              192 src/core/Compartment.cpp         Geode * geode = node -&gt; getChild(i) -&gt; asGeode();
+<a href='../S/10.html#L26'>node</a>               26 src/core/Network.cpp     node -&gt; setNodeMask(NODE_HIDE_MASK);
+<a href='../S/10.html#L32'>node</a>               32 src/core/Network.cpp     node -&gt; setNodeMask(NODE_SHOW_MASK);
+<a href='../S/10.html#L38'>node</a>               38 src/core/Network.cpp     return (node -&gt; getNodeMask() == NODE_SHOW_MASK ? true : false);
+<a href='../S/10.html#L60'>node</a>               60 src/core/Network.cpp         node -&gt; addChild(neuron -&gt; node.get());
+<a href='../S/10.html#L95'>node</a>               95 src/core/Network.cpp         node -&gt; removeChild(neuron -&gt; node.get());
+<a href='../S/8.html#L4'>node</a>                4 src/core/Neuron.cpp                                 , node(new osg::Switch())
+<a href='../S/8.html#L9'>node</a>                9 src/core/Neuron.cpp     node -&gt; addChild(compartment_group_node.get(), true);
+<a href='../S/8.html#L55'>node</a>               55 src/core/Neuron.cpp     node -&gt; setNodeMask(NODE_HIDE_MASK);
+<a href='../S/8.html#L61'>node</a>               61 src/core/Neuron.cpp     node -&gt; setNodeMask(NODE_SHOW_MASK);
+<a href='../S/8.html#L67'>node</a>               67 src/core/Neuron.cpp     return (node -&gt; getNodeMask() == NODE_SHOW_MASK ? true : false);
+<a href='../S/8.html#L109'>node</a>              109 src/core/Neuron.cpp     node -&gt; addChild(geode);
+<a href='../S/8.html#L110'>node</a>              110 src/core/Neuron.cpp     return node -&gt; getNumChildren();
+<a href='../S/8.html#L125'>node</a>              125 src/core/Neuron.cpp         compartment_group_node -&gt; addChild(compartment -&gt; node.get());
+<a href='../S/8.html#L148'>node</a>              148 src/core/Neuron.cpp         compartment_group_node -&gt; removeChild(compartment -&gt; node.get());
+<a href='../S/8.html#L158'>node</a>              158 src/core/Neuron.cpp     if(hide_others) node -&gt; setSingleChildOn(geometry_index);
+<a href='../S/8.html#L159'>node</a>              159 src/core/Neuron.cpp     else            node -&gt; setValue(geometry_index, true);
+<a href='../S/8.html#L166'>node</a>              166 src/core/Neuron.cpp     node -&gt; setValue(geometry_index, false);
+<a href='../S/8.html#L172'>node</a>              172 src/core/Neuron.cpp     node -&gt; setAllChildrenOn();
+<a href='../S/8.html#L178'>node</a>              178 src/core/Neuron.cpp     node -&gt; setAllChildrenOff();
+<a href='../S/8.html#L184'>node</a>              184 src/core/Neuron.cpp     for(unsigned int i = 1; i &lt; node -&gt; getNumChildren(); ++i)
+<a href='../S/8.html#L186'>node</a>              186 src/core/Neuron.cpp         Geode * geode = node -&gt; getChild(i) -&gt; asGeode();
+<a href='../S/9.html#L4'>node</a>                4 src/core/Voxel.cpp                               , node(new osg::Geometry())
+<a href='../S/9.html#L61'>node</a>               61 src/core/Voxel.cpp               , node.get()
+<a href='../S/9.html#L71'>node</a>               71 src/core/Voxel.cpp                 , node.get()
+<a href='../S/9.html#L84'>node</a>               84 src/core/Voxel.cpp     node -&gt; setColorArray(colors, osg::Array::BIND_OVERALL);
+<a href='../S/9.html#L85'>node</a>               85 src/core/Voxel.cpp     node -&gt; setColorBinding(osg::Geometry::BIND_OVERALL);
+<a href='../S/3.html#L110'>node</a>              110 src/view/NetworkViewer.cpp     osg::StateSet* stateSet = network -&gt; node -&gt; getOrCreateStateSet();
+<a href='../S/3.html#L150'>node</a>              150 src/view/NetworkViewer.cpp     const osg::BoundingSphere&amp; bs = network -&gt; node -&gt; getBound();
+<a href='../S/3.html#L265'>node</a>              265 src/view/NetworkViewer.cpp     view-&gt;setSceneData( network -&gt; node.get() );
+</pre>
+</body>
+</html>

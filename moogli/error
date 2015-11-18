@@ -1,0 +1,48 @@
+Resolving dependencies...
+Configuring ghc-mod-5.2.1.2...
+Building ghc-mod-5.2.1.2...
+Failed to install ghc-mod-5.2.1.2
+Build log ( /home/aviral/.cabal/logs/ghc-mod-5.2.1.2.log ):
+Configuring ghc-mod-5.2.1.2...
+Building ghc-mod-5.2.1.2...
+Preprocessing library ghc-mod-5.2.1.2...
+
+Language/Haskell/GhcMod/Convert.hs:1:51: Warning:
+    -XOverlappingInstances is deprecated: instead use per-instance pragmas OVERLAPPING/OVERLAPPABLE/OVERLAPS
+[ 1 of 38] Compiling Language.Haskell.GhcMod.Read ( Language/Haskell/GhcMod/Read.hs, dist/build/Language/Haskell/GhcMod/Read.o )
+[ 2 of 38] Compiling Language.Haskell.GhcMod.Cabal21 ( Language/Haskell/GhcMod/Cabal21.hs, dist/build/Language/Haskell/GhcMod/Cabal21.o )
+[ 3 of 38] Compiling Language.Haskell.GhcMod.Cabal18 ( Language/Haskell/GhcMod/Cabal18.hs, dist/build/Language/Haskell/GhcMod/Cabal18.o )
+[ 4 of 38] Compiling Language.Haskell.GhcMod.Cabal16 ( Language/Haskell/GhcMod/Cabal16.hs, dist/build/Language/Haskell/GhcMod/Cabal16.o )
+[ 5 of 38] Compiling Language.Haskell.GhcMod.GHCChoice ( Language/Haskell/GhcMod/GHCChoice.hs, dist/build/Language/Haskell/GhcMod/GHCChoice.o )
+[ 6 of 38] Compiling Language.Haskell.GhcMod.Error ( Language/Haskell/GhcMod/Error.hs, dist/build/Language/Haskell/GhcMod/Error.o )
+
+Language/Haskell/GhcMod/Error.hs:12:1: Warning:
+    Module ‘Control.Monad.Error’ is deprecated:
+      Use Control.Monad.Except instead
+
+Language/Haskell/GhcMod/Error.hs:40:10: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+
+Language/Haskell/GhcMod/Error.hs:40:10: Warning:
+    In the use of type constructor or class ‘Error’
+    (imported from Control.Monad.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[ 7 of 38] Compiling Language.Haskell.GhcMod.Utils ( Language/Haskell/GhcMod/Utils.hs, dist/build/Language/Haskell/GhcMod/Utils.o )
+
+Language/Haskell/GhcMod/Utils.hs:15:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+
+Language/Haskell/GhcMod/Utils.hs:45:51: Warning:
+    In the use of ‘strMsg’
+    (imported from Language.Haskell.GhcMod.Error, but defined in Control.Monad.Trans.Error):
+    Deprecated: "Use Control.Monad.Trans.Except instead"
+[ 8 of 38] Compiling Language.Haskell.GhcMod.Types ( Language/Haskell/GhcMod/Types.hs, dist/build/Language/Haskell/GhcMod/Types.o )
+[ 9 of 38] Compiling Language.Haskell.GhcMod.Gap ( Language/Haskell/GhcMod/Gap.hs, dist/build/Language/Haskell/GhcMod/Gap.o )
+
+Language/Haskell/GhcMod/Gap.hs:256:18:
+    Not in scope: data constructor ‘ExposePackageId’
+    Perhaps you meant ‘ExposePackage’ (imported from DynFlags)

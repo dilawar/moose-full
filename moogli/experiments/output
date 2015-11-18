@@ -1,0 +1,2470 @@
+Alpha => 0.099515
+D         => 0.125559,-0.992007,0.0125573
+Red => 162.533,-75.965,-18.455
+Green => 170.443,-74.8481,-9.31031
+Blue => 160.767,-75.965,-0.805024
+Yellow => 152.857,-77.0819,-9.94969
+Alpha => 0.109331
+D         => 0.12716,-0.991784,0.0139863
+Red => 162.697,-76.75,-18.2276
+Green => 170.33,-75.6443,-9.22283
+Blue => 160.803,-76.75,-1.01141
+Yellow => 153.17,-77.8557,-10.0162
+Angle between direction vectors -> 0.125115
+Alpha => 0.0499395
+D         => 0.2454,-0.969344,0.0122704
+Red => 162.317,-77.535,-17.9476
+Green => 169.993,-75.4876,-9.72922
+Blue => 161.483,-77.535,-1.27042
+Yellow => 153.807,-79.5824,-9.48878
+Angle between direction vectors -> 6.90044
+Alpha => 0.0995
+D         => 0.125578,-0.992004,0.0125573
+Red => 162.84,-78.325,-17.5006
+Green => 169.923,-77.3248,-9.31288
+Blue => 161.26,-78.325,-1.69741
+Yellow => 154.177,-79.3252,-9.88512
+Angle between direction vectors -> 6.99137
+Alpha => 0.0499395
+D         => 0.248353,-0.96859,0.0124181
+Red => 162.572,-79.11,-17.0187
+Green => 169.405,-77.2638,-9.69639
+Blue => 161.829,-79.11,-2.15928
+Yellow => 154.995,-80.9562,-9.48161
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-5
+Angle between direction vectors -> 7.16601
+Alpha => 0.109347
+D         => 0.125557,-0.99199,0.0138121
+Red => 163.099,-79.895,-16.3874
+Green => 169.138,-79.0315,-9.26447
+Blue => 161.601,-79.895,-2.76957
+Yellow => 155.562,-80.7586,-9.89253
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-6
+Angle between direction vectors -> 7.16741
+Alpha => 0.0995
+D         => 0.125578,-0.992004,0.0125573
+Red => 163.065,-80.685,-15.7183
+Green => 168.578,-79.9065,-9.34529
+Blue => 161.835,-80.685,-3.41767
+Yellow => 156.322,-81.4635,-9.79071
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-7
+Angle between direction vectors -> 0.0766167
+Alpha => 0.0499348
+D         => 0.248353,-0.96859,0.0124169
+Red => 162.872,-81.47,-14.9902
+Green => 167.868,-80.1202,-9.63655
+Blue => 162.328,-81.47,-4.12579
+Yellow => 157.332,-82.8198,-9.47945
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-8
+Angle between direction vectors -> 7.16601
+Alpha => 0.0995
+D         => 0.125578,-0.992004,0.0125573
+Red => 163.211,-82.255,-14.159
+Green => 167.344,-81.6713,-9.38103
+Blue => 162.289,-82.255,-4.937
+Yellow => 158.156,-82.8387,-9.71497
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-9
+Angle between direction vectors -> 7.16601
+Alpha => 0.099515
+D         => 0.125559,-0.992007,0.0125573
+Red => 163.226,-83.045,-13.2933
+Green => 166.591,-82.5697,-9.40196
+Blue => 162.474,-83.045,-5.78273
+Yellow => 159.109,-83.5203,-9.67404
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-10
+Angle between direction vectors -> 0.0279765
+Alpha => 0.0549121
+D         => 0.248367,-0.96857,0.0136589
+Red => 163.185,-83.83,-12.8874
+Green => 166.26,-82.9946,-9.55985
+Blue => 162.815,-83.83,-6.16758
+Yellow => 159.74,-84.6654,-9.49515
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-11
+Angle between direction vectors -> 7.16837
+Alpha => 0.099515
+D         => 0.125559,-0.992007,0.0125573
+Red => 163.485,-84.615,-12.8653
+Green => 166.486,-84.1912,-9.39571
+Blue => 162.815,-84.615,-6.1687
+Yellow => 159.814,-85.0388,-9.63829
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-12
+Angle between direction vectors -> 7.16837
+Alpha => 0.0995
+D         => 0.125578,-0.992004,0.0125573
+Red => 163.585,-85.405,-12.8553
+Green => 166.586,-84.9812,-9.38576
+Blue => 162.915,-85.405,-6.1587
+Yellow => 159.914,-85.8288,-9.62824
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-13
+Angle between direction vectors -> 0.0279765
+Alpha => 0.0499395
+D         => 0.248353,-0.96859,0.0124181
+Red => 163.568,-86.19,-12.8578
+Green => 166.659,-85.3549,-9.54558
+Blue => 163.232,-86.19,-6.1362
+Yellow => 160.141,-87.0251,-9.44842
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-14
+Angle between direction vectors -> 7.16601
+Alpha => -0.0698246
+D         => -0.169904,0.985389,-0.0118925
+Red => 163.363,-86.29,-8.25853
+Green => 164.661,-86.0792,-9.33268
+Blue => 163.537,-86.29,-10.7325
+Yellow => 162.239,-86.5008,-9.65832
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-15
+Angle between direction vectors -> 175.402
+Alpha => 0
+D         => 0.388058,-0.921635,0
+Red => 163.8,-86.95,-10.089
+Green => 164.343,-86.7215,-9.53605
+Blue => 163.8,-86.95,-8.909
+Yellow => 163.257,-87.1785,-9.46195
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-16
+Angle between direction vectors -> 166.932
+Alpha => 0
+D         => 0.256601,-0.966518,0
+Red => 164.35,-88.465,-9.914
+Green => 164.75,-88.3587,-9.52506
+Blue => 164.35,-88.465,-9.084
+Yellow => 163.95,-88.5713,-9.47294
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-17
+Angle between direction vectors -> 7.96523
+Alpha => 0
+D         => 0.0728033,-0.997346,0
+Red => 164.55,-89.715,-9.914
+Green => 164.963,-89.6848,-9.52506
+Blue => 164.55,-89.715,-9.084
+Yellow => 164.137,-89.7451,-9.47294
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-18
+Angle between direction vectors -> 10.6934
+Alpha => 0
+D         => 0.163074,-0.986614,0
+Red => 164.7,-91.005,-9.914
+Green => 165.109,-90.9375,-9.52506
+Blue => 164.7,-91.005,-9.084
+Yellow => 164.291,-91.0725,-9.47294
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-19
+Angle between direction vectors -> 5.2103
+Alpha => 0
+D         => -0.0697639,-0.997564,0
+Red => 164.75,-92.325,-9.084
+Green => 164.337,-92.2961,-9.47294
+Blue => 164.75,-92.325,-9.914
+Yellow => 165.163,-92.3539,-9.52506
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-20
+Angle between direction vectors -> 13.3858
+Alpha => -0.974013
+D         => -0.0578863,-0.966789,-0.248934
+Red => 164.246,-93.875,-9.62
+Green => 164.534,-93.7691,-10.0981
+Blue => 165.054,-93.875,-9.80799
+Yellow => 164.766,-93.9809,-9.32988
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-21
+Angle between direction vectors -> 14.4256
+Alpha => 0
+D         => 0.0616054,-0.998101,0
+Red => 164.65,-95.52,-10.344
+Green => 165.063,-95.4945,-9.95506
+Blue => 164.65,-95.52,-9.514
+Yellow => 164.237,-95.5455,-9.90294
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-22
+Angle between direction vectors -> 15.974
+Alpha => -0.458353
+D         => -0.377264,-0.905438,-0.194561
+Red => 164.16,-97.17,-9.74066
+Green => 164.005,-96.9942,-10.2582
+Blue => 164.54,-97.17,-10.4783
+Yellow => 164.695,-97.3458,-9.96077
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-23
+Angle between direction vectors -> 28.3001
+Alpha => -0.682314
+D         => -0.128952,-0.98432,-0.120353
+Red => 163.567,-99.155,-10.1266
+Green => 163.534,-99.0819,-10.6891
+Blue => 164.133,-99.155,-10.7334
+Yellow => 164.166,-99.2281,-10.1709
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-24
+Angle between direction vectors -> 15.5695
+Alpha => 0
+D         => -0.164401,-0.986394,0
+Red => 163.55,-101.2,-10.155
+Green => 163.141,-101.132,-10.5439
+Blue => 163.55,-101.2,-10.985
+Yellow => 163.959,-101.268,-10.5961
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-25
+Angle between direction vectors -> 7.1944
+Alpha => 0.0598918
+D         => -0.212412,-0.977097,0.0127446
+Red => 163.175,-103.25,-10.1407
+Green => 162.748,-103.162,-10.5048
+Blue => 163.125,-103.25,-10.9693
+Yellow => 163.552,-103.338,-10.6052
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-26
+Angle between direction vectors -> 2.89591
+Alpha => -0.287329
+D         => 0.0499351,-0.99864,-0.0149795
+Red => 162.831,-105.4,-10.9525
+Green => 163.339,-105.378,-10.6988
+Blue => 163.069,-105.4,-10.1575
+Yellow => 162.561,-105.422,-10.4112
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-27
+Angle between direction vectors -> 15.21
+Alpha => -0.422883
+D         => 0.312843,-0.938518,-0.145992
+Red => 163.15,-107.3,-11.0317
+Green => 163.592,-107.178,-10.8708
+Blue => 163.45,-107.3,-10.3883
+Yellow => 163.008,-107.422,-10.5492
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-28
+Angle between direction vectors -> 17.2442
+Alpha => 0
+D         => 0.470583,-0.882356,0
+Red => 164,-108.95,-11.205
+Green => 164.313,-108.783,-10.8723
+Blue => 164,-108.95,-10.495
+Yellow => 163.687,-109.117,-10.8277
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-29
+Angle between direction vectors -> 12.7544
+Alpha => 0
+D         => 0.678283,-0.734801,0
+Red => 165,-110.35,-11.205
+Green => 165.26,-110.11,-10.8723
+Blue => 165,-110.35,-10.495
+Yellow => 164.74,-110.59,-10.8277
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-30
+Angle between direction vectors -> 14.6375
+Alpha => 0
+D         => 0.529999,-0.847998,0
+Red => 166.1,-111.8,-11.205
+Green => 166.4,-111.612,-10.8723
+Blue => 166.1,-111.8,-10.495
+Yellow => 165.8,-111.988,-10.8277
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-31
+Angle between direction vectors -> 10.7042
+Alpha => -0.148343
+D         => 0.522479,-0.849043,-0.0783729
+Red => 166.965,-113.25,-11.1424
+Green => 167.195,-113.126,-10.9541
+Blue => 167.035,-113.25,-10.6776
+Yellow => 166.805,-113.374,-10.8659
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-32
+Angle between direction vectors -> 4.51267
+Alpha => 0
+D         => 0.406146,-0.913808,0
+Red => 167.6,-114.35,-11.205
+Green => 167.814,-114.255,-10.9848
+Blue => 167.6,-114.35,-10.735
+Yellow => 167.386,-114.445,-10.9552
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-33
+Angle between direction vectors -> 8.86104
+Alpha => -0.933347
+D         => 0.118046,-0.944385,-0.306925
+Red => 167.681,-115.6,-11.3144
+Green => 167.966,-115.523,-11.442
+Blue => 168.119,-115.6,-11.1456
+Yellow => 167.834,-115.677,-11.018
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-34
+Angle between direction vectors -> 24.3657
+Alpha => -0.768202
+D         => -0.0763786,-0.992858,-0.0916487
+Red => 167.769,-117.05,-11.3996
+Green => 167.79,-117.022,-11.7194
+Blue => 168.131,-117.05,-11.7004
+Yellow => 168.11,-117.078,-11.3806
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-35
+Angle between direction vectors -> 16.912
+Alpha => 0
+D         => -0.124023,-0.992279,0
+Red => 167.85,-118.1,-11.375
+Green => 167.617,-118.071,-11.5952
+Blue => 167.85,-118.1,-11.845
+Yellow => 168.083,-118.129,-11.6248
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-36
+Angle between direction vectors -> 5.92096
+Alpha => -0.132162
+D         => -0.28714,-0.957123,-0.0382849
+Red => 167.619,-119,-11.3971
+Green => 167.426,-118.932,-11.645
+Blue => 167.681,-119,-11.8629
+Yellow => 167.874,-119.068,-11.615
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-37
+Angle between direction vectors -> 9.82093
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 167.735,-119.95,-11.65
+Green => 167.515,-119.95,-11.4155
+Blue => 167.265,-119.95,-11.65
+Yellow => 167.485,-119.95,-11.8845
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-38
+Angle between direction vectors -> 16.8389
+Alpha => 0
+D         => 0.0905413,-0.995893,0
+Red => 167.55,-120.95,-11.885
+Green => 167.784,-120.929,-11.6648
+Blue => 167.55,-120.95,-11.415
+Yellow => 167.316,-120.971,-11.6352
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-39
+Angle between direction vectors -> 5.19475
+Alpha => 0.196119
+D         => 0.123995,-0.991973,0.0247993
+Red => 167.746,-122.3,-11.8604
+Green => 167.931,-122.27,-11.5988
+Blue => 167.654,-122.3,-11.3996
+Yellow => 167.469,-122.33,-11.6612
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-40
+Angle between direction vectors -> 2.39678
+Alpha => 0
+D         => -0.274727,-0.961522,0
+Red => 167.6,-123.8,-11.375
+Green => 167.374,-123.736,-11.5952
+Blue => 167.6,-123.8,-11.845
+Yellow => 167.826,-123.864,-11.6248
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-41
+Angle between direction vectors -> 23.112
+Alpha => 0
+D         => -0.316216,-0.948687,0
+Red => 167.25,-124.95,-11.375
+Green => 167.027,-124.876,-11.5952
+Blue => 167.25,-124.95,-11.845
+Yellow => 167.473,-125.024,-11.6248
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-42
+Angle between direction vectors -> 2.48837
+Alpha => 0
+D         => -0.371398,-0.928474,0
+Red => 166.9,-125.9,-11.375
+Green => 166.682,-125.813,-11.5952
+Blue => 166.9,-125.9,-11.845
+Yellow => 167.118,-125.987,-11.6248
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-43
+Angle between direction vectors -> 3.36755
+Alpha => -0.682315
+D         => -0.333667,-0.889766,-0.311421
+Red => 166.431,-126.8,-11.6221
+Green => 166.429,-126.72,-11.848
+Blue => 166.669,-126.8,-11.8779
+Yellow => 166.671,-126.88,-11.652
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-44
+Angle between direction vectors -> 18.1861
+Alpha => 0
+D         => 0.894427,-0.447214,0
+Red => 166.8,-127.4,-12.065
+Green => 166.878,-127.244,-11.901
+Blue => 166.8,-127.4,-11.715
+Yellow => 166.722,-127.556,-11.879
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-45
+Angle between direction vectors -> 84.2911
+Alpha => 0
+D         => 0.976187,-0.216933,0
+Red => 167.65,-127.7,-12.065
+Green => 167.688,-127.53,-11.901
+Blue => 167.65,-127.7,-11.715
+Yellow => 167.612,-127.87,-11.879
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-46
+Angle between direction vectors -> 14.0361
+Alpha => -0.524894
+D         => 0.603965,-0.704633,-0.37245
+Red => 168.308,-128.15,-12.224
+Green => 168.499,-128.026,-12.149
+Blue => 168.492,-128.15,-11.926
+Yellow => 168.301,-128.274,-12.001
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-47
+Angle between direction vectors -> 42.0603
+Alpha => 0
+D         => 0.164397,-0.986394,0
+Red => 168.8,-129.1,-12.435
+Green => 168.972,-129.071,-12.271
+Blue => 168.8,-129.1,-12.085
+Yellow => 168.628,-129.129,-12.249
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-48
+Angle between direction vectors -> 37.4074
+Alpha => 0
+D         => -0.707053,-0.707161,0
+Red => 168.85,-129.75,-12.085
+Green => 168.727,-129.627,-12.249
+Blue => 168.85,-129.75,-12.435
+Yellow => 168.974,-129.873,-12.271
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-49
+Angle between direction vectors -> 54.4578
+Alpha => -0.0995018
+D         => -0.263031,-0.964429,-0.0263026
+Red => 168.633,-130.35,-12.1009
+Green => 168.481,-130.304,-12.2808
+Blue => 168.667,-130.35,-12.4491
+Yellow => 168.819,-130.396,-12.2692
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-50
+Angle between direction vectors -> 29.7749
+Alpha => -0.990991
+D         => -0.0667062,-0.86713,-0.493596
+Red => 168.277,-131.55,-12.6366
+Green => 168.419,-131.463,-12.8086
+Blue => 168.623,-131.55,-12.6834
+Yellow => 168.481,-131.637,-12.5114
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-51
+Angle between direction vectors -> 29.9096
+Alpha => -0.0665188
+D         => 0.155956,-0.987709,-0.010397
+Red => 168.838,-135.05,-13.2346
+Green => 169.021,-135.023,-13.0824
+Blue => 168.862,-135.05,-12.8854
+Yellow => 168.679,-135.077,-13.0376
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-52
+Angle between direction vectors -> 31.6575
+Alpha => -0.0995018
+D         => 0.31607,-0.948209,-0.0316064
+Red => 169.433,-138.35,-13.2791
+Green => 169.614,-138.295,-13.1324
+Blue => 169.467,-138.35,-12.9309
+Yellow => 169.286,-138.405,-13.0776
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-53
+Angle between direction vectors -> 9.53772
+Alpha => 0
+D         => 0.316223,-0.948685,0
+Red => 169.9,-139.7,-13.295
+Green => 170.066,-139.645,-13.131
+Blue => 169.9,-139.7,-12.945
+Yellow => 169.734,-139.755,-13.109
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-54
+Angle between direction vectors -> 1.811
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 170.375,-140.65,-13.12
+Green => 170.211,-140.65,-12.9453
+Blue => 170.025,-140.65,-13.12
+Yellow => 170.189,-140.65,-13.2947
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-55
+Angle between direction vectors -> 18.4346
+Alpha => 0
+D         => 0.141418,-0.98995,0
+Red => 170.3,-141.4,-13.295
+Green => 170.473,-141.375,-13.131
+Blue => 170.3,-141.4,-12.945
+Yellow => 170.127,-141.425,-13.109
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-56
+Angle between direction vectors -> 8.12995
+Alpha => 0
+D         => -0.0905283,-0.995894,0
+Red => 170.35,-142.65,-12.945
+Green => 170.176,-142.634,-13.109
+Blue => 170.35,-142.65,-13.295
+Yellow => 170.524,-142.666,-13.131
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-57
+Angle between direction vectors -> 13.324
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 170.475,-143.25,-13.12
+Green => 170.311,-143.25,-12.9453
+Blue => 170.125,-143.25,-13.12
+Yellow => 170.289,-143.25,-13.2947
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-58
+Angle between direction vectors -> 5.19403
+Alpha => 0
+D         => -0.536877,-0.843661,0
+Red => 169.95,-143.85,-12.945
+Green => 169.803,-143.756,-13.109
+Blue => 169.95,-143.85,-13.295
+Yellow => 170.097,-143.944,-13.131
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-59
+Angle between direction vectors -> 32.4713
+Alpha => 0
+D         => -0.216941,-0.976185,0
+Red => 169.5,-144.85,-12.945
+Green => 169.329,-144.812,-13.109
+Blue => 169.5,-144.85,-13.295
+Yellow => 169.671,-144.888,-13.131
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-60
+Angle between direction vectors -> 19.9419
+Alpha => 0.253027
+D         => 0.237761,-0.969331,0.0621835
+Red => 170.094,-147.95,-13.1193
+Green => 170.217,-147.907,-12.9178
+Blue => 170.006,-147.95,-12.7807
+Yellow => 169.883,-147.993,-12.9822
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-61
+Angle between direction vectors -> 26.5344
+Alpha => 0
+D         => 0.209532,-0.977802,0
+Red => 170.85,-151.3,-12.955
+Green => 171.021,-151.263,-12.791
+Blue => 170.85,-151.3,-12.605
+Yellow => 170.679,-151.337,-12.769
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-62
+Angle between direction vectors -> 3.94352
+Alpha => 0
+D         => -0.707107,-0.707107,0
+Red => 170.95,-152.05,-12.605
+Green => 170.826,-151.926,-12.769
+Blue => 170.95,-152.05,-12.955
+Yellow => 171.074,-152.174,-12.791
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-63
+Angle between direction vectors -> 57.0949
+Alpha => 0
+D         => 0.58124,-0.813732,0
+Red => 171.15,-152.45,-12.955
+Green => 171.292,-152.348,-12.791
+Blue => 171.15,-152.45,-12.605
+Yellow => 171.008,-152.552,-12.769
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-64
+Angle between direction vectors -> 80.5378
+Alpha => 0
+D         => 0.707107,0.707107,0
+Red => 171.45,-152.75,-12.955
+Green => 171.326,-152.626,-12.791
+Blue => 171.45,-152.75,-12.605
+Yellow => 171.574,-152.874,-12.769
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-65
+Angle between direction vectors -> 99.4622
+Alpha => 0
+D         => 0.847999,-0.529997,0
+Red => 171.9,-152.95,-12.955
+Green => 171.993,-152.802,-12.791
+Blue => 171.9,-152.95,-12.605
+Yellow => 171.807,-153.098,-12.769
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-66
+Angle between direction vectors -> 77.0053
+Alpha => 0
+D         => 0.51449,-0.857496,0
+Red => 172.6,-153.7,-12.955
+Green => 172.75,-153.61,-12.791
+Blue => 172.6,-153.7,-12.605
+Yellow => 172.45,-153.79,-12.769
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-67
+Angle between direction vectors -> 27.0314
+Alpha => 0
+D         => -0.707053,-0.707161,0
+Red => 172.85,-154.25,-12.605
+Green => 172.727,-154.127,-12.769
+Blue => 172.85,-154.25,-12.955
+Yellow => 172.974,-154.373,-12.791
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-68
+Angle between direction vectors -> 75.959
+Alpha => -0.884936
+D         => 0.070597,-0.988444,-0.134147
+Red => 172.695,-155,-12.9565
+Green => 172.921,-154.974,-13.0329
+Blue => 173.005,-155,-12.7935
+Yellow => 172.779,-155.026,-12.7171
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-69
+Angle between direction vectors -> 49.5283
+Alpha => 0
+D         => 0.132172,-0.991227,0
+Red => 173,-156.45,-13.145
+Green => 173.173,-156.427,-12.981
+Blue => 173,-156.45,-12.795
+Yellow => 172.827,-156.473,-12.959
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-70
+Angle between direction vectors -> 8.46629
+Alpha => 0
+D         => 0.707053,-0.707161,0
+Red => 173.15,-157.25,-13.145
+Green => 173.273,-157.127,-12.981
+Blue => 173.15,-157.25,-12.795
+Yellow => 173.026,-157.373,-12.959
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-71
+Angle between direction vectors -> 37.4005
+Alpha => 0
+D         => -0.110422,-0.993885,0
+Red => 173.15,-157.75,-12.795
+Green => 172.976,-157.731,-12.959
+Blue => 173.15,-157.75,-13.145
+Yellow => 173.324,-157.769,-12.981
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-72
+Angle between direction vectors -> 51.3353
+Alpha => 0
+D         => 0.0665129,-0.997786,0
+Red => 173.15,-158.95,-13.145
+Green => 173.324,-158.938,-12.981
+Blue => 173.15,-158.95,-12.795
+Yellow => 172.976,-158.962,-12.959
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-73
+Angle between direction vectors -> 10.1533
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 173.375,-159.75,-12.97
+Green => 173.211,-159.75,-12.7953
+Blue => 173.025,-159.75,-12.97
+Yellow => 173.189,-159.75,-13.1447
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-74
+Angle between direction vectors -> 3.81372
+Alpha => 0
+D         => 0.076701,-0.997054,0
+Red => 173.25,-160.45,-13.145
+Green => 173.424,-160.437,-12.981
+Blue => 173.25,-160.45,-12.795
+Yellow => 173.076,-160.463,-12.959
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-75
+Angle between direction vectors -> 4.39895
+Alpha => 0
+D         => 0.624696,-0.780868,0
+Red => 173.7,-161.6,-13.145
+Green => 173.836,-161.491,-12.981
+Blue => 173.7,-161.6,-12.795
+Yellow => 173.564,-161.709,-12.959
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-76
+Angle between direction vectors -> 34.2609
+Alpha => 0
+D         => 0.14142,-0.98995,0
+Red => 174.2,-162.8,-13.145
+Green => 174.373,-162.775,-12.981
+Blue => 174.2,-162.8,-12.795
+Yellow => 174.027,-162.825,-12.959
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-77
+Angle between direction vectors -> 30.5299
+Alpha => -0.38075
+D         => -0.812291,-0.477819,-0.334473
+Red => 173.383,-164,-13.1582
+Green => 173.369,-163.847,-13.3416
+Blue => 173.517,-164,-13.4818
+Yellow => 173.531,-164.153,-13.2984
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-78
+Angle between direction vectors -> 69.0138
+Alpha => 0
+D         => -0.422891,-0.90618,0
+Red => 172.25,-165.25,-13.495
+Green => 172.092,-165.176,-13.659
+Blue => 172.25,-165.25,-13.845
+Yellow => 172.408,-165.324,-13.681
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-79
+Angle between direction vectors -> 39.0587
+Alpha => 0
+D         => 0.316242,-0.948678,0
+Red => 171.95,-166.15,-13.845
+Green => 172.116,-166.095,-13.681
+Blue => 171.95,-166.15,-13.495
+Yellow => 171.784,-166.205,-13.659
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-80
+Angle between direction vectors -> 43.4531
+Alpha => 0
+D         => 0.351125,-0.936328,0
+Red => 172.15,-166.7,-13.845
+Green => 172.314,-166.639,-13.681
+Blue => 172.15,-166.7,-13.495
+Yellow => 171.986,-166.761,-13.659
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-81
+Angle between direction vectors -> 2.12043
+Alpha => 0
+D         => -0.406149,-0.913807,0
+Red => 172.1,-167.55,-13.495
+Green => 171.94,-167.479,-13.659
+Blue => 172.1,-167.55,-13.845
+Yellow => 172.26,-167.621,-13.681
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-82
+Angle between direction vectors -> 44.5193
+Alpha => -0.624671
+D         => 0.163005,-0.97797,-0.130396
+Red => 171.891,-168.6,-13.8867
+Green => 172.127,-168.564,-13.8653
+Blue => 172.109,-168.6,-13.6133
+Yellow => 171.873,-168.636,-13.6347
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-83
+Angle between direction vectors -> 34.1601
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 172.275,-169.55,-13.83
+Green => 172.111,-169.55,-13.6553
+Blue => 171.925,-169.55,-13.83
+Yellow => 172.089,-169.55,-14.0047
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-84
+Angle between direction vectors -> 12.0487
+Alpha => 0
+D         => -0.447214,-0.894427,0
+Red => 172.05,-170,-13.655
+Green => 171.894,-169.922,-13.819
+Blue => 172.05,-170,-14.005
+Yellow => 172.206,-170.078,-13.841
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-85
+Angle between direction vectors -> 26.565
+Alpha => 0
+D         => -0.274718,-0.961525,0
+Red => 171.9,-170.45,-13.655
+Green => 171.732,-170.402,-13.819
+Blue => 171.9,-170.45,-14.005
+Yellow => 172.068,-170.498,-13.841
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-86
+Angle between direction vectors -> 10.6198
+Alpha => 0
+D         => 0.47885,-0.877897,0
+Red => 172.1,-171.35,-14.005
+Green => 172.253,-171.266,-13.841
+Blue => 172.1,-171.35,-13.655
+Yellow => 171.947,-171.434,-13.819
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-87
+Angle between direction vectors -> 44.5555
+Alpha => -0.287329
+D         => 0.957832,0,-0.287329
+Red => 172.4,-171.9,-14.0126
+Green => 172.447,-171.725,-13.8555
+Blue => 172.5,-171.9,-13.6774
+Yellow => 172.453,-172.075,-13.8345
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-88
+Angle between direction vectors -> 62.6995
+Alpha => 0
+D         => 0.536872,-0.843664,0
+Red => 172.85,-172.45,-14.035
+Green => 172.997,-172.356,-13.871
+Blue => 172.85,-172.45,-13.685
+Yellow => 172.703,-172.544,-13.849
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-89
+Angle between direction vectors -> 59.0538
+Alpha => -0.0747899
+D         => 0.371254,-0.928114,-0.0278441
+Red => 173.387,-173.5,-14.0495
+Green => 173.561,-173.435,-13.8981
+Blue => 173.413,-173.5,-13.7005
+Yellow => 173.239,-173.565,-13.8519
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-90
+Angle between direction vectors -> 10.7863
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 173.775,-174.15,-13.89
+Green => 173.611,-174.15,-13.7153
+Blue => 173.425,-174.15,-13.89
+Yellow => 173.589,-174.15,-14.0647
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-91
+Angle between direction vectors -> 21.8573
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 173.775,-174.8,-13.89
+Green => 173.611,-174.8,-13.7153
+Blue => 173.425,-174.8,-13.89
+Yellow => 173.589,-174.8,-14.0647
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-92
+Angle between direction vectors -> 0
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 173.65,-175.35,-14.065
+Green => 173.773,-175.227,-13.901
+Blue => 173.65,-175.35,-13.715
+Yellow => 173.526,-175.474,-13.879
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-93
+Angle between direction vectors -> 45
+Alpha => 0
+D         => 0.496141,-0.868242,0
+Red => 173.9,-175.75,-14.065
+Green => 174.052,-175.663,-13.901
+Blue => 173.9,-175.75,-13.715
+Yellow => 173.748,-175.837,-13.879
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-94
+Angle between direction vectors -> 15.255
+Alpha => 0
+D         => 0.894441,-0.447186,0
+Red => 174.2,-176.15,-14.065
+Green => 174.278,-175.994,-13.901
+Blue => 174.2,-176.15,-13.715
+Yellow => 174.122,-176.306,-13.879
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-95
+Angle between direction vectors -> 33.6917
+Alpha => 0
+D         => 0.447207,-0.894431,0
+Red => 174.5,-176.6,-14.065
+Green => 174.656,-176.522,-13.901
+Blue => 174.5,-176.6,-13.715
+Yellow => 174.344,-176.678,-13.879
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-96
+Angle between direction vectors -> 36.8721
+Alpha => 0
+D         => 1,0,0
+Red => 174.8,-177,-14.065
+Green => 174.8,-176.825,-13.901
+Blue => 174.8,-177,-13.715
+Yellow => 174.8,-177.175,-13.879
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-97
+Angle between direction vectors -> 63.4354
+Alpha => 0.406907
+D         => 0.843638,-0.38347,0.375801
+Red => 175.521,-177.25,-13.8049
+Green => 175.516,-177.089,-13.6278
+Blue => 175.379,-177.25,-13.4851
+Yellow => 175.384,-177.411,-13.6622
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-98
+Angle between direction vectors -> 32.4737
+Alpha => 0
+D         => 0.813732,-0.58124,0
+Red => 176.35,-177.75,-13.575
+Green => 176.452,-177.608,-13.411
+Blue => 176.35,-177.75,-13.225
+Yellow => 176.248,-177.892,-13.389
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-99
+Angle between direction vectors -> 24.5798
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 176.875,-178.15,-13.4
+Green => 176.711,-178.15,-13.2253
+Blue => 176.525,-178.15,-13.4
+Yellow => 176.689,-178.15,-13.5747
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-100
+Angle between direction vectors -> 54.4622
+Alpha => 0
+D         => 0.894427,-0.447214,0
+Red => 177.2,-178.55,-13.575
+Green => 177.278,-178.394,-13.411
+Blue => 177.2,-178.55,-13.225
+Yellow => 177.122,-178.706,-13.389
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-101
+Angle between direction vectors -> 63.435
+Alpha => 0.275567
+D         => 0.931175,-0.24831,0.266936
+Red => 178.498,-179,-13.3532
+Green => 178.495,-178.831,-13.1836
+Blue => 178.402,-179,-13.0168
+Yellow => 178.405,-179.169,-13.1864
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-102
+Angle between direction vectors -> 19.2801
+Alpha => 0
+D         => 0.613935,-0.789357,0
+Red => 179.55,-179.65,-13.145
+Green => 179.688,-179.543,-12.981
+Blue => 179.55,-179.65,-12.795
+Yellow => 179.412,-179.757,-12.959
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-103
+Angle between direction vectors -> 39.8535
+Alpha => 0.206557
+D         => 0.956097,-0.212461,0.201841
+Red => 180.386,-180.2,-13.0462
+Green => 180.389,-180.029,-12.8781
+Blue => 180.314,-180.2,-12.7038
+Yellow => 180.311,-180.371,-12.8719
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-104
+Angle between direction vectors -> 41.0019
+Alpha => 0
+D         => 0.976187,0.216929,0
+Red => 181.25,-180.2,-12.955
+Green => 181.212,-180.03,-12.791
+Blue => 181.25,-180.2,-12.605
+Yellow => 181.288,-180.371,-12.769
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-105
+Angle between direction vectors -> 27.4715
+Alpha => -0.046105
+D         => 0.987344,0.151908,-0.0455699
+Red => 182.342,-180,-12.9848
+Green => 182.323,-179.827,-12.8198
+Blue => 182.358,-180,-12.6352
+Yellow => 182.377,-180.173,-12.8002
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-106
+Angle between direction vectors -> 4.59521
+Alpha => 0
+D         => 0.832049,-0.554703,0
+Red => 183.6,-180.3,-13.015
+Green => 183.697,-180.155,-12.851
+Blue => 183.6,-180.3,-12.665
+Yellow => 183.503,-180.445,-12.829
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-107
+Angle between direction vectors -> 42.502
+Alpha => 0
+D         => 0.664361,-0.747411,0
+Red => 184.6,-181.15,-13.015
+Green => 184.731,-181.034,-12.851
+Blue => 184.6,-181.15,-12.665
+Yellow => 184.469,-181.266,-12.829
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-108
+Angle between direction vectors -> 14.6764
+Alpha => 0.586966
+D         => 0.660641,-0.578056,0.478963
+Red => 185.503,-181.95,-12.6917
+Green => 185.488,-181.807,-12.4996
+Blue => 185.297,-181.95,-12.4083
+Yellow => 185.312,-182.093,-12.6004
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-109
+Angle between direction vectors -> 29.4308
+Alpha => 0
+D         => 0.51449,-0.857496,0
+Red => 186.1,-182.8,-12.435
+Green => 186.25,-182.71,-12.271
+Blue => 186.1,-182.8,-12.085
+Yellow => 185.95,-182.89,-12.249
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-110
+Angle between direction vectors -> 33.3244
+Alpha => 0
+D         => 0.747411,-0.664361,0
+Red => 186.85,-183.7,-12.435
+Green => 186.966,-183.569,-12.271
+Blue => 186.85,-183.7,-12.085
+Yellow => 186.734,-183.831,-12.249
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-111
+Angle between direction vectors -> 17.4033
+Alpha => 0.840301
+D         => 0.17238,-0.948099,0.267194
+Red => 187.547,-184.65,-12.1999
+Green => 187.499,-184.594,-11.9718
+Blue => 187.253,-184.65,-12.0101
+Yellow => 187.301,-184.706,-12.2382
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-112
+Angle between direction vectors -> 40.6485
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 187.675,-185.55,-11.95
+Green => 187.511,-185.55,-11.7753
+Blue => 187.325,-185.55,-11.95
+Yellow => 187.489,-185.55,-12.1247
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-113
+Angle between direction vectors -> 18.5405
+Alpha => 0
+D         => 0.196128,-0.980578,0
+Red => 187.55,-186.15,-12.125
+Green => 187.721,-186.116,-11.961
+Blue => 187.55,-186.15,-11.775
+Yellow => 187.379,-186.184,-11.939
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-114
+Angle between direction vectors -> 11.3106
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 187.775,-186.5,-11.95
+Green => 187.611,-186.5,-11.7753
+Blue => 187.425,-186.5,-11.95
+Yellow => 187.589,-186.5,-12.1247
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-115
+Angle between direction vectors -> 11.3106
+Alpha => 0.856581
+D         => -0.513287,-0.102648,0.852056
+Red => 187.5,-186.65,-11.4447
+Green => 187.35,-186.476,-11.514
+Blue => 187.2,-186.65,-11.6253
+Yellow => 187.35,-186.824,-11.556
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-116
+Angle between direction vectors -> 84.1083
+Alpha => 0.62471
+D         => 0.421059,-0.842161,0.33686
+Red => 187.359,-187,-11.1367
+Green => 187.372,-186.906,-10.9167
+Blue => 187.141,-187,-10.8633
+Yellow => 187.128,-187.094,-11.0833
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-117
+Angle between direction vectors -> 80.9471
+Alpha => 0.12752
+D         => 0.809321,-0.578076,0.104054
+Red => 187.772,-187.55,-11.0086
+Green => 187.852,-187.407,-10.833
+Blue => 187.728,-187.55,-10.6614
+Yellow => 187.648,-187.693,-10.837
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-118
+Angle between direction vectors -> 30.3838
+Alpha => 0
+D         => 0.51449,-0.857496,0
+Red => 188.4,-188.3,-10.965
+Green => 188.55,-188.21,-10.801
+Blue => 188.4,-188.3,-10.615
+Yellow => 188.25,-188.39,-10.779
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-119
+Angle between direction vectors -> 24.2048
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 188.875,-188.85,-10.79
+Green => 188.711,-188.85,-10.6153
+Blue => 188.525,-188.85,-10.79
+Yellow => 188.689,-188.85,-10.9647
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-120
+Angle between direction vectors -> 30.9634
+Alpha => 0
+D         => 1,0,0
+Red => 189.1,-188.9,-10.965
+Green => 189.1,-188.725,-10.801
+Blue => 189.1,-188.9,-10.615
+Yellow => 189.1,-189.075,-10.779
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-121
+Angle between direction vectors -> 90
+Alpha => 0
+D         => 0.707161,0.707053,0
+Red => 189.55,-188.85,-10.965
+Green => 189.427,-188.727,-10.801
+Blue => 189.55,-188.85,-10.615
+Yellow => 189.673,-188.974,-10.779
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-122
+Angle between direction vectors -> 44.9956
+Alpha => 0
+D         => 0.913813,-0.406136,0
+Red => 190.05,-189,-10.965
+Green => 190.121,-188.84,-10.801
+Blue => 190.05,-189,-10.615
+Yellow => 189.979,-189.16,-10.779
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-123
+Angle between direction vectors -> 68.9579
+Alpha => 0.612578
+D         => 0.422547,-0.84511,0.327479
+Red => 190.807,-189.6,-10.7733
+Green => 190.823,-189.507,-10.5533
+Blue => 190.593,-189.6,-10.4967
+Yellow => 190.577,-189.693,-10.7167
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-124
+Angle between direction vectors -> 43.1674
+Alpha => 0.624695
+D         => 0.421076,-0.842152,0.33686
+Red => 191.259,-190.5,-10.4167
+Green => 191.272,-190.406,-10.1967
+Blue => 191.041,-190.5,-10.1433
+Yellow => 191.028,-190.594,-10.3633
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-125
+Angle between direction vectors -> 0.569926
+Alpha => 0
+D         => 0.263119,-0.964763,0
+Red => 191.55,-191.55,-10.255
+Green => 191.718,-191.504,-10.091
+Blue => 191.55,-191.55,-9.905
+Yellow => 191.381,-191.596,-10.069
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-126
+Angle between direction vectors -> 22.591
+Alpha => 0.782087
+D         => 0.389987,-0.779974,0.48944
+Red => 191.937,-192.3,-10.0636
+Green => 191.893,-192.191,-9.85481
+Blue => 191.663,-192.3,-9.84545
+Yellow => 191.706,-192.409,-10.0542
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-127
+Angle between direction vectors -> 31.2289
+Alpha => 0
+D         => 0.86825,-0.496127,0
+Red => 192.25,-192.7,-10.004
+Green => 192.337,-192.548,-9.83999
+Blue => 192.25,-192.7,-9.654
+Yellow => 192.163,-192.852,-9.81801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-128
+Angle between direction vectors -> 43.4836
+Alpha => 0.653623
+D         => 0.715657,-0.325301,0.618073
+Red => 193.264,-193.15,-9.48644
+Green => 193.2,-192.985,-9.32518
+Blue => 193.036,-193.15,-9.22156
+Yellow => 193.1,-193.315,-9.38282
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-129
+Angle between direction vectors -> 38.486
+Alpha => 0.658503
+D         => 0.574366,-0.646165,0.502568
+Red => 194.215,-193.85,-8.6607
+Green => 194.192,-193.717,-8.46295
+Blue => 193.985,-193.85,-8.3973
+Yellow => 194.008,-193.983,-8.59505
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-130
+Angle between direction vectors -> 21.2717
+Alpha => 0
+D         => 0.936328,-0.351125,0
+Red => 194.9,-194.45,-8.354
+Green => 194.961,-194.286,-8.18999
+Blue => 194.9,-194.45,-8.004
+Yellow => 194.839,-194.614,-8.16801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-131
+Angle between direction vectors -> 40.1215
+Alpha => 0.164401
+D         => 0.702247,-0.702247,0.117042
+Red => 195.629,-194.9,-8.30162
+Green => 195.723,-194.776,-8.11967
+Blue => 195.571,-194.9,-7.95638
+Yellow => 195.477,-195.024,-8.13832
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-132
+Angle between direction vectors -> 25.2963
+Alpha => 0
+D         => 0.650797,-0.759252,0
+Red => 196.2,-195.55,-8.254
+Green => 196.333,-195.436,-8.08999
+Blue => 196.2,-195.55,-7.904
+Yellow => 196.067,-195.664,-8.06801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-133
+Angle between direction vectors -> 8.02708
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 196.55,-195.95,-8.254
+Green => 196.674,-195.826,-8.08999
+Blue => 196.55,-195.95,-7.904
+Yellow => 196.426,-196.074,-8.06801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-134
+Angle between direction vectors -> 4.39828
+Alpha => 0
+D         => 1,0,0
+Red => 197,-196,-8.254
+Green => 197,-195.825,-8.08999
+Blue => 197,-196,-7.904
+Yellow => 197,-196.175,-8.06801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-135
+Angle between direction vectors -> 45
+Alpha => 0
+D         => -0.196113,-0.980581,0
+Red => 197.3,-196.5,-7.904
+Green => 197.129,-196.466,-8.06801
+Blue => 197.3,-196.5,-8.254
+Yellow => 197.471,-196.534,-8.08999
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-136
+Angle between direction vectors -> 101.31
+Alpha => 0.447211
+D         => 0.768227,-0.512138,0.384111
+Red => 197.578,-197.2,-8.08552
+Green => 197.585,-197.05,-7.89883
+Blue => 197.422,-197.2,-7.77247
+Yellow => 197.415,-197.35,-7.95917
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-137
+Angle between direction vectors -> 69.4188
+Alpha => 0
+D         => 0.980578,-0.196128,0
+Red => 198.05,-197.45,-7.954
+Green => 198.084,-197.279,-7.78999
+Blue => 198.05,-197.45,-7.604
+Yellow => 198.016,-197.621,-7.76801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-138
+Angle between direction vectors -> 31.3779
+Alpha => -0.395028
+D         => 0.885649,-0.265697,-0.380829
+Red => 198.731,-197.65,-8.15477
+Green => 198.838,-197.482,-8.02243
+Blue => 198.869,-197.65,-7.83323
+Yellow => 198.762,-197.818,-7.96557
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-139
+Angle between direction vectors -> 22.9921
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 199.7,-198.2,-8.384
+Green => 199.824,-198.077,-8.21999
+Blue => 199.7,-198.2,-8.034
+Yellow => 199.577,-198.324,-8.19801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-140
+Angle between direction vectors -> 35.4991
+Alpha => 0
+D         => 0.447186,-0.894441,0
+Red => 200.15,-198.7,-8.384
+Green => 200.306,-198.622,-8.21999
+Blue => 200.15,-198.7,-8.034
+Yellow => 199.994,-198.778,-8.19801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-141
+Angle between direction vectors -> 18.4367
+Alpha => 0
+D         => 0.624696,-0.780868,0
+Red => 200.6,-199.3,-8.384
+Green => 200.736,-199.191,-8.21999
+Blue => 200.6,-199.3,-8.034
+Yellow => 200.464,-199.409,-8.19801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-142
+Angle between direction vectors -> 12.0966
+Alpha => 0
+D         => 0.55469,-0.832057,0
+Red => 201.1,-199.95,-8.384
+Green => 201.245,-199.853,-8.21999
+Blue => 201.1,-199.95,-8.034
+Yellow => 200.955,-200.047,-8.19801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-143
+Angle between direction vectors -> 4.97051
+Alpha => 0
+D         => 0.633245,-0.773952,0
+Red => 201.65,-200.65,-8.384
+Green => 201.785,-200.539,-8.21999
+Blue => 201.65,-200.65,-8.034
+Yellow => 201.515,-200.761,-8.19801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-144
+Angle between direction vectors -> 5.60053
+Alpha => 0
+D         => 0.447186,-0.894441,0
+Red => 202.15,-201.3,-8.384
+Green => 202.306,-201.222,-8.21999
+Blue => 202.15,-201.3,-8.034
+Yellow => 201.994,-201.378,-8.19801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-145
+Angle between direction vectors -> 12.7266
+Alpha => 0
+D         => 0.664361,-0.747411,0
+Red => 202.6,-201.85,-8.384
+Green => 202.731,-201.734,-8.21999
+Blue => 202.6,-201.85,-8.034
+Yellow => 202.469,-201.966,-8.19801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-146
+Angle between direction vectors -> 15.0701
+Alpha => 0.847998
+D         => 0.496904,-0.347832,0.795047
+Red => 203.648,-202.65,-7.50175
+Green => 203.542,-202.486,-7.36331
+Blue => 203.352,-202.65,-7.31625
+Yellow => 203.458,-202.814,-7.45469
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-147
+Angle between direction vectors -> 53.8361
+Alpha => 0
+D         => 0.780868,-0.624696,0
+Red => 204.5,-203.4,-6.784
+Green => 204.609,-203.264,-6.61999
+Blue => 204.5,-203.4,-6.434
+Yellow => 204.391,-203.536,-6.59801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-148
+Angle between direction vectors -> 52.7492
+Alpha => 0.304776
+D         => 0.952424,0,0.304776
+Red => 206.053,-203.8,-6.45567
+Green => 206.003,-203.625,-6.29947
+Blue => 205.947,-203.8,-6.12233
+Yellow => 205.997,-203.975,-6.27853
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-149
+Angle between direction vectors -> 41.951
+Alpha => 0
+D         => 0.707107,0.707107,0
+Red => 207.05,-203.75,-6.144
+Green => 206.926,-203.626,-5.97999
+Blue => 207.05,-203.75,-5.794
+Yellow => 207.174,-203.874,-5.95801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-150
+Angle between direction vectors -> 47.6649
+Alpha => 0
+D         => 0.980581,-0.196113,0
+Red => 207.6,-203.8,-6.144
+Green => 207.634,-203.629,-5.97999
+Blue => 207.6,-203.8,-5.794
+Yellow => 207.566,-203.971,-5.95801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-151
+Angle between direction vectors -> 56.3098
+Alpha => 0
+D         => 0.995894,0.0905283,0
+Red => 208.65,-203.85,-6.144
+Green => 208.634,-203.676,-5.97999
+Blue => 208.65,-203.85,-5.794
+Yellow => 208.666,-204.024,-5.95801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-152
+Angle between direction vectors -> 16.5038
+Alpha => 0
+D         => 0.991228,0.132162,0
+Red => 209.95,-203.7,-6.144
+Green => 209.927,-203.527,-5.97999
+Blue => 209.95,-203.7,-5.794
+Yellow => 209.973,-203.873,-5.95801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-153
+Angle between direction vectors -> 2.4007
+Alpha => 0
+D         => 1,0,0
+Red => 211,-203.6,-6.144
+Green => 211,-203.425,-5.97999
+Blue => 211,-203.6,-5.794
+Yellow => 211,-203.775,-5.95801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-154
+Angle between direction vectors -> 7.59456
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 211.35,-203.65,-6.144
+Green => 211.474,-203.526,-5.97999
+Blue => 211.35,-203.65,-5.794
+Yellow => 211.227,-203.773,-5.95801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-155
+Angle between direction vectors -> 45
+Alpha => 0
+D         => 0.799998,-0.600002,0
+Red => 211.8,-204,-6.144
+Green => 211.905,-203.86,-5.97999
+Blue => 211.8,-204,-5.794
+Yellow => 211.695,-204.14,-5.95801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-156
+Angle between direction vectors -> 8.12992
+Alpha => 0
+D         => 1,0,0
+Red => 212.3,-204.3,-6.144
+Green => 212.3,-204.125,-5.97999
+Blue => 212.3,-204.3,-5.794
+Yellow => 212.3,-204.475,-5.95801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-157
+Angle between direction vectors -> 36.8701
+Alpha => 0.36132
+D         => 0.926172,0.115769,0.35889
+Red => 213.263,-204.2,-5.82218
+Green => 213.185,-204.027,-5.67655
+Blue => 213.137,-204.2,-5.49582
+Yellow => 213.215,-204.373,-5.64145
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-158
+Angle between direction vectors -> 22.1542
+Alpha => 0
+D         => 0.970147,-0.242518,0
+Red => 214.2,-204.15,-5.524
+Green => 214.242,-203.981,-5.35999
+Blue => 214.2,-204.15,-5.174
+Yellow => 214.158,-204.319,-5.33801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-159
+Angle between direction vectors -> 29.4894
+Alpha => 0
+D         => 0.316228,-0.948683,0
+Red => 214.55,-204.65,-5.524
+Green => 214.716,-204.595,-5.35999
+Blue => 214.55,-204.65,-5.174
+Yellow => 214.384,-204.705,-5.33801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-160
+Angle between direction vectors -> 57.5298
+Alpha => 0.939795
+D         => 0.186297,-0.838342,0.512324
+Red => 214.964,-205.55,-5.1338
+Green => 214.86,-205.455,-4.94015
+Blue => 214.636,-205.55,-5.0142
+Yellow => 214.74,-205.645,-5.20785
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-161
+Angle between direction vectors -> 31.3248
+Alpha => 0
+D         => 0.529997,-0.847999,0
+Red => 215.15,-206.4,-4.974
+Green => 215.298,-206.307,-4.80999
+Blue => 215.15,-206.4,-4.624
+Yellow => 215.002,-206.493,-4.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-162
+Angle between direction vectors -> 35.9382
+Alpha => 0
+D         => 1,0,0
+Red => 215.45,-206.8,-4.974
+Green => 215.45,-206.625,-4.80999
+Blue => 215.45,-206.8,-4.624
+Yellow => 215.45,-206.975,-4.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-163
+Angle between direction vectors -> 57.9947
+Alpha => 0
+D         => 0.658502,-0.752579,0
+Red => 215.85,-207.2,-4.974
+Green => 215.981,-207.085,-4.80999
+Blue => 215.85,-207.2,-4.624
+Yellow => 215.719,-207.315,-4.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-164
+Angle between direction vectors -> 48.8143
+Alpha => 0
+D         => 0.894441,-0.447186,0
+Red => 216.3,-207.65,-4.974
+Green => 216.378,-207.494,-4.80999
+Blue => 216.3,-207.65,-4.624
+Yellow => 216.222,-207.806,-4.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-165
+Angle between direction vectors -> 22.251
+Alpha => 0
+D         => 0.970144,-0.242531,0
+Red => 216.8,-207.8,-4.974
+Green => 216.842,-207.631,-4.80999
+Blue => 216.8,-207.8,-4.624
+Yellow => 216.758,-207.969,-4.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-166
+Angle between direction vectors -> 12.5273
+Alpha => 0.0333142
+D         => 0.831731,-0.554487,0.0277238
+Red => 217.656,-208.2,-4.9589
+Green => 217.747,-208.055,-4.79176
+Blue => 217.644,-208.2,-4.6091
+Yellow => 217.553,-208.345,-4.77624
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-167
+Angle between direction vectors -> 19.7156
+Alpha => 0
+D         => 0.936326,-0.351131,0
+Red => 218.5,-208.65,-4.944
+Green => 218.561,-208.486,-4.77999
+Blue => 218.5,-208.65,-4.594
+Yellow => 218.439,-208.814,-4.75801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-168
+Angle between direction vectors -> 13.2276
+Alpha => 0
+D         => 0.995894,-0.090527,0
+Red => 219.45,-208.85,-4.944
+Green => 219.466,-208.676,-4.77999
+Blue => 219.45,-208.85,-4.594
+Yellow => 219.434,-209.024,-4.75801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-169
+Angle between direction vectors -> 15.3626
+Alpha => 0.316229
+D         => 0.882257,0.367608,0.294087
+Red => 220.655,-208.65,-4.73502
+Green => 220.543,-208.488,-4.59973
+Blue => 220.545,-208.65,-4.40298
+Yellow => 220.657,-208.812,-4.53827
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-170
+Angle between direction vectors -> 32.2899
+Alpha => 0
+D         => 0.95783,0.287337,0
+Red => 221.7,-208.25,-4.544
+Green => 221.65,-208.083,-4.37999
+Blue => 221.7,-208.25,-4.194
+Yellow => 221.75,-208.417,-4.35801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-171
+Angle between direction vectors -> 18.0698
+Alpha => 0
+D         => 0.832047,0.554705,0
+Red => 222.5,-207.9,-4.544
+Green => 222.403,-207.755,-4.37999
+Blue => 222.5,-207.9,-4.194
+Yellow => 222.597,-208.045,-4.35801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-172
+Angle between direction vectors -> 16.9918
+Alpha => 0
+D         => 1,0,0
+Red => 222.85,-207.7,-4.544
+Green => 222.85,-207.525,-4.37999
+Blue => 222.85,-207.7,-4.194
+Yellow => 222.85,-207.875,-4.35801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-173
+Angle between direction vectors -> 33.6904
+Alpha => 0
+D         => 0.948683,0.316228,0
+Red => 223.35,-207.55,-4.544
+Green => 223.295,-207.384,-4.37999
+Blue => 223.35,-207.55,-4.194
+Yellow => 223.405,-207.716,-4.35801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-174
+Angle between direction vectors -> 18.4349
+Alpha => 0
+D         => 1,0,0
+Red => 223.85,-207.4,-4.544
+Green => 223.85,-207.225,-4.37999
+Blue => 223.85,-207.4,-4.194
+Yellow => 223.85,-207.575,-4.35801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-175
+Angle between direction vectors -> 18.4349
+Alpha => 0
+D         => 0.993885,0.11042,0
+Red => 224.35,-207.35,-4.544
+Green => 224.331,-207.176,-4.37999
+Blue => 224.35,-207.35,-4.194
+Yellow => 224.369,-207.524,-4.35801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-176
+Angle between direction vectors -> 6.33951
+Alpha => -0.205517
+D         => 0.879055,0.439528,-0.184602
+Red => 225.264,-207.05,-4.64526
+Green => 225.223,-206.893,-4.46898
+Blue => 225.336,-207.05,-4.30274
+Yellow => 225.377,-207.207,-4.47902
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-177
+Angle between direction vectors -> 22.7483
+Alpha => -0.0762482
+D         => 0.956794,0.281411,-0.0731668
+Red => 226.637,-206.55,-4.81849
+Green => 226.6,-206.382,-4.65121
+Blue => 226.663,-206.55,-4.46951
+Yellow => 226.7,-206.718,-4.63679
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-178
+Angle between direction vectors -> 11.9665
+Alpha => -0.257664
+D         => 0.960713,0.106753,-0.256192
+Red => 227.905,-206.25,-4.99809
+Green => 227.929,-206.076,-4.83481
+Blue => 227.995,-206.25,-4.65991
+Yellow => 227.971,-206.424,-4.82319
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-179
+Angle between direction vectors -> 14.5359
+Alpha => 0
+D         => 0.894427,-0.447214,0
+Red => 229,-206.5,-5.124
+Green => 229.078,-206.344,-4.95999
+Blue => 229,-206.5,-4.774
+Yellow => 228.922,-206.656,-4.93801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-180
+Angle between direction vectors -> 35.7527
+Alpha => -0.594843
+D         => 0.75263,-0.351226,-0.556946
+Red => 230.246,-207.15,-5.64467
+Green => 230.393,-206.986,-5.54932
+Blue => 230.454,-207.15,-5.36333
+Yellow => 230.307,-207.314,-5.45868
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-181
+Angle between direction vectors -> 33.876
+Alpha => 0
+D         => 0.819233,-0.573461,0
+Red => 231.6,-207.85,-6.234
+Green => 231.7,-207.707,-6.06999
+Blue => 231.6,-207.85,-5.884
+Yellow => 231.5,-207.993,-6.04801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-182
+Angle between direction vectors -> 35.1156
+Alpha => -0.594843
+D         => 0.533944,-0.747519,-0.395119
+Red => 232.246,-208.55,-6.38467
+Green => 232.448,-208.434,-6.33049
+Blue => 232.454,-208.55,-6.10333
+Yellow => 232.252,-208.666,-6.15751
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-183
+Angle between direction vectors -> 29.9917
+Alpha => -nan
+r is zero
+D         => 0,-1,0
+Red => 232.775,-208.95,-6.429
+Green => 232.611,-208.95,-6.25435
+Blue => 232.425,-208.95,-6.429
+Yellow => 232.589,-208.95,-6.60365
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-184
+Angle between direction vectors -> 41.6241
+Alpha => 0
+D         => 0.970142,-0.242536,0
+Red => 233,-209.1,-6.604
+Green => 233.042,-208.931,-6.43999
+Blue => 233,-209.1,-6.254
+Yellow => 232.958,-209.269,-6.41801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-185
+Angle between direction vectors -> 75.9638
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 233.45,-209.25,-6.604
+Green => 233.574,-209.126,-6.43999
+Blue => 233.45,-209.25,-6.254
+Yellow => 233.326,-209.374,-6.41801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-186
+Angle between direction vectors -> 30.9638
+Alpha => 0
+D         => 0.948686,-0.316221,0
+Red => 233.8,-209.4,-6.604
+Green => 233.855,-209.234,-6.43999
+Blue => 233.8,-209.4,-6.254
+Yellow => 233.745,-209.566,-6.41801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-187
+Angle between direction vectors -> 26.5655
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 234.35,-209.75,-6.604
+Green => 234.474,-209.626,-6.43999
+Blue => 234.35,-209.75,-6.254
+Yellow => 234.227,-209.874,-6.41801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-188
+Angle between direction vectors -> 26.5655
+Alpha => -0.257665
+D         => 0.851331,-0.472965,-0.227023
+Red => 235.005,-210.25,-6.71809
+Green => 235.127,-210.096,-6.5809
+Blue => 235.095,-210.25,-6.37991
+Yellow => 234.973,-210.404,-6.5171
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-189
+Angle between direction vectors -> 20.5414
+Alpha => 0
+D         => 0.799993,-0.60001,0
+Red => 235.7,-210.65,-6.844
+Green => 235.805,-210.51,-6.67999
+Blue => 235.7,-210.65,-6.494
+Yellow => 235.595,-210.79,-6.65801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-190
+Angle between direction vectors -> 15.2381
+Alpha => 0
+D         => 0.832047,0.554705,0
+Red => 236.2,-210.6,-6.844
+Green => 236.103,-210.455,-6.67999
+Blue => 236.2,-210.6,-6.494
+Yellow => 236.297,-210.745,-6.65801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-191
+Angle between direction vectors -> 70.561
+Alpha => 0
+D         => 0.989951,0.141409,0
+Red => 236.85,-210.35,-6.844
+Green => 236.825,-210.177,-6.67999
+Blue => 236.85,-210.35,-6.494
+Yellow => 236.875,-210.523,-6.65801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-192
+Angle between direction vectors -> 25.561
+Alpha => -0.0995039
+D         => 0.94444,0.314821,-0.0944442
+Red => 237.783,-210.1,-6.90313
+Green => 237.744,-209.934,-6.73446
+Blue => 237.817,-210.1,-6.55487
+Yellow => 237.856,-210.266,-6.72354
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-193
+Angle between direction vectors -> 11.6304
+Alpha => 0
+D         => 0.948682,-0.316231,0
+Red => 239,-210.1,-6.964
+Green => 239.055,-209.934,-6.79999
+Blue => 239,-210.1,-6.614
+Yellow => 238.945,-210.266,-6.77801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-194
+Angle between direction vectors -> 37.2107
+Alpha => 0
+D         => 0.832052,-0.554697,0
+Red => 240.05,-210.6,-6.964
+Green => 240.147,-210.455,-6.79999
+Blue => 240.05,-210.6,-6.614
+Yellow => 239.953,-210.745,-6.77801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-195
+Angle between direction vectors -> 15.2547
+Alpha => 0
+D         => 0.668962,-0.743296,0
+Red => 240.95,-211.4,-6.964
+Green => 241.08,-211.283,-6.79999
+Blue => 240.95,-211.4,-6.614
+Yellow => 240.82,-211.517,-6.77801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-196
+Angle between direction vectors -> 14.3231
+Alpha => -0.39114
+D         => 0.603779,-0.754721,-0.256605
+Red => 241.732,-212.4,-7.12006
+Green => 241.917,-212.285,-7.02067
+Blue => 241.868,-212.4,-6.79794
+Yellow => 241.683,-212.515,-6.89733
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-197
+Angle between direction vectors -> 15.2282
+Alpha => 0
+D         => 0.957825,-0.287351,0
+Red => 242.7,-213.05,-7.304
+Green => 242.75,-212.883,-7.13999
+Blue => 242.7,-213.05,-6.954
+Yellow => 242.65,-213.217,-7.11801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-198
+Angle between direction vectors -> 37.3273
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 243.3,-213.3,-7.304
+Green => 243.423,-213.176,-7.13999
+Blue => 243.3,-213.3,-6.954
+Yellow => 243.176,-213.423,-7.11801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-199
+Angle between direction vectors -> 28.3006
+Alpha => 0
+D         => 0.970139,-0.242549,0
+Red => 243.8,-213.5,-7.304
+Green => 243.842,-213.331,-7.13999
+Blue => 243.8,-213.5,-6.954
+Yellow => 243.758,-213.669,-7.11801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-200
+Angle between direction vectors -> 30.963
+Alpha => -0.61257
+D         => 0.679926,-0.509935,-0.526941
+Red => 244.493,-213.9,-7.57732
+Green => 244.664,-213.75,-7.50224
+Blue => 244.707,-213.9,-7.30068
+Yellow => 244.536,-214.05,-7.37576
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-201
+Angle between direction vectors -> 38.4356
+Alpha => 0
+D         => 0.799998,-0.600002,0
+Red => 245.4,-214.5,-7.924
+Green => 245.505,-214.36,-7.75999
+Blue => 245.4,-214.5,-7.574
+Yellow => 245.295,-214.64,-7.73801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-202
+Angle between direction vectors -> 31.799
+Alpha => -0.41037
+D         => 0.538184,-0.807282,-0.242186
+Red => 246.028,-215.25,-8.04359
+Green => 246.224,-215.147,-7.95188
+Blue => 246.172,-215.25,-7.72441
+Yellow => 245.976,-215.353,-7.81612
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-203
+Angle between direction vectors -> 23.806
+Alpha => 0
+D         => 0.759259,-0.650789,0
+Red => 246.75,-216,-8.194
+Green => 246.864,-215.867,-8.02999
+Blue => 246.75,-216,-7.844
+Yellow => 246.636,-216.133,-8.00801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-204
+Angle between direction vectors -> 20.9343
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 247.15,-216.35,-8.194
+Green => 247.273,-216.227,-8.02999
+Blue => 247.15,-216.35,-7.844
+Yellow => 247.026,-216.474,-8.00801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-205
+Angle between direction vectors -> 4.3989
+Alpha => -0.459017
+D         => 0.664171,-0.664171,-0.343152
+Red => 247.42,-216.7,-8.32947
+Green => 247.598,-216.569,-8.23701
+Blue => 247.58,-216.7,-8.01853
+Yellow => 247.402,-216.831,-8.11099
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-206
+Angle between direction vectors -> 20.069
+Alpha => 0
+D         => 0.447207,-0.894431,0
+Red => 248,-217.4,-8.504
+Green => 248.156,-217.322,-8.33999
+Blue => 248,-217.4,-8.154
+Yellow => 247.844,-217.478,-8.31801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-207
+Angle between direction vectors -> 26.9911
+Alpha => 0
+D         => 0.447214,-0.894427,0
+Red => 248.45,-218.3,-8.504
+Green => 248.606,-218.222,-8.33999
+Blue => 248.45,-218.3,-8.154
+Yellow => 248.294,-218.378,-8.31801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-208
+Angle between direction vectors -> 0
+Alpha => 0
+D         => 0.707161,-0.707053,0
+Red => 248.75,-218.85,-8.504
+Green => 248.873,-218.727,-8.33999
+Blue => 248.75,-218.85,-8.154
+Yellow => 248.627,-218.974,-8.31801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-209
+Angle between direction vectors -> 18.4393
+Alpha => 0
+D         => 0.413801,-0.910367,0
+Red => 249.05,-219.45,-8.504
+Green => 249.209,-219.378,-8.33999
+Blue => 249.05,-219.45,-8.154
+Yellow => 248.891,-219.522,-8.31801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-210
+Angle between direction vectors -> 20.5605
+Alpha => 0
+D         => 0.707053,-0.707161,0
+Red => 249.35,-220.05,-8.504
+Green => 249.474,-219.927,-8.33999
+Blue => 249.35,-220.05,-8.154
+Yellow => 249.227,-220.173,-8.31801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-211
+Angle between direction vectors -> 20.5518
+Alpha => 0
+D         => 0.554715,-0.83204,0
+Red => 249.6,-220.4,-8.504
+Green => 249.745,-220.303,-8.33999
+Blue => 249.6,-220.4,-8.154
+Yellow => 249.455,-220.497,-8.31801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-212
+Angle between direction vectors -> 11.3045
+Alpha => 0
+D         => 0.447186,-0.894441,0
+Red => 249.85,-220.8,-8.504
+Green => 250.006,-220.722,-8.33999
+Blue => 249.85,-220.8,-8.154
+Yellow => 249.694,-220.878,-8.31801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-213
+Angle between direction vectors -> 7.1278
+Alpha => -0.336331
+D         => 0.527275,-0.828565,-0.188309
+Red => 250.191,-221.45,-8.61881
+Green => 250.383,-221.352,-8.51302
+Blue => 250.309,-221.45,-8.2892
+Yellow => 250.117,-221.548,-8.39498
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-214
+Angle between direction vectors -> 12.341
+Alpha => -0.330354
+D         => 0.441829,-0.88367,-0.154642
+Red => 250.842,-222.6,-8.84918
+Green => 251.042,-222.518,-8.74536
+Blue => 250.958,-222.6,-8.51882
+Yellow => 250.758,-222.682,-8.62264
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-215
+Angle between direction vectors -> 6.13939
+Alpha => 0
+D         => 0.948678,-0.316242,0
+Red => 251.35,-223.25,-8.964
+Green => 251.405,-223.084,-8.79999
+Blue => 251.35,-223.25,-8.614
+Yellow => 251.295,-223.416,-8.77801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-216
+Angle between direction vectors -> 45.6846
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 251.7,-223.5,-8.964
+Green => 251.824,-223.376,-8.79999
+Blue => 251.7,-223.5,-8.614
+Yellow => 251.576,-223.624,-8.77801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-217
+Angle between direction vectors -> 26.5642
+Alpha => 0
+D         => 0.961526,-0.274713,0
+Red => 252.25,-223.8,-8.964
+Green => 252.298,-223.632,-8.79999
+Blue => 252.25,-223.8,-8.614
+Yellow => 252.202,-223.968,-8.77801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-218
+Angle between direction vectors -> 29.0551
+Alpha => 0
+D         => 0.707107,0.707107,0
+Red => 252.65,-223.85,-8.964
+Green => 252.526,-223.727,-8.79999
+Blue => 252.65,-223.85,-8.614
+Yellow => 252.773,-223.974,-8.77801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-219
+Angle between direction vectors -> 60.9449
+Alpha => -0.402739
+D         => 0.802286,-0.481377,-0.353006
+Red => 252.88,-223.95,-9.05918
+Green => 253.023,-223.797,-8.94292
+Blue => 253.02,-223.95,-8.73882
+Yellow => 252.877,-224.103,-8.85508
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-220
+Angle between direction vectors -> 76.8844
+Alpha => 0
+D         => 0.894427,-0.447214,0
+Red => 253.7,-224.35,-9.184
+Green => 253.778,-224.194,-9.01999
+Blue => 253.7,-224.35,-8.834
+Yellow => 253.622,-224.506,-8.99801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-221
+Angle between direction vectors -> 21.1141
+Alpha => 0
+D         => 0.613942,-0.789352,0
+Red => 254.55,-225.05,-9.184
+Green => 254.688,-224.943,-9.01999
+Blue => 254.55,-225.05,-8.834
+Yellow => 254.412,-225.157,-8.99801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-222
+Angle between direction vectors -> 25.5599
+Alpha => -0.410362
+D         => 0.673818,-0.673818,-0.303215
+Red => 255.128,-225.8,-9.30359
+Green => 255.303,-225.671,-9.20231
+Blue => 255.272,-225.8,-8.98441
+Yellow => 255.097,-225.929,-9.08569
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-223
+Angle between direction vectors -> 18.9921
+Alpha => 0
+D         => 0.60001,-0.799993,0
+Red => 255.8,-226.5,-9.454
+Green => 255.94,-226.395,-9.28999
+Blue => 255.8,-226.5,-9.104
+Yellow => 255.66,-226.605,-9.26801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-224
+Angle between direction vectors -> 19.3786
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 256.4,-227.2,-9.454
+Green => 256.524,-227.076,-9.28999
+Blue => 256.4,-227.2,-9.104
+Yellow => 256.277,-227.324,-9.26801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-225
+Angle between direction vectors -> 8.12939
+Alpha => 0
+D         => 0.70708,-0.707134,0
+Red => 256.8,-227.6,-9.454
+Green => 256.923,-227.477,-9.28999
+Blue => 256.8,-227.6,-9.104
+Yellow => 256.676,-227.723,-9.26801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-226
+Angle between direction vectors -> 0
+Alpha => 0.41037
+D         => 0.538177,-0.807287,0.242184
+Red => 257.172,-228,-9.34859
+Green => 257.233,-227.897,-9.14116
+Blue => 257.028,-228,-9.02941
+Yellow => 256.967,-228.103,-9.23684
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-227
+Angle between direction vectors -> 17.9373
+Alpha => 0
+D         => 0.707161,-0.707053,0
+Red => 257.35,-228.35,-9.274
+Green => 257.473,-228.227,-9.10999
+Blue => 257.35,-228.35,-8.924
+Yellow => 257.226,-228.474,-9.08801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-228
+Angle between direction vectors -> 17.9413
+Alpha => 0
+D         => -0.274693,-0.961532,0
+Red => 257.3,-228.75,-8.924
+Green => 257.132,-228.702,-9.08801
+Blue => 257.3,-228.75,-9.274
+Yellow => 257.468,-228.798,-9.10999
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-229
+Angle between direction vectors -> 60.9481
+Alpha => 0
+D         => 0.0905146,-0.995895,0
+Red => 257.25,-229.65,-9.274
+Green => 257.424,-229.634,-9.10999
+Blue => 257.25,-229.65,-8.924
+Yellow => 257.076,-229.666,-9.08801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-230
+Angle between direction vectors -> 21.137
+Alpha => 0
+D         => 0.447241,-0.894414,0
+Red => 257.35,-230.3,-9.274
+Green => 257.506,-230.222,-9.10999
+Blue => 257.35,-230.3,-8.924
+Yellow => 257.194,-230.378,-9.08801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-231
+Angle between direction vectors -> 21.3736
+Alpha => 0
+D         => 0.707107,-0.707107,0
+Red => 257.65,-230.65,-9.274
+Green => 257.773,-230.526,-9.10999
+Blue => 257.65,-230.65,-8.924
+Yellow => 257.526,-230.773,-9.08801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-232
+Angle between direction vectors -> 18.4332
+Alpha => 0
+D         => 1,0,0
+Red => 258.1,-230.9,-9.274
+Green => 258.1,-230.725,-9.10999
+Blue => 258.1,-230.9,-8.924
+Yellow => 258.1,-231.075,-9.08801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-233
+Angle between direction vectors -> 45
+Alpha => 0
+D         => 0.868242,-0.496141,0
+Red => 258.65,-231.1,-9.274
+Green => 258.737,-230.948,-9.10999
+Blue => 258.65,-231.1,-8.924
+Yellow => 258.563,-231.252,-9.08801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-234
+Angle between direction vectors -> 29.745
+Alpha => 0
+D         => 1,0,0
+Red => 259.05,-231.3,-9.274
+Green => 259.05,-231.125,-9.10999
+Blue => 259.05,-231.3,-8.924
+Yellow => 259.05,-231.475,-9.08801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-235
+Angle between direction vectors -> 29.745
+Alpha => -0.422885
+D         => 0.891657,-0.178333,-0.416107
+Red => 259.776,-231.45,-9.60758
+Green => 259.874,-231.278,-9.47213
+Blue => 259.924,-231.45,-9.29042
+Yellow => 259.826,-231.622,-9.42587
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-236
+Angle between direction vectors -> 26.9178
+Alpha => 0
+D         => 0.948683,-0.316228,0
+Red => 261.2,-231.8,-9.974
+Green => 261.255,-231.634,-9.80999
+Blue => 261.2,-231.8,-9.624
+Yellow => 261.145,-231.966,-9.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-237
+Angle between direction vectors -> 25.5387
+Alpha => 0
+D         => 1,0,0
+Red => 261.85,-232,-9.974
+Green => 261.85,-231.825,-9.80999
+Blue => 261.85,-232,-9.624
+Yellow => 261.85,-232.175,-9.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-238
+Angle between direction vectors -> 18.435
+Alpha => 0
+D         => 0.939796,-0.341737,0
+Red => 262.45,-232.2,-9.974
+Green => 262.51,-232.036,-9.80999
+Blue => 262.45,-232.2,-9.624
+Yellow => 262.39,-232.364,-9.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-239
+Angle between direction vectors -> 19.9827
+Alpha => 0
+D         => 0.898383,-0.439212,0
+Red => 265.25,-233.5,-9.974
+Green => 265.327,-233.343,-9.80999
+Blue => 265.25,-233.5,-9.624
+Yellow => 265.173,-233.657,-9.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-240
+Angle between direction vectors -> 6.07089
+Alpha => 0
+D         => 0.936332,-0.351116,0
+Red => 267.9,-234.75,-9.974
+Green => 267.961,-234.586,-9.80999
+Blue => 267.9,-234.75,-9.624
+Yellow => 267.839,-234.914,-9.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-241
+Angle between direction vectors -> 5.49804
+Alpha => 0
+D         => 0.998053,0.0623724,0
+Red => 269.1,-234.85,-9.974
+Green => 269.089,-234.676,-9.80999
+Blue => 269.1,-234.85,-9.624
+Yellow => 269.111,-235.024,-9.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-242
+Angle between direction vectors -> 24.1315
+Alpha => 0
+D         => 0.957825,-0.287351,0
+Red => 270.4,-234.95,-9.974
+Green => 270.45,-234.783,-9.80999
+Blue => 270.4,-234.95,-9.624
+Yellow => 270.35,-235.117,-9.78801
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[912]-
+
+[ERROR]-[test_catmull_rom.cpp]-[catmull_rom_segment]-[913]-243
+Angle between direction vectors -> 20.2754
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[44]-Selected6
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[44]-Selected9
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[44]-Selected10
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected
+[INFO]-[../moogli/src/handlers/GeometrySelector.cpp]-[handle]-[38]-not selected

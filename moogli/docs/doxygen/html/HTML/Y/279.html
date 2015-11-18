@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>normals</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/1.html#L34'>normals</a>            34 src/mesh/CylinderMesh.cpp     Vec3Array          * normals  = new Vec3Array(2 * vertex_count);
+<a href='../S/1.html#L61'>normals</a>            61 src/mesh/CylinderMesh.cpp         (*normals)[i]           = Vec3f(x,y,0.0f);
+<a href='../S/1.html#L62'>normals</a>            62 src/mesh/CylinderMesh.cpp         (*normals)[i + points]  = Vec3f(x,y,0.0f);
+<a href='../S/1.html#L63'>normals</a>            63 src/mesh/CylinderMesh.cpp         (*normals)[i + 2 * points] = Vec3f(0.0f, 0.0f, 1.0f);
+<a href='../S/1.html#L64'>normals</a>            64 src/mesh/CylinderMesh.cpp         (*normals)[i + 3 * points]  = Vec3f( 0.0f, 0.0f, -1.0f);
+<a href='../S/1.html#L108'>normals</a>           108 src/mesh/CylinderMesh.cpp                                                , normals
+<a href='../S/1.html#L145'>normals</a>           145 src/mesh/CylinderMesh.cpp     ref_ptr&lt;Vec3Array&gt; normals(
+<a href='../S/1.html#L212'>normals</a>           212 src/mesh/CylinderMesh.cpp         (*normals)[i + points]  = (*normals)[i]  = rotate * (*unit_normals)[i];
+<a href='../S/1.html#L213'>normals</a>           213 src/mesh/CylinderMesh.cpp         (*normals)[i + 2 * points] = direction;
+<a href='../S/1.html#L214'>normals</a>           214 src/mesh/CylinderMesh.cpp         (*normals)[i + 3 * points] = -direction;
+<a href='../S/1.html#L237'>normals</a>           237 src/mesh/CylinderMesh.cpp     geometry -&gt; setNormalArray( normals.get()
+<a href='../S/2.html#L38'>normals</a>            38 src/mesh/SphereMesh.cpp     Vec3Array          * normals  = new Vec3Array(vertex_count);
+<a href='../S/2.html#L45'>normals</a>            45 src/mesh/SphereMesh.cpp     (*vertices)[0] = (*normals)[0] = Vec3f(0.0f, 0.0f, 1.0f);
+<a href='../S/2.html#L54'>normals</a>            54 src/mesh/SphereMesh.cpp             (*normals)[vertex_index] =
+<a href='../S/2.html#L64'>normals</a>            64 src/mesh/SphereMesh.cpp     (*normals)[vertex_index] = Vec3f(0.0f, 0.0f, -1.0f);
+<a href='../S/2.html#L110'>normals</a>           110 src/mesh/SphereMesh.cpp                                         , normals
+<a href='../S/2.html#L149'>normals</a>           149 src/mesh/SphereMesh.cpp     Vec3Array          * normals  = new Vec3Array(*unit_normals);
+<a href='../S/2.html#L162'>normals</a>           162 src/mesh/SphereMesh.cpp     geometry -&gt; setNormalArray(normals);
+</pre>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>include/utility/libraries.hpp</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/31.html'>include</a>/<a href='../files/34.html'>utility</a>/libraries.hpp</h2>
+<i><font color='green'>/* [&lt;][&gt;][^][v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2><a href='../J/10.html' title='Multiple included from 5 places.'>INCLUDED FROM</a></h2>
+<hr>
+<pre>
+<a name='L1'>   1 <font color='darkred'>#ifndef</font> <a href='../S/20.html#L2' title='Defined at 2 in include/utility/libraries.hpp.'>__LIBRARIES_HPP__</a>
+<a name='L2'>   2 <font color='darkred'>#define</font> <a href='../S/20.html#L1' title='Refered from 1 in include/utility/libraries.hpp.'>__LIBRARIES_HPP__</a>
+<a name='L3'>   3 
+<a name='L4'>   4 
+<a name='L5'>   5 <font color='darkred'>#undef</font> ANY
+<a name='L6'>   6 <i><font color='green'>/******************************************************************************/</font></i>
+<a name='L7'>   7 <i><font color='green'>/* C++ STANDARD LIBRARY HEADERS                                               */</font></i>
+<a name='L8'>   8 <i><font color='green'>/******************************************************************************/</font></i>
+<a name='L9'>   9 <font color='darkred'>#include</font> &lt;cmath&gt;
+<a name='L10'>  10 <font color='darkred'>#include</font> &lt;cfloat&gt;
+<a name='L11'>  11 <font color='darkred'>#include</font> &lt;string&gt;
+<a name='L12'>  12 <font color='darkred'>#include</font> &lt;vector&gt;
+<a name='L13'>  13 <font color='darkred'>#include</font> &lt;set&gt;
+<a name='L14'>  14 <font color='darkred'>#include</font> &lt;unordered_map&gt;
+<a name='L15'>  15 <font color='darkred'>#include</font> &lt;unordered_set&gt;
+<a name='L16'>  16 <font color='darkred'>#include</font> &lt;chrono&gt;
+<a name='L17'>  17 <font color='darkred'>#include</font> &lt;utility&gt;
+<a name='L18'>  18 <font color='darkred'>#include</font> &lt;sstream&gt;
+<a name='L19'>  19 <font color='darkred'>#include</font> &lt;cassert&gt;
+<a name='L20'>  20 <font color='darkred'>#include</font> &lt;stdexcept&gt;
+<a name='L21'>  21 <font color='darkred'>#include</font> &lt;algorithm&gt;
+<a name='L22'>  22 
+<a name='L23'>  23 <i><font color='green'>/******************************************************************************/</font></i>
+<a name='L24'>  24 <i><font color='green'>/* OSG HEADERS                                                                */</font></i>
+<a name='L25'>  25 <i><font color='green'>/******************************************************************************/</font></i>
+<a name='L26'>  26 <font color='darkred'>#include</font> &lt;osg/Shape&gt;
+<a name='L27'>  27 <font color='darkred'>#include</font> &lt;osg/Geometry&gt;
+<a name='L28'>  28 <font color='darkred'>#include</font> &lt;osg/Geode&gt;
+<a name='L29'>  29 <font color='darkred'>#include</font> &lt;osg/Vec3d&gt;
+<a name='L30'>  30 <font color='darkred'>#include</font> &lt;osg/Vec4d&gt;
+<a name='L31'>  31 <font color='darkred'>#include</font> &lt;osg/ref_ptr&gt;
+<a name='L32'>  32 <font color='darkred'>#include</font> &lt;osgViewer/Viewer&gt;
+<a name='L33'>  33 <font color='darkred'>#include</font> &lt;osg/MatrixTransform&gt;
+<a name='L34'>  34 <font color='darkred'>#include</font> &lt;osg/DisplaySettings&gt;
+<a name='L35'>  35 <font color='darkred'>#include</font> &lt;osg/ShapeDrawable&gt;
+<a name='L36'>  36 <font color='darkred'>#include</font> &lt;osg/StateSet&gt;
+<a name='L37'>  37 
+<a name='L38'>  38 <font color='darkred'>#include</font> &lt;osgGA/EventQueue&gt;
+<a name='L39'>  39 <font color='darkred'>#include</font> &lt;osgUtil/IntersectionVisitor&gt;
+<a name='L40'>  40 <font color='darkred'>#include</font> &lt;osgUtil/PolytopeIntersector&gt;
+<a name='L41'>  41 
+<a name='L42'>  42 <font color='darkred'>#include</font> &lt;osgViewer/View&gt;
+<a name='L43'>  43 <font color='darkred'>#include</font> &lt;osgViewer/ViewerEventHandlers&gt;
+<a name='L44'>  44 
+<a name='L45'>  45 <font color='darkred'>#include</font> &lt;osgViewer/ViewerEventHandlers&gt;
+<a name='L46'>  46 <font color='darkred'>#include</font> &lt;osgViewer/CompositeViewer&gt;
+<a name='L47'>  47 <font color='darkred'>#include</font> &lt;osgViewer/GraphicsWindow&gt;
+<a name='L48'>  48 
+<a name='L49'>  49 <font color='darkred'>#include</font> &lt;osgQt/GraphicsWindowQt&gt;
+<a name='L50'>  50 
+<a name='L51'>  51 <font color='darkred'>#include</font> &lt;osgGA/TrackballManipulator&gt;
+<a name='L52'>  52 
+<a name='L53'>  53 <font color='darkred'>#include</font> &lt;osg/ShadeModel&gt;
+<a name='L54'>  54 <font color='darkred'>#include</font> &lt;osg/Material&gt;
+<a name='L55'>  55 <font color='darkred'>#include</font> &lt;osg/LightSource&gt;
+<a name='L56'>  56 <font color='darkred'>#include</font> &lt;osg/Light&gt;
+<a name='L57'>  57 <font color='darkred'>#include</font> &lt;osg/StateSet&gt;
+<a name='L58'>  58 <font color='darkred'>#include</font> &lt;osg/Depth&gt;
+<a name='L59'>  59 <font color='darkred'>#include</font> &lt;osgFX/Outline&gt;
+<a name='L60'>  60 
+<a name='L61'>  61 <i><font color='green'>/******************************************************************************/</font></i>
+<a name='L62'>  62 <i><font color='green'>/* QT HEADERS                                                                 */</font></i>
+<a name='L63'>  63 <i><font color='green'>/******************************************************************************/</font></i>
+<a name='L64'>  64 <font color='darkred'>#include</font> &lt;QTimer&gt;
+<a name='L65'>  65 <font color='darkred'>#include</font> &lt;QtOpenGL&gt;
+<a name='L66'>  66 <font color='darkred'>#include</font> &lt;QApplication&gt;
+<a name='L67'>  67 <font color='darkred'>#include</font> &lt;QGridLayout&gt;
+<a name='L68'>  68 <font color='darkred'>#include</font> &lt;QScrollArea&gt;
+<a name='L69'>  69 <font color='darkred'>#include</font> &lt;QMenu&gt;
+<a name='L70'>  70 <font color='darkred'>#include</font> &lt;QCursor&gt;
+<a name='L71'>  71 <font color='darkred'>#include</font> &lt;QDrag&gt;
+<a name='L72'>  72 <font color='darkred'>#include</font> &lt;QToolBar&gt;
+<a name='L73'>  73 <font color='darkred'>#include</font> &lt;QPushButton&gt;
+<a name='L74'>  74 <font color='darkred'>#include</font> &lt;QDebug&gt;
+<a name='L75'>  75 <font color='darkred'>#include</font> &lt;QKeyEvent&gt;
+<a name='L76'>  76 <font color='darkred'>#include</font> &lt;QWheelEvent&gt;
+<a name='L77'>  77 
+<a name='L78'>  78 <i><font color='green'>/******************************************************************************/</font></i>
+<a name='L79'>  79 <i><font color='green'>/* UTILITY HEADERS                                                            */</font></i>
+<a name='L80'>  80 <i><font color='green'>/******************************************************************************/</font></i>
+<a name='L81'>  81 <font color='darkred'>#include</font> "<a href='19.html'>utility/record.hpp</a>"
+<a name='L82'>  82 <font color='darkred'>#include</font> "<a href='21.html'>utility/conversions.hpp</a>"
+<a name='L83'>  83 <font color='darkred'>#include</font> "<a href='22.html'>utility/globals.hpp</a>"
+<a name='L84'>  84 
+<a name='L85'>  85 <font color='darkred'>#include</font> "Python.h"
+<a name='L86'>  86 <font color='darkred'>#define</font> ANY <b>void</b>
+<a name='L87'>  87 <font color='darkred'>#endif</font>  <i><font color='green'>/* __LIBRARIES_HPP__ */</font></i>
+<a name='L88'>  88 
+<a name='L89'>  89 
+<a name='L90'>  90 
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;][^][v]<a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

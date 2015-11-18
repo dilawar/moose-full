@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>i</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/7.html#L179'>i</a>                 179 src/core/Compartment.cpp     unsigned int i;
+<a href='../S/7.html#L180'>i</a>                 180 src/core/Compartment.cpp     for(i = 0; i &lt; limit;++i)
+<a href='../S/7.html#L182'>i</a>                 182 src/core/Compartment.cpp         voxel_seq[i] -&gt; set_color(PySequence_GetItem(colors, i));
+<a href='../S/7.html#L190'>i</a>                 190 src/core/Compartment.cpp     for(unsigned int i = 1; i &lt; node -&gt; getNumChildren(); ++i)
+<a href='../S/7.html#L192'>i</a>                 192 src/core/Compartment.cpp         Geode * geode = node -&gt; getChild(i) -&gt; asGeode();
+<a href='../S/10.html#L113'>i</a>                 113 src/core/Network.cpp     unsigned int i;
+<a href='../S/10.html#L114'>i</a>                 114 src/core/Network.cpp     for(i = 0; i &lt; limit;++i)
+<a href='../S/10.html#L116'>i</a>                 116 src/core/Network.cpp         neuron_seq[i] -&gt; set_color(PySequence_GetItem(colors, i));
+<a href='../S/8.html#L184'>i</a>                 184 src/core/Neuron.cpp     for(unsigned int i = 1; i &lt; node -&gt; getNumChildren(); ++i)
+<a href='../S/8.html#L186'>i</a>                 186 src/core/Neuron.cpp         Geode * geode = node -&gt; getChild(i) -&gt; asGeode();
+<a href='../S/8.html#L210'>i</a>                 210 src/core/Neuron.cpp     unsigned int i;
+<a href='../S/8.html#L211'>i</a>                 211 src/core/Neuron.cpp     for(i = 0; i &lt; limit;++i)
+<a href='../S/8.html#L213'>i</a>                 213 src/core/Neuron.cpp         compartment_seq[i] -&gt; set_color(PySequence_GetItem(colors, i));
+<a href='../S/1.html#L26'>i</a>                  26 src/mesh/CylinderMesh.cpp     unsigned int i, j;
+<a href='../S/1.html#L45'>i</a>                  45 src/mesh/CylinderMesh.cpp     for(i = 0; i &lt; points; ++i)
+<a href='../S/1.html#L47'>i</a>                  47 src/mesh/CylinderMesh.cpp         theta = i * theta_delta;
+<a href='../S/1.html#L54'>i</a>                  54 src/mesh/CylinderMesh.cpp         (*vertices)[i]          = Vec3f(x, y,  0.5f);
+<a href='../S/1.html#L55'>i</a>                  55 src/mesh/CylinderMesh.cpp         (*vertices)[i + points] = Vec3f(x, y, -0.5f);
+<a href='../S/1.html#L56'>i</a>                  56 src/mesh/CylinderMesh.cpp         (*vertices)[i + 2 * points] = Vec3f(x, y,  0.5f);
+<a href='../S/1.html#L57'>i</a>                  57 src/mesh/CylinderMesh.cpp         (*vertices)[i + 3 * points] = Vec3f(x, y, -0.5f);
+<a href='../S/1.html#L61'>i</a>                  61 src/mesh/CylinderMesh.cpp         (*normals)[i]           = Vec3f(x,y,0.0f);
+<a href='../S/1.html#L62'>i</a>                  62 src/mesh/CylinderMesh.cpp         (*normals)[i + points]  = Vec3f(x,y,0.0f);
+<a href='../S/1.html#L63'>i</a>                  63 src/mesh/CylinderMesh.cpp         (*normals)[i + 2 * points] = Vec3f(0.0f, 0.0f, 1.0f);
+<a href='../S/1.html#L64'>i</a>                  64 src/mesh/CylinderMesh.cpp         (*normals)[i + 3 * points]  = Vec3f( 0.0f, 0.0f, -1.0f);
+<a href='../S/1.html#L71'>i</a>                  71 src/mesh/CylinderMesh.cpp     for(i = 0; i &lt; points; ++i)
+<a href='../S/1.html#L73'>i</a>                  73 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index    ] = i;
+<a href='../S/1.html#L74'>i</a>                  74 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 1] = i + points;
+<a href='../S/1.html#L75'>i</a>                  75 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 2] = i + 1;
+<a href='../S/1.html#L77'>i</a>                  77 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 3] = i + points;
+<a href='../S/1.html#L78'>i</a>                  78 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 4] = i + 1 + points;
+<a href='../S/1.html#L79'>i</a>                  79 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 5] = i + 1;
+<a href='../S/1.html#L88'>i</a>                  88 src/mesh/CylinderMesh.cpp     for(i = 2 * points + 1; i &lt; 3 * points - 1; ++i)
+<a href='../S/1.html#L91'>i</a>                  91 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 1] = i;
+<a href='../S/1.html#L92'>i</a>                  92 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 2] = i + 1;
+<a href='../S/1.html#L96'>i</a>                  96 src/mesh/CylinderMesh.cpp     for(i = 3 * points + 1; i &lt; 4 * points - 1; ++i)
+<a href='../S/1.html#L98'>i</a>                  98 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index    ] = i + 1;
+<a href='../S/1.html#L99'>i</a>                  99 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 1] = i;
+<a href='../S/1.html#L152'>i</a>                 152 src/mesh/CylinderMesh.cpp     unsigned int i, j;
+<a href='../S/1.html#L172'>i</a>                 172 src/mesh/CylinderMesh.cpp         for(i = 0; i &lt; points; ++i)
+<a href='../S/1.html#L174'>i</a>                 174 src/mesh/CylinderMesh.cpp             temp_vertex.set( (*vertices)[i + points][0]
+<a href='../S/1.html#L175'>i</a>                 175 src/mesh/CylinderMesh.cpp                            , (*vertices)[i + points][1]
+<a href='../S/1.html#L182'>i</a>                 182 src/mesh/CylinderMesh.cpp                 (*vertices)[i + 3 * points][2] = (*vertices)[i + points][2] =
+<a href='../S/1.html#L187'>i</a>                 187 src/mesh/CylinderMesh.cpp                 (*vertices)[i + 3 * points][2] = (*vertices)[i + points][2] =
+<a href='../S/1.html#L192'>i</a>                 192 src/mesh/CylinderMesh.cpp                 (*vertices)[i + 3 * points][2] = (*vertices)[i + points][2] =
+<a href='../S/1.html#L197'>i</a>                 197 src/mesh/CylinderMesh.cpp                 (*vertices)[i + 3 * points][2] = (*vertices)[i + points][2] =
+<a href='../S/1.html#L205'>i</a>                 205 src/mesh/CylinderMesh.cpp     for(i = 0; i &lt; points; ++i)
+<a href='../S/1.html#L207'>i</a>                 207 src/mesh/CylinderMesh.cpp         temp_vertex.set( upper_radius * (*unit_vertices)[i][0]
+<a href='../S/1.html#L208'>i</a>                 208 src/mesh/CylinderMesh.cpp                        , upper_radius * (*unit_vertices)[i][1]
+<a href='../S/1.html#L211'>i</a>                 211 src/mesh/CylinderMesh.cpp         (*vertices)[i + 2 * points] = (*vertices)[i] = rotate * temp_vertex + center;
+<a href='../S/1.html#L212'>i</a>                 212 src/mesh/CylinderMesh.cpp         (*normals)[i + points]  = (*normals)[i]  = rotate * (*unit_normals)[i];
+<a href='../S/1.html#L213'>i</a>                 213 src/mesh/CylinderMesh.cpp         (*normals)[i + 2 * points] = direction;
+<a href='../S/1.html#L214'>i</a>                 214 src/mesh/CylinderMesh.cpp         (*normals)[i + 3 * points] = -direction;
+<a href='../S/1.html#L215'>i</a>                 215 src/mesh/CylinderMesh.cpp         j = i + points;
+<a href='../S/2.html#L29'>i</a>                  29 src/mesh/SphereMesh.cpp     unsigned int i, j;
+<a href='../S/2.html#L47'>i</a>                  47 src/mesh/SphereMesh.cpp     for(i = 1; i &lt; points / 2; ++i)
+<a href='../S/2.html#L49'>i</a>                  49 src/mesh/SphereMesh.cpp         z = cos( i * phi_delta);
+<a href='../S/2.html#L50'>i</a>                  50 src/mesh/SphereMesh.cpp         radius = sin( i * phi_delta );
+<a href='../S/2.html#L66'>i</a>                  66 src/mesh/SphereMesh.cpp     for(i = 0; i &lt; points; ++i)
+<a href='../S/2.html#L69'>i</a>                  69 src/mesh/SphereMesh.cpp         (*indices)[triangle_index + 1] = i + 1;
+<a href='../S/2.html#L70'>i</a>                  70 src/mesh/SphereMesh.cpp         (*indices)[triangle_index + 2] = i + 2;
+<a href='../S/2.html#L76'>i</a>                  76 src/mesh/SphereMesh.cpp     for(i = 1; i &lt; points / 2 - 1; ++i)
+<a href='../S/2.html#L78'>i</a>                  78 src/mesh/SphereMesh.cpp         alpha = 1 + points * (i - 1);
+<a href='../S/2.html#L79'>i</a>                  79 src/mesh/SphereMesh.cpp         beta  = 1 + points * i;
+<a href='../S/2.html#L97'>i</a>                  97 src/mesh/SphereMesh.cpp     for(i = 0; i &lt; points; ++i)
+<a href='../S/2.html#L100'>i</a>                 100 src/mesh/SphereMesh.cpp         (*indices)[triangle_index + 1] = beta + i + 1;
+<a href='../S/2.html#L101'>i</a>                 101 src/mesh/SphereMesh.cpp         (*indices)[triangle_index + 2] = beta + i;
+<a href='../S/3.html#L742'>i</a>                 742 src/view/NetworkViewer.cpp     for( std::size_t i = 0; i &lt; views.size(); i++ )
+<a href='../S/3.html#L744'>i</a>                 744 src/view/NetworkViewer.cpp         osgViewer::View* view = views.at(i);
+</pre>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Vec3f</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/16.html#L39'>Vec3f</a>              39 include/mesh/CylinderMesh.hpp     angle(Vec3f&amp; vector1, Vec3f&amp; vector2);
+<a href='../S/16.html#L42'>Vec3f</a>              42 include/mesh/CylinderMesh.hpp     operator()( Vec3f        center
+<a href='../S/16.html#L46'>Vec3f</a>              46 include/mesh/CylinderMesh.hpp               , Vec3f        direction
+<a href='../S/16.html#L50'>Vec3f</a>              50 include/mesh/CylinderMesh.hpp               , Vec3f        parent
+<a href='../S/16.html#L54'>Vec3f</a>              54 include/mesh/CylinderMesh.hpp     operator()( Vec3f        center
+<a href='../S/16.html#L58'>Vec3f</a>              58 include/mesh/CylinderMesh.hpp               , Vec3f        direction
+<a href='../S/16.html#L61'>Vec3f</a>              61 include/mesh/CylinderMesh.hpp               , Vec3f        parent
+<a href='../S/16.html#L70'>Vec3f</a>              70 include/mesh/CylinderMesh.hpp               , Vec3f        parent
+<a href='../S/16.html#L78'>Vec3f</a>              78 include/mesh/CylinderMesh.hpp               , Vec3f        parent
+<a href='../S/15.html#L37'>Vec3f</a>              37 include/mesh/SphereMesh.hpp     operator()( Vec3f        center
+<a href='../S/15.html#L44'>Vec3f</a>              44 include/mesh/SphereMesh.hpp     operator()( Vec3f        center
+<a href='../S/21.html#L19'>Vec3f</a>              19 include/utility/conversions.hpp osg::Vec3f
+<a href='../S/7.html#L76'>Vec3f</a>              76 src/core/Compartment.cpp         sphere( osg::Vec3f(d[0], d[1], d[2])
+<a href='../S/8.html#L90'>Vec3f</a>              90 src/core/Neuron.cpp         sphere( osg::Vec3f(d[0], d[1], d[2])
+<a href='../S/9.html#L59'>Vec3f</a>              59 src/core/Voxel.cpp         sphere( osg::Vec3f(d[0], d[1], d[2])
+<a href='../S/1.html#L54'>Vec3f</a>              54 src/mesh/CylinderMesh.cpp         (*vertices)[i]          = Vec3f(x, y,  0.5f);
+<a href='../S/1.html#L55'>Vec3f</a>              55 src/mesh/CylinderMesh.cpp         (*vertices)[i + points] = Vec3f(x, y, -0.5f);
+<a href='../S/1.html#L56'>Vec3f</a>              56 src/mesh/CylinderMesh.cpp         (*vertices)[i + 2 * points] = Vec3f(x, y,  0.5f);
+<a href='../S/1.html#L57'>Vec3f</a>              57 src/mesh/CylinderMesh.cpp         (*vertices)[i + 3 * points] = Vec3f(x, y, -0.5f);
+<a href='../S/1.html#L61'>Vec3f</a>              61 src/mesh/CylinderMesh.cpp         (*normals)[i]           = Vec3f(x,y,0.0f);
+<a href='../S/1.html#L62'>Vec3f</a>              62 src/mesh/CylinderMesh.cpp         (*normals)[i + points]  = Vec3f(x,y,0.0f);
+<a href='../S/1.html#L63'>Vec3f</a>              63 src/mesh/CylinderMesh.cpp         (*normals)[i + 2 * points] = Vec3f(0.0f, 0.0f, 1.0f);
+<a href='../S/1.html#L64'>Vec3f</a>              64 src/mesh/CylinderMesh.cpp         (*normals)[i + 3 * points]  = Vec3f( 0.0f, 0.0f, -1.0f);
+<a href='../S/1.html#L116'>Vec3f</a>             116 src/mesh/CylinderMesh.cpp CylinderMesh::angle(Vec3f&amp; vector1, Vec3f&amp; vector2)
+<a href='../S/1.html#L125'>Vec3f</a>             125 src/mesh/CylinderMesh.cpp CylinderMesh::operator()( Vec3f        center
+<a href='../S/1.html#L129'>Vec3f</a>             129 src/mesh/CylinderMesh.cpp                         , Vec3f        direction
+<a href='../S/1.html#L133'>Vec3f</a>             133 src/mesh/CylinderMesh.cpp                         , Vec3f        parent
+<a href='../S/1.html#L153'>Vec3f</a>             153 src/mesh/CylinderMesh.cpp     Vec3f temp_vertex;
+<a href='../S/1.html#L158'>Vec3f</a>             158 src/mesh/CylinderMesh.cpp     rotate.makeRotate(parent, osg::Vec3f(0.0f, 0.0f, 1.0f));
+<a href='../S/1.html#L159'>Vec3f</a>             159 src/mesh/CylinderMesh.cpp     Vec3f side = osg::Vec3f(0.0f, 0.0f, 1.0f) ^ (rotate * direction);
+<a href='../S/1.html#L203'>Vec3f</a>             203 src/mesh/CylinderMesh.cpp     rotate.makeRotate(osg::Vec3f(0.0f, 0.0f, 1.0f), direction);
+<a href='../S/1.html#L249'>Vec3f</a>             249 src/mesh/CylinderMesh.cpp CylinderMesh::operator()( Vec3f        center
+<a href='../S/1.html#L253'>Vec3f</a>             253 src/mesh/CylinderMesh.cpp                         , Vec3f        direction
+<a href='../S/1.html#L256'>Vec3f</a>             256 src/mesh/CylinderMesh.cpp                         , Vec3f        parent
+<a href='../S/1.html#L281'>Vec3f</a>             281 src/mesh/CylinderMesh.cpp                         , Vec3f        parent
+<a href='../S/1.html#L284'>Vec3f</a>             284 src/mesh/CylinderMesh.cpp     Vec3f center( (upper[0] + lower[0]) / 2.0
+<a href='../S/1.html#L289'>Vec3f</a>             289 src/mesh/CylinderMesh.cpp     Vec3f direction( upper[0] - lower[0]
+<a href='../S/1.html#L315'>Vec3f</a>             315 src/mesh/CylinderMesh.cpp                         , Vec3f        parent
+<a href='../S/2.html#L45'>Vec3f</a>              45 src/mesh/SphereMesh.cpp     (*vertices)[0] = (*normals)[0] = Vec3f(0.0f, 0.0f, 1.0f);
+<a href='../S/2.html#L55'>Vec3f</a>              55 src/mesh/SphereMesh.cpp                 Vec3f( radius * cos(j * theta_delta)
+<a href='../S/2.html#L64'>Vec3f</a>              64 src/mesh/SphereMesh.cpp     (*normals)[vertex_index] = Vec3f(0.0f, 0.0f, -1.0f);
+<a href='../S/2.html#L118'>Vec3f</a>             118 src/mesh/SphereMesh.cpp SphereMesh::operator()( Vec3f        center
+<a href='../S/2.html#L135'>Vec3f</a>             135 src/mesh/SphereMesh.cpp SphereMesh::operator()( Vec3f        center
+<a href='../S/2.html#L155'>Vec3f</a>             155 src/mesh/SphereMesh.cpp                   , [&amp;](const Vec3f&amp; vertex)
+<a href='../S/4.html#L56'>Vec3f</a>              56 src/utility/conversions.cpp osg::Vec3f
+<a href='../S/4.html#L61'>Vec3f</a>              61 src/utility/conversions.cpp         return osg::Vec3f();
+<a href='../S/4.html#L64'>Vec3f</a>              64 src/utility/conversions.cpp     return osg::Vec3f( static_cast&lt;float&gt;(
+<a href='../S/3.html#L581'>Vec3f</a>             581 src/view/NetworkViewer.cpp     Vec3f rotated_up = rotation * up;
+<a href='../S/3.html#L598'>Vec3f</a>             598 src/view/NetworkViewer.cpp     Vec3f rotated_up = rotation * up;
+<a href='../S/3.html#L600'>Vec3f</a>             600 src/view/NetworkViewer.cpp     Vec3f rotated_look = rotation * look;
+<a href='../S/3.html#L616'>Vec3f</a>             616 src/view/NetworkViewer.cpp     Vec3f rotated_look = rotation * look;
+</pre>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>include/core/Voxel.hpp</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/31.html'>include</a>/<a href='../files/32.html'>core</a>/Voxel.hpp</h2>
+<i><font color='green'>/* [&lt;][&gt;][^][v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2><a href='../J/4.html' title='Multiple included from 2 places.'>INCLUDED FROM</a></h2>
+<hr>
+<pre>
+<a name='L1'>   1 <font color='darkred'>#ifndef</font> <a href='../S/26.html#L2' title='Defined at 2 in include/core/Voxel.hpp.'>_VOXEL_HPP_</a>
+<a name='L2'>   2 <font color='darkred'>#define</font> <a href='../S/26.html#L1' title='Refered from 1 in include/core/Voxel.hpp.'>_VOXEL_HPP_</a>
+<a name='L3'>   3 <font color='darkred'>#include</font> "<a href='20.html'>utility/libraries.hpp</a>"
+<a name='L4'>   4 <font color='darkred'>#include</font> "<a href='18.html'>utility/constants.hpp</a>"
+<a name='L5'>   5 
+<a name='L6'>   6 <b>class</b> Compartment; <i><font color='green'>// forward declaration to avoid cyclic dependency issues</font></i>
+<a name='L7'>   7 
+<a name='L8'>   8 <b>class</b> <a href='../R/11.html' title='Multiple refered from 15 places.'>Voxel</a>
+<a name='L9'>   9 <font color='red'>{</font>
+<a name='L10'>  10 <b>public</b>:
+<a name='L11'>  11     <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> <a href='../Y/239.html' title='Multiple used in 22 places.'>id</a>;
+<a name='L12'>  12     <a href='../D/2.html' title='Multiple defined in 2 places.'>Compartment</a> * <a href='../S/9.html#L5' title='Defined at 5 in src/core/Voxel.cpp.'>compartment</a>;
+<a name='L13'>  13     <a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/302.html' title='Multiple used in 11 places.'>ref_ptr</a>&lt;<a href='../D/63.html' title='Multiple defined in 3 places.'>osg</a>::<a href='../Y/28.html' title='Multiple used in 27 places.'>Geometry</a>&gt; <a href='../S/10.html#L4' title='Defined at 4 in src/core/Network.cpp.'>node</a>;
+<a name='L14'>  14 
+<a name='L15'>  15     <a href='../D/12.html' title='Multiple defined in 2 places.'>Voxel</a>(<b>const</b> <b>char</b> * <a href='../Y/239.html' title='Multiple used in 22 places.'>id</a>);
+<a name='L16'>  16 
+<a name='L17'>  17     ~<a href='../D/12.html' title='Multiple defined in 2 places.'>Voxel</a>();
+<a name='L18'>  18 
+<a name='L19'>  19     <b>const</b> <b>char</b> *
+<a name='L20'>  20     <a href='../D/43.html' title='Multiple defined in 4 places.'>get_id</a>();
+<a name='L21'>  21 
+<a name='L22'>  22     <b>void</b>
+<a name='L23'>  23     <a href='../S/9.html#L19' title='Defined at 19 in src/core/Voxel.cpp.'>set_compartment</a>(<a href='../Y/15.html' title='Multiple used in 6 places.'>Compartment</a> * <a href='../Y/179.html' title='Multiple used in 6 places.'>compartment</a>);
+<a name='L24'>  24 
+<a name='L25'>  25     <a href='../D/2.html' title='Multiple defined in 2 places.'>Compartment</a> *
+<a name='L26'>  26     <a href='../D/42.html' title='Multiple defined in 2 places.'>get_compartment</a>();
+<a name='L27'>  27 
+<a name='L28'>  28     <b>void</b>
+<a name='L29'>  29     <a href='../D/46.html' title='Multiple defined in 4 places.'>hide</a>();
+<a name='L30'>  30 
+<a name='L31'>  31     <b>void</b>
+<a name='L32'>  32     <a href='../D/92.html' title='Multiple defined in 4 places.'>show</a>();
+<a name='L33'>  33 
+<a name='L34'>  34     <b>bool</b>
+<a name='L35'>  35     <a href='../D/50.html' title='Multiple defined in 4 places.'>is_visible</a>();
+<a name='L36'>  36 
+<a name='L37'>  37     <b>void</b>
+<a name='L38'>  38     <a href='../S/9.html#L50' title='Defined at 50 in src/core/Voxel.cpp.'>set_geometry</a>( <a href='../Y/74.html' title='Multiple used in 38 places.'>PyObject</a> * <a href='../Y/195.html' title='Multiple used in 11 places.'>distal</a>
+<a name='L39'>  39                 , <a href='../Y/74.html' title='Multiple used in 38 places.'>PyObject</a> * <a href='../Y/295.html' title='Multiple used in 14 places.'>proximal</a> = <a href='../Y/78.html' title='Multiple used in 9 places.'>Py_None</a>
+<a name='L40'>  40                 , <a href='../Y/74.html' title='Multiple used in 38 places.'>PyObject</a> * <a href='../Y/287.html' title='Multiple used in 26 places.'>parent</a>   = <a href='../Y/78.html' title='Multiple used in 9 places.'>Py_None</a>
+<a name='L41'>  41                 );
+<a name='L42'>  42 
+<a name='L43'>  43     <b>void</b>
+<a name='L44'>  44     <a href='../D/86.html' title='Multiple defined in 3 places.'>set_color</a>(<a href='../Y/74.html' title='Multiple used in 38 places.'>PyObject</a> * <a href='../Y/177.html' title='Multiple used in 27 places.'>color</a>);
+<a name='L45'>  45 <font color='red'>}</font>;
+<a name='L46'>  46 
+<a name='L47'>  47 <font color='darkred'>#endif</font> <i><font color='green'>/* _VOXEL_HPP_ */</font></i>
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;][^][v]<a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

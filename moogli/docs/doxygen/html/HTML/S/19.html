@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>include/utility/record.hpp</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/31.html'>include</a>/<a href='../files/34.html'>utility</a>/record.hpp</h2>
+<i><font color='green'>/* [&lt;][&gt;][^][v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2><a href='../J/11.html' title='Multiple included from 3 places.'>INCLUDED FROM</a></h2>
+<hr>
+<pre>
+<a name='L1'>   1 <font color='darkred'>#ifndef</font> <a href='../S/19.html#L2' title='Defined at 2 in include/utility/record.hpp.'>__RECORD__</a>
+<a name='L2'>   2 <font color='darkred'>#define</font> <a href='../S/19.html#L1' title='Refered from 1 in include/utility/record.hpp.'>__RECORD__</a>
+<a name='L3'>   3 
+<a name='L4'>   4 <font color='darkred'>#include</font> &lt;string&gt;
+<a name='L5'>   5 <font color='darkred'>#include</font> &lt;iostream&gt;
+<a name='L6'>   6 
+<a name='L7'>   7 <b>using</b> <b>namespace</b> std;
+<a name='L8'>   8 
+<a name='L9'>   9 <b>enum</b> <b>class</b> <a href='../R/75.html' title='Multiple refered from 8 places.'>record_t</a> <font color='red'>{</font> <a href='../Y/19.html' title='Multiple used in 3 places.'>ERROR</a>   =   0
+<a name='L10'>  10                     , <a href='../Y/136.html' title='Multiple used in 3 places.'>WARNING</a> =   1
+<a name='L11'>  11                     , <a href='../Y/32.html' title='Multiple used in 3 places.'>INFO</a>    =   2
+<a name='L12'>  12                     <font color='red'>}</font>;
+<a name='L13'>  13 
+<a name='L14'>  14 <b>void</b>
+<a name='L15'>  15 <a href='../S/5.html#L39' title='Defined at 39 in src/utility/record.cpp.'>record_error</a>( <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/209.html' title='Multiple used in 14 places.'>file_name</a>
+<a name='L16'>  16             , <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/214.html' title='Multiple used in 14 places.'>function_name</a>
+<a name='L17'>  17             , <b>const</b> <b>unsigned</b> <b>int</b> <a href='../Y/253.html' title='Multiple used in 14 places.'>line_number</a>
+<a name='L18'>  18             , <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>
+<a name='L19'>  19             );
+<a name='L20'>  20 
+<a name='L21'>  21 <b>void</b>
+<a name='L22'>  22 <a href='../S/5.html#L58' title='Defined at 58 in src/utility/record.cpp.'>record_warning</a>( <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/209.html' title='Multiple used in 14 places.'>file_name</a>
+<a name='L23'>  23             , <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/214.html' title='Multiple used in 14 places.'>function_name</a>
+<a name='L24'>  24             , <b>const</b> <b>unsigned</b> <b>int</b> <a href='../Y/253.html' title='Multiple used in 14 places.'>line_number</a>
+<a name='L25'>  25             , <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>
+<a name='L26'>  26             );
+<a name='L27'>  27 
+<a name='L28'>  28 <b>void</b>
+<a name='L29'>  29 <a href='../S/5.html#L77' title='Defined at 77 in src/utility/record.cpp.'>record_info</a>( <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/209.html' title='Multiple used in 14 places.'>file_name</a>
+<a name='L30'>  30            , <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/214.html' title='Multiple used in 14 places.'>function_name</a>
+<a name='L31'>  31            , <b>const</b> <b>unsigned</b> <b>int</b> <a href='../Y/253.html' title='Multiple used in 14 places.'>line_number</a>
+<a name='L32'>  32            , <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>
+<a name='L33'>  33 );
+<a name='L34'>  34 
+<a name='L35'>  35 
+<a name='L36'>  36 <b>void</b>
+<a name='L37'>  37 <a href='../S/5.html#L6' title='Defined at 6 in src/utility/record.cpp.'>record</a>( <a href='../S/19.html#L9' title='Defined at 9 in include/utility/record.hpp.'>record_t</a> <a href='../Y/301.html' title='Multiple used in 3 places.'>record_type</a>
+<a name='L38'>  38       , <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/209.html' title='Multiple used in 14 places.'>file_name</a>
+<a name='L39'>  39       , <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/214.html' title='Multiple used in 14 places.'>function_name</a>
+<a name='L40'>  40       , <b>const</b> <b>unsigned</b> <b>int</b> <a href='../Y/253.html' title='Multiple used in 14 places.'>line_number</a>
+<a name='L41'>  41       , <b>const</b> <a href='../Y/363.html' title='Multiple used in 36 places.'>string</a> &amp; <a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>
+<a name='L42'>  42       );
+<a name='L43'>  43 
+<a name='L44'>  44 <font color='darkred'>#define</font> <a href='../R/6.html' title='Multiple refered from 3 places.'>RECORD</a>(<a href='../Y/376.html' title='Multiple used in 2 places.'>type</a>, <a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>) (<a href='../S/5.html#L6' title='Defined at 6 in src/utility/record.cpp.'>record</a>(<a href='../Y/376.html' title='Multiple used in 2 places.'>type</a>, __FILE__, __FUNCTION__, __LINE__, <a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>))
+<a name='L45'>  45 
+<a name='L46'>  46 <font color='darkred'>#define</font> <a href='../R/7.html' title='Multiple refered from 3 places.'>RECORD_ERROR</a>(<a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>) <a href='../S/19.html#L44' title='Defined at 44 in include/utility/record.hpp.'>RECORD</a>(<a href='../S/19.html#L9' title='Defined at 9 in include/utility/record.hpp.'>record_t</a>::<a href='../Y/19.html' title='Multiple used in 3 places.'>ERROR</a>, <a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>)
+<a name='L47'>  47 
+<a name='L48'>  48 <font color='darkred'>#define</font> <a href='../R/9.html' title='Multiple refered from 8 places.'>RECORD_WARNING</a>(<a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>) <a href='../S/19.html#L44' title='Defined at 44 in include/utility/record.hpp.'>RECORD</a>(<a href='../S/19.html#L9' title='Defined at 9 in include/utility/record.hpp.'>record_t</a>::<a href='../Y/136.html' title='Multiple used in 3 places.'>WARNING</a>, <a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>)
+<a name='L49'>  49 
+<a name='L50'>  50 <font color='darkred'>#define</font> <a href='../R/8.html' title='Multiple refered from 5 places.'>RECORD_INFO</a>(<a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>) <a href='../S/19.html#L44' title='Defined at 44 in include/utility/record.hpp.'>RECORD</a>(<a href='../S/19.html#L9' title='Defined at 9 in include/utility/record.hpp.'>record_t</a>::<a href='../Y/32.html' title='Multiple used in 3 places.'>INFO</a>, <a href='../Y/263.html' title='Multiple used in 18 places.'>message</a>)
+<a name='L51'>  51 
+<a name='L52'>  52 <font color='darkred'>#endif</font>  <i><font color='green'>/* __RECORD__ */</font></i>
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;][^][v]<a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>
