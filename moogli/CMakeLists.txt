@@ -56,8 +56,16 @@ IF (WITH_CUSTOM_WIDGETS)
 ENDIF (WITH_CUSTOM_WIDGETS)
 
 FIND_PACKAGE(Qt4 REQUIRED COMPONENTS QtCore QtGui QtOpenGL)
-FIND_PACKAGE(OpenSceneGraph REQUIRED)
 FIND_PACKAGE(osgAnimation REQUIRED)
+FIND_PACKAGE(OpenSceneGraph REQUIRED 
+    osgFX osgGA
+    osgQt osgAnimation osgViewer
+    osgManipulator osgSim osgText
+    osgDB
+    osgUtil
+    )
+
+MESSAGE(STATUS "OSG LIBRARIES: ${OPENSCENEGRAPH_LIBRARIES}")
 
 INCLUDE(${QT_USE_FILE})
 
@@ -90,10 +98,7 @@ SET_TARGET_PROPERTIES(_moogli PROPERTIES
     )
 
 ## Link the following libraries to moogli.
-SET(STATIC_LIBRARIES
-    sip
-    src
-    )
+SET(STATIC_LIBRARIES sip src)
 
 SET(DYNAMIC_LIBRARIES
     QtCore
@@ -102,21 +107,15 @@ SET(DYNAMIC_LIBRARIES
     )
 
 IF(BUILD_STATIC)
-    SET(STATIC_LIBRARIES 
-        ${STATIC_LIBRARIES} 
-        ${OPENSCENEGRAPH_LIBRARIES}
-        )
+    LIST(APPEND STATIC_LIBRARIES ${OPENSCENEGRAPH_LIBRARIES})
 ELSE(BUILD_STATIC)
-    SET(DYNAMIC_LIBRARIES 
-        ${DYNAMIC_LIBRARIES}
-        ${OPENSCENEGRAPH_LIBRARIES}
-        )
+    LIST(APPEND DYNAMIC_LIBRARIES ${OPENSCENEGRAPH_LIBRARIES})
 ENDIF(BUILD_STATIC)
 
 TARGET_LINK_LIBRARIES(_moogli
-    "-Wl,-Bstatic"
+    "-Wl,--whole-archive"
     ${STATIC_LIBRARIES}
-    "-Wl,-Bdynamic"
+    "-Wl,--no-whole-archive"
     ${DYNAMIC_LIBRARIES}
     )
 
@@ -128,21 +127,21 @@ if(NOT MOOGLI_DIST_DIR)
     set(MOOGLI_DIST_DIR ${CMAKE_CURRENT_BINARY_DIR})
 endif()
 
-# create the source distribution for moogli, but do not use default setup.py
-# which is used to build moogli without cmake. Use cmake_module/setup.py file.
-# We need to copy the whole folder and replace the setup.py by our
-# cmake_modules/setup.py file. This is a Hack and should have been avoided.
-SET(MOOGLI_TEMP_DIR ${CMAKE_CURRENT_BINARY_DIR}/_temp_moogli)
-FILE(MAKE_DIRECTORY ${MOOGLI_TEMP_DIR})
-FILE(COPY ${PROJECT_SOURCE_DIR}/ DESTINATION ${MOOGLI_TEMP_DIR}
-    PATTERN "_temp_moogli" EXCLUDE
-    )
-ADD_CUSTOM_COMMAND(TARGET _moogli POST_BUILD
-    # dont use cmake copy_directory. It goes nuts on recursive copying.
-    COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/_moogli.so ${MOOGLI_TEMP_DIR}
-    COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/cmake_modules/setup.py ${MOOGLI_TEMP_DIR}/setup.py
-    COMMAND ${PYTHON_EXECUTABLE} setup.py sdist --dist-dir ${MOOGLI_DIST_DIR}
-    WORKING_DIRECTORY ${MOOGLI_TEMP_DIR}
-    COMMENT "Generating MOOGLI source distribution in ${MOOGLI_DIST_DIR}"
-    VERBATIM
-    )
+### create the source distribution for moogli, but do not use default setup.py
+### which is used to build moogli without cmake. Use cmake_module/setup.py file.
+### We need to copy the whole folder and replace the setup.py by our
+### cmake_modules/setup.py file. This is a Hack and should have been avoided.
+##SET(MOOGLI_TEMP_DIR ${CMAKE_CURRENT_BINARY_DIR}/_temp_moogli)
+##FILE(MAKE_DIRECTORY ${MOOGLI_TEMP_DIR})
+##FILE(COPY ${PROJECT_SOURCE_DIR}/ DESTINATION ${MOOGLI_TEMP_DIR}
+##    PATTERN "_temp_moogli" EXCLUDE
+##    )
+##ADD_CUSTOM_COMMAND(TARGET _moogli POST_BUILD
+##    # dont use cmake copy_directory. It goes nuts on recursive copying.
+##    COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/_moogli.so ${MOOGLI_TEMP_DIR}
+##    COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/cmake_modules/setup.py ${MOOGLI_TEMP_DIR}/setup.py
+##    COMMAND ${PYTHON_EXECUTABLE} setup.py sdist --dist-dir ${MOOGLI_DIST_DIR}
+##    WORKING_DIRECTORY ${MOOGLI_TEMP_DIR}
+##    COMMENT "Generating MOOGLI source distribution in ${MOOGLI_DIST_DIR}"
+##    VERBATIM
+##    )
