@@ -150,10 +150,6 @@ install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
     DESTINATION bin
     )
 
-install(FILES ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
-    DESTINATION share/moose
-    )
-
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
     DESTINATION lib/moose/gui
     COMPONENT moose-gui

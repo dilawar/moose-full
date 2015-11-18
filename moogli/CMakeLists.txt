@@ -122,29 +122,14 @@ TARGET_LINK_LIBRARIES(_moogli
 # Build python source distribution of moogli
 FIND_PACKAGE(PythonInterp REQUIRED)
 
-# "Source distribution is generated in this directory, default ${CMAKE_CURRENT_BINARY_DIR})
-if(NOT MOOGLI_DIST_DIR)
-    set(MOOGLI_DIST_DIR ${CMAKE_CURRENT_BINARY_DIR})
-endif()
-
-### create the source distribution for moogli, but do not use default setup.py
-### which is used to build moogli without cmake. Use cmake_module/setup.py file.
-### We need to copy the whole folder and replace the setup.py by our
-### cmake_modules/setup.py file. This is a Hack and should have been avoided.
-##SET(MOOGLI_TEMP_DIR ${CMAKE_CURRENT_BINARY_DIR}/_temp_moogli)
-##FILE(MAKE_DIRECTORY ${MOOGLI_TEMP_DIR})
-##FILE(COPY ${PROJECT_SOURCE_DIR}/ DESTINATION ${MOOGLI_TEMP_DIR}
-##    PATTERN "_temp_moogli" EXCLUDE
-##    )
-##ADD_CUSTOM_COMMAND(TARGET _moogli POST_BUILD
-##    # dont use cmake copy_directory. It goes nuts on recursive copying.
-##    COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/_moogli.so ${MOOGLI_TEMP_DIR}
-##    COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/cmake_modules/setup.py ${MOOGLI_TEMP_DIR}/setup.py
-##    COMMAND ${PYTHON_EXECUTABLE} setup.py sdist --dist-dir ${MOOGLI_DIST_DIR}
-##    WORKING_DIRECTORY ${MOOGLI_TEMP_DIR}
-##    COMMENT "Generating MOOGLI source distribution in ${MOOGLI_DIST_DIR}"
-##    VERBATIM
-##    )
+# Install using python setup.py
+install(CODE
+    "EXECUTE_PROCESS(
+        COMMAND ${PYTHON_EXECUTABLE} cmake_modules/setup.py install
+        --prefix=${CMAKE_INSTALL_PREFIX}
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        )
+    ")
 
 enable_testing()
 add_test(NAME moogli_import 
