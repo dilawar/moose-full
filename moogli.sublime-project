@@ -1,0 +1,53 @@
+
+{
+    "folders":
+    [
+        {
+            "follow_symlinks": true,
+            "path": "."
+        }
+    ],
+
+    "settings":
+    {
+        "tab_size" : 4
+    },
+
+    "build_systems" :
+    [
+        {
+            "cmd":
+            [
+                "python",
+                "setup.py",
+                "-L/home/aviral/OpenSceneGraph-3.2.1-rc2/build/lib",
+                "develop",
+                "--uninstall"
+            ],
+            "name": "moogli-uninstall",
+            "working_dir" : "$project_path"
+        },
+        {
+            "cmd":
+            [
+                "python",
+                "setup.py",
+                "-L/home/aviral/OpenSceneGraph-3.2.1-rc2/build/lib",
+                "develop"
+            ],
+            "name": "moogli-install",
+            "working_dir" : "$project_path"
+        },
+        {
+            "shell_cmd": "rm -rf moogli.egg-info && rm -rf dist && rm -rf build",
+            "name": "moogli-clean",
+            "working_dir" : "$project_path"
+        },
+        {
+            "shell_cmd"     :   "clang++ -std=c++11 test_catmull_rom.cpp -I /usr/include/python2.7  ../moogli/src/handlers/GeometrySelector.cpp ../moogli/src/utility/record.cpp  ../moogli/src/mesh/Ring.cpp ../moogli/src/mesh/CylinderMesh.cpp  -I /usr/include/qt4/QtGui  -I /usr/include/qt4/QtOpenGL  -I /usr/include/qt4   -I /usr/include/qt4/QtCore  -I ../moogli/include  -losg -losgGA -losgDB -losgUtil -losgViewer -losgFX -losgQt",
+            "name"          :  "test_catmull_rom",
+            "working_dir"   :  "$file_path"
+        }
+    ]
+
+}

@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>triangle_index</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/1.html#L24'>triangle_index</a>     24 src/mesh/CylinderMesh.cpp     unsigned int triangle_index = 0;
+<a href='../S/1.html#L73'>triangle_index</a>     73 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index    ] = i;
+<a href='../S/1.html#L74'>triangle_index</a>     74 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 1] = i + points;
+<a href='../S/1.html#L75'>triangle_index</a>     75 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 2] = i + 1;
+<a href='../S/1.html#L77'>triangle_index</a>     77 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 3] = i + points;
+<a href='../S/1.html#L78'>triangle_index</a>     78 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 4] = i + 1 + points;
+<a href='../S/1.html#L79'>triangle_index</a>     79 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 5] = i + 1;
+<a href='../S/1.html#L81'>triangle_index</a>     81 src/mesh/CylinderMesh.cpp         triangle_index += 6;
+<a href='../S/1.html#L84'>triangle_index</a>     84 src/mesh/CylinderMesh.cpp     (*indices)[triangle_index - 1]     = 0;
+<a href='../S/1.html#L85'>triangle_index</a>     85 src/mesh/CylinderMesh.cpp     (*indices)[triangle_index - 2]     = points;
+<a href='../S/1.html#L86'>triangle_index</a>     86 src/mesh/CylinderMesh.cpp     (*indices)[triangle_index - 4]     = 0;
+<a href='../S/1.html#L90'>triangle_index</a>     90 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index    ] = 2 * points;
+<a href='../S/1.html#L91'>triangle_index</a>     91 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 1] = i;
+<a href='../S/1.html#L92'>triangle_index</a>     92 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 2] = i + 1;
+<a href='../S/1.html#L93'>triangle_index</a>     93 src/mesh/CylinderMesh.cpp         triangle_index += 3;
+<a href='../S/1.html#L98'>triangle_index</a>     98 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index    ] = i + 1;
+<a href='../S/1.html#L99'>triangle_index</a>     99 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 1] = i;
+<a href='../S/1.html#L100'>triangle_index</a>    100 src/mesh/CylinderMesh.cpp         (*indices)[triangle_index + 2] = 3 * points;
+<a href='../S/1.html#L101'>triangle_index</a>    101 src/mesh/CylinderMesh.cpp         triangle_index += 3;
+<a href='../S/2.html#L27'>triangle_index</a>     27 src/mesh/SphereMesh.cpp     unsigned int triangle_index = 0;
+<a href='../S/2.html#L68'>triangle_index</a>     68 src/mesh/SphereMesh.cpp         (*indices)[triangle_index]     = 0;
+<a href='../S/2.html#L69'>triangle_index</a>     69 src/mesh/SphereMesh.cpp         (*indices)[triangle_index + 1] = i + 1;
+<a href='../S/2.html#L70'>triangle_index</a>     70 src/mesh/SphereMesh.cpp         (*indices)[triangle_index + 2] = i + 2;
+<a href='../S/2.html#L71'>triangle_index</a>     71 src/mesh/SphereMesh.cpp         triangle_index += 3;
+<a href='../S/2.html#L74'>triangle_index</a>     74 src/mesh/SphereMesh.cpp     (*indices)[triangle_index - 1]     = 1;
+<a href='../S/2.html#L83'>triangle_index</a>     83 src/mesh/SphereMesh.cpp             (*indices)[triangle_index    ] = alpha + j;
+<a href='../S/2.html#L84'>triangle_index</a>     84 src/mesh/SphereMesh.cpp             (*indices)[triangle_index + 1] = beta  + j;
+<a href='../S/2.html#L85'>triangle_index</a>     85 src/mesh/SphereMesh.cpp             (*indices)[triangle_index + 2] = beta  + j + 1;
+<a href='../S/2.html#L87'>triangle_index</a>     87 src/mesh/SphereMesh.cpp             (*indices)[triangle_index + 3] = alpha + j + 1;
+<a href='../S/2.html#L88'>triangle_index</a>     88 src/mesh/SphereMesh.cpp             (*indices)[triangle_index + 4] = alpha + j;
+<a href='../S/2.html#L89'>triangle_index</a>     89 src/mesh/SphereMesh.cpp             (*indices)[triangle_index + 5] = beta  + j + 1;
+<a href='../S/2.html#L90'>triangle_index</a>     90 src/mesh/SphereMesh.cpp             triangle_index += 6;
+<a href='../S/2.html#L92'>triangle_index</a>     92 src/mesh/SphereMesh.cpp         (*indices)[triangle_index - 4] = beta;
+<a href='../S/2.html#L93'>triangle_index</a>     93 src/mesh/SphereMesh.cpp         (*indices)[triangle_index - 3] = alpha;
+<a href='../S/2.html#L94'>triangle_index</a>     94 src/mesh/SphereMesh.cpp         (*indices)[triangle_index - 1] = beta;
+<a href='../S/2.html#L99'>triangle_index</a>     99 src/mesh/SphereMesh.cpp         (*indices)[triangle_index    ] = vertex_count - 1;
+<a href='../S/2.html#L100'>triangle_index</a>    100 src/mesh/SphereMesh.cpp         (*indices)[triangle_index + 1] = beta + i + 1;
+<a href='../S/2.html#L101'>triangle_index</a>    101 src/mesh/SphereMesh.cpp         (*indices)[triangle_index + 2] = beta + i;
+<a href='../S/2.html#L102'>triangle_index</a>    102 src/mesh/SphereMesh.cpp         triangle_index += 3;
+<a href='../S/2.html#L105'>triangle_index</a>    105 src/mesh/SphereMesh.cpp     (*indices)[triangle_index - 2]     = beta;
+</pre>
+</body>
+</html>

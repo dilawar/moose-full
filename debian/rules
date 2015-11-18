@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+## Here goes the debian make.
+
+%:
+	dh "$@" --with python2
+
+override_dh_auto_build:
+	python setup.py build
+
+override_dh_auto_install:
+	python setup.py install --root=debian/tmp --install-layout=deb
+
+override_dh_shlibdeps:
+	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
