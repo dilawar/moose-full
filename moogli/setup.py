@@ -75,6 +75,7 @@ if osghome:
             " in any of  LD_LIBRARY_PATH s"
             )
     extra_objects += [ os.path.join(osghome, "lib", "lib"+x+".a") for x in osg_libs ]
+    extra_objects += [ os.path.join(osghome, "lib", "libOpenThreads.so.3.2.0") ]
     include_dirs += [ os.path.join( osghome, "include" ) ]
 else:
     libraries += osg_libs
@@ -88,12 +89,13 @@ runtime_library_dirs = PyQt4.__path__
 # additional command line options for the compiler command line
 extra_compile_args = ["-O2",
                       "-std=c++0x",
+                      "-pthread",
                       "-Wno-reorder",
                       "-Wno-overloaded-virtual"]
 
 # additional command line options for the linker command line
 if osname_ == 'Linux':
-    extra_link_args = ["-L/usr/lib64", "-L/usr/X11R6/lib64"]
+    extra_link_args = ["-L/usr/lib64", "-L/usr/X11R6/lib64", "-pthread"]
 elif osname_ == 'Windows':
     # Who cares
     pass

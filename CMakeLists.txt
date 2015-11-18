@@ -138,10 +138,14 @@ install(FILES ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
 
 # install moogli sdist if only BUILD_MOOGLI is ON/TRUE.
 if(WITH_MOOGLI)
+    INSTALL(CODE 
+    "
     EXECUTE_PROCESS(COMMAND
         python setup.py build 
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moogli
         )
+    "
+    )
 endif(WITH_MOOGLI)
 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
