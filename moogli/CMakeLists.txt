@@ -56,7 +56,7 @@ IF (WITH_CUSTOM_WIDGETS)
 ENDIF (WITH_CUSTOM_WIDGETS)
 
 FIND_PACKAGE(Qt4 REQUIRED COMPONENTS QtCore QtGui QtOpenGL)
-FIND_PACKAGE(osgAnimation REQUIRED)
+#FIND_PACKAGE(osgAnimation REQUIRED)
 FIND_PACKAGE(OpenSceneGraph REQUIRED 
     osgFX osgGA
     osgQt osgAnimation osgViewer
@@ -145,3 +145,9 @@ endif()
 ##    COMMENT "Generating MOOGLI source distribution in ${MOOGLI_DIST_DIR}"
 ##    VERBATIM
 ##    )
+
+enable_testing()
+add_test(NAME moogli_import 
+    COMMAND ${PYTHON_EXECUTABLE} -c "import moogli"
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    )
