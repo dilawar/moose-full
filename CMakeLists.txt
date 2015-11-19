@@ -115,6 +115,13 @@ add_custom_target(_build_moose_core ALL
 add_dependencies(_build_moose_core _moose_static_dependencies)
 
 # Use moose-core cmake file to install it.
+install(CODE 
+    "
+    EXECUTE_PROCESS(
+        COMMAND ${CMAKE_COMMAND} -P ${MOOSE_CORE_BUILD_DIR}/cmake_install.cmake
+        )"
+    )
+
 install(CODE
     "
     EXECUTE_PROCESS(
@@ -125,10 +132,6 @@ install(CODE
     COMPONENT moose-python
     )
 
-# Copy the gui folder. TODO: This should be a python-module.
-install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
-    DESTINATION bin
-    )
 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
     DESTINATION lib/moose/gui
