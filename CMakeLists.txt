@@ -117,30 +117,6 @@ add_custom_target(_build_moose_core ALL
 
 add_dependencies(_build_moose_core _moose_static_dependencies)
 
-##*############## 
-# Build Local OSG
-IF(WITH_MOOGLI)
-    include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_osg.cmake)
-    # Set the OSGDIR environment so that cmake can find the libraries.
-    SET(MOOGLI_BUILD_DIR ${CMAKE_CURRENT_BINARY_DIR}/_moogli_)
-    SET(MOOGLI_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/moogli)
-    FILE(MAKE_DIRECTORY ${MOOGLI_BUILD_DIR})
-    add_custom_command(
-        OUTPUT ${MOOGLI_SOURCE_DIR}/moogli/core/_moogli.so
-        COMMAND OSGDIR=${OSG_INSTALL_DIR}
-        ${CMAKE_COMMAND} ${MOOGLI_SOURCE_DIR}
-    COMMAND $(MAKE) VERBOSE=1
-    WORKING_DIRECTORY ${MOOGLI_BUILD_DIR}
-    VERBATIM
-    )
-
-    add_custom_target(_build_moogli ALL
-        DEPENDS ${MOOGLI_SOURCE_DIR}/moogli/core/_moogli.so
-        )
-    add_dependencies(_build_moogli _libosg)
-ENDIF(WITH_MOOGLI)
-
-
 # Use moose-core cmake file to install it.
 install(CODE
     "
@@ -152,17 +128,6 @@ install(CODE
     COMPONENT moose-python
     )
 
-IF(WITH_MOOGLI)
-    INSTALL(CODE
-    "
-    EXECUTE_PROCESS(
-        COMMAND cmake_modules/python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --install-layout=deb
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moogli
-        )
-    "
-    COMPONENT moogli
-    )
-ENDIF(WITH_MOOGLI)
 # Copy the gui folder. TODO: This should be a python-module.
 install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
     DESTINATION bin
@@ -202,10 +167,6 @@ install(FILES ${CMAKE_SOURCE_DIR}/moose-core/scripts/moose.desktop
 
 ### Tests.
 enable_testing()
-add_test(NAME moose-moogli
-    COMMAND sanity_check.sh
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/tests
-    )
 add_test(NAME moose-tests
     COMMAND ctest -R pymoose*
     WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
