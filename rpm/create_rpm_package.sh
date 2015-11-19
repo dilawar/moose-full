@@ -12,6 +12,5 @@ else
     sudo python setup.py install 
 )
 fi
-rpmlint moose.spec
 gbp buildpackage-rpm  --git-ignore-new --git-ignore-branch \
-    --git-spec-file=packaging_scripts/moose.spec
+    --git-spec-file=rpm/moose.spec
