@@ -114,12 +114,13 @@ add_custom_target(_build_moose_core ALL
 
 add_dependencies(_build_moose_core _moose_static_dependencies)
 
-# Use moose-core cmake file to install it.
+# Use moose-core cmake file to install its targets.
 install(CODE 
     "
     EXECUTE_PROCESS(
         COMMAND ${CMAKE_COMMAND} -P ${MOOSE_CORE_BUILD_DIR}/cmake_install.cmake
         )"
+    COMPONENT moose-core
     )
 
 install(CODE
