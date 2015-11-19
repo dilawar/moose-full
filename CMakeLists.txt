@@ -12,7 +12,6 @@ set(MOOGLI_VERSION "1.0")
 
 ## CMAKE options
 option(WITH_DOC "Build documentation as well" OFF)
-option(WITH_MOOGLI "Build moogli extension" OFF)
 
 ## Project related macros
 set(MOOSE_SOURCE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${MOOSE_CORE_DIRNAME})
@@ -116,30 +115,6 @@ add_custom_target(_build_moose_core ALL
 
 add_dependencies(_build_moose_core _moose_static_dependencies)
 
-##*############## 
-# Build Local OSG
-IF(WITH_MOOGLI)
-    include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_osg.cmake)
-    # Set the OSGDIR environment so that cmake can find the libraries.
-    SET(MOOGLI_BUILD_DIR ${CMAKE_CURRENT_BINARY_DIR}/_moogli_)
-    SET(MOOGLI_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/moogli)
-    FILE(MAKE_DIRECTORY ${MOOGLI_BUILD_DIR})
-    add_custom_command(
-        OUTPUT ${MOOGLI_SOURCE_DIR}/moogli/core/_moogli.so
-        COMMAND OSGDIR=${OSG_INSTALL_DIR}
-        ${CMAKE_COMMAND} ${MOOGLI_SOURCE_DIR}
-    COMMAND $(MAKE) VERBOSE=1
-    WORKING_DIRECTORY ${MOOGLI_BUILD_DIR}
-    VERBATIM
-    )
-
-    add_custom_target(_build_moogli ALL
-        DEPENDS ${MOOGLI_SOURCE_DIR}/moogli/core/_moogli.so
-        )
-    add_dependencies(_build_moogli _libosg)
-ENDIF(WITH_MOOGLI)
-
-
 # Use moose-core cmake file to install it.
 install(CODE
     "
@@ -206,10 +181,3 @@ add_test(NAME moose-core
     COMMAND ctest --output-on-failure
     WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
     )
-
-IF(WITH_MOOGLI)
-    add_test(NAME moogli
-        COMMAND python -c "import moogli"
-        WORKING_DIRECTORY ${MOOGLI_SOURCE_DIR}
-        )
-ENDIF(WITH_MOOGLI)
