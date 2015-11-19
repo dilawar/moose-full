@@ -161,6 +161,8 @@ IF(WITH_MOOGLI)
     "
     COMPONENT moogli
     )
+ENDIF(WITH_MOOGLI)
+
 # Copy the gui folder. TODO: This should be a python-module.
 install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
     DESTINATION bin
