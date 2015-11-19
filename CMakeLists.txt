@@ -12,7 +12,7 @@ set(MOOGLI_VERSION "1.0")
 
 ## CMAKE options
 option(WITH_DOC "Build documentation as well" OFF)
-option(WITH_MOOGLI "Build moogli extension" ON)
+option(WITH_MOOGLI "Build moogli extension" OFF)
 
 ## Project related macros
 set(MOOSE_SOURCE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${MOOSE_CORE_DIRNAME})
@@ -129,7 +129,6 @@ IF(WITH_MOOGLI)
         COMMAND OSGDIR=${OSG_INSTALL_DIR}
         ${CMAKE_COMMAND} ${MOOGLI_SOURCE_DIR}
     COMMAND $(MAKE) VERBOSE=1
-
     WORKING_DIRECTORY ${MOOGLI_BUILD_DIR}
     VERBATIM
     )
@@ -152,6 +151,15 @@ install(CODE
     COMPONENT moose-python
     )
 
+IF(WITH_MOOGLI)
+    "
+    EXECUTE_PROCESS(
+        COMMAND cmake_modules/python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --install-layout=deb
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moogli
+        )
+    "
+    COMPONENT moogli
+    )
 # Copy the gui folder. TODO: This should be a python-module.
 install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
     DESTINATION bin
@@ -195,8 +203,10 @@ add_test(NAME moose-core
     COMMAND ctest --output-on-failure
     WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
     )
-add_test(NAME moogli
-    COMMAND python -c "import moogli"
-    WORKING_DIRECTORY ${MOOGLI_SOURCE_DIR}
-    )
 
+IF(WITH_MOOGLI)
+    add_test(NAME moogli
+        COMMAND python -c "import moogli"
+        WORKING_DIRECTORY ${MOOGLI_SOURCE_DIR}
+        )
+ENDIF(WITH_MOOGLI)
