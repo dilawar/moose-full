@@ -12,7 +12,6 @@ set(MOOGLI_VERSION "1.0")
 
 ## CMAKE options
 option(WITH_DOC "Build documentation as well" OFF)
-option(BUILD_MOOGLI "Build moogli extension" OFF)
 
 ## Project related macros
 set(MOOSE_SOURCE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${MOOSE_CORE_DIRNAME})
@@ -133,12 +132,6 @@ install(FILES ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
     DESTINATION share/moose
     )
 
-# install moogli sdist if only BUILD_MOOGLI is ON/TRUE.
-if(BUILD_MOOGLI)
-    install(FILES ${MOOSE_CORE_BUILD_DIR}/moogli-${MOOGLI_VERSION}.tar.gz
-        DESTINATION share/moogli
-        )
-endif(BUILD_MOOGLI)
 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
     DESTINATION lib/moose/gui
