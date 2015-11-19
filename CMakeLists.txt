@@ -109,8 +109,7 @@ add_custom_command(
 
 add_custom_target(_build_moose_core ALL
     DEPENDS ${MOOSE_CORE_BUILD_DIR}/moose.bin 
-            ${MOOSE_CORE_BUILD_DIR}/libmoose.so
-            )
+    )
 
 add_dependencies(_build_moose_core _moose_static_dependencies)
 
