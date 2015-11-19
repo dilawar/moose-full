@@ -2,7 +2,7 @@ Source: moogli
 Section: science
 Priority: optional
 Maintainer: Dilawar Singh <dilawars@ncbs.res.in>
-Build-Depends: debhelper, cdbs, devscripts, dh-python, python, python-pip, python-qt4-dev, libopenscenegraph-dev, python-sip-dev, libqt4-dev, libqt4-opengl-dev, python-qt4-gl
+Build-Depends: debhelper, cdbs, devscripts, cmake, dh-python, python, python-pip, python-qt4-dev, libopenscenegraph-dev, python-sip-dev, libqt4-dev, libqt4-opengl-dev, python-qt4-gl
 Standards-Version: 3.9.5
 Homepage: http://moogli.ncbs.res.in
 

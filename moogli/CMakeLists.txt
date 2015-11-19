@@ -1,12 +1,9 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
-# setup SIP variables
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 PROJECT(moogli)
 
-SET(PROJECT_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
-SET(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake_modules")
 
-## Options
-option(BUILD_STATIC "Link osg statically. Useful for creating standalone packages" OFF)
+# A phony target to setup correct depedencies. This is always out-of-date.
+add_custom_target(_moogli_all ALL)
 
 MESSAGE("++ Reading module files from ${CMAKE_MODULE_PATH}")
 
@@ -85,47 +82,41 @@ ADD_LIBRARY(_moogli SHARED
     ${PROJECT_SOURCE_DIR}/moogli/bin/moc/Viewer.moc.cpp
     )
 
-# Set MOOGLI paths if they are not already set.
-IF(NOT MOOGLI_BUILD_PATH)
-    SET(MOOGLI_BUILD_PATH ${CMAKE_CURRENT_SOURCE_DIR})
-    FILE(MAKE_DIRECTORY ${MOOGLI_BUILD_PATH})
+# Check if OpenSceneGraph available.
+FIND_PACKAGE(OpenSceneGraph 3.2.0)
+IF(NOT OPENSCENEGRAPH_FOUND)
+    MESSAGE(STATUS "Building OSG locally")
+    SET(OSG_LOCAL ON)
+    SET(BUILD_STATIC ON)
+else()
+    SET(BUILD_STATIC OFF)
+    MESSAGE(STATUS "OSG Found: ${OPENSCENEGRAPH_VERSION}")
 ENDIF()
 
-MESSAGE(STATUS "Building moogli in ${MOOGLI_BUILD_PATH}")
-SET_TARGET_PROPERTIES(_moogli PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY "${MOOGLI_BUILD_PATH}/moogli/core"
-    PREFIX ""
+IF(OSG_LOCAL)
+    include(build_static_osg.cmake)
+ENDIF(OSG_LOCAL)
+
+# Now build MOOGLI. Don't use external project here. There is no simple way to
+# honour environment variable in ExternalProject. 
+set(MOOGLI_BUILD_DIR ${CMAKE_CURRENT_BINARY_DIR}/_moogli_)
+file(MAKE_DIRECTORY ${MOOGLI_BUILD_DIR})
+add_custom_command(
+    OUTPUT ${MOOGLI_SRC_DIR}/core/_moogli.so
+    COMMAND OSGDIR=${OSG_INSTALL_DIR}
+        ${CMAKE_COMMAND} -DBUILD_STATIC=${BUILD_STATIC} ${MOOGLI_SRC_DIR}
+    COMMAND $(MAKE) VERBOSE=1
+    WORKING_DIRECTORY ${MOOGLI_BUILD_DIR}
+    VERBATIM
     )
+add_dependencies(_moogli_all _build_moogli)
 
-## Link the following libraries to moogli.
-SET(STATIC_LIBRARIES sip src)
-
-SET(DYNAMIC_LIBRARIES
-    QtCore
-    QtGui
-    QtOpenGL           
-    )
-
-IF(BUILD_STATIC)
-    LIST(APPEND STATIC_LIBRARIES ${OPENSCENEGRAPH_LIBRARIES})
-ELSE(BUILD_STATIC)
-    LIST(APPEND DYNAMIC_LIBRARIES ${OPENSCENEGRAPH_LIBRARIES})
-ENDIF(BUILD_STATIC)
-
-TARGET_LINK_LIBRARIES(_moogli
-    "-Wl,--whole-archive"
-    ${STATIC_LIBRARIES}
-    "-Wl,--no-whole-archive"
-    ${DYNAMIC_LIBRARIES}
-    )
-
-# Build python source distribution of moogli
-FIND_PACKAGE(PythonInterp REQUIRED)
 
 # Install using python setup.py
+FIND_PACKAGE(PythonInterp REQUIRED)
 install(CODE
     "EXECUTE_PROCESS(
-        COMMAND ${PYTHON_EXECUTABLE} cmake_modules/setup.py install
+    COMMAND ${PYTHON_EXECUTABLE} moogli/cmake_modules/setup.py install
         --prefix=${CMAKE_INSTALL_PREFIX}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         )
@@ -134,5 +125,6 @@ install(CODE
 enable_testing()
 add_test(NAME moogli_import 
     COMMAND ${PYTHON_EXECUTABLE} -c "import moogli"
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    WORKING_DIRECTORY ${MOOGLI_SRC_DIR}/
     )
+

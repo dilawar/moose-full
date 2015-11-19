@@ -16,9 +16,6 @@ SUFFIXES =
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -105,91 +102,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named _moogli
+# Target rules for targets named _build_moogli
 
 # Build rule for target.
-_moogli: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _moogli
-.PHONY : _moogli
+_build_moogli: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _build_moogli
+.PHONY : _build_moogli
 
 # fast build rule for target.
-_moogli/fast:
-	$(MAKE) -f CMakeFiles/_moogli.dir/build.make CMakeFiles/_moogli.dir/build
-.PHONY : _moogli/fast
+_build_moogli/fast:
+	$(MAKE) -f CMakeFiles/_build_moogli.dir/build.make CMakeFiles/_build_moogli.dir/build
+.PHONY : _build_moogli/fast
 
 #=============================================================================
-# Target rules for targets named sip
+# Target rules for targets named _moogli_all
 
 # Build rule for target.
-sip: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sip
-.PHONY : sip
+_moogli_all: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _moogli_all
+.PHONY : _moogli_all
 
 # fast build rule for target.
-sip/fast:
-	$(MAKE) -f moogli/bin/sip/CMakeFiles/sip.dir/build.make moogli/bin/sip/CMakeFiles/sip.dir/build
-.PHONY : sip/fast
-
-#=============================================================================
-# Target rules for targets named src
-
-# Build rule for target.
-src: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 src
-.PHONY : src
-
-# fast build rule for target.
-src/fast:
-	$(MAKE) -f moogli/bin/src/CMakeFiles/src.dir/build.make moogli/bin/src/CMakeFiles/src.dir/build
-.PHONY : src/fast
-
-moogli/bin/moc/NetworkViewer.moc.o: moogli/bin/moc/NetworkViewer.moc.cpp.o
-.PHONY : moogli/bin/moc/NetworkViewer.moc.o
-
-# target to build an object file
-moogli/bin/moc/NetworkViewer.moc.cpp.o:
-	$(MAKE) -f CMakeFiles/_moogli.dir/build.make CMakeFiles/_moogli.dir/moogli/bin/moc/NetworkViewer.moc.cpp.o
-.PHONY : moogli/bin/moc/NetworkViewer.moc.cpp.o
-
-moogli/bin/moc/NetworkViewer.moc.i: moogli/bin/moc/NetworkViewer.moc.cpp.i
-.PHONY : moogli/bin/moc/NetworkViewer.moc.i
-
-# target to preprocess a source file
-moogli/bin/moc/NetworkViewer.moc.cpp.i:
-	$(MAKE) -f CMakeFiles/_moogli.dir/build.make CMakeFiles/_moogli.dir/moogli/bin/moc/NetworkViewer.moc.cpp.i
-.PHONY : moogli/bin/moc/NetworkViewer.moc.cpp.i
-
-moogli/bin/moc/NetworkViewer.moc.s: moogli/bin/moc/NetworkViewer.moc.cpp.s
-.PHONY : moogli/bin/moc/NetworkViewer.moc.s
-
-# target to generate assembly for a file
-moogli/bin/moc/NetworkViewer.moc.cpp.s:
-	$(MAKE) -f CMakeFiles/_moogli.dir/build.make CMakeFiles/_moogli.dir/moogli/bin/moc/NetworkViewer.moc.cpp.s
-.PHONY : moogli/bin/moc/NetworkViewer.moc.cpp.s
-
-moogli/bin/moc/Viewer.moc.o: moogli/bin/moc/Viewer.moc.cpp.o
-.PHONY : moogli/bin/moc/Viewer.moc.o
-
-# target to build an object file
-moogli/bin/moc/Viewer.moc.cpp.o:
-	$(MAKE) -f CMakeFiles/_moogli.dir/build.make CMakeFiles/_moogli.dir/moogli/bin/moc/Viewer.moc.cpp.o
-.PHONY : moogli/bin/moc/Viewer.moc.cpp.o
-
-moogli/bin/moc/Viewer.moc.i: moogli/bin/moc/Viewer.moc.cpp.i
-.PHONY : moogli/bin/moc/Viewer.moc.i
-
-# target to preprocess a source file
-moogli/bin/moc/Viewer.moc.cpp.i:
-	$(MAKE) -f CMakeFiles/_moogli.dir/build.make CMakeFiles/_moogli.dir/moogli/bin/moc/Viewer.moc.cpp.i
-.PHONY : moogli/bin/moc/Viewer.moc.cpp.i
-
-moogli/bin/moc/Viewer.moc.s: moogli/bin/moc/Viewer.moc.cpp.s
-.PHONY : moogli/bin/moc/Viewer.moc.s
-
-# target to generate assembly for a file
-moogli/bin/moc/Viewer.moc.cpp.s:
-	$(MAKE) -f CMakeFiles/_moogli.dir/build.make CMakeFiles/_moogli.dir/moogli/bin/moc/Viewer.moc.cpp.s
-.PHONY : moogli/bin/moc/Viewer.moc.cpp.s
+_moogli_all/fast:
+	$(MAKE) -f CMakeFiles/_moogli_all.dir/build.make CMakeFiles/_moogli_all.dir/build
+.PHONY : _moogli_all/fast
 
 # Help Target
 help:
@@ -197,17 +133,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... _moogli"
+	@echo "... _build_moogli"
+	@echo "... _moogli_all"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... sip"
-	@echo "... src"
-	@echo "... moogli/bin/moc/NetworkViewer.moc.o"
-	@echo "... moogli/bin/moc/NetworkViewer.moc.i"
-	@echo "... moogli/bin/moc/NetworkViewer.moc.s"
-	@echo "... moogli/bin/moc/Viewer.moc.o"
-	@echo "... moogli/bin/moc/Viewer.moc.i"
-	@echo "... moogli/bin/moc/Viewer.moc.s"
 .PHONY : help
 
 
