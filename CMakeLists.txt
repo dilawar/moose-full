@@ -109,10 +109,18 @@ add_custom_command(
 
 add_custom_target(_build_moose_core ALL
     DEPENDS ${MOOSE_CORE_BUILD_DIR}/moose.bin 
-    ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
-    )
+            ${MOOSE_CORE_BUILD_DIR}/libmoose.so
+            )
 
 add_dependencies(_build_moose_core _moose_static_dependencies)
+
+# install moose-core 
+install(CODE
+    "EXECUTE_PROCESS(
+        COMMAND ${CMAKE_COMMAND} -P cmake_install.cmake
+        WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
+        )
+    ")
 
 # Copy the gui folder. 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
