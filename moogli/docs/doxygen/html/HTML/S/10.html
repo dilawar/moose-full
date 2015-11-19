@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>src/core/Network.cpp</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/37.html'>src</a>/<a href='../files/38.html'>core</a>/Network.cpp</h2>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L4'>[^]</a><a href='#L102'>[v]</a>[top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2>DEFINITIONS</h2>
+This source file includes following definitions.
+<ol>
+<li><a href='#L4' title='Defined at 4.'>node</a>
+<li><a href='#L18' title='Defined at 18.'>get_id</a>
+<li><a href='#L24' title='Defined at 24.'>hide</a>
+<li><a href='#L30' title='Defined at 30.'>show</a>
+<li><a href='#L36' title='Defined at 36.'>is_visible</a>
+<li><a href='#L42' title='Defined at 42.'>size</a>
+<li><a href='#L48' title='Defined at 48.'>add_neuron</a>
+<li><a href='#L66' title='Defined at 66.'>get_neuron</a>
+<li><a href='#L80' title='Defined at 80.'>remove_neuron</a>
+<li><a href='#L102' title='Defined at 102.'>set_colors</a>
+</ol>
+<hr>
+<pre>
+<a name='L1'>   1 <font color='darkred'>#include</font> "<a href='24.html'>core/Network.hpp</a>"
+<a name='L2'>   2 
+<a name='L3'>   3 <a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>::<a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>(<b>const</b> <b>char</b> * <a href='../Y/239.html' title='Multiple used in 22 places.'>id</a>) : <a href='../Y/239.html' title='Multiple used in 22 places.'>id</a>(<a href='../Y/239.html' title='Multiple used in 22 places.'>id</a>)
+<a name='L4'>   4                                   , <a href='../R/58.html' title='Multiple refered from 49 places.'>node</a>(<b>new</b> <a href='../Y/282.html' title='Multiple used in 14 places.'>osg</a>::<a href='../Y/58.html' title='Multiple used in 2 places.'>MatrixTransform</a>())
+<a name='L5'>   5 <font color='red'>{</font>
+<a name='L6'>   6 <font color='red'>}</font>
+<a name='L7'>   7 
+<a name='L8'>   8 
+<a name='L9'>   9 <a href='../R/3.html' title='Multiple refered from 20 places.'>Network</a>::~<a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>()
+<a name='L10'>  10 <font color='red'>{</font>
+<a name='L11'>  11     <b>for</b>(<a href='../D/6.html' title='Multiple defined in 2 places.'>Neuron</a> * <a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a> : <a href='../Y/275.html' title='Multiple used in 10 places.'>neuron_seq</a>)
+<a name='L12'>  12     <font color='red'>{</font>
+<a name='L13'>  13         <a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a> -&gt; <a href='../S/8.html#L41' title='Defined at 41 in src/core/Neuron.cpp.'>set_network</a>(<a href='../Y/281.html' title='Multiple used in 11 places.'>nullptr</a>);
+<a name='L14'>  14     <font color='red'>}</font>
+<a name='L15'>  15 <font color='red'>}</font>
+<a name='L16'>  16 
+<a name='L17'>  17 <b>const</b> <b>char</b> *
+<a name='L18'>  18 <a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>::<a href='../R/41.html' title='Multiple refered from 13 places.'>get_id</a>()
+<a name='L19'>  19 <font color='red'>{</font>
+<a name='L20'>  20     <b>return</b> <a href='../Y/239.html' title='Multiple used in 22 places.'>id</a>.<a href='../Y/171.html' title='Multiple used in 5 places.'>c_str</a>();
+<a name='L21'>  21 <font color='red'>}</font>
+<a name='L22'>  22 
+<a name='L23'>  23 <b>void</b>
+<a name='L24'>  24 <a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>::<a href='../R/44.html' title='Multiple refered from 4 places.'>hide</a>()
+<a name='L25'>  25 <font color='red'>{</font>
+<a name='L26'>  26     <a href='../S/10.html#L4' title='Defined at 4 in src/core/Network.cpp.'>node</a> -&gt; <a href='../Y/335.html' title='Multiple used in 6 places.'>setNodeMask</a>(<a href='../Y/64.html' title='Multiple used in 4 places.'>NODE_HIDE_MASK</a>);
+<a name='L27'>  27 <font color='red'>}</font>
+<a name='L28'>  28 
+<a name='L29'>  29 <b>void</b>
+<a name='L30'>  30 <a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>::<a href='../R/89.html' title='Multiple refered from 4 places.'>show</a>()
+<a name='L31'>  31 <font color='red'>{</font>
+<a name='L32'>  32     <a href='../S/10.html#L4' title='Defined at 4 in src/core/Network.cpp.'>node</a> -&gt; <a href='../Y/335.html' title='Multiple used in 6 places.'>setNodeMask</a>(<a href='../Y/65.html' title='Multiple used in 7 places.'>NODE_SHOW_MASK</a>);
+<a name='L33'>  33 <font color='red'>}</font>
+<a name='L34'>  34 
+<a name='L35'>  35 <b>bool</b>
+<a name='L36'>  36 <a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>::<a href='../R/48.html' title='Multiple refered from 4 places.'>is_visible</a>()
+<a name='L37'>  37 <font color='red'>{</font>
+<a name='L38'>  38     <b>return</b> (<a href='../S/10.html#L4' title='Defined at 4 in src/core/Network.cpp.'>node</a> -&gt; <a href='../Y/224.html' title='Multiple used in 3 places.'>getNodeMask</a>() == <a href='../Y/65.html' title='Multiple used in 7 places.'>NODE_SHOW_MASK</a> ? <b>true</b> : <b>false</b>);
+<a name='L39'>  39 <font color='red'>}</font>
+<a name='L40'>  40 
+<a name='L41'>  41 <b>unsigned</b> <b>int</b>
+<a name='L42'>  42 <a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>::<a href='../R/92.html' title='Multiple refered from 19 places.'>size</a>()
+<a name='L43'>  43 <font color='red'>{</font>
+<a name='L44'>  44     <b>return</b> <b>static_cast</b>&lt;<b>unsigned</b> <b>int</b>&gt;(<a href='../Y/275.html' title='Multiple used in 10 places.'>neuron_seq</a>.<a href='../D/95.html' title='Multiple defined in 3 places.'>size</a>());
+<a name='L45'>  45 <font color='red'>}</font>
+<a name='L46'>  46 
+<a name='L47'>  47 <b>unsigned</b> <b>int</b>
+<a name='L48'>  48 <a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>::<a href='../S/24.html#L36' title='Refered from 36 in include/core/Network.hpp.'>add_neuron</a>(<a href='../Y/67.html' title='Multiple used in 6 places.'>Neuron</a> * <a href='../Y/273.html' title='Multiple used in 5 places.'>neuron</a>)
+<a name='L49'>  49 <font color='red'>{</font>
+<a name='L50'>  50     <b>auto</b> <a href='../Y/244.html' title='Multiple used in 24 places.'>iter</a> = <a href='../Y/274.html' title='Multiple used in 9 places.'>neuron_map</a>.<a href='../Y/210.html' title='Multiple used in 14 places.'>find</a>(<a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a> -&gt; <a href='../D/43.html' title='Multiple defined in 4 places.'>get_id</a>());
+<a name='L51'>  51     <b>if</b>(<a href='../Y/244.html' title='Multiple used in 24 places.'>iter</a> != <a href='../Y/274.html' title='Multiple used in 9 places.'>neuron_map</a>.<a href='../Y/201.html' title='Multiple used in 17 places.'>end</a>())
+<a name='L52'>  52     <font color='red'>{</font>
+<a name='L53'>  53         <a href='../S/19.html#L48' title='Defined at 48 in include/utility/record.hpp.'>RECORD_WARNING</a>("Neuron already exists!");
+<a name='L54'>  54     <font color='red'>}</font>
+<a name='L55'>  55     <b>else</b>
+<a name='L56'>  56     <font color='red'>{</font>
+<a name='L57'>  57         <a href='../Y/274.html' title='Multiple used in 9 places.'>neuron_map</a>[<a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a> -&gt; <a href='../D/43.html' title='Multiple defined in 4 places.'>get_id</a>()] = <a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a>;
+<a name='L58'>  58         <a href='../Y/275.html' title='Multiple used in 10 places.'>neuron_seq</a>.<a href='../Y/296.html' title='Multiple used in 8 places.'>push_back</a>(<a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a>);
+<a name='L59'>  59         <a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a> -&gt; <a href='../S/8.html#L41' title='Defined at 41 in src/core/Neuron.cpp.'>set_network</a>(<b>this</b>);
+<a name='L60'>  60         <a href='../S/10.html#L4' title='Defined at 4 in src/core/Network.cpp.'>node</a> -&gt; <a href='../Y/154.html' title='Multiple used in 6 places.'>addChild</a>(<a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a> -&gt; <a href='../S/10.html#L4' title='Defined at 4 in src/core/Network.cpp.'>node</a>.<a href='../Y/218.html' title='Multiple used in 20 places.'>get</a>());
+<a name='L61'>  61     <font color='red'>}</font>
+<a name='L62'>  62     <b>return</b> <b>static_cast</b>&lt;<b>unsigned</b> <b>int</b>&gt;(<a href='../Y/275.html' title='Multiple used in 10 places.'>neuron_seq</a>.<a href='../D/95.html' title='Multiple defined in 3 places.'>size</a>());
+<a name='L63'>  63 <font color='red'>}</font>
+<a name='L64'>  64 
+<a name='L65'>  65 <a href='../D/6.html' title='Multiple defined in 2 places.'>Neuron</a> *
+<a name='L66'>  66 <a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>::<a href='../R/43.html' title='Multiple refered from 2 places.'>get_neuron</a>(<b>const</b> <b>char</b> * <a href='../Y/239.html' title='Multiple used in 22 places.'>id</a>)
+<a name='L67'>  67 <font color='red'>{</font>
+<a name='L68'>  68     <b>auto</b> <a href='../Y/244.html' title='Multiple used in 24 places.'>iter</a> = <a href='../Y/274.html' title='Multiple used in 9 places.'>neuron_map</a>.<a href='../Y/210.html' title='Multiple used in 14 places.'>find</a>(<a href='../Y/239.html' title='Multiple used in 22 places.'>id</a>);
+<a name='L69'>  69     <b>if</b>(<a href='../Y/244.html' title='Multiple used in 24 places.'>iter</a> == <a href='../Y/274.html' title='Multiple used in 9 places.'>neuron_map</a>.<a href='../Y/201.html' title='Multiple used in 17 places.'>end</a>())
+<a name='L70'>  70     <font color='red'>{</font>
+<a name='L71'>  71         <a href='../S/19.html#L48' title='Defined at 48 in include/utility/record.hpp.'>RECORD_WARNING</a>("Neuron does not exist!");
+<a name='L72'>  72         <i><font color='green'>// TODO : raise exception instead of returning nullptr</font></i>
+<a name='L73'>  73         <b>return</b> <a href='../Y/281.html' title='Multiple used in 11 places.'>nullptr</a>;
+<a name='L74'>  74     <font color='red'>}</font>
+<a name='L75'>  75     <b>return</b> <a href='../Y/244.html' title='Multiple used in 24 places.'>iter</a> -&gt; <a href='../Y/313.html' title='Multiple used in 6 places.'>second</a>;
+<a name='L76'>  76 <font color='red'>}</font>
+<a name='L77'>  77 
+<a name='L78'>  78 
+<a name='L79'>  79 <b>unsigned</b> <b>int</b>
+<a name='L80'>  80 <a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>::<a href='../S/24.html#L39' title='Refered from 39 in include/core/Network.hpp.'>remove_neuron</a>(<a href='../Y/67.html' title='Multiple used in 6 places.'>Neuron</a> * <a href='../Y/273.html' title='Multiple used in 5 places.'>neuron</a>)
+<a name='L81'>  81 <font color='red'>{</font>
+<a name='L82'>  82     <b>auto</b> <a href='../Y/244.html' title='Multiple used in 24 places.'>iter</a> = <a href='../Y/274.html' title='Multiple used in 9 places.'>neuron_map</a>.<a href='../Y/210.html' title='Multiple used in 14 places.'>find</a>(<a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a> -&gt; <a href='../D/43.html' title='Multiple defined in 4 places.'>get_id</a>());
+<a name='L83'>  83     <b>if</b>(<a href='../Y/244.html' title='Multiple used in 24 places.'>iter</a> == <a href='../Y/274.html' title='Multiple used in 9 places.'>neuron_map</a>.<a href='../Y/201.html' title='Multiple used in 17 places.'>end</a>())
+<a name='L84'>  84     <font color='red'>{</font>
+<a name='L85'>  85         <a href='../S/19.html#L48' title='Defined at 48 in include/utility/record.hpp.'>RECORD_WARNING</a>("Neuron does not exist!");
+<a name='L86'>  86     <font color='red'>}</font>
+<a name='L87'>  87     <b>else</b>
+<a name='L88'>  88     <font color='red'>{</font>
+<a name='L89'>  89         <a href='../Y/274.html' title='Multiple used in 9 places.'>neuron_map</a>.<a href='../Y/203.html' title='Multiple used in 6 places.'>erase</a>(<a href='../Y/244.html' title='Multiple used in 24 places.'>iter</a>);
+<a name='L90'>  90         <a href='../Y/275.html' title='Multiple used in 10 places.'>neuron_seq</a>.<a href='../Y/203.html' title='Multiple used in 6 places.'>erase</a>( <a href='../Y/361.html' title='Multiple used in 15 places.'>std</a>::<a href='../Y/210.html' title='Multiple used in 14 places.'>find</a>( <a href='../Y/275.html' title='Multiple used in 10 places.'>neuron_seq</a>.<a href='../Y/167.html' title='Multiple used in 7 places.'>begin</a>()
+<a name='L91'>  91                                    , <a href='../Y/275.html' title='Multiple used in 10 places.'>neuron_seq</a>.<a href='../Y/201.html' title='Multiple used in 17 places.'>end</a>()
+<a name='L92'>  92                                    , <a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a>
+<a name='L93'>  93                                    )
+<a name='L94'>  94                              );
+<a name='L95'>  95         <a href='../S/10.html#L4' title='Defined at 4 in src/core/Network.cpp.'>node</a> -&gt; <a href='../Y/303.html' title='Multiple used in 2 places.'>removeChild</a>(<a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a> -&gt; <a href='../S/10.html#L4' title='Defined at 4 in src/core/Network.cpp.'>node</a>.<a href='../Y/218.html' title='Multiple used in 20 places.'>get</a>());
+<a name='L96'>  96         <a href='../S/7.html#L6' title='Defined at 6 in src/core/Compartment.cpp.'>neuron</a> -&gt; <a href='../S/8.html#L41' title='Defined at 41 in src/core/Neuron.cpp.'>set_network</a>(<a href='../Y/281.html' title='Multiple used in 11 places.'>nullptr</a>);
+<a name='L97'>  97     <font color='red'>}</font>
+<a name='L98'>  98     <b>return</b> <b>static_cast</b>&lt;<b>unsigned</b> <b>int</b>&gt;(<a href='../Y/275.html' title='Multiple used in 10 places.'>neuron_seq</a>.<a href='../D/95.html' title='Multiple defined in 3 places.'>size</a>());
+<a name='L99'>  99 <font color='red'>}</font>
+<a name='L100'> 100 
+<a name='L101'> 101 <b>bool</b>
+<a name='L102'> 102 <a href='../D/4.html' title='Multiple defined in 2 places.'>Network</a>::<a href='../R/84.html' title='Multiple refered from 3 places.'>set_colors</a>(<a href='../Y/74.html' title='Multiple used in 38 places.'>PyObject</a> * <a href='../Y/178.html' title='Multiple used in 30 places.'>colors</a>)
+<a name='L103'> 103 <font color='red'>{</font>
+<a name='L104'> 104     <b>if</b>(<a href='../Y/75.html' title='Multiple used in 3 places.'>PySequence_Check</a>(<a href='../Y/178.html' title='Multiple used in 30 places.'>colors</a>) != 1)
+<a name='L105'> 105     <font color='red'>{</font>
+<a name='L106'> 106         <a href='../S/19.html#L46' title='Defined at 46 in include/utility/record.hpp.'>RECORD_ERROR</a>("Invalid data structure provided for setting neuron colors.");
+<a name='L107'> 107         <a href='../Y/79.html' title='Multiple used in 3 places.'>Py_RETURN_FALSE</a>;
+<a name='L108'> 108     <font color='red'>}</font>
+<a name='L109'> 109 
+<a name='L110'> 110     <b>unsigned</b> <b>int</b> <a href='../Y/252.html' title='Multiple used in 6 places.'>limit</a> = <a href='../Y/361.html' title='Multiple used in 15 places.'>std</a>::<a href='../Y/264.html' title='Multiple used in 3 places.'>min</a>( <b>static_cast</b>&lt;<b>unsigned</b> <b>int</b>&gt;(<a href='../Y/77.html' title='Multiple used in 3 places.'>PySequence_Length</a>(<a href='../Y/178.html' title='Multiple used in 30 places.'>colors</a>))
+<a name='L111'> 111                                  , <b>static_cast</b>&lt;<b>unsigned</b> <b>int</b>&gt;(<a href='../Y/275.html' title='Multiple used in 10 places.'>neuron_seq</a>.<a href='../D/95.html' title='Multiple defined in 3 places.'>size</a>())
+<a name='L112'> 112                                  );
+<a name='L113'> 113     <b>unsigned</b> <b>int</b> <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>;
+<a name='L114'> 114     <b>for</b>(<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> = 0; <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a> &lt; <a href='../Y/252.html' title='Multiple used in 6 places.'>limit</a>;++<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>)
+<a name='L115'> 115     <font color='red'>{</font>
+<a name='L116'> 116         <a href='../Y/275.html' title='Multiple used in 10 places.'>neuron_seq</a>[<a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>] -&gt; <a href='../D/86.html' title='Multiple defined in 3 places.'>set_color</a>(<a href='../Y/76.html' title='Multiple used in 17 places.'>PySequence_GetItem</a>(<a href='../Y/178.html' title='Multiple used in 30 places.'>colors</a>, <a href='../Y/238.html' title='Multiple used in 68 places.'>i</a>));
+<a name='L117'> 117     <font color='red'>}</font>
+<a name='L118'> 118     <a href='../Y/80.html' title='Multiple used in 3 places.'>Py_RETURN_TRUE</a>;
+<a name='L119'> 119 <font color='red'>}</font>
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;]<a href='#L4'>[^]</a><a href='#L102'>[v]</a><a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

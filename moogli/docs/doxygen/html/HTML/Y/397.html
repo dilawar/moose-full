@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>voxel</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/23.html#L52'>voxel</a>              52 include/core/Compartment.hpp     add_voxel(Voxel * voxel);
+<a href='../S/23.html#L55'>voxel</a>              55 include/core/Compartment.hpp     remove_voxel(Voxel * voxel);
+<a href='../S/7.html#L14'>voxel</a>              14 src/core/Compartment.cpp     for(Voxel * voxel : voxel_seq)
+<a href='../S/7.html#L16'>voxel</a>              16 src/core/Compartment.cpp         voxel -&gt; set_compartment(nullptr);
+<a href='../S/7.html#L100'>voxel</a>             100 src/core/Compartment.cpp Compartment::add_voxel(Voxel * voxel)
+<a href='../S/7.html#L102'>voxel</a>             102 src/core/Compartment.cpp     auto iter = voxel_map.find(voxel -&gt; get_id());
+<a href='../S/7.html#L109'>voxel</a>             109 src/core/Compartment.cpp         voxel_map[voxel -&gt; get_id()] = voxel;
+<a href='../S/7.html#L110'>voxel</a>             110 src/core/Compartment.cpp         voxel_seq.push_back(voxel);
+<a href='../S/7.html#L111'>voxel</a>             111 src/core/Compartment.cpp         voxel_group_node -&gt; addDrawable(voxel -&gt; node.get());
+<a href='../S/7.html#L112'>voxel</a>             112 src/core/Compartment.cpp         voxel -&gt; set_compartment(this);
+<a href='../S/7.html#L119'>voxel</a>             119 src/core/Compartment.cpp Compartment::remove_voxel(Voxel * voxel)
+<a href='../S/7.html#L121'>voxel</a>             121 src/core/Compartment.cpp     auto iter = voxel_map.find(voxel -&gt; get_id());
+<a href='../S/7.html#L131'>voxel</a>             131 src/core/Compartment.cpp                                   , voxel
+<a href='../S/7.html#L134'>voxel</a>             134 src/core/Compartment.cpp         voxel_group_node -&gt; removeDrawable(voxel -&gt; node.get());
+<a href='../S/7.html#L135'>voxel</a>             135 src/core/Compartment.cpp         voxel -&gt; set_compartment(nullptr);
+</pre>
+</body>
+</html>

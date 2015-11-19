@@ -1,0 +1,27 @@
+var classCompartment =
+[
+    [ "Compartment", "classCompartment.html#a38a29a2e29ed0cd4331a7b4fa30d76ac", null ],
+    [ "~Compartment", "classCompartment.html#a22d20ccf9b329e3032c7c29c59fc6923", null ],
+    [ "add_geometry", "classCompartment.html#aab05340ee74143998ff715fcd8ff2f0c", null ],
+    [ "add_voxel", "classCompartment.html#acf7782fd4a6c881ba22b0496aadbfcb7", null ],
+    [ "get_id", "classCompartment.html#a765ab8ee0882726b757880452614a252", null ],
+    [ "get_neuron", "classCompartment.html#a7bf21873fe750c61ea9147fe09822182", null ],
+    [ "hide", "classCompartment.html#ad1cb24afb9b7434089928d2385a4206f", null ],
+    [ "hide_all_geometries", "classCompartment.html#ae5d31347af38773bef049bc995b6900d", null ],
+    [ "hide_geometry", "classCompartment.html#a36304c9171a1b6fbf0652379b67fce67", null ],
+    [ "is_visible", "classCompartment.html#ab4bd90fdd259fad72c19eaba06d64c0c", null ],
+    [ "remove_voxel", "classCompartment.html#aa59eec53596025959d8da75000d55608", null ],
+    [ "set_color", "classCompartment.html#a88709d6915c189fc6d31de59309648c8", null ],
+    [ "set_colors", "classCompartment.html#a6f7c863df4f6975c3d5706b732b99ea4", null ],
+    [ "set_neuron", "classCompartment.html#a8f091f514a8228cd788e161d95b30e82", null ],
+    [ "show", "classCompartment.html#aa67f77ce7177b97d0ee197c4190927c1", null ],
+    [ "show_all_geometries", "classCompartment.html#a0ea1d6d34e1e5b5498659ccf51c413d2", null ],
+    [ "show_geometry", "classCompartment.html#ad85eb22510c7f0518d0f0a12ff361ca7", null ],
+    [ "size", "classCompartment.html#af63a6d167ec4e743c5d6bbadd167ec88", null ],
+    [ "id", "classCompartment.html#a1d3734cf005a65aeacf0872794db4f97", null ],
+    [ "neuron", "classCompartment.html#ac6f7e8ff3bd7bfc36cb4e1795d5e8cec", null ],
+    [ "node", "classCompartment.html#a81f71696a8a6336d5b0637585e26afd4", null ],
+    [ "voxel_group_node", "classCompartment.html#a0a6f592f00bc11a5a4ad4f0c01e3b59d", null ],
+    [ "voxel_map", "classCompartment.html#a53bdb07a6645e022c76cd6f3635e30b1", null ],
+    [ "voxel_seq", "classCompartment.html#a3c0b324e4b052c57499f4f74e8994177", null ]
+];

@@ -9,9 +9,9 @@ git buildpackage --git-ignore-new --git-no-sign-tags --git-dist=$DIST \
 echo "installing"
 sudo dpkg -i ../*.deb
 python -c 'import moose'
-#python -c 'import moogli'
+python -c 'import moogli'
 echo "now uninstalling"
-sudo apt-get remove moose-core moose-doc moose-gui moose-moogli 
+sudo apt-get remove moose-core moose-doc moose-gui moose-moogli moose-moogli
 echo "Checking if moose-python is still there"
 python -c 'import moose' || echo "Successfully uninstalled"
-#python -c 'import moogli' || echo "Successfully uninstalled"
+python -c 'import moogli' || echo "Successfully uninstalled"
