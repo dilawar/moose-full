@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>colors</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/23.html#L73'>colors</a>             73 include/core/Compartment.hpp     set_colors(PyObject * colors);
+<a href='../S/24.html#L45'>colors</a>             45 include/core/Network.hpp     set_colors(PyObject * colors);
+<a href='../S/25.html#L76'>colors</a>             76 include/core/Neuron.hpp     set_colors(PyObject * colors);
+<a href='../S/7.html#L168'>colors</a>            168 src/core/Compartment.cpp Compartment::set_colors(PyObject * colors)
+<a href='../S/7.html#L170'>colors</a>            170 src/core/Compartment.cpp     if(PySequence_Check(colors) != 1)
+<a href='../S/7.html#L176'>colors</a>            176 src/core/Compartment.cpp     unsigned int limit = std::min( static_cast&lt;unsigned int&gt;(PySequence_Length(colors))
+<a href='../S/7.html#L182'>colors</a>            182 src/core/Compartment.cpp         voxel_seq[i] -&gt; set_color(PySequence_GetItem(colors, i));
+<a href='../S/7.html#L196'>colors</a>            196 src/core/Compartment.cpp             Vec4Array * colors = new Vec4Array();
+<a href='../S/7.html#L197'>colors</a>            197 src/core/Compartment.cpp             colors -&gt; push_back(pysequence_to_vec4d(color));
+<a href='../S/7.html#L198'>colors</a>            198 src/core/Compartment.cpp             geometry -&gt; setColorArray(colors, osg::Array::BIND_OVERALL);
+<a href='../S/10.html#L102'>colors</a>            102 src/core/Network.cpp Network::set_colors(PyObject * colors)
+<a href='../S/10.html#L104'>colors</a>            104 src/core/Network.cpp     if(PySequence_Check(colors) != 1)
+<a href='../S/10.html#L110'>colors</a>            110 src/core/Network.cpp     unsigned int limit = std::min( static_cast&lt;unsigned int&gt;(PySequence_Length(colors))
+<a href='../S/10.html#L116'>colors</a>            116 src/core/Network.cpp         neuron_seq[i] -&gt; set_color(PySequence_GetItem(colors, i));
+<a href='../S/8.html#L190'>colors</a>            190 src/core/Neuron.cpp             Vec4Array * colors = new Vec4Array();
+<a href='../S/8.html#L191'>colors</a>            191 src/core/Neuron.cpp             colors -&gt; push_back(pysequence_to_vec4d(color));
+<a href='../S/8.html#L192'>colors</a>            192 src/core/Neuron.cpp             geometry -&gt; setColorArray(colors, osg::Array::BIND_OVERALL);
+<a href='../S/8.html#L199'>colors</a>            199 src/core/Neuron.cpp Neuron::set_colors(PyObject * colors)
+<a href='../S/8.html#L201'>colors</a>            201 src/core/Neuron.cpp     if(PySequence_Check(colors) != 1)
+<a href='../S/8.html#L207'>colors</a>            207 src/core/Neuron.cpp     unsigned int limit = std::min( static_cast&lt;unsigned int&gt;(PySequence_Length(colors))
+<a href='../S/8.html#L213'>colors</a>            213 src/core/Neuron.cpp         compartment_seq[i] -&gt; set_color(PySequence_GetItem(colors, i));
+<a href='../S/9.html#L82'>colors</a>             82 src/core/Voxel.cpp     Vec4Array * colors = new Vec4Array();
+<a href='../S/9.html#L83'>colors</a>             83 src/core/Voxel.cpp     colors -&gt; push_back(pysequence_to_vec4d(color));
+<a href='../S/9.html#L84'>colors</a>             84 src/core/Voxel.cpp     node -&gt; setColorArray(colors, osg::Array::BIND_OVERALL);
+<a href='../S/1.html#L232'>colors</a>            232 src/mesh/CylinderMesh.cpp     Vec4Array * colors = new Vec4Array();
+<a href='../S/1.html#L233'>colors</a>            233 src/mesh/CylinderMesh.cpp     colors -&gt; push_back(color); //color);
+<a href='../S/1.html#L243'>colors</a>            243 src/mesh/CylinderMesh.cpp     geometry -&gt; setColorArray(colors);
+<a href='../S/2.html#L165'>colors</a>            165 src/mesh/SphereMesh.cpp     Vec4Array * colors = new Vec4Array();
+<a href='../S/2.html#L166'>colors</a>            166 src/mesh/SphereMesh.cpp     colors -&gt; push_back(color); //color);
+<a href='../S/2.html#L167'>colors</a>            167 src/mesh/SphereMesh.cpp     geometry -&gt; setColorArray(colors);
+</pre>
+</body>
+</html>

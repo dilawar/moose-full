@@ -78,7 +78,7 @@ if(LOCAL_SBML)
     include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_sbml.cmake)
 endif() 
 
-##*############## 
+
 ## Now build MOOSE
 SET(MOOSE_CORE_BUILD_DIR ${CMAKE_BINARY_DIR}/_moose-core)
 FILE(MAKE_DIRECTORY ${MOOSE_CORE_BUILD_DIR})
@@ -91,10 +91,6 @@ add_custom_command(
     ${CMAKE_COMMAND} 
         -DDEBUG:BOOL=OFF 
         -DWITH_DOC:BOOL=${WITH_DOC}
-        # MOOGLI related command line arguments.
-        -DBUILD_MOOGLI:BOOL=${BUILD_MOOGLI}
-        # where to store moogli source distribution.
-        -DMOOGLI_DIST_DIR=${MOOSE_CORE_BUILD_DIR}
         -DLOCAL_SBML:BOOL=${LOCAL_SBML} -DLOCAL_GSL:BOOL=${LOCAL_GSL}
         -DSTATIC_GSL_LIBRARY=${STATIC_GSL_LIBRARY}
         -DSTATIC_GSLBLAS_LIBRARY=${STATIC_GSLBLAS_LIBRARY}
@@ -128,11 +124,6 @@ install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
     DESTINATION bin
     )
 
-install(FILES ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
-    DESTINATION share/moose
-    )
-
-
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
     DESTINATION lib/moose/gui
     COMPONENT moose-gui
@@ -160,4 +151,11 @@ install(FILES ${CMAKE_SOURCE_DIR}/moose-gui/icons/moose_icon.png
 install(FILES ${CMAKE_SOURCE_DIR}/moose-core/scripts/moose.desktop
     DESTINATION share/applications
     COMPONENT moose
+    )
+
+### Tests.
+enable_testing()
+add_test(NAME moose-core 
+    COMMAND ctest --output-on-failure
+    WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
     )

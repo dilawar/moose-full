@@ -1,0 +1,19 @@
+language: python
+python:
+- '2.7'
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get install -y libopenscenegraph-dev
+- sudo apt-get install -y libqt4-dev
+- sudo apt-get install -y libqt4-opengl-dev
+- sudo apt-get install -y python-qt4-gl
+- sudo apt-get install -y python-qt4-dev
+- sudo apt-get install -y python-sip-dev
+script: sudo python setup.py install
+cache:
+- apt
+deploy:
+  provider: pypi
+  user: aviralgoel
+  password:
+    secure: d4CmChzACj1fYOgRuKKkkZf5QQ7HYITKG4mqE2uCZCWhD4tZhk6ospznwddXybL2+X5ARpSPlVG7XFnYWo86UnhRHS0gyiZmJRtzs4v+D5Q1BCIEOp451G05vyzf3tZknur6qNJB6De2jt0Av0/lW3/qWL7eOQP1ZI1ybDI13UY=

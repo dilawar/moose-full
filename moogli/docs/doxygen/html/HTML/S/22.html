@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>include/utility/globals.hpp</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<a name='TOP'><h2><a href='../mains.html'>root</a>/<a href='../files/31.html'>include</a>/<a href='../files/34.html'>utility</a>/globals.hpp</h2>
+<i><font color='green'>/* [&lt;][&gt;][^][v][top]<a href='#BOTTOM'>[bottom]</a><a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+<hr>
+<h2><a href='../J/9.html' title='Multiple included from 2 places.'>INCLUDED FROM</a></h2>
+<hr>
+<pre>
+<a name='L1'>   1 <font color='darkred'>#ifndef</font> <a href='../S/22.html#L2' title='Defined at 2 in include/utility/globals.hpp.'>_GLOBALS_HPP_</a>
+<a name='L2'>   2 <font color='darkred'>#define</font> <a href='../S/22.html#L1' title='Refered from 1 in include/utility/globals.hpp.'>_GLOBALS_HPP_</a>
+<a name='L3'>   3 
+<a name='L4'>   4 <font color='darkred'>#include</font> "<a href='16.html'>mesh/CylinderMesh.hpp</a>"
+<a name='L5'>   5 <font color='darkred'>#include</font> "<a href='15.html'>mesh/SphereMesh.hpp</a>"
+<a name='L6'>   6 
+<a name='L7'>   7 <i><font color='green'>/* Global variables should be avoided for they increase program’s complexity immensely and because their values can be changed by any function that is called. But it is a necessity in this case.</font></i>
+<a name='L8'>   8 <i><font color='green'> * CylinderGeometry and SphereGeometry implement a caching scheme which is effective iff there is one instance of these objects. Hence they are defined as global variables.</font></i>
+<a name='L9'>   9 <i><font color='green'> * Another approach would be to define these as singleton classes but that is mostly frowned upon and does not provide us any benefit in comparison to declaring global variables.</font></i>
+<a name='L10'>  10 <i><font color='green'> */</font></i>
+<a name='L11'>  11 
+<a name='L12'>  12 <b>extern</b> <a href='../D/3.html' title='Multiple defined in 2 places.'>CylinderMesh</a> <a href='../Y/187.html' title='Multiple used in 5 places.'>cylinder</a>;
+<a name='L13'>  13 <b>extern</b> <a href='../D/11.html' title='Multiple defined in 2 places.'>SphereMesh</a>   <a href='../Y/355.html' title='Multiple used in 5 places.'>sphere</a>;
+<a name='L14'>  14 
+<a name='L15'>  15     <i><font color='green'>// light -&gt; setAmbient( osg::);</font></i>
+<a name='L16'>  16     <i><font color='green'>// light -&gt; setDiffuse( osg::);</font></i>
+<a name='L17'>  17     <i><font color='green'>// light -&gt; setSpecular( osg::);</font></i>
+<a name='L18'>  18 
+<a name='L19'>  19 
+<a name='L20'>  20 
+<a name='L21'>  21 <font color='darkred'>#endif</font> <i><font color='green'>/* _GLOBALS_HPP_ */</font></i>
+</pre>
+<hr>
+<a name='BOTTOM'>
+<i><font color='green'>/* [&lt;][&gt;][^][v]<a href='#TOP'>[top]</a>[bottom]<a href='../mains.html'>[index]</a><a href='../help.html'>[help]</a> */</font></i>
+</body>
+</html>

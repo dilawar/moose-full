@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>geometry_index</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/23.html#L58'>geometry_index</a>     58 include/core/Compartment.hpp     show_geometry(unsigned int geometry_index, bool hide_others);
+<a href='../S/23.html#L61'>geometry_index</a>     61 include/core/Compartment.hpp     hide_geometry(unsigned int geometry_index);
+<a href='../S/25.html#L61'>geometry_index</a>     61 include/core/Neuron.hpp     show_geometry(unsigned int geometry_index, bool hide_others);
+<a href='../S/25.html#L64'>geometry_index</a>     64 include/core/Neuron.hpp     hide_geometry(unsigned int geometry_index);
+<a href='../S/7.html#L142'>geometry_index</a>    142 src/core/Compartment.cpp Compartment::show_geometry(unsigned int geometry_index, bool hide_others)
+<a href='../S/7.html#L144'>geometry_index</a>    144 src/core/Compartment.cpp     if(hide_others) node -&gt; setSingleChildOn(geometry_index);
+<a href='../S/7.html#L145'>geometry_index</a>    145 src/core/Compartment.cpp     else            node -&gt; setValue(geometry_index, true);
+<a href='../S/7.html#L150'>geometry_index</a>    150 src/core/Compartment.cpp Compartment::hide_geometry(unsigned int geometry_index)
+<a href='../S/7.html#L152'>geometry_index</a>    152 src/core/Compartment.cpp     node -&gt; setValue(geometry_index, false);
+<a href='../S/8.html#L156'>geometry_index</a>    156 src/core/Neuron.cpp Neuron::show_geometry(unsigned int geometry_index, bool hide_others)
+<a href='../S/8.html#L158'>geometry_index</a>    158 src/core/Neuron.cpp     if(hide_others) node -&gt; setSingleChildOn(geometry_index);
+<a href='../S/8.html#L159'>geometry_index</a>    159 src/core/Neuron.cpp     else            node -&gt; setValue(geometry_index, true);
+<a href='../S/8.html#L164'>geometry_index</a>    164 src/core/Neuron.cpp Neuron::hide_geometry(unsigned int geometry_index)
+<a href='../S/8.html#L166'>geometry_index</a>    166 src/core/Neuron.cpp     node -&gt; setValue(geometry_index, false);
+</pre>
+</body>
+</html>

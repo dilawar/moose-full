@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>parent_viewport</title>
+<meta name='robots' content='noindex,nofollow'>
+<meta name='generator' content='GLOBAL-5.7.1'>
+</head>
+<body text='#191970' bgcolor='#f5f5dc' vlink='gray'>
+<pre>
+<a href='../S/3.html#L177'>parent_viewport</a>   177 src/view/NetworkViewer.cpp     osg::Viewport * parent_viewport = parent_camera -&gt; getViewport();
+<a href='../S/3.html#L178'>parent_viewport</a>   178 src/view/NetworkViewer.cpp     int new_parent_width = parent_viewport -&gt; width() * (width_factor - 1) / width_factor;
+<a href='../S/3.html#L179'>parent_viewport</a>   179 src/view/NetworkViewer.cpp     add_view( parent_viewport -&gt; x() + new_parent_width
+<a href='../S/3.html#L180'>parent_viewport</a>   180 src/view/NetworkViewer.cpp             , parent_viewport -&gt; y()
+<a href='../S/3.html#L181'>parent_viewport</a>   181 src/view/NetworkViewer.cpp             , parent_viewport -&gt; width() - new_parent_width
+<a href='../S/3.html#L182'>parent_viewport</a>   182 src/view/NetworkViewer.cpp             , parent_viewport -&gt; height()
+<a href='../S/3.html#L184'>parent_viewport</a>   184 src/view/NetworkViewer.cpp     parent_camera-&gt;setViewport( parent_viewport -&gt; x()
+<a href='../S/3.html#L185'>parent_viewport</a>   185 src/view/NetworkViewer.cpp                               , parent_viewport -&gt; y()
+<a href='../S/3.html#L187'>parent_viewport</a>   187 src/view/NetworkViewer.cpp                               , parent_viewport -&gt; height()
+<a href='../S/3.html#L191'>parent_viewport</a>   191 src/view/NetworkViewer.cpp                                                    / static_cast&lt;float&gt;(parent_viewport -&gt; height())
+<a href='../S/3.html#L205'>parent_viewport</a>   205 src/view/NetworkViewer.cpp     osg::Viewport * parent_viewport = parent_camera -&gt; getViewport();
+<a href='../S/3.html#L212'>parent_viewport</a>   212 src/view/NetworkViewer.cpp     int new_parent_height = parent_viewport -&gt; height() * (height_factor - 1) / height_factor;
+<a href='../S/3.html#L213'>parent_viewport</a>   213 src/view/NetworkViewer.cpp     add_view( parent_viewport -&gt; x()
+<a href='../S/3.html#L214'>parent_viewport</a>   214 src/view/NetworkViewer.cpp             , parent_viewport -&gt; y() + new_parent_height
+<a href='../S/3.html#L215'>parent_viewport</a>   215 src/view/NetworkViewer.cpp             , parent_viewport -&gt; width()
+<a href='../S/3.html#L216'>parent_viewport</a>   216 src/view/NetworkViewer.cpp             , parent_viewport -&gt; height() - new_parent_height
+<a href='../S/3.html#L224'>parent_viewport</a>   224 src/view/NetworkViewer.cpp     parent_camera-&gt;setViewport( parent_viewport -&gt; x()
+<a href='../S/3.html#L225'>parent_viewport</a>   225 src/view/NetworkViewer.cpp                               , parent_viewport -&gt; y()
+<a href='../S/3.html#L226'>parent_viewport</a>   226 src/view/NetworkViewer.cpp                               , parent_viewport -&gt; width()
+<a href='../S/3.html#L235'>parent_viewport</a>   235 src/view/NetworkViewer.cpp                                                    , static_cast&lt;float&gt;(parent_viewport -&gt; width())
+</pre>
+</body>
+</html>
