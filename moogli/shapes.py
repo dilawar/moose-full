@@ -48,7 +48,7 @@ class Frustum(_moogli.Frustum):
         pass
 
 
-class Sphere(_moogli.Sphere):
+class Sphere(_moogli.MoogliSphere):
 
     @classmethod
     def sequence(cls):
