@@ -42,6 +42,7 @@ endif()
 set(CMAKE_BUILD_TYPE Release)
 # This is essential to remove the RPATH.
 set(CMAKE_INSTALL_RPATH "")
+find_package(PythonInterp REQUIRED)
 
 ################
 # Which local libraries need to be built, Here we just set the
@@ -201,14 +202,13 @@ install(FILES ${CMAKE_SOURCE_DIR}/moose-core/scripts/moose.desktop
 
 ### Tests.
 enable_testing()
-add_test(NAME moose-core 
-    COMMAND ctest --output-on-failure
+add_test(NAME moose-moogli
+    COMMAND sanity_check.sh
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/tests
+    )
+add_test(NAME moose-tests
+    COMMAND ctest -R pymoose*
     WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
     )
 
-IF(WITH_MOOGLI)
-    add_test(NAME moogli
-        COMMAND python -c "import moogli"
-        WORKING_DIRECTORY ${MOOGLI_SOURCE_DIR}
-        )
-ENDIF(WITH_MOOGLI)
+

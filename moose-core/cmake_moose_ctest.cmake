@@ -10,6 +10,10 @@ ADD_TEST(NAME moose.bin-raw-run
     COMMAND moose.bin -u -q
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
     )
+# make sure that we find libmoose.so
+set_property(TEST moose.bin-raw-run
+    APPEND PROPERTY ENVIRONMENT LD_LIBRARY_PATH=${CMAKE_CURRENT_BINARY_DIR}
+    )
 
 ## PyMOOSE tests.
 

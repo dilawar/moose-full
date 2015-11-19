@@ -20,6 +20,7 @@ BuildRequires: python-setuptools
 BuildRequires: bzip2-devel
 BuildRequires: numpy
 BuildRequires: libxml2-devel
+BuildRequires: qt-devel
 
 %description
 
@@ -59,12 +60,8 @@ Requires: python-suds
 %setup -q -n moose-%{version}
 
 %build
-%if 0%{?openscenegraph_dist} 
-cmake -DWITH_DOC=OFF -DBUILD_MOOGLI=TRUE \
-                 -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr .  && make -j`nproc`
-%else
-cmake -DWITH_DOC=OFF -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr . && make -j`nproc`
-%endif
+cmake -DWITH_DOC=OFF -DWITH_MOOGLI=ON -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr . 
+make -j`nproc`
 
 %install
 make install

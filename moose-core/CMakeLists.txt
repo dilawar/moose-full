@@ -474,21 +474,14 @@ install(PROGRAMS ${CMAKE_CURRENT_SOURCE_DIR}/scripts/moose
     )
 
 if(WITH_PYTHON)
-    SET(MOOSE_SRC_TAR ${CMAKE_CURRENT_BINARY_DIR}/moose-${MOOSE_VERSION}.tar.gz)
-
     install(CODE 
         "
-        execute_process(
-            COMMAND tar xvf ${MOOSE_SRC_TAR} -C /tmp
-            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-            )
         execute_process(
             COMMAND ${PYTHON_EXECUTABLE} setup.py install --prefix=${CMAKE_INSTALL_PREFIX}
             WORKING_DIRECTORY /tmp/moose-${MOOSE_VERSION}
             )
         "
         )
-
 endif(WITH_PYTHON)
 
 if(WITH_DOC)
@@ -501,20 +494,6 @@ if(WITH_DOC)
         DESTINATION share/doc/moose/developer
         )
 endif()
-
-## TODO: Use python setup.py install to make sure that it installs with MacPort
-## and any Unix-like system.
-##if(BUILD_MOOGLI)
-##    install(CODE
-##        "
-##        execute_process(COMMAND easy_install
-##            --prefix ${CMAKE_INSTALL_PREFIX}
-##            WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-##            )
-##        "
-##        )
-##endif(BUILD_MOOGLI)
-    
 
 ############################ CTEST ######################################
 
