@@ -25,7 +25,6 @@ override_dh_auto_build:
 override_dh_auto_install:
 	cd $(BUILD_DIR_MOOSE) && make install
 	cd moose-core/python && python setup.py install --root=../../debian/tmp/moose --install-layout=deb
-	cd moogli && python cmake_modules/setup.py install --root=../debian/tmp/moogli --install-layout=deb
 
 override_dh_shlibdeps:
 	dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info

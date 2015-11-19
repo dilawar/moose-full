@@ -47,9 +47,3 @@ Depends: python-qt4, moose-python
 Description: GUI of moose
  .
  This package installs the GUI frontend of MOOSE neural simulator.
-
-Package: moose-moogli
-Architecture: any
-Description: 3-d visualizer of neuronal morphology and simulation data.
-  . 
-  Moogli is a 3D neuronal network activity visualizer. It can show neuronal network morphologies and visualize electrical and chemical activity from compartmental modeling simulations. 
