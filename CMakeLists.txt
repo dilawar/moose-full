@@ -1,7 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 ## Now setting up project.
 # A dummy target to add dependencies later.
-project(Moose)
+project(moose-all)
 
 add_custom_target(_moose_static_dependencies ALL)
 # This variable should point to the source code.
@@ -39,6 +39,8 @@ endif()
 ################
 # Definately building release type ##########################
 set(CMAKE_BUILD_TYPE Release)
+# This is essential to remove the RPATH.
+set(CMAKE_INSTALL_RPATH "")
 
 ################
 # Which local libraries need to be built, Here we just set the
@@ -96,6 +98,7 @@ add_custom_command(
         -DSTATIC_GSLBLAS_LIBRARY=${STATIC_GSLBLAS_LIBRARY}
         -DSTATIC_SBML_LIBRARY=${STATIC_SBML_LIBRARY}
         -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
+        -DCMAKE_SKIP_RPATH=ON
         ${MOOSE_SOURCE_DIRECTORY}
     COMMAND $(MAKE) VERBOSE=1
     # Not running neuroml test since it requires matplotlib.
@@ -106,18 +109,34 @@ add_custom_command(
     )
 
 add_custom_target(_build_moose_core ALL
-    DEPENDS ${MOOSE_CORE_BUILD_DIR}/moose.bin ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
+    DEPENDS ${MOOSE_CORE_BUILD_DIR}/moose.bin 
+    ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
     )
+
 add_dependencies(_build_moose_core _moose_static_dependencies)
 
 # Use moose-core cmake file to install it.
 install(CODE
     "
-    execute_process(COMMAND cmake -P cmake_install.cmake
-        WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
+    EXECUTE_PROCESS(
+        COMMAND python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --install-layout=deb
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moose-core/python
         )
     "
+    COMPONENT moose-python
     )
+
+IF(WITH_MOOGLI)
+    INSTALL(CODE
+    "
+    EXECUTE_PROCESS(
+        COMMAND cmake_modules/python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --install-layout=deb
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moogli
+        )
+    "
+    COMPONENT moogli
+    )
+ENDIF(WITH_MOOGLI)
 
 # Copy the gui folder. TODO: This should be a python-module.
 install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
@@ -138,6 +157,9 @@ install(PROGRAMS ${CMAKE_SOURCE_DIR}/package_data/moosegui
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-examples/
     DESTINATION lib/moose/moose-examples
     COMPONENT moose-gui
+    PATTERN "travis" EXCLUDE
+    PATTERN "CVS" EXCLUDE
+    PATTERN ".git*" EXCLUDE
     )
 
 ## Install the icon
@@ -150,7 +172,7 @@ install(FILES ${CMAKE_SOURCE_DIR}/moose-gui/icons/moose_icon.png
 # And the desktop file.
 install(FILES ${CMAKE_SOURCE_DIR}/moose-core/scripts/moose.desktop
     DESTINATION share/applications
-    COMPONENT moose
+    COMPONENT moose-gui
     )
 
 ### Tests.
