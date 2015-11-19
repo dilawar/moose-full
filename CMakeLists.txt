@@ -152,6 +152,7 @@ install(CODE
     )
 
 IF(WITH_MOOGLI)
+    INSTALL(CODE
     "
     EXECUTE_PROCESS(
         COMMAND cmake_modules/python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --install-layout=deb
