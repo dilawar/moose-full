@@ -46,6 +46,7 @@ add_custom_target(uninstall
     ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake
     )
 
+# This is for testing purpose.
 link_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ################################# OS Specific ##################################
@@ -364,8 +365,6 @@ if(WITH_PYTHON)
 if(MACOSX)
     set(CMAKE_MODULE_LINKER_FLAGS "-undefined dynamic_lookup")
     MESSAGE(STATUS "ADDING some linker flags ${CMAKE_EXE_LINKER_FLAGS}")
-else(MACOSX)
-    list(APPEND SYSTEM_SHARED_LIBS ${PYTHON_LIBRARIES})
 endif(MACOSX)
 
 IF(MACOSX)

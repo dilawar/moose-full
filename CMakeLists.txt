@@ -12,7 +12,7 @@ set(MOOGLI_VERSION "1.0")
 
 ## CMAKE options
 option(WITH_DOC "Build documentation as well" OFF)
-option(WITH_MOOGLI "Build moogli extension" ON)
+option(WITH_MOOGLI "Build moogli extension" OFF)
 
 ## Project related macros
 set(MOOSE_SOURCE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${MOOSE_CORE_DIRNAME})
@@ -40,6 +40,8 @@ endif()
 ################
 # Definately building release type ##########################
 set(CMAKE_BUILD_TYPE Release)
+# This is essential to remove the RPATH.
+set(CMAKE_INSTALL_RPATH "")
 
 ################
 # Which local libraries need to be built, Here we just set the
@@ -97,7 +99,7 @@ add_custom_command(
         -DSTATIC_GSLBLAS_LIBRARY=${STATIC_GSLBLAS_LIBRARY}
         -DSTATIC_SBML_LIBRARY=${STATIC_SBML_LIBRARY}
         -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
-        -DCMAKE_SKIP_INSTALL_RPATH=ON
+        -DCMAKE_SKIP_RPATH=ON
         ${MOOSE_SOURCE_DIRECTORY}
     COMMAND $(MAKE) VERBOSE=1
     # Not running neuroml test since it requires matplotlib.
@@ -127,7 +129,6 @@ IF(WITH_MOOGLI)
         COMMAND OSGDIR=${OSG_INSTALL_DIR}
         ${CMAKE_COMMAND} ${MOOGLI_SOURCE_DIR}
     COMMAND $(MAKE) VERBOSE=1
-
     WORKING_DIRECTORY ${MOOGLI_BUILD_DIR}
     VERBATIM
     )
@@ -150,6 +151,17 @@ install(CODE
     COMPONENT moose-python
     )
 
+IF(WITH_MOOGLI)
+    INSTALL(CODE
+    "
+    EXECUTE_PROCESS(
+        COMMAND cmake_modules/python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --install-layout=deb
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moogli
+        )
+    "
+    COMPONENT moogli
+    )
+ENDIF(WITH_MOOGLI)
 # Copy the gui folder. TODO: This should be a python-module.
 install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
     DESTINATION bin
@@ -193,8 +205,10 @@ add_test(NAME moose-core
     COMMAND ctest --output-on-failure
     WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
     )
-add_test(NAME moogli
-    COMMAND python -c "import moogli"
-    WORKING_DIRECTORY ${MOOGLI_SOURCE_DIR}
-    )
 
+IF(WITH_MOOGLI)
+    add_test(NAME moogli
+        COMMAND python -c "import moogli"
+        WORKING_DIRECTORY ${MOOGLI_SOURCE_DIR}
+        )
+ENDIF(WITH_MOOGLI)
