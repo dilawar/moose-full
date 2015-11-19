@@ -8,6 +8,7 @@ add_custom_target(_moose_static_dependencies ALL)
 set(MOOSE_CORE_DIRNAME moose-core)
 set(MOOSE_GUI_DIRNAME moose-gui)
 set(MOOSE_VERSION "3.0.2")
+set(MOOGLI_VERSION "1.0")
 
 ## CMAKE options
 option(WITH_DOC "Build documentation as well" OFF)
@@ -109,19 +110,39 @@ add_custom_command(
 
 add_custom_target(_build_moose_core ALL
     DEPENDS ${MOOSE_CORE_BUILD_DIR}/moose.bin 
+    ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
     )
 
 add_dependencies(_build_moose_core _moose_static_dependencies)
 
-# install moose-core 
+# Use moose-core cmake file to install it.
 install(CODE
-    "EXECUTE_PROCESS(
-        COMMAND ${CMAKE_COMMAND} -P cmake_install.cmake
-        WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
+    "
+    EXECUTE_PROCESS(
+        COMMAND python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --install-layout=deb
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moose-core/python
         )
-    ")
+    "
+    COMPONENT moose-python
+    )
 
-# Copy the gui folder. 
+IF(WITH_MOOGLI)
+    INSTALL(CODE
+    "
+    EXECUTE_PROCESS(
+        COMMAND cmake_modules/python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} --install-layout=deb
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moogli
+        )
+    "
+    COMPONENT moogli
+    )
+ENDIF(WITH_MOOGLI)
+
+# Copy the gui folder. TODO: This should be a python-module.
+install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
+    DESTINATION bin
+    )
+
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
     DESTINATION lib/moose/gui
     COMPONENT moose-gui
