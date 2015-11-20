@@ -1,3 +1,5 @@
+dist: trusty
+sudo: required
 language: cpp
 compiler:
 - gcc
@@ -11,19 +13,24 @@ notifications:
     on_failure: always
 cache: apt
 before_script:
-- sudo apt-get update -qq
-- sudo apt-get install libxml2-dev libbz2-dev
-- sudo apt-get install libhdf5-serial-dev
-- sudo apt-get install texinfo texi2html
-- sudo apt-get install python-numpy python-networkx
-- sudo apt-get install make texinfo cmake texi2html
-- sudo apt-get install python-suds python-matplotlib
-- sudo apt-get install git git-buildpackage debhelper cdbs devscripts
+    - sudo add-apt-repository -y ppa:bhallalab/moose
+    - sudo apt-get -y update -qq
+    - sudo apt-get -y install libxml2-dev libbz2-dev
+    - sudo apt-get -y install libhdf5-serial-dev
+    - sudo apt-get -y install texinfo texi2html
+    - sudo apt-get -y install python-numpy python-networkx python-qt4
+    - sudo apt-get -y install make texinfo cmake texi2html
+    - sudo apt-get -y install python-suds python-matplotlib
+    - sudo apt-get -y install git git-buildpackage debhelper cdbs devscripts
+    - sudo apt-get -y install moogli
+
 script:
-- ./scripts/git_buildpackage_and_test.sh
+    - ./scripts/git_buildpackage_and_test.sh
+
 before_deploy:
     sudo dpkg -i ../*.deb
     cd moose-examples/_travis && ./run_scripts.sh
+
 deploy:
   provider: releases
   api_key:
@@ -34,4 +41,3 @@ deploy:
   on:
     repo: BhallaLab/moose-full
     branch: debian
-    tags: true
