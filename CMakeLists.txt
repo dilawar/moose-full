@@ -175,3 +175,8 @@ add_test(NAME moose-core
     COMMAND ctest --output-on-failure
     WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
     )
+
+
+####### CPack ###############################
+include(cmake_moose_cpack.cmake)
+
