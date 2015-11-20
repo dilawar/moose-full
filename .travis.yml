@@ -25,6 +25,8 @@ before_script:
     - sudo apt-get -y install moogli
 
 script:
+    - ls -l
+    - git checkout origin/debian -b debian
     - ./scripts/git_buildpackage_and_test.sh
 
 before_deploy:
