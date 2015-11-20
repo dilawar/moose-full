@@ -1,29 +1,39 @@
 language: cpp
 compiler:
-    - gcc
+- gcc
 os:
-    - linux
-
+- linux
 notifications:
-    email:
-        recipients:
-            - dilawar.s.rajput@gmail.com
-        on_success: change
-        on_failure: always
-
+  email:
+    recipients:
+    - dilawar.s.rajput@gmail.com
+    on_success: change
+    on_failure: always
 cache: apt
 before_script:
-    - sudo apt-get update -qq
-    - sudo apt-get install libxml2-dev libbz2-dev
-    - sudo apt-get install libhdf5-serial-dev
-    - sudo apt-get install libgsl0-dev texinfo texi2html  
-    - sudo apt-get install python-numpy python-setuptools python-networkx
-    - sudo apt-get install make texinfo cmake texi2html
-    - sudo apt-get install python-suds python-matplotlib
-    - sudo apt-get install python-qt4-dev python-qt4-gl python-sip-dev libqt4-dev libopenscenegraph-dev
-    - sudo apt-get install doxygen python-sphinx
-    - sudo apt-get install git git-buildpackage debhelper cdbs devscripts 
-
+- sudo apt-get update -qq
+- sudo apt-get install libxml2-dev libbz2-dev
+- sudo apt-get install libhdf5-serial-dev
+- sudo apt-get install libgsl0-dev texinfo texi2html
+- sudo apt-get install python-numpy python-setuptools python-networkx
+- sudo apt-get install make texinfo cmake texi2html
+- sudo apt-get install python-suds python-matplotlib
+- sudo apt-get install python-qt4-dev python-qt4-gl python-sip-dev libqt4-dev libopenscenegraph-dev
+- sudo apt-get install doxygen python-sphinx
+- sudo apt-get install git git-buildpackage debhelper cdbs devscripts
 script:
-    - ./scripts/git_buildpackage_and_test.sh
-
+- ./scripts/git_buildpackage_and_test.sh
+before_deploy:
+    sudo dpkg -i ../*.deb
+    cd moose-examples/_travis && ./run_scripts.sh
+deploy:
+  provider: releases
+  api_key:
+    secure: NLTH/OQJAMYwcbwp02QFnOxG/4Yc+4+H6+/Ls6n7s1i8UbhPSkjwkvF0kuNJobcIsdMXGq4YX2EvXXxniWpSvr3e967B/fzRhms9zXw5YMq5vrKSLMJEoREVbfDz4KFuVpuGNUORVEPFVAf2C2Vhd7y67mS+56FPHNvmC21LWoUvC/cOKhuUi9HdpwvxZxZMsNygymfuXobN4z0WlDeZk4k00SfD4rwT/Wce/R+HP8IlD1geG1NGYjLA3T0jzYrjS34JNzmxUISLu2Z+d9Dr4CnxSKSBzYJ/qi+SjmQetbgX+eHqfWqSs95hWieWpARq6BGNMU3/7oWeQyz6nZsqGAgCFX5Wyp7mkd70C8JfFoRFizC9V1n5hbn7jQgBrvKeOtLj7KZ6V2ez7dr4V3zYWpuomn7R42dvdVXV9FIClZVaVkxKbj4M8ZwKgJxxobWVEmPMGrkwt3NDvRs/GkW5oDAJ7/06/8z6+bV7WGWs9ehH+a86C1GI3UVFsMJCyI/4I+GkRR1Bh+d0GDwVlLtKb6zbVgmQQHFuhCfpwp6KXkgGGsU116sHwk4nOfiD8uMNXNvcRYzsviGa18jm3fw7EPB5SRrOaKSEzCqBZdY5Q3fzUXA4zQk0TiSksgJoN9PoZcE9FTfnpi2Bcc+terkT9wD+Pd1xfhwjOa5B/8t1bfg=
+  file: 
+      - ../moose_3.0.2_amd64.deb
+  skip_cleanup: true
+  on:
+    repo: BhallaLab/moose-full
+    branch: debian
+    tags: true
