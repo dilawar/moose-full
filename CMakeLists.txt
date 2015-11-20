@@ -153,19 +153,22 @@ install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-examples/
     PATTERN ".git*" EXCLUDE
     )
 
-## Install the icon
-install(FILES ${CMAKE_SOURCE_DIR}/moose-gui/icons/moose_icon.png 
-    DESTINATION share/pixmaps
-    COMPONENT moose-gui
-    RENAME moose.png
-    )
+## DO NOT install icon and dekstop file. They cause a lot of issues on various
+## repositories on open-build-service.
 
-# And the desktop file.
-install(FILES ${CMAKE_SOURCE_DIR}/moose-core/scripts/moose.desktop
-    DESTINATION share/applications
-    COMPONENT moose-gui
-    )
-
+#### Install the icon
+##install(FILES ${CMAKE_SOURCE_DIR}/moose-gui/icons/moose_icon.png 
+##    DESTINATION share/pixmaps
+##    COMPONENT moose-gui
+##    RENAME moose.png
+##    )
+##
+### And the desktop file.
+##install(FILES ${CMAKE_SOURCE_DIR}/moose-core/scripts/moose.desktop
+##    DESTINATION share/applications
+##    COMPONENT moose-gui
+##    )
+##
 ### Tests.
 enable_testing()
 add_test(NAME moose-core 
