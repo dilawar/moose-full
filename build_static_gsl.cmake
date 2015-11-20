@@ -10,12 +10,15 @@ set(STATIC_GSLBLAS_LIBRARY ${GSL_INSTALL_DIR}/lib/libgslcblas.a)
 
 SET(GSL_BUILD_DIR ${CMAKE_CURRENT_BINARY_DIR}/__gsl_build__)
 FILE(MAKE_DIRECTORY ${GSL_BUILD_DIR})
+
+# NOTE: Set WORKING_DIRECTORY to GSL_SRC_DIRECTORY else the build might fail
+# because of missing texinfo and texi2html package.
 ADD_CUSTOM_COMMAND(
     OUTPUT ${STATIC_GSLBLAS_LIBRARY} ${STATIC_GSL_LIBRARY}
     COMMAND ${GSL_SRC_DIR}/configure --prefix=${GSL_INSTALL_DIR} --with-pic --enable-static --disable-shared
     COMMAND $(MAKE) 
     COMMAND $(MAKE) install
-    WORKING_DIRECTORY ${GSL_BUILD_DIR}
+    WORKING_DIRECTORY ${GSL_SRC_DIR}
     VERBATIM  # needed to handle escape characters.
     )
 
