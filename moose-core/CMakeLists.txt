@@ -84,12 +84,13 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules")
 
 ########################### COMPILER MACROS #####################################
 
-## Turn warning to error
+# Turn warning to error: Not all of the options may be supported on all
+# versions of compilers. be careful here.
 add_definitions(-Wall
-    -Wno-return-type-c-linkage
+    #-Wno-return-type-c-linkage
     -Wno-unused-variable
     -Wno-unused-function
-    -Wno-unused-private-field
+    #-Wno-unused-private-field
     )
 add_definitions(-fPIC)
 
