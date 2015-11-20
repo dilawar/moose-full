@@ -178,5 +178,5 @@ add_test(NAME moose-core
 
 
 ####### CPack ###############################
-include(cmake_moose_cpack.cmake)
+##include(cmake_moose_cpack.cmake)
 

@@ -1,4 +1,6 @@
 #!/bin/bash
+# TODO: No simple way to install python files without including the source
+# files. Not worth it.
 set -e
 PKG_PATH=`pwd`/moose-3.0.2-Linux-amd64.deb
 
