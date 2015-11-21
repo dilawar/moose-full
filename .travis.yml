@@ -26,11 +26,15 @@ before_script:
 
 script:
     - git checkout debian
-    - ./scripts/git_buildpackage_and_test.sh
+    - git buildpackage --git-ignore-new --git-no-sign-tags --git-dist=wheezy --git-arch=amd64
+    - git buildpackage --git-ignore-new --git-no-sign-tags --git-dist=wheezy --git-arch=i386
 
 before_deploy:
-    sudo dpkg -i ../*.deb
-    cd moose-examples/_travis && ./run_scripts.sh
+    - sudo dpkg -i ../*amd64*.deb
+    - python -c 'import moose'
+    - cd moose-examples/_travis && ./run_scripts.sh
+    - sudo apt-get remove moose
+    - python -c 'import moose' | echo "Successfull uninstall"
 
 deploy:
   provider: releases
