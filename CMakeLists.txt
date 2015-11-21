@@ -67,15 +67,7 @@ endif()
 ## SBML
 find_package(LIBSBML)
 if(NOT LIBSBML_FOUND)
-    MESSAGE("++ LIBSBML NOT FOUND. Using local SBML")
-    SET(LOCAL_SBML 1)
-else()
-    SET(LOCAL_SBML 0)
-    MESSAGE("++ SBML found")
-endif()
-
-if(LOCAL_SBML)
-    message("++ Building LOCAL SBML")
+    MESSAGE("++ LIBSBML NOT FOUND. Building local SBML")
     include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_sbml.cmake)
 endif() 
 
@@ -92,10 +84,8 @@ add_custom_command(
     ${CMAKE_COMMAND} 
         -DDEBUG:BOOL=OFF 
         -DWITH_DOC:BOOL=${WITH_DOC}
-        -DLOCAL_SBML:BOOL=${LOCAL_SBML} -DLOCAL_GSL:BOOL=${LOCAL_GSL}
-        -DSTATIC_GSL_LIBRARY=${STATIC_GSL_LIBRARY}
-        -DSTATIC_GSLBLAS_LIBRARY=${STATIC_GSLBLAS_LIBRARY}
-        -DSTATIC_SBML_LIBRARY=${STATIC_SBML_LIBRARY}
+        -DGSL_STATIC_HOME=${GSL_INSTALL_DIR}
+        -DSBML_STATIC_HOME=${SBML_INSTALL_DIR}
         -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
         -DCMAKE_SKIP_RPATH=ON
         ${MOOSE_SOURCE_DIRECTORY}
