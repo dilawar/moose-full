@@ -162,7 +162,7 @@ install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-examples/
 ### Tests.
 enable_testing()
 add_test(NAME moose-core 
-    COMMAND ctest --output-on-failure
+    COMMAND ctest -R pymoose* --output-on-failure
     WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
     )
 
