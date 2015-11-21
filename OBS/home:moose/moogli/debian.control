@@ -1,0 +1,18 @@
+Source: moogli
+Section: science
+Priority: optional
+Maintainer: Dilawar Singh <dilawars@ncbs.res.in>
+Build-Depends: debhelper, cdbs, devscripts, cmake, python-qt4-dev, python-sip-dev, libqt4-dev, libqt4-opengl-dev
+Standards-Version: 3.9.5
+Homepage: http://moose.ncbs.res.in/moogli
+
+Package: moogli
+Architecture: any
+Depends: ${shlibs:Depends}, python-qt4-gl, python-sip, libqt4-gui, openscenegraph, moose-gui
+Suggests: moose-python
+Description: Visualizer for neural simulator
+ .
+ Moogli (a sister project of MOOSE) is a simulator independent openGL based
+ visualization tool for neural simulations. Moogli can visualize morphology of
+ single/multiple neurons or network of neurons, and can also visualize activity
+ in these cells. 

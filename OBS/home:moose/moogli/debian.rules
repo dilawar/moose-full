@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+# export DH_VERBOSE=1
+
+export BUILD_DIR_MOOSE=_build
+export PYTHONPATH=$(shell pwd)/../debian/tmp/$(PYTHON_LIBS))
+
+## Here goes the debian make.
+
+%:
+	dh "$@" --parallel
+
+override_dh_auto_clean:
+	rm -rf $(BUILD_DIR_MOOSE)
+	dh_auto_clean --buildsystem=cmake
+
+# consider using -DUSE_VERSIONED_DIR=ON if backporting
+override_dh_auto_configure:
+	mkdir -p $(BUILD_DIR_MOOSE)
+	cd $(BUILD_DIR_MOOSE) && cmake  -DCMAKE_INSTALL_PREFIX=`pwd`/../debian/tmp/usr ..
+
+override_dh_auto_build:
+	cd $(BUILD_DIR_MOOSE) && make VERBOSE=0 -j`nproc`
+
+override_dh_auto_install:
+	# Distable python install
+	cd $(BUILD_DIR_MOOSE) && make install 
+

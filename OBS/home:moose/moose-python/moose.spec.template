@@ -1,0 +1,66 @@
+%global branch <<version>>
+%global version <<version>>
+%define _unpackaged_files_terminate_build 0 
+Name: moose-src
+Group: Applications/Biology
+Summary: <<moose_summary>>
+
+Version: <<version>>
+Release: 1%{?dist}
+Url: http://github.com/BhallaLab/moose
+Source0: moose-%{version}.tar.gz
+
+License: GPL-3.0
+
+<<MooseBuildRequires>>
+
+%description
+
+<<moose_description>>
+
+%package -n moose-core
+Summary: MOOSE simulator library.
+Group: Applications/Biology
+%description -n moose-core
+This package contains C++ core of MOOSE simulator. For general use you should
+install moose-python.
+
+<<moose-coreRequires>>
+
+%package -n moose-python
+Summary: Python interface of MOOSE
+Group: Applications/Biology
+Conflicts: moose
+%description -n moose-python
+This package contains python interface of MOOSE simulator.
+
+<<moose-pythonRequires>>
+
+%prep
+%setup -q -n moose-%{version}
+
+%build
+mkdir -p _build
+cd _build
+cmake -DWITH_DOC=OFF -DCMAKE_INSTALL_PREFIX=%{buildroot}/usr .. 
+make -j`nproc`
+
+%install
+cd _build && make install && cd ..
+cd moose-core/python && python setup.py install \
+    --prefix=%{_prefix} --root=%{buildroot}
+# Note: direct installation causes following
+# http://lists.opensuse.org/opensuse-factory/2012-01/msg00235.html
+find "%{buildroot}%{python_sitelib}/" -name "*.pyc" -exec %__rm {} \;
+%__python -c 'import compileall; 
+compileall.compile_dir("%{buildroot}/%{python_sitelib}/"
+    , ddir="%{python_sitelib}/", force=1)'
+
+%files -n moose-core
+/usr/bin/moose.bin
+/usr/bin/moose
+/usr/lib/*.so
+
+%files -n moose-python
+%defattr(-,root,root)
+%{python_sitelib}/*

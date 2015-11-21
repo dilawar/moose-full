@@ -1,0 +1,24 @@
+%global branch <<version>>
+%global version <<version>>
+%define _unpackaged_files_terminate_build 0 
+Name: moose-src
+Group: Applications/Biology
+Summary: <<moose_summary>>
+
+Version: <<version>>
+Release: 1%{?dist}
+Url: http://github.com/BhallaLab/moose
+Source0: moose-gui-%{version}.tar.gz
+
+License: GPL-3.0
+
+<<MooseBuildRequires>>
+
+%description
+
+<<moose_description>>
+
+%prep
+%setup -q -n moose-%{version}
+
+%install

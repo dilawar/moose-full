@@ -1,0 +1,16 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">https://github.com/BhallaLab/moose-full</param>
+        <param name="version">3.0.2</param>
+        <param name="filename">moose</param>
+    </service>
+    <service name="recompress">
+        <param name="compression">gz</param>
+        <param name="file">*.tar</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*moose*.tar.gz</param>
+        <param name="files">*</param>
+    </service>
+</services>
