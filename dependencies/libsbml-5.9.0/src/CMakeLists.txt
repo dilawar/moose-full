@@ -477,4 +477,4 @@ add_subdirectory(sbml)
 #
 # create language bindings
 #
-add_subdirectory(bindings)
+#add_subdirectory(bindings)
