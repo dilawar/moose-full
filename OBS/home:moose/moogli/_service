@@ -1,0 +1,16 @@
+<services>
+    <service name="tar_scm">
+        <param name="scm">git</param>
+        <param name="url">https://github.com/BhallaLab/moogli</param>
+        <param name="version">0.5.0</param>
+        <param name="filename">moogli</param>
+    </service>
+    <service name="recompress">
+        <param name="compression">gz</param>
+        <param name="file">*.tar</param>
+    </service>
+    <service name="extract_file">
+        <param name="archive">*moogli*.tar.gz</param>
+        <param name="files">*</param>
+    </service>
+</services>

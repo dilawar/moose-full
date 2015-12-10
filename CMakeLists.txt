@@ -1,18 +1,16 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
 ## Now setting up project.
 # A dummy target to add dependencies later.
-project(Moose)
+project(moose-all)
 
 add_custom_target(_moose_static_dependencies ALL)
 # This variable should point to the source code.
 set(MOOSE_CORE_DIRNAME moose-core)
 set(MOOSE_GUI_DIRNAME moose-gui)
 set(MOOSE_VERSION "3.0.2")
-set(MOOGLI_VERSION "1.0")
 
 ## CMAKE options
 option(WITH_DOC "Build documentation as well" OFF)
-option(BUILD_MOOGLI "Build moogli extension" OFF)
 
 ## Project related macros
 set(MOOSE_SOURCE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${MOOSE_CORE_DIRNAME})
@@ -40,6 +38,8 @@ endif()
 ################
 # Definately building release type ##########################
 set(CMAKE_BUILD_TYPE Release)
+# This is essential to remove the RPATH.
+set(CMAKE_INSTALL_RPATH "")
 
 ################
 # Which local libraries need to be built, Here we just set the
@@ -67,19 +67,11 @@ endif()
 ## SBML
 find_package(LIBSBML)
 if(NOT LIBSBML_FOUND)
-    MESSAGE("++ LIBSBML NOT FOUND. Using local SBML")
-    SET(LOCAL_SBML 1)
-else()
-    SET(LOCAL_SBML 0)
-    MESSAGE("++ SBML found")
-endif()
-
-if(LOCAL_SBML)
-    message("++ Building LOCAL SBML")
+    MESSAGE("++ LIBSBML NOT FOUND. Building local SBML")
     include(${CMAKE_CURRENT_SOURCE_DIR}/build_static_sbml.cmake)
 endif() 
 
-##*############## 
+
 ## Now build MOOSE
 SET(MOOSE_CORE_BUILD_DIR ${CMAKE_BINARY_DIR}/_moose-core)
 FILE(MAKE_DIRECTORY ${MOOSE_CORE_BUILD_DIR})
@@ -92,15 +84,10 @@ add_custom_command(
     ${CMAKE_COMMAND} 
         -DDEBUG:BOOL=OFF 
         -DWITH_DOC:BOOL=${WITH_DOC}
-        # MOOGLI related command line arguments.
-        -DBUILD_MOOGLI:BOOL=${BUILD_MOOGLI}
-        # where to store moogli source distribution.
-        -DMOOGLI_DIST_DIR=${MOOSE_CORE_BUILD_DIR}
-        -DLOCAL_SBML:BOOL=${LOCAL_SBML} -DLOCAL_GSL:BOOL=${LOCAL_GSL}
-        -DSTATIC_GSL_LIBRARY=${STATIC_GSL_LIBRARY}
-        -DSTATIC_GSLBLAS_LIBRARY=${STATIC_GSLBLAS_LIBRARY}
-        -DSTATIC_SBML_LIBRARY=${STATIC_SBML_LIBRARY}
+        -DGSL_STATIC_HOME=${GSL_INSTALL_DIR}
+        -DSBML_STATIC_HOME=${SBML_INSTALL_DIR}
         -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
+        -DCMAKE_SKIP_RPATH=ON
         ${MOOSE_SOURCE_DIRECTORY}
     COMMAND $(MAKE) VERBOSE=1
     # Not running neuroml test since it requires matplotlib.
@@ -111,34 +98,31 @@ add_custom_command(
     )
 
 add_custom_target(_build_moose_core ALL
-    DEPENDS ${MOOSE_CORE_BUILD_DIR}/moose.bin ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
+    DEPENDS ${MOOSE_CORE_BUILD_DIR}/moose.bin 
+    ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
     )
+
 add_dependencies(_build_moose_core _moose_static_dependencies)
 
-# Use moose-core cmake file to install it.
+# Use moose-core cmake file to install its targets.
+install(CODE 
+    "
+    EXECUTE_PROCESS(
+        COMMAND ${CMAKE_COMMAND} -P ${MOOSE_CORE_BUILD_DIR}/cmake_install.cmake
+        )"
+    COMPONENT moose-core
+    )
+
 install(CODE
     "
-    execute_process(COMMAND cmake -P cmake_install.cmake
-        WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
+    EXECUTE_PROCESS(
+        COMMAND python setup.py install --prefix=${CMAKE_INSTALL_PREFIX} 
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/moose-core/python
         )
     "
+    COMPONENT moose-python
     )
 
-# Copy the gui folder. TODO: This should be a python-module.
-install(PROGRAMS ${MOOSE_CORE_BUILD_DIR}/moose.bin
-    DESTINATION bin
-    )
-
-install(FILES ${MOOSE_CORE_BUILD_DIR}/moose-${MOOSE_VERSION}.tar.gz
-    DESTINATION share/moose
-    )
-
-# install moogli sdist if only BUILD_MOOGLI is ON/TRUE.
-if(BUILD_MOOGLI)
-    install(FILES ${MOOSE_CORE_BUILD_DIR}/moogli-${MOOGLI_VERSION}.tar.gz
-        DESTINATION share/moogli
-        )
-endif(BUILD_MOOGLI)
 
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-gui/
     DESTINATION lib/moose/gui
@@ -154,17 +138,35 @@ install(PROGRAMS ${CMAKE_SOURCE_DIR}/package_data/moosegui
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/moose-examples/
     DESTINATION lib/moose/moose-examples
     COMPONENT moose-gui
+    PATTERN "travis" EXCLUDE
+    PATTERN "CVS" EXCLUDE
+    PATTERN ".git*" EXCLUDE
     )
 
-## Install the icon
-install(FILES ${CMAKE_SOURCE_DIR}/moose-gui/icons/moose_icon.png 
-    DESTINATION share/icons/moose
-    COMPONENT moose-gui
-    RENAME moose.png
+## DO NOT install icon and dekstop file. They cause a lot of issues on various
+## repositories on open-build-service.
+
+#### Install the icon
+##install(FILES ${CMAKE_SOURCE_DIR}/moose-gui/icons/moose_icon.png 
+##    DESTINATION share/pixmaps
+##    COMPONENT moose-gui
+##    RENAME moose.png
+##    )
+##
+### And the desktop file.
+##install(FILES ${CMAKE_SOURCE_DIR}/moose-core/scripts/moose.desktop
+##    DESTINATION share/applications
+##    COMPONENT moose-gui
+##    )
+##
+### Tests.
+enable_testing()
+add_test(NAME moose-core 
+    COMMAND ctest -R pymoose* --output-on-failure
+    WORKING_DIRECTORY ${MOOSE_CORE_BUILD_DIR}
     )
 
-# And the desktop file.
-install(FILES ${CMAKE_SOURCE_DIR}/moose-core/scripts/moose.desktop
-    DESTINATION share/applications
-    COMPONENT moose
-    )
+
+####### CPack ###############################
+##include(cmake_moose_cpack.cmake)
+
